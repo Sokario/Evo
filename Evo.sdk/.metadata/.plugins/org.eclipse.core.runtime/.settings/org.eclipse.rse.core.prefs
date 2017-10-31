@@ -1,3 +1,4 @@
 activeuserprofiles=LogOut-AsusPro;Team
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=LogOut
+useridperkey=LogOut-AsusPro.Local\=LogOut;

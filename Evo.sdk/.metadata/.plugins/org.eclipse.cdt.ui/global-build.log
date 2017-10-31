@@ -282,3 +282,116 @@ arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
   19384	   1148	  22568	  43100	   a85c	Evo.elf
 'Finished building: Evo.elf.size'
 ' '
+19:57:52 **** Clean-only build of configuration Debug for project Evo ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  Evo.elf.size  Evo.elf
+' '
+19:57:53 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19384	   1148	  22568	  43100	   a85c	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+19:58:29 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22120	   1148	  22568	  45836	   b30c	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+19:59:58 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:55:8: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+        usleep(200000);   //delay
+        ^~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23772	   1188	  22584	  47544	   b9b8	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+20:00:17 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23772	   1188	  22584	  47544	   b9b8	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+20:00:44 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+20:01:11 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+20:01:47 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+20:02:12 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
