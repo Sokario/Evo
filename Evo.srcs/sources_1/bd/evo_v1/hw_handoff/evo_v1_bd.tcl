@@ -161,15 +161,48 @@ proc create_root_design { parentCell } {
   set sws_4bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 sws_4bits ]
 
   # Create ports
+  set PWM_L [ create_bd_port -dir O PWM_L ]
+  set PWM_R [ create_bd_port -dir O PWM_R ]
+  set QuadA_L [ create_bd_port -dir I QuadA_L ]
+  set QuadA_R [ create_bd_port -dir I QuadA_R ]
+  set QuadB_L [ create_bd_port -dir I QuadB_L ]
+  set QuadB_R [ create_bd_port -dir I QuadB_R ]
+  set Sens_L [ create_bd_port -dir O Sens_L ]
+  set Sens_R [ create_bd_port -dir O Sens_R ]
+
+  # Create instance: Derivator_0, and set properties
+  set Derivator_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:Derivator:1.0 Derivator_0 ]
+
+  # Create instance: Derivator_1, and set properties
+  set Derivator_1 [ create_bd_cell -type ip -vlnv xilinx.com:user:Derivator:1.0 Derivator_1 ]
+
+  # Create instance: Encoder_0, and set properties
+  set Encoder_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:Encoder:1.0 Encoder_0 ]
+
+  # Create instance: Encoder_1, and set properties
+  set Encoder_1 [ create_bd_cell -type ip -vlnv xilinx.com:user:Encoder:1.0 Encoder_1 ]
+
+  # Create instance: Motor_0, and set properties
+  set Motor_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:Motor:1.0 Motor_0 ]
+
+  # Create instance: Motor_1, and set properties
+  set Motor_1 [ create_bd_cell -type ip -vlnv xilinx.com:user:Motor:1.0 Motor_1 ]
+
+  # Create instance: PID_0, and set properties
+  set PID_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:PID:1.0 PID_0 ]
+
+  # Create instance: PID_1, and set properties
+  set PID_1 [ create_bd_cell -type ip -vlnv xilinx.com:user:PID:1.0 PID_1 ]
+
+  # Create instance: Subtractor_0, and set properties
+  set Subtractor_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:Subtractor:1.0 Subtractor_0 ]
+
+  # Create instance: Subtractor_1, and set properties
+  set Subtractor_1 [ create_bd_cell -type ip -vlnv xilinx.com:user:Subtractor:1.0 Subtractor_1 ]
 
   # Create instance: axi_gpio_0, and set properties
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
   set_property -dict [ list \
-CONFIG.C_ALL_INPUTS {1} \
-CONFIG.C_ALL_INPUTS_2 {1} \
-CONFIG.C_GPIO2_WIDTH {4} \
-CONFIG.C_GPIO_WIDTH {4} \
-CONFIG.C_IS_DUAL {1} \
 CONFIG.GPIO2_BOARD_INTERFACE {sws_4bits} \
 CONFIG.GPIO_BOARD_INTERFACE {btns_4bits} \
 CONFIG.USE_BOARD_FLOW {true} \
@@ -277,9 +310,7 @@ CONFIG.PCW_MIO_47_PULLUP {disabled} \
 CONFIG.PCW_MIO_48_PULLUP {disabled} \
 CONFIG.PCW_MIO_49_PULLUP {disabled} \
 CONFIG.PCW_MIO_4_SLEW {fast} \
-CONFIG.PCW_MIO_50_DIRECTION {inout} \
 CONFIG.PCW_MIO_50_PULLUP {disabled} \
-CONFIG.PCW_MIO_51_DIRECTION {inout} \
 CONFIG.PCW_MIO_51_PULLUP {disabled} \
 CONFIG.PCW_MIO_52_PULLUP {disabled} \
 CONFIG.PCW_MIO_52_SLEW {slow} \
@@ -321,7 +352,7 @@ CONFIG.PCW_USB0_RESET_IO {MIO 46} \
   # Create instance: ps7_0_axi_periph, and set properties
   set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
   set_property -dict [ list \
-CONFIG.NUM_MI {2} \
+CONFIG.NUM_MI {12} \
  ] $ps7_0_axi_periph
 
   # Create instance: rst_ps7_0_100M, and set properties
@@ -336,14 +367,50 @@ CONFIG.NUM_MI {2} \
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins axi_gpio_1/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M02_AXI [get_bd_intf_pins Motor_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M02_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M03_AXI [get_bd_intf_pins Motor_1/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M03_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M04_AXI [get_bd_intf_pins Encoder_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M04_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M05_AXI [get_bd_intf_pins Encoder_1/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M05_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M06_AXI [get_bd_intf_pins Derivator_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M06_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M07_AXI [get_bd_intf_pins Derivator_1/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M07_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M08_AXI [get_bd_intf_pins PID_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M08_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M09_AXI [get_bd_intf_pins PID_1/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M09_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M10_AXI [get_bd_intf_pins Subtractor_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M10_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M11_AXI [get_bd_intf_pins Subtractor_1/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M11_AXI]
 
   # Create port connections
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_gpio_1/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+  connect_bd_net -net Derivator_0_Speed [get_bd_pins Derivator_0/Speed] [get_bd_pins Subtractor_0/Subtract]
+  connect_bd_net -net Derivator_1_Speed [get_bd_pins Derivator_1/Speed] [get_bd_pins Subtractor_1/Subtract]
+  connect_bd_net -net Encoder_0_Increments [get_bd_pins Derivator_0/Increments] [get_bd_pins Encoder_0/Increments]
+  connect_bd_net -net Encoder_1_Increments [get_bd_pins Derivator_1/Increments] [get_bd_pins Encoder_1/Increments]
+  connect_bd_net -net Motor_0_PWM [get_bd_ports PWM_L] [get_bd_pins Motor_0/PWM]
+  connect_bd_net -net Motor_0_Sens [get_bd_ports Sens_L] [get_bd_pins Motor_0/Sens]
+  connect_bd_net -net Motor_1_PWM [get_bd_ports PWM_R] [get_bd_pins Motor_1/PWM]
+  connect_bd_net -net Motor_1_Sens [get_bd_ports Sens_R] [get_bd_pins Motor_1/Sens]
+  connect_bd_net -net PID_0_Command [get_bd_pins Motor_0/Speed] [get_bd_pins PID_0/Command]
+  connect_bd_net -net PID_1_Command [get_bd_pins Motor_1/Speed] [get_bd_pins PID_1/Command]
+  connect_bd_net -net QuadA_L_1 [get_bd_ports QuadA_L] [get_bd_pins Encoder_0/QuadA]
+  connect_bd_net -net QuadA_R_1 [get_bd_ports QuadA_R] [get_bd_pins Encoder_1/QuadA]
+  connect_bd_net -net QuadB_L_1 [get_bd_ports QuadB_L] [get_bd_pins Encoder_0/QuadB]
+  connect_bd_net -net QuadB_R_1 [get_bd_ports QuadB_R] [get_bd_pins Encoder_1/QuadB]
+  connect_bd_net -net Subtractor_0_Result [get_bd_pins PID_0/Error] [get_bd_pins Subtractor_0/Result]
+  connect_bd_net -net Subtractor_1_Result [get_bd_pins PID_1/Error] [get_bd_pins Subtractor_1/Result]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins Derivator_0/s00_axi_aclk] [get_bd_pins Derivator_1/s00_axi_aclk] [get_bd_pins Encoder_0/s00_axi_aclk] [get_bd_pins Encoder_1/s00_axi_aclk] [get_bd_pins Motor_0/s00_axi_aclk] [get_bd_pins Motor_1/s00_axi_aclk] [get_bd_pins PID_0/s00_axi_aclk] [get_bd_pins PID_1/s00_axi_aclk] [get_bd_pins Subtractor_0/s00_axi_aclk] [get_bd_pins Subtractor_1/s00_axi_aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_gpio_1/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins ps7_0_axi_periph/M05_ACLK] [get_bd_pins ps7_0_axi_periph/M06_ACLK] [get_bd_pins ps7_0_axi_periph/M07_ACLK] [get_bd_pins ps7_0_axi_periph/M08_ACLK] [get_bd_pins ps7_0_axi_periph/M09_ACLK] [get_bd_pins ps7_0_axi_periph/M10_ACLK] [get_bd_pins ps7_0_axi_periph/M11_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_100M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_100M/interconnect_aresetn]
-  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_gpio_1/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins Derivator_0/s00_axi_aresetn] [get_bd_pins Derivator_1/s00_axi_aresetn] [get_bd_pins Encoder_0/s00_axi_aresetn] [get_bd_pins Encoder_1/s00_axi_aresetn] [get_bd_pins Motor_0/s00_axi_aresetn] [get_bd_pins Motor_1/s00_axi_aresetn] [get_bd_pins PID_0/s00_axi_aresetn] [get_bd_pins PID_1/s00_axi_aresetn] [get_bd_pins Subtractor_0/s00_axi_aresetn] [get_bd_pins Subtractor_1/s00_axi_aresetn] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_gpio_1/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins ps7_0_axi_periph/M04_ARESETN] [get_bd_pins ps7_0_axi_periph/M05_ARESETN] [get_bd_pins ps7_0_axi_periph/M06_ARESETN] [get_bd_pins ps7_0_axi_periph/M07_ARESETN] [get_bd_pins ps7_0_axi_periph/M08_ARESETN] [get_bd_pins ps7_0_axi_periph/M09_ARESETN] [get_bd_pins ps7_0_axi_periph/M10_ARESETN] [get_bd_pins ps7_0_axi_periph/M11_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
 
   # Create address segments
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C40000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Derivator_0/S00_AXI/S00_AXI_reg] SEG_Derivator_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C50000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Derivator_1/S00_AXI/S00_AXI_reg] SEG_Derivator_1_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C20000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Encoder_0/S00_AXI/S00_AXI_reg] SEG_Encoder_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C30000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Encoder_1/S00_AXI/S00_AXI_reg] SEG_Encoder_1_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Motor_0/S00_AXI/S00_AXI_reg] SEG_Motor_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C10000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Motor_1/S00_AXI/S00_AXI_reg] SEG_Motor_1_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C60000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PID_0/S00_AXI/S00_AXI_reg] SEG_PID_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C70000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PID_1/S00_AXI/S00_AXI_reg] SEG_PID_1_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C80000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Subtractor_0/S00_AXI/S00_AXI_reg] SEG_Subtractor_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C90000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Subtractor_1/S00_AXI/S00_AXI_reg] SEG_Subtractor_1_S00_AXI_reg
   create_bd_addr_seg -range 0x00010000 -offset 0x41200000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x41210000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_1/S_AXI/Reg] SEG_axi_gpio_1_Reg
 

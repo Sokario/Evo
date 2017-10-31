@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1508917613">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1509458977">
   <File Type="RDS-PROPCONSTRS" Name="evo_v1_wrapper_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="evo_v1_wrapper.tcl"/>
   <File Type="RDS-RDS" Name="evo_v1_wrapper.vds"/>
@@ -17,10 +17,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/evo_v1/hdl/evo_v1_wrapper.v">
+    <File Path="$PSRCDIR/sources_1/bd/evo_v1/hdl/evo_v1_wrapper.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -32,20 +31,25 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Vivado/ZYBO_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ZYBO_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1508678068"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="evo_v1_axi_gpio_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="evo_v1_auto_pc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="evo_v1_axi_gpio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="evo_v1_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="evo_v1_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="evo_v1_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="evo_v1_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="evo_v1_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="evo_v1_Motor_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="evo_v1_Motor_1_0"/>
 </GenRun>

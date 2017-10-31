@@ -18,8 +18,93 @@
 
 #include "xparameters_ps.h"
 
-#define STDIN_BASEADDRESS 0xE0001000
-#define STDOUT_BASEADDRESS 0xE0001000
+#define STDIN_BASEADDRESS 0xF8800000
+#define STDOUT_BASEADDRESS 0xF8800000
+
+/******************************************************************/
+
+/* Definitions for driver DERIVATOR */
+#define XPAR_DERIVATOR_NUM_INSTANCES 2
+
+/* Definitions for peripheral DERIVATOR_0 */
+#define XPAR_DERIVATOR_0_DEVICE_ID 0
+#define XPAR_DERIVATOR_0_S00_AXI_BASEADDR 0x43C40000
+#define XPAR_DERIVATOR_0_S00_AXI_HIGHADDR 0x43C4FFFF
+
+
+/* Definitions for peripheral DERIVATOR_1 */
+#define XPAR_DERIVATOR_1_DEVICE_ID 1
+#define XPAR_DERIVATOR_1_S00_AXI_BASEADDR 0x43C50000
+#define XPAR_DERIVATOR_1_S00_AXI_HIGHADDR 0x43C5FFFF
+
+
+/******************************************************************/
+
+/* Definitions for driver ENCODER */
+#define XPAR_ENCODER_NUM_INSTANCES 2
+
+/* Definitions for peripheral ENCODER_0 */
+#define XPAR_ENCODER_0_DEVICE_ID 0
+#define XPAR_ENCODER_0_S00_AXI_BASEADDR 0x43C20000
+#define XPAR_ENCODER_0_S00_AXI_HIGHADDR 0x43C2FFFF
+
+
+/* Definitions for peripheral ENCODER_1 */
+#define XPAR_ENCODER_1_DEVICE_ID 1
+#define XPAR_ENCODER_1_S00_AXI_BASEADDR 0x43C30000
+#define XPAR_ENCODER_1_S00_AXI_HIGHADDR 0x43C3FFFF
+
+
+/******************************************************************/
+
+/* Definitions for driver MOTOR */
+#define XPAR_MOTOR_NUM_INSTANCES 2
+
+/* Definitions for peripheral MOTOR_0 */
+#define XPAR_MOTOR_0_DEVICE_ID 0
+#define XPAR_MOTOR_0_S00_AXI_BASEADDR 0x43C00000
+#define XPAR_MOTOR_0_S00_AXI_HIGHADDR 0x43C0FFFF
+
+
+/* Definitions for peripheral MOTOR_1 */
+#define XPAR_MOTOR_1_DEVICE_ID 1
+#define XPAR_MOTOR_1_S00_AXI_BASEADDR 0x43C10000
+#define XPAR_MOTOR_1_S00_AXI_HIGHADDR 0x43C1FFFF
+
+
+/******************************************************************/
+
+/* Definitions for driver PID */
+#define XPAR_PID_NUM_INSTANCES 2
+
+/* Definitions for peripheral PID_0 */
+#define XPAR_PID_0_DEVICE_ID 0
+#define XPAR_PID_0_S00_AXI_BASEADDR 0x43C60000
+#define XPAR_PID_0_S00_AXI_HIGHADDR 0x43C6FFFF
+
+
+/* Definitions for peripheral PID_1 */
+#define XPAR_PID_1_DEVICE_ID 1
+#define XPAR_PID_1_S00_AXI_BASEADDR 0x43C70000
+#define XPAR_PID_1_S00_AXI_HIGHADDR 0x43C7FFFF
+
+
+/******************************************************************/
+
+/* Definitions for driver SUBTRACTOR */
+#define XPAR_SUBTRACTOR_NUM_INSTANCES 2
+
+/* Definitions for peripheral SUBTRACTOR_0 */
+#define XPAR_SUBTRACTOR_0_DEVICE_ID 0
+#define XPAR_SUBTRACTOR_0_S00_AXI_BASEADDR 0x43C80000
+#define XPAR_SUBTRACTOR_0_S00_AXI_HIGHADDR 0x43C8FFFF
+
+
+/* Definitions for peripheral SUBTRACTOR_1 */
+#define XPAR_SUBTRACTOR_1_DEVICE_ID 1
+#define XPAR_SUBTRACTOR_1_S00_AXI_BASEADDR 0x43C90000
+#define XPAR_SUBTRACTOR_1_S00_AXI_HIGHADDR 0x43C9FFFF
+
 
 /******************************************************************/
 

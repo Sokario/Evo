@@ -13,7 +13,12 @@ src/main.o src/main.o: ../src/main.c ../src/platform.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xil_assert.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xstatus.h \
- ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h
+ ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/Motor.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/Encoder.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/Derivator.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/PID.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/Subtractor.h
 
 ../src/platform.h:
 
@@ -46,3 +51,13 @@ src/main.o src/main.o: ../src/main.c ../src/platform.h \
 ../../Evo_bsp/ps7_cortexa9_0/include/xstatus.h:
 
 ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/Motor.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/Encoder.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/Derivator.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/PID.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/Subtractor.h:

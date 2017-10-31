@@ -53,6 +53,7 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Projet/Vivado/Evo/Evo.cache/wt [current_project]
   set_property parent.project_path C:/Projet/Vivado/Evo/Evo.xpr [current_project]
+  set_property ip_repo_paths C:/Projet/Vivado/Custom_IP [current_project]
   set_property ip_output_repo C:/Projet/Vivado/Evo/Evo.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
@@ -62,6 +63,7 @@ set rc [catch {
   add_files C:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/evo_v1.bd
   set_property is_locked true [get_files C:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/evo_v1.bd]
   set_param project.isImplRun false
+  read_xdc C:/Projet/Vivado/Evo/Evo.srcs/constrs_1/imports/Vivado/ZYBO_Master.xdc
   set_param project.isImplRun true
   link_design -top evo_v1_wrapper -part xc7z010clg400-1
   set_param project.isImplRun false

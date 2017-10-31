@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Wed Oct 25 09:46:31 2017
+//Date        : Tue Oct 31 15:00:08 2017
 //Host        : LogOut-AsusPro running 64-bit major release  (build 9200)
 //Command     : generate_target evo_v1_wrapper.bd
 //Design      : evo_v1_wrapper
@@ -25,12 +25,22 @@ module evo_v1_wrapper
     DDR_ras_n,
     DDR_reset_n,
     DDR_we_n,
+    Enable_L,
+    Enable_R,
     FIXED_IO_ddr_vrn,
     FIXED_IO_ddr_vrp,
     FIXED_IO_mio,
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    PWM_L,
+    PWM_R,
+    QuadA_L,
+    QuadA_R,
+    QuadB_L,
+    QuadB_R,
+    Sens_L,
+    Sens_R,
     btns_4bits_tri_i,
     leds_4bits_tri_io,
     sws_4bits_tri_i);
@@ -49,12 +59,22 @@ module evo_v1_wrapper
   inout DDR_ras_n;
   inout DDR_reset_n;
   inout DDR_we_n;
+  output Enable_L;
+  output Enable_R;
   inout FIXED_IO_ddr_vrn;
   inout FIXED_IO_ddr_vrp;
   inout [53:0]FIXED_IO_mio;
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  output PWM_L;
+  output PWM_R;
+  input QuadA_L;
+  input QuadA_R;
+  input QuadB_L;
+  input QuadB_R;
+  output Sens_L;
+  output Sens_R;
   input [3:0]btns_4bits_tri_i;
   inout [3:0]leds_4bits_tri_io;
   input [3:0]sws_4bits_tri_i;
@@ -74,12 +94,22 @@ module evo_v1_wrapper
   wire DDR_ras_n;
   wire DDR_reset_n;
   wire DDR_we_n;
+  wire Enable_L;
+  wire Enable_R;
   wire FIXED_IO_ddr_vrn;
   wire FIXED_IO_ddr_vrp;
   wire [53:0]FIXED_IO_mio;
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire PWM_L;
+  wire PWM_R;
+  wire QuadA_L;
+  wire QuadA_R;
+  wire QuadB_L;
+  wire QuadB_R;
+  wire Sens_L;
+  wire Sens_R;
   wire [3:0]btns_4bits_tri_i;
   wire [0:0]leds_4bits_tri_i_0;
   wire [1:1]leds_4bits_tri_i_1;
@@ -115,12 +145,22 @@ module evo_v1_wrapper
         .DDR_ras_n(DDR_ras_n),
         .DDR_reset_n(DDR_reset_n),
         .DDR_we_n(DDR_we_n),
+        .Enable_L(Enable_L),
+        .Enable_R(Enable_R),
         .FIXED_IO_ddr_vrn(FIXED_IO_ddr_vrn),
         .FIXED_IO_ddr_vrp(FIXED_IO_ddr_vrp),
         .FIXED_IO_mio(FIXED_IO_mio),
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .PWM_L(PWM_L),
+        .PWM_R(PWM_R),
+        .QuadA_L(QuadA_L),
+        .QuadA_R(QuadA_R),
+        .QuadB_L(QuadB_L),
+        .QuadB_R(QuadB_R),
+        .Sens_L(Sens_L),
+        .Sens_R(Sens_R),
         .btns_4bits_tri_i(btns_4bits_tri_i),
         .leds_4bits_tri_i({leds_4bits_tri_i_3,leds_4bits_tri_i_2,leds_4bits_tri_i_1,leds_4bits_tri_i_0}),
         .leds_4bits_tri_o({leds_4bits_tri_o_3,leds_4bits_tri_o_2,leds_4bits_tri_o_1,leds_4bits_tri_o_0}),
