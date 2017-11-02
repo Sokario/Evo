@@ -180,3 +180,12 @@ u32 Derivator_GetSpeed(Derivator *InstancePtr)
     
     return DERIVATOR_mReadReg(InstancePtr->BaseAddress, DERIVATOR_S00_AXI_SLV_REG2_OFFSET);
 }
+
+u32 Derivator_GetFrequence(Derivator *InstancePtr)
+{
+    /* Asserts */
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+    
+    return DERIVATOR_mReadReg(InstancePtr->BaseAddress, DERIVATOR_S00_AXI_SLV_REG3_OFFSET);
+}

@@ -19,7 +19,16 @@
 #include "PID.h"
 #include "Subtractor.h"
 
+#include "xil_io.h"
 
+#include "xuartps.h"
+XUartPs UartPs;
+#define UART_PS_DEVICE_ID XPAR_XUARTPS_0_DEVICE_ID
+u8 command[16];
+u8 result[16];
+int UartPs_Initialization(XUartPs *Uart, u16 deviceId);
+
+XGpio Input, Output;
 #define INPUT_DEVICE_ID XPAR_GPIO_0_DEVICE_ID
 #define BUTTON 1
 #define SWITCH 2
@@ -27,30 +36,58 @@ u32 inputDirectionMask = 0xF;
 #define OUTPUT_DEVICE_ID XPAR_GPIO_1_DEVICE_ID
 #define LED 1
 u32 outputDirectionMask = 0x0;
-int Debug_Initialization(XGpio *In, XGpio *Out);
-
-#include "xuartps.h"
-#define UART_PS_DEVICE_ID XPAR_XUARTPS_0_DEVICE_ID
-u8 command[16];
-u8 result[16];
-int UartPs_Initialization(XUartPs * Uart, u16 deviceId);
+int Debug_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId);
 
 #define SUBTRACTOR_LEFT_DEVICE_ID XPAR_SUBTRACTOR_0_DEVICE_ID
 #define SUBTRACTOR_RIGHT_DEVICE_ID XPAR_SUBTRACTOR_1_DEVICE_ID
+int Subtractor_Initialization(Subtractor *sub, u16 deviceID);
+
+#define DERIVATOR_LEFT_DEVICE_ID XPAR_DERIVATOR_0_DEVICE_ID
+#define DERIVATOR_RIGHT_DEVICE_ID XPAR_DERIVATOR_1_DEVICE_ID
+int Derivator_Initialization(Derivator *deriv, u16 deviceID);
 
 int main()
 {
-	XGpio Input, Output;
-	XUartPs UartPs;
+	int button_data = 0, switch_data = 0;
+
+	if (UartPs_Initialization(&UartPs, UART_PS_DEVICE_ID) != XST_SUCCESS)
+		write(&UartPs, (u8 *)"UART FAILURE", 16);
+	else
+		write(&UartPs, (u8 *)"UART SUCCESS", 16);
+	usleep(1000000);
+	if (Debug_Initialization(&Input, &Output, INPUT_DEVICE_ID, OUTPUT_DEVICE_ID) != XST_SUCCESS)
+		write(&UartPs, (u8 *)"DEBUG FAILURE", 16);
+	else
+		write(&UartPs, (u8 *)"DEBUG SUCCESS", 16);
+	usleep(1000000);
+
+	// Subtractor initialization
 	Subtractor SubLeft, SubRight;
+	if (Subtractor_Initialization(&SubLeft, SUBTRACTOR_LEFT_DEVICE_ID) != XST_SUCCESS)
+		write(&UartPs, (u8 *)"SUB0 FAILURE", 16);
+	else
+		write(&UartPs, (u8 *)"SUB0 SUCCESS", 16);
+	usleep(1000000);
+	if (Subtractor_Initialization(&SubRight, SUBTRACTOR_RIGHT_DEVICE_ID) != XST_SUCCESS)
+		write(&UartPs, (u8 *)"SUB1 FAILURE", 16);
+	else
+		write(&UartPs, (u8 *)"SUB1 SUCCESS", 16);
+	usleep(1000000);
 
-	int button_data = 0;
-	int switch_data = 0;
 
-	Debug_Initialization(&Input, &Output);
-	UartPs_Initialization(&UartPs, UART_PS_DEVICE_ID);
-	Subtractor_Initialize(&SubLeft, SUBTRACTOR_LEFT_DEVICE_ID);
-	Subtractor_Initialize(&SubRight, SUBTRACTOR_RIGHT_DEVICE_ID);
+	// Derivator test
+	Derivator DerivLeft, DerivRight;
+	if (Derivator_Initialization(&DerivLeft, DERIVATOR_LEFT_DEVICE_ID) != XST_SUCCESS)
+		write(&UartPs, (u8 *)"DERIV0 FAILURE", 16);
+	else
+		write(&UartPs, (u8 *)"DERIV0 SUCCESS", 16);
+	usleep(1000000);
+	if (Derivator_Initialization(&DerivRight, DERIVATOR_RIGHT_DEVICE_ID) != XST_SUCCESS)
+		write(&UartPs, (u8 *)"DERIV1 FAILURE", 16);
+	else
+		write(&UartPs, (u8 *)"DERIV1 SUCCESS", 16);
+	usleep(1000000);
+
 
 	while(1){
 		memset(command, '\0', sizeof(command));
@@ -60,15 +97,6 @@ int main()
 		read(&UartPs, command, sizeof(command));
 		write(&UartPs, command, sizeof(command));
 		usleep(500000);
-
-		// Subtractor test
-		Subtractor_SetOverRide(&SubLeft, 3);
-		Subtractor_SetAdd(&SubLeft, 123456000);
-		Subtractor_SetSubtract(&SubLeft, 1000);
-		u32 value = Subtractor_GetResult(&SubLeft);
-		char str[16];
-		itoa(value, str, 10);
-		write(&UartPs, (u8 *)str, sizeof(str));
 
 		// Debug
 		switch_data = XGpio_DiscreteRead(&Input, SWITCH);	//get switch data
@@ -90,17 +118,15 @@ int main()
 	return XST_SUCCESS;
 }
 
-int UartPs_Initialization(XUartPs * Uart, u16 deviceId)
+int UartPs_Initialization(XUartPs *Uart, u16 deviceId)
 {
-	int status;
 	XUartPs_Config *config;
 
 	config = XUartPs_LookupConfig(deviceId);
 	if (config == NULL)
 		return XST_FAILURE;
 
-	status = XUartPs_CfgInitialize(Uart, config, config->BaseAddress);
-	if (status != XST_SUCCESS)
+	if (XUartPs_CfgInitialize(Uart, config, config->BaseAddress) != XST_SUCCESS)
 		return XST_FAILURE;
 
 	XUartPs_SetBaudRate(Uart, 115200);
@@ -108,21 +134,53 @@ int UartPs_Initialization(XUartPs * Uart, u16 deviceId)
 	return XST_SUCCESS;
 }
 
-int Debug_Initialization(XGpio *In, XGpio *Out)
+int Debug_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
 {
-	int status;
-
-	status = XGpio_Initialize(In, INPUT_DEVICE_ID);	//initialize input XGpio variable
-	if (status != XST_SUCCESS)
-			return XST_FAILURE;
-	status = XGpio_Initialize(Out, OUTPUT_DEVICE_ID);	//initialize output XGpio variable
-	if (status != XST_SUCCESS)
-			return XST_FAILURE;
+	if (XGpio_Initialize(In, in_deviceId) != XST_SUCCESS)
+		return XST_FAILURE;
+	if (XGpio_Initialize(Out, out_deviceId) != XST_SUCCESS)
+		return XST_FAILURE;
 
 	XGpio_SetDataDirection(In, BUTTON, inputDirectionMask);			//set first channel tristate buffer to input
 	XGpio_SetDataDirection(In, SWITCH, inputDirectionMask);			//set second channel tristate buffer to input
 
 	XGpio_SetDataDirection(Out, LED, outputDirectionMask);		//set first channel tristate buffer to output
 
+	return XST_SUCCESS;
+}
+
+int Subtractor_Initialization(Subtractor *sub, u16 deviceId)
+{
+	u32 test_a = 1000, test_b = 200;
+	#define FULL_SUBTRACTOR_OVERRIDE 3
+
+	if (Subtractor_Initialize(sub, deviceId) != XST_SUCCESS)
+		return XST_FAILURE;
+
+	Subtractor_SetOverRide(sub, FULL_SUBTRACTOR_OVERRIDE);
+	Subtractor_SetAdd(sub, test_a);
+	Subtractor_SetSubtract(sub, test_b);
+	if (Subtractor_GetResult(sub) != (test_a - test_b))
+		return XST_FAILURE;
+
+	Subtractor_SetOverRide(sub, 0);
+	return XST_SUCCESS;
+}
+
+int Derivator_Initialization(Derivator *deriv, u16 deviceId)
+{
+	u32 test_a = 100, test_b = 20;
+	#define FULL_DERIVATOR_OVERRIDE 1
+
+	if (Derivator_Initialize(deriv, deviceId) != XST_SUCCESS)
+		return XST_FAILURE;
+
+	Derivator_SetOverRide(deriv, FULL_DERIVATOR_OVERRIDE);
+	Derivator_SetIncrements(deriv, test_b);
+	Derivator_SetIncrements(deriv, test_a);
+	if (Derivator_GetSpeed(deriv) != ((test_a - test_b) * 256))
+		return XST_FAILURE;
+
+	Derivator_SetOverRide(deriv, 0);
 	return XST_SUCCESS;
 }

@@ -1,4 +1,4 @@
-12:04:07 **** Auto Build of configuration Debug for project Evo ****
+16:53:28 **** Auto Build of configuration Debug for project Evo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -15,9 +15,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  28088	   1220	  22616	  51924	   cad4	Evo.elf
+  29772	   1236	  22712	  53720	   d1d8	Evo.elf
 'Finished building: Evo.elf.size'
 ' '
 
-12:04:07 Build Finished (took 595ms)
+16:53:29 Build Finished (took 649ms)
 

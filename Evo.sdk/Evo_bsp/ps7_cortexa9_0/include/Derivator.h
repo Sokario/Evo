@@ -15,7 +15,7 @@ extern "C" {
 #define DERIVATOR_S00_AXI_SLV_REG0_OFFSET 0     // OverRide
 #define DERIVATOR_S00_AXI_SLV_REG1_OFFSET 4     // Increments
 #define DERIVATOR_S00_AXI_SLV_REG2_OFFSET 8     // Speed
-#define DERIVATOR_S00_AXI_SLV_REG3_OFFSET 12    // REG3
+#define DERIVATOR_S00_AXI_SLV_REG3_OFFSET 12    // Frequence
 
 
 /**************************** Type Definitions *****************************/
@@ -116,10 +116,11 @@ int Derivator_CfgInitialize(Derivator *InstancePtr, UINTPTR EffectiveAddr);
  */
 void Derivator_SetOverRide(Derivator *InstancePtr, u32 Data);
 u32 Derivator_GetOverRide(Derivator *InstancePtr);
-
 void Derivator_SetIncrements(Derivator *InstancePtr, u32 Data);
 u32 Derivator_GetIncrements(Derivator *InstancePtr);
+
 u32 Derivator_GetSpeed(Derivator *InstancePtr);
+u32 Derivator_GetFrequence(Derivator *InstancePtr);
 
 #ifdef _cplusplus
 }

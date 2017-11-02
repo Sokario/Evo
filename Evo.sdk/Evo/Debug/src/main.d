@@ -20,7 +20,8 @@ src/main.o src/main.o: ../src/main.c \
  ../../Evo_bsp/ps7_cortexa9_0/include/Encoder.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/Derivator.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/PID.h \
- ../../Evo_bsp/ps7_cortexa9_0/include/Subtractor.h
+ ../../Evo_bsp/ps7_cortexa9_0/include/Subtractor.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h
 
 ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:
 
@@ -69,3 +70,5 @@ src/main.o src/main.o: ../src/main.c \
 ../../Evo_bsp/ps7_cortexa9_0/include/PID.h:
 
 ../../Evo_bsp/ps7_cortexa9_0/include/Subtractor.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:

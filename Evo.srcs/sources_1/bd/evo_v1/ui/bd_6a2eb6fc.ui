@@ -26,8 +26,8 @@ preplace inst Motor_1 -pg 1 -lvl 5 -y 1240 -defaultsOSRD
 preplace inst Subtractor_0 -pg 1 -lvl 3 -y 1070 -defaultsOSRD
 preplace inst Encoder_1 -pg 1 -lvl 3 -y 1670 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -y 880 -defaultsOSRD
-preplace inst Subtractor_1 -pg 1 -lvl 3 -y 1240 -defaultsOSRD
 preplace inst Derivator_0 -pg 1 -lvl 4 -y 1470 -defaultsOSRD
+preplace inst Subtractor_1 -pg 1 -lvl 3 -y 1240 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 1 -y 1120 -defaultsOSRD
 preplace netloc processing_system7_0_DDR 1 0 2 N 1290 410J
 preplace netloc ps7_0_axi_periph_M02_AXI 1 2 3 850 1350 N 1350 1530

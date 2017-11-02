@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Tue Oct 31 15:08:57 2017
+--Date        : Thu Nov  2 15:03:28 2017
 --Host        : LogOut-AsusPro running 64-bit major release  (build 9200)
 --Command     : generate_target evo_v1.bd
 --Design      : evo_v1
@@ -3958,10 +3958,11 @@ architecture STRUCTURE of evo_v1 is
     s00_axi_aresetn : in STD_LOGIC
   );
   end component evo_v1_Encoder_1_1;
-  component evo_v1_Derivator_0_0 is
+  component evo_v1_Subtractor_0_0 is
   port (
-    Increments : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Speed : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    Add : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Subtract : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Result : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_awvalid : in STD_LOGIC;
@@ -3984,11 +3985,12 @@ architecture STRUCTURE of evo_v1 is
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC
   );
-  end component evo_v1_Derivator_0_0;
-  component evo_v1_Derivator_1_0 is
+  end component evo_v1_Subtractor_0_0;
+  component evo_v1_Subtractor_1_0 is
   port (
-    Increments : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Speed : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    Add : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Subtract : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Result : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_awvalid : in STD_LOGIC;
@@ -4011,7 +4013,7 @@ architecture STRUCTURE of evo_v1 is
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC
   );
-  end component evo_v1_Derivator_1_0;
+  end component evo_v1_Subtractor_1_0;
   component evo_v1_PID_0_0 is
   port (
     Reset : in STD_LOGIC;
@@ -4070,11 +4072,10 @@ architecture STRUCTURE of evo_v1 is
     s00_axi_aresetn : in STD_LOGIC
   );
   end component evo_v1_PID_1_0;
-  component evo_v1_Subtractor_0_0 is
+  component evo_v1_Derivator_0_0 is
   port (
-    Add : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Subtract : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Result : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    Increments : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Speed : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_awvalid : in STD_LOGIC;
@@ -4097,12 +4098,11 @@ architecture STRUCTURE of evo_v1 is
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC
   );
-  end component evo_v1_Subtractor_0_0;
-  component evo_v1_Subtractor_1_0 is
+  end component evo_v1_Derivator_0_0;
+  component evo_v1_Derivator_1_0 is
   port (
-    Add : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Subtract : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Result : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    Increments : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Speed : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_awvalid : in STD_LOGIC;
@@ -4125,7 +4125,7 @@ architecture STRUCTURE of evo_v1 is
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC
   );
-  end component evo_v1_Subtractor_1_0;
+  end component evo_v1_Derivator_1_0;
   signal Derivator_0_Speed : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal Derivator_1_Speed : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal Encoder_0_Increments : STD_LOGIC_VECTOR ( 31 downto 0 );
