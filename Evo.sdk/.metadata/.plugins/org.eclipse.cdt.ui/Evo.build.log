@@ -1,10 +1,14 @@
-16:53:28 **** Auto Build of configuration Debug for project Evo ****
+20:06:56 **** Auto Build of configuration Debug for project Evo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/main.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 200;
+      ^~~~
 'Finished building: ../src/main.c'
 ' '
 'Building target: Evo.elf'
@@ -15,9 +19,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  29772	   1236	  22712	  53720	   d1d8	Evo.elf
+  37040	   1252	  22760	  61052	   ee7c	Evo.elf
 'Finished building: Evo.elf.size'
 ' '
 
-16:53:29 Build Finished (took 649ms)
+20:06:57 Build Finished (took 695ms)
 

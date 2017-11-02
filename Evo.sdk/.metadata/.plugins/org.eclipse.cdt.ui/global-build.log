@@ -19661,3 +19661,1342 @@ arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
   29772	   1236	  22712	  53720	   d1d8	Evo.elf
 'Finished building: Evo.elf.size'
 ' '
+16:56:04 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:92:12: error: redeclaration of 'DerivLeft' with no linkage
+  Derivator DerivLeft, DerivRight;
+            ^~~~~~~~~
+../src/main.c:79:12: note: previous declaration of 'DerivLeft' was here
+  Derivator DerivLeft, DerivRight;
+            ^~~~~~~~~
+../src/main.c:92:23: error: redeclaration of 'DerivRight' with no linkage
+  Derivator DerivLeft, DerivRight;
+                       ^~~~~~~~~~
+../src/main.c:79:23: note: previous declaration of 'DerivRight' was here
+  Derivator DerivLeft, DerivRight;
+                       ^~~~~~~~~~
+make: *** [src/main.o] Erreur 1
+16:56:53 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:12: error: redeclaration of 'DerivLeft' with no linkage
+  Derivator DerivLeft, DerivRight;
+            ^~~~~~~~~
+../src/main.c:83:12: note: previous declaration of 'DerivLeft' was here
+  Derivator DerivLeft, DerivRight;
+            ^~~~~~~~~
+../src/main.c:96:23: error: redeclaration of 'DerivRight' with no linkage
+  Derivator DerivLeft, DerivRight;
+                       ^~~~~~~~~~
+../src/main.c:83:23: note: previous declaration of 'DerivRight' was here
+  Derivator DerivLeft, DerivRight;
+                       ^~~~~~~~~~
+make: *** [src/main.o] Erreur 1
+16:56:58 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:12: error: redeclaration of 'DerivLeft' with no linkage
+  Derivator DerivLeft, DerivRight;
+            ^~~~~~~~~
+../src/main.c:83:12: note: previous declaration of 'DerivLeft' was here
+  Derivator DerivLeft, DerivRight;
+            ^~~~~~~~~
+../src/main.c:96:23: error: redeclaration of 'DerivRight' with no linkage
+  Derivator DerivLeft, DerivRight;
+                       ^~~~~~~~~~
+../src/main.c:83:23: note: previous declaration of 'DerivRight' was here
+  Derivator DerivLeft, DerivRight;
+                       ^~~~~~~~~~
+make: *** [src/main.o] Erreur 1
+16:57:35 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:20: warning: unused variable 'PIDRightMotor' [-Wunused-variable]
+  PID PIDLeftMotor, PIDRightMotor;
+                    ^~~~~~~~~~~~~
+../src/main.c:96:6: warning: unused variable 'PIDLeftMotor' [-Wunused-variable]
+  PID PIDLeftMotor, PIDRightMotor;
+      ^~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29956	   1236	  22712	  53904	   d290	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+16:59:10 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:97:25: error: incompatible type for argument 1 of 'PID_Initialization'
+  if (PID_Initialization(PIDLeftMotor, PID_LEFT_MOTOR_DEVICE_ID) != XST_SUCCESS)
+                         ^~~~~~~~~~~~
+../src/main.c:51:5: note: expected 'PID * {aka struct <anonymous> *}' but argument is of type 'PID {aka struct <anonymous>}'
+ int PID_Initialization(PID *pid, u16 deviceID);
+     ^~~~~~~~~~~~~~~~~~
+../src/main.c:102:25: error: incompatible type for argument 1 of 'PID_Initialization'
+  if (PID_Initialization(PIDRightMotor, PID_RIGHT_MOTOR_DEVICE_ID) != XST_SUCCESS)
+                         ^~~~~~~~~~~~~
+../src/main.c:51:5: note: expected 'PID * {aka struct <anonymous> *}' but argument is of type 'PID {aka struct <anonymous>}'
+ int PID_Initialization(PID *pid, u16 deviceID);
+     ^~~~~~~~~~~~~~~~~~
+make: *** [src/main.o] Erreur 1
+16:59:25 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:97: undefined reference to `PID_Initialization'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:102: undefined reference to `PID_Initialization'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Evo.elf] Erreur 1
+17:00:15 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:187:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ PID_Initialization(PID *pid, u16 deviceId)
+ ^~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:192:27: error: 'deriv' undeclared (first use in this function)
+  if (Derivator_Initialize(deriv, deviceId) != XST_SUCCESS)
+                           ^~~~~
+../src/main.c:192:27: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Erreur 1
+17:00:54 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:186:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ PID_Initialization(PID *pid, u16 deviceId)
+ ^~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:191:27: error: 'deriv' undeclared (first use in this function)
+  if (Derivator_Initialize(deriv, deviceId) != XST_SUCCESS)
+                           ^~~~~
+../src/main.c:191:27: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Erreur 1
+17:00:59 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:187:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ PID_Initialization(PID *pid, u16 deviceId)
+ ^~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:192:27: error: 'deriv' undeclared (first use in this function)
+  if (Derivator_Initialize(deriv, deviceId) != XST_SUCCESS)
+                           ^~~~~
+../src/main.c:192:27: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Erreur 1
+17:01:04 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:187:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ PID_Initialization(PID *pid, u16 deviceId)
+ ^~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:192:27: error: 'deriv' undeclared (first use in this function)
+  if (Derivator_Initialize(deriv, deviceId) != XST_SUCCESS)
+                           ^~~~~
+../src/main.c:192:27: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Erreur 1
+17:01:18 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:188:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ PID_Initialization(PID *pid, u16 deviceId)
+ ^~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:193:27: error: 'deriv' undeclared (first use in this function)
+  if (Derivator_Initialize(deriv, deviceId) != XST_SUCCESS)
+                           ^~~~~
+../src/main.c:193:27: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Erreur 1
+17:02:20 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:188:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ PID_Initialization(PID *pid, u16 deviceId)
+ ^~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:195:24: error: 'deriv' undeclared (first use in this function)
+  Derivator_SetOverRide(deriv, FULL_DERIVATOR_OVERRIDE);
+                        ^~~~~
+../src/main.c:195:24: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:195:31: error: 'FULL_DERIVATOR_OVERRIDE' undeclared (first use in this function)
+  Derivator_SetOverRide(deriv, FULL_DERIVATOR_OVERRIDE);
+                               ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:196:33: error: 'test_b' undeclared (first use in this function)
+  Derivator_SetIncrements(deriv, test_b);
+                                 ^~~~~~
+../src/main.c:197:33: error: 'test_a' undeclared (first use in this function)
+  Derivator_SetIncrements(deriv, test_a);
+                                 ^~~~~~
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+make: *** [src/main.o] Erreur 1
+17:02:29 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:188:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ PID_Initialization(PID *pid, u16 deviceId)
+ ^~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:196:18: error: 'deriv' undeclared (first use in this function)
+  PID_SetOverRide(deriv, 0);
+                  ^~~~~
+../src/main.c:196:18: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+make: *** [src/main.o] Erreur 1
+17:02:34 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:188:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ PID_Initialization(PID *pid, u16 deviceId)
+ ^~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36676	   1252	  22712	  60640	   ece0	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:02:45 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36676	   1252	  22712	  60640	   ece0	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:04:14 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:195:2: warning: implicit declaration of function 'PID_PS_SetOverRide_Error' [-Wimplicit-function-declaration]
+  PID_PS_SetOverRide_Error(pid);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `PID_Initialization':
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:195: undefined reference to `PID_PS_SetOverRide_Error'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Evo.elf] Erreur 1
+17:05:00 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36684	   1252	  22712	  60648	   ece8	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:05:58 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:199:17: warning: pointer targets in passing argument 2 of 'write' differ in signedness [-Wpointer-sign]
+  write(&UartPs, str, sizeof(str));
+                 ^~~
+In file included from ../src/main.c:14:0:
+../src/write.h:13:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'char *'
+ void write(XUartPs *ptr, u8 *str, u32 size);
+      ^~~~~
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37092	   1252	  22712	  61056	   ee80	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:06:06 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37092	   1252	  22712	  61056	   ee80	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:06:14 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:202:2: error: expected ';' before 'PID_SetOverRide'
+  PID_SetOverRide(pid, 0);
+  ^~~~~~~~~~~~~~~
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+make: *** [src/main.o] Erreur 1
+17:06:16 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37104	   1252	  22712	  61068	   ee8c	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:06:19 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+17:06:55 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37112	   1252	  22712	  61076	   ee94	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:06:57 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+17:07:37 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:197:2: warning: implicit declaration of function 'PID_PS_OverRide_Propotional' [-Wimplicit-function-declaration]
+  PID_PS_OverRide_Propotional(pid);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `PID_Initialization':
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:197: undefined reference to `PID_PS_OverRide_Propotional'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Evo.elf] Erreur 1
+17:07:42 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37120	   1252	  22712	  61084	   ee9c	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:07:44 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+17:08:14 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37128	   1252	  22712	  61092	   eea4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:08:16 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+17:08:35 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37136	   1252	  22712	  61100	   eeac	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:08:36 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+17:09:03 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37144	   1252	  22712	  61108	   eeb4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:09:05 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+17:09:24 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:201:2: warning: implicit declaration of function 'PID_PS_OverRide_Min' [-Wimplicit-function-declaration]
+  PID_PS_OverRide_Min(pid);
+  ^~~~~~~~~~~~~~~~~~~
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `PID_Initialization':
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:201: undefined reference to `PID_PS_OverRide_Min'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Evo.elf] Erreur 1
+17:09:29 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:201:2: warning: implicit declaration of function 'PID_PS_OverRide_Min_Output' [-Wimplicit-function-declaration]
+  PID_PS_OverRide_Min_Output(pid);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `PID_Initialization':
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:201: undefined reference to `PID_PS_OverRide_Min_Output'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Evo.elf] Erreur 1
+17:09:33 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37152	   1252	  22712	  61116	   eebc	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:09:36 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+17:09:54 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37160	   1252	  22712	  61124	   eec4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:09:56 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+17:13:07 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:198:0: warning: "PID_OVERRIDE_MAX_OUTPUT" redefined
+  #define PID_OVERRIDE_MAX_OUTPUT 255
+ 
+../src/main.c:197:0: note: this is the location of the previous definition
+  #define PID_OVERRIDE_MAX_OUTPUT 127
+ 
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37180	   1252	  22712	  61144	   eed8	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:13:13 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37180	   1252	  22712	  61144	   eed8	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:14:24 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37196	   1252	  22712	  61160	   eee8	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:16:04 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37448	   1252	  22712	  61412	   efe4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:16:18 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37448	   1252	  22712	  61412	   efe4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:16:51 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37448	   1252	  22712	  61412	   efe4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:17:03 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37028	   1252	  22712	  60992	   ee40	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+17:17:05 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+19:00:09 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+19:00:25 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+19:51:05 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37028	   1252	  22744	  61024	   ee60	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+19:51:16 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 100;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37028	   1252	  22760	  61040	   ee70	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+19:52:04 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37048	   1252	  22760	  61060	   ee84	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+19:54:04 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37444	   1252	  22760	  61456	   f010	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+19:54:15 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37456	   1252	  22760	  61468	   f01c	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+19:54:18 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+19:56:05 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37484	   1252	  22760	  61496	   f038	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+19:56:10 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+19:57:12 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37484	   1252	  22760	  61496	   f038	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+19:57:14 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+19:58:52 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37516	   1252	  22760	  61528	   f058	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+19:58:55 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+19:59:40 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37528	   1252	  22760	  61540	   f064	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+19:59:42 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+20:00:37 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37524	   1252	  22760	  61536	   f060	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+20:00:40 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+20:01:51 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37544	   1252	  22760	  61556	   f074	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+20:01:55 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+20:02:53 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:246:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37544	   1252	  22760	  61556	   f074	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+20:03:19 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37556	   1252	  22760	  61568	   f080	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+20:03:21 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+20:04:11 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37536	   1252	  22760	  61548	   f06c	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+20:04:13 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+20:04:43 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37564	   1252	  22760	  61576	   f088	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+20:04:45 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+20:05:09 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+20:05:31 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+20:05:43 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+20:06:07 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37564	   1252	  22760	  61576	   f088	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+20:06:10 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+20:06:56 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'PID_Initialization':
+../src/main.c:190:6: warning: unused variable 'test' [-Wunused-variable]
+  u32 test = 200;
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37040	   1252	  22760	  61052	   ee7c	Evo.elf
+'Finished building: Evo.elf.size'
+' '
