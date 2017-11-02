@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:PID:1.0
--- IP Revision: 17
+-- IP Revision: 18
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -131,7 +131,7 @@ ARCHITECTURE evo_v1_PID_0_0_arch OF evo_v1_PID_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF evo_v1_PID_0_0_arch : ARCHITECTURE IS "evo_v1_PID_0_0,PID_v1_0,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF evo_v1_PID_0_0_arch: ARCHITECTURE IS "evo_v1_PID_0_0,PID_v1_0,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=PID,x_ipVersion=1.0,x_ipCoreRevision=17,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=6,KP=1,KI=1,KD=1,DIVIDER=390625,DEADBAND=1,MIN=1,MAX=1}";
+  ATTRIBUTE CORE_GENERATION_INFO OF evo_v1_PID_0_0_arch: ARCHITECTURE IS "evo_v1_PID_0_0,PID_v1_0,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=PID,x_ipVersion=1.0,x_ipCoreRevision=18,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=6,KP=1,KI=1,KD=1,DIVIDER=390625,DEADBAND=1,MIN=1,MAX=1}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF Reset: SIGNAL IS "xilinx.com:signal:reset:1.0 Reset RST";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR";

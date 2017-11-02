@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Tue Oct 31 15:14:40 2017'>
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Tue Oct 31 19:00:21 2017'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="1909853" description="" />
-  <keyValuePair key="date_generated" value="Tue Oct 31 15:14:40 2017" description="" />
+  <keyValuePair key="date_generated" value="Tue Oct 31 19:00:21 2017" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2017.2 (64-bit)" description="" />
   <keyValuePair key="project_id" value="172fa338e10f4ad28ab65cd5c4ffce97" description="" />
-  <keyValuePair key="project_iteration" value="2" description="" />
+  <keyValuePair key="project_iteration" value="3" description="" />
   <keyValuePair key="random_id" value="42cca8ef808657cf9990937370070287" description="" />
   <keyValuePair key="registration_id" value="42cca8ef808657cf9990937370070287" description="" />
   <keyValuePair key="route_design" value="TRUE" description="" />
@@ -116,13 +116,13 @@
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="deadband" value="1" description="" />
    <keyValuePair key="divider" value="390625" description="" />
-   <keyValuePair key="iptotal" value="2" description="" />
+   <keyValuePair key="iptotal" value="1" description="" />
    <keyValuePair key="kd" value="1" description="" />
    <keyValuePair key="ki" value="1" description="" />
    <keyValuePair key="kp" value="1" description="" />
    <keyValuePair key="max" value="1" description="" />
    <keyValuePair key="min" value="1" description="" />
-   <keyValuePair key="x_ipcorerevision" value="17" description="" />
+   <keyValuePair key="x_ipcorerevision" value="18" description="" />
    <keyValuePair key="x_iplanguage" value="VHDL" description="" />
    <keyValuePair key="x_iplibrary" value="user" description="" />
    <keyValuePair key="x_ipname" value="PID" description="" />
@@ -131,7 +131,28 @@
    <keyValuePair key="x_ipvendor" value="xilinx.com" description="" />
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
-  <section name="Subtractor_v1_0/1" level="2" order="7" description="">
+  <section name="PID_v1_0/2" level="2" order="7" description="">
+   <keyValuePair key="c_s00_axi_addr_width" value="6" description="" />
+   <keyValuePair key="c_s00_axi_data_width" value="32" description="" />
+   <keyValuePair key="core_container" value="NA" description="" />
+   <keyValuePair key="deadband" value="1" description="" />
+   <keyValuePair key="divider" value="390625" description="" />
+   <keyValuePair key="iptotal" value="1" description="" />
+   <keyValuePair key="kd" value="1" description="" />
+   <keyValuePair key="ki" value="1" description="" />
+   <keyValuePair key="kp" value="1" description="" />
+   <keyValuePair key="max" value="1" description="" />
+   <keyValuePair key="min" value="1" description="" />
+   <keyValuePair key="x_ipcorerevision" value="18" description="" />
+   <keyValuePair key="x_iplanguage" value="VHDL" description="" />
+   <keyValuePair key="x_iplibrary" value="user" description="" />
+   <keyValuePair key="x_ipname" value="PID" description="" />
+   <keyValuePair key="x_ipproduct" value="Vivado 2017.2" description="" />
+   <keyValuePair key="x_ipsimlanguage" value="MIXED" description="" />
+   <keyValuePair key="x_ipvendor" value="xilinx.com" description="" />
+   <keyValuePair key="x_ipversion" value="1.0" description="" />
+  </section>
+  <section name="Subtractor_v1_0/1" level="2" order="8" description="">
    <keyValuePair key="c_s00_axi_addr_width" value="4" description="" />
    <keyValuePair key="c_s00_axi_data_width" value="32" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
@@ -145,7 +166,7 @@
    <keyValuePair key="x_ipvendor" value="xilinx.com" description="" />
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
-  <section name="axi_crossbar_v2_1_14_axi_crossbar/1" level="2" order="8" description="">
+  <section name="axi_crossbar_v2_1_14_axi_crossbar/1" level="2" order="9" description="">
    <keyValuePair key="c_axi_addr_width" value="32" description="" />
    <keyValuePair key="c_axi_aruser_width" value="1" description="" />
    <keyValuePair key="c_axi_awuser_width" value="1" description="" />
@@ -186,7 +207,7 @@
    <keyValuePair key="x_ipvendor" value="xilinx.com" description="" />
    <keyValuePair key="x_ipversion" value="2.1" description="" />
   </section>
-  <section name="axi_gpio/1" level="2" order="9" description="">
+  <section name="axi_gpio/1" level="2" order="10" description="">
    <keyValuePair key="c_all_inputs" value="1" description="" />
    <keyValuePair key="c_all_inputs_2" value="1" description="" />
    <keyValuePair key="c_all_outputs" value="0" description="" />
@@ -213,7 +234,7 @@
    <keyValuePair key="x_ipvendor" value="xilinx.com" description="" />
    <keyValuePair key="x_ipversion" value="2.0" description="" />
   </section>
-  <section name="axi_gpio/2" level="2" order="10" description="">
+  <section name="axi_gpio/2" level="2" order="11" description="">
    <keyValuePair key="c_all_inputs" value="0" description="" />
    <keyValuePair key="c_all_inputs_2" value="0" description="" />
    <keyValuePair key="c_all_outputs" value="0" description="" />
@@ -240,7 +261,7 @@
    <keyValuePair key="x_ipvendor" value="xilinx.com" description="" />
    <keyValuePair key="x_ipversion" value="2.0" description="" />
   </section>
-  <section name="axi_protocol_converter_v2_1_13_axi_protocol_converter/1" level="2" order="11" description="">
+  <section name="axi_protocol_converter_v2_1_13_axi_protocol_converter/1" level="2" order="12" description="">
    <keyValuePair key="c_axi_addr_width" value="32" description="" />
    <keyValuePair key="c_axi_aruser_width" value="1" description="" />
    <keyValuePair key="c_axi_awuser_width" value="1" description="" />
@@ -268,7 +289,7 @@
    <keyValuePair key="x_ipvendor" value="xilinx.com" description="" />
    <keyValuePair key="x_ipversion" value="2.1" description="" />
   </section>
-  <section name="proc_sys_reset/1" level="2" order="12" description="">
+  <section name="proc_sys_reset/1" level="2" order="13" description="">
    <keyValuePair key="c_aux_reset_high" value="0" description="" />
    <keyValuePair key="c_aux_rst_width" value="4" description="" />
    <keyValuePair key="c_ext_reset_high" value="0" description="" />
@@ -289,7 +310,7 @@
    <keyValuePair key="x_ipvendor" value="xilinx.com" description="" />
    <keyValuePair key="x_ipversion" value="5.0" description="" />
   </section>
-  <section name="processing_system7_v5.5_user_configuration/1" level="2" order="13" description="">
+  <section name="processing_system7_v5.5_user_configuration/1" level="2" order="14" description="">
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="iptotal" value="1" description="" />
    <keyValuePair key="pcw_apu_clk_ratio_enable" value="6:2:1" description="" />
@@ -594,7 +615,7 @@
    <keyValuePair key="pcw_wdt_peripheral_enable" value="0" description="" />
    <keyValuePair key="pcw_wdt_peripheral_freqmhz" value="133.333333" description="" />
   </section>
-  <section name="processing_system7_v5_5_processing_system7/1" level="2" order="14" description="">
+  <section name="processing_system7_v5_5_processing_system7/1" level="2" order="15" description="">
    <keyValuePair key="c_dm_width" value="4" description="" />
    <keyValuePair key="c_dq_width" value="32" description="" />
    <keyValuePair key="c_dqs_width" value="4" description="" />
@@ -766,7 +787,7 @@
    <keyValuePair key="output_load" value="5.000000" description="" />
    <keyValuePair key="output_toggle" value="12.500000" description="" />
    <keyValuePair key="package" value="clg400" description="" />
-   <keyValuePair key="pct_clock_constrained" value="5.000000" description="" />
+   <keyValuePair key="pct_clock_constrained" value="4.000000" description="" />
    <keyValuePair key="pct_inputs_defined" value="0" description="" />
    <keyValuePair key="platform" value="nt64" description="" />
    <keyValuePair key="process" value="typical" description="" />
@@ -1169,10 +1190,10 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:00:33s" description="" />
+   <keyValuePair key="elapsed" value="00:00:34s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
-   <keyValuePair key="memory_gain" value="400.367MB" description="" />
-   <keyValuePair key="memory_peak" value="726.715MB" description="" />
+   <keyValuePair key="memory_gain" value="399.598MB" description="" />
+   <keyValuePair key="memory_peak" value="725.883MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="10" description="">
@@ -1237,24 +1258,26 @@
    <keyValuePair key="editproperties" value="2" description="" />
    <keyValuePair key="editredo" value="3" description="" />
    <keyValuePair key="editundo" value="8" description="" />
-   <keyValuePair key="newexporthardware" value="2" description="" />
-   <keyValuePair key="newlaunchhardware" value="2" description="" />
+   <keyValuePair key="newexporthardware" value="3" description="" />
+   <keyValuePair key="newlaunchhardware" value="4" description="" />
    <keyValuePair key="newproject" value="1" description="" />
-   <keyValuePair key="openblockdesign" value="6" description="" />
+   <keyValuePair key="openblockdesign" value="7" description="" />
    <keyValuePair key="openproject" value="1" description="" />
    <keyValuePair key="recustomizecore" value="2" description="" />
    <keyValuePair key="regeneratersblayout" value="3" description="" />
-   <keyValuePair key="runbitgen" value="2" description="" />
+   <keyValuePair key="reportipstatus" value="1" description="" />
+   <keyValuePair key="runbitgen" value="3" description="" />
    <keyValuePair key="saversbdesign" value="2" description="" />
    <keyValuePair key="showpropertyeditor" value="2" description="" />
    <keyValuePair key="toolssettings" value="2" description="" />
    <keyValuePair key="ui.views.c.ak" value="1" description="" />
-   <keyValuePair key="zoomfit" value="22" description="" />
+   <keyValuePair key="upgradeip" value="1" description="" />
+   <keyValuePair key="zoomfit" value="23" description="" />
    <keyValuePair key="zoomin" value="1" description="" />
    <keyValuePair key="zoomout" value="5" description="" />
   </section>
   <section name="other_data" level="2" order="2" description="">
-   <keyValuePair key="guimode" value="6" description="" />
+   <keyValuePair key="guimode" value="8" description="" />
   </section>
   <section name="project_data" level="2" order="3" description="">
    <keyValuePair key="constraintsetcount" value="1" description="" />
@@ -1283,8 +1306,8 @@
    <keyValuePair key="synthesisstrategy" value="Vivado Synthesis Defaults" description="" />
    <keyValuePair key="target_language" value="VHDL" description="" />
    <keyValuePair key="target_simulator" value="XSim" description="" />
-   <keyValuePair key="totalimplruns" value="6" description="" />
-   <keyValuePair key="totalsynthesisruns" value="6" description="" />
+   <keyValuePair key="totalimplruns" value="8" description="" />
+   <keyValuePair key="totalsynthesisruns" value="8" description="" />
   </section>
  </section>
 </section>

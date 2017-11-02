@@ -1,0 +1,115 @@
+/*
+ * main.c
+ *
+ *  Created on: 25 oct. 2017
+ *      Author: LogOut
+ */
+
+#include "platform.h"
+#include "xil_printf.h"
+
+#include "xparameters.h"
+#include "sleep.h"
+#include "xgpio.h"
+
+#include "write.h"
+
+#include "Motor.h"
+#include "Encoder.h"
+#include "Derivator.h"
+#include "PID.h"
+#include "Subtractor.h"
+
+
+#include "xuartps.h"
+XUartPs  Uart_Ps;
+u8 str[16];
+
+int UartPsHelloWorldExample(u16 DeviceId)
+{
+	u8 HelloWorld[] = "Hello World";
+	int SentCount = 0;
+	int Status;
+	XUartPs_Config *Config;
+
+	/*
+	 * Initialize the UART driver so that it's ready to use
+	 * Look up the configuration in the config table and then initialize it.
+	 */
+	Config = XUartPs_LookupConfig(DeviceId);
+	if (NULL == Config) {
+		return XST_FAILURE;
+	}
+
+	Status = XUartPs_CfgInitialize(&Uart_Ps, Config, Config->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	XUartPs_SetBaudRate(&Uart_Ps, 115200);
+
+	while (SentCount < (sizeof(HelloWorld) - 1)) {
+		// Transmit the data
+		SentCount += XUartPs_Send(&Uart_Ps,
+					   &HelloWorld[SentCount], 1);
+	}
+
+	return SentCount;
+}
+
+int main()
+{
+	XGpio input, output;
+	int button_data = 0;
+	int switch_data = 0;
+
+	XGpio_Initialize(&input, XPAR_AXI_GPIO_0_DEVICE_ID);	//initialize input XGpio variable
+	XGpio_Initialize(&output, XPAR_AXI_GPIO_1_DEVICE_ID);	//initialize output XGpio variable
+
+	XGpio_SetDataDirection(&input, 1, 0xF);			//set first channel tristate buffer to input
+	XGpio_SetDataDirection(&input, 2, 0xF);			//set second channel tristate buffer to input
+
+	XGpio_SetDataDirection(&output, 1, 0x0);		//set first channel tristate buffer to output
+
+	init_platform();
+	UartPsHelloWorldExample(0);
+
+	while(1){
+		memset(str, '\0', sizeof(str));
+		strcpy(str, "Dragon\r\n");
+		int SentCount = 0;
+		while (!XUartPs_IsTransmitEmpty(&Uart_Ps));
+		while (SentCount < (sizeof(str) - 1)) {
+				SentCount += XUartPs_Send(&Uart_Ps, &str[SentCount], 1);
+		}
+		while (XUartPs_IsSending(&Uart_Ps));
+		XUartPs_SetOptions(&Uart_Ps, XUARTPS_OPTION_RESET_TX);
+		write(&Uart_Ps, "Pony :P\r\n");
+
+
+		switch_data = XGpio_DiscreteRead(&input, 2);	//get switch data
+
+		XGpio_DiscreteWrite(&output, 1, switch_data);	//write switch data to the LEDs
+
+		button_data = XGpio_DiscreteRead(&input, 1);	//get button data
+
+		//print message dependent on whether one or more buttons are pressed
+		if(button_data == 0b0000) //do nothing
+			write(&Uart_Ps, "0 button\n\r");
+		else if(button_data == 0b0001)
+			write(&Uart_Ps, "button 0 pressed\n\r");
+		else if(button_data == 0b0010)
+			write(&Uart_Ps, "button 1 pressed\n\r");
+		else if(button_data == 0b0100)
+			write(&Uart_Ps, "button 2 pressed\n\r");
+		else if(button_data == 0b1000)
+			write(&Uart_Ps, "button 3 pressed\n\r");
+		else
+			write(&Uart_Ps, "multiple buttons pressed\n\r");
+
+		usleep(200000);			//delay
+
+	}
+	cleanup_platform();
+	return 0;
+}

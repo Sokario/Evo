@@ -1,0 +1,31 @@
+/*
+ * write.c
+ *
+ *  Created on: 6 oct. 2017
+ *      Author: LogOut
+ */
+
+#include "xparameters.h"
+#include "xuartps.h"
+//#include "xcoresightpsdcc.h"
+
+
+void write(XUartPs *ptr, u8 *str)
+{
+	int SentCount = 0;
+	while (XUartPs_IsSending(ptr));
+	while (!XUartPs_IsTransmitEmpty(ptr));
+	while (SentCount < (sizeof(str) - 1)) {
+			SentCount += XUartPs_Send(ptr, &str[SentCount], 1);
+	}
+//	while (XUartPs_IsSending(ptr));
+	while (!XUartPs_IsTransmitEmpty(ptr));
+	//	XUartPs_SetOptions(ptr, XUARTPS_OPTION_RESET_TX);
+/*	while (!XUartPs_IsTransmitEmpty(ptr));
+	while (*str != (char8) 0) {
+		XCoresightPs_DccSendByte(ptr->Config.BaseAddress, *str);
+		str++;
+	}
+	while (XUartPs_IsSending(ptr));
+	XUartPs_SetOptions(ptr, XUARTPS_OPTION_RESET_TX);*/
+}

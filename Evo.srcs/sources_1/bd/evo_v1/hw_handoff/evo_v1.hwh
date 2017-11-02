@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Oct 31 15:09:21 2017" VIVADOVERSION="2017.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Oct 31 18:56:13 2017" VIVADOVERSION="2017.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="evo_v1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -3935,8 +3935,6 @@
             <CONNECTION INSTANCE="Encoder_1" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="Derivator_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="Derivator_1" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="PID_0" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="PID_1" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="Subtractor_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="Subtractor_1" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ACLK"/>
@@ -3953,6 +3951,8 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M09_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M10_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M11_ACLK"/>
+            <CONNECTION INSTANCE="PID_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="PID_1" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -6292,8 +6292,6 @@
             <CONNECTION INSTANCE="Encoder_1" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="Derivator_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="Derivator_1" PORT="s00_axi_aresetn"/>
-            <CONNECTION INSTANCE="PID_0" PORT="s00_axi_aresetn"/>
-            <CONNECTION INSTANCE="PID_1" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="Subtractor_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="Subtractor_1" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ARESETN"/>
@@ -6309,6 +6307,8 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M09_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M10_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M11_ARESETN"/>
+            <CONNECTION INSTANCE="PID_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="PID_1" PORT="s00_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

@@ -1,0 +1,28 @@
+/*
+ * write.c
+ *
+ *  Created on: 6 oct. 2017
+ *      Author: LogOut
+ */
+
+#include "xparameters.h"
+#include "xuartps.h"
+#include "sleep.h"
+#include "xcoresightpsdcc.h"
+
+
+void write(XUartPs *ptr, u8 *str)
+{
+	int SentCount = 0, LoopCount = 0;
+	while (XUartPs_IsSending(ptr)) {
+			LoopCount++;
+		}
+	while (!XUartPs_IsTransmitEmpty(ptr));
+	while (SentCount < 15) {
+			SentCount += XUartPs_Send(ptr, &str[SentCount], 1);
+	}
+	while (XUartPs_IsSending(ptr)) {
+			LoopCount++;
+		}
+//	XUartPs_SetOptions(ptr, XUARTPS_OPTION_RESET_TX);
+}

@@ -8,15 +8,21 @@ LD_SRCS += \
 
 C_SRCS += \
 ../src/main.c \
-../src/platform.c 
+../src/platform.c \
+../src/read.c \
+../src/write.c 
 
 OBJS += \
 ./src/main.o \
-./src/platform.o 
+./src/platform.o \
+./src/read.o \
+./src/write.o 
 
 C_DEPS += \
 ./src/main.d \
-./src/platform.d 
+./src/platform.d \
+./src/read.d \
+./src/write.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

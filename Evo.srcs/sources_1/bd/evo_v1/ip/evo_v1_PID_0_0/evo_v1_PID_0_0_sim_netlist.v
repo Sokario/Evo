@@ -1,17 +1,398 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Mon Oct 30 15:11:38 2017
+// Date        : Tue Oct 31 18:57:22 2017
 // Host        : LogOut-AsusPro running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top evo_v1_PID_0_0 -prefix
-//               evo_v1_PID_0_0_ Test_PID_0_0_sim_netlist.v
-// Design      : Test_PID_0_0
+// Command     : write_verilog -force -mode funcsim
+//               C:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_PID_0_0/evo_v1_PID_0_0_sim_netlist.v
+// Design      : evo_v1_PID_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z010clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "evo_v1_PID_0_0,PID_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "PID_v1_0,Vivado 2017.2" *) 
+(* NotValidForBitStream *)
+module evo_v1_PID_0_0
+   (Reset,
+    Error,
+    Command,
+    Ended,
+    s00_axi_awaddr,
+    s00_axi_awprot,
+    s00_axi_awvalid,
+    s00_axi_awready,
+    s00_axi_wdata,
+    s00_axi_wstrb,
+    s00_axi_wvalid,
+    s00_axi_wready,
+    s00_axi_bresp,
+    s00_axi_bvalid,
+    s00_axi_bready,
+    s00_axi_araddr,
+    s00_axi_arprot,
+    s00_axi_arvalid,
+    s00_axi_arready,
+    s00_axi_rdata,
+    s00_axi_rresp,
+    s00_axi_rvalid,
+    s00_axi_rready,
+    s00_axi_aclk,
+    s00_axi_aresetn);
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 Reset RST" *) input Reset;
+  input [31:0]Error;
+  output [31:0]Command;
+  output Ended;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) input [5:0]s00_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY" *) output s00_axi_awready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WDATA" *) input [31:0]s00_axi_wdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB" *) input [3:0]s00_axi_wstrb;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WVALID" *) input s00_axi_wvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WREADY" *) output s00_axi_wready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BRESP" *) output [1:0]s00_axi_bresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BVALID" *) output s00_axi_bvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BREADY" *) input s00_axi_bready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *) input [5:0]s00_axi_araddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT" *) input [2:0]s00_axi_arprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID" *) input s00_axi_arvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY" *) output s00_axi_arready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) input s00_axi_rready;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK, xilinx.com:signal:clock:1.0 s00_axi_aclk CLK" *) input s00_axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST, xilinx.com:signal:reset:1.0 s00_axi_aresetn RST" *) input s00_axi_aresetn;
+
+  wire \<const0> ;
+  wire [31:0]Command;
+  wire Ended;
+  wire [31:0]Error;
+  wire \PID_v1_0_S00_AXI_inst/enable_i ;
+  wire \PID_v1_0_S00_AXI_inst/error_choice0 ;
+  wire \PID_v1_0_S00_AXI_inst/reset_i ;
+  wire Reset;
+  wire U0_n_10;
+  wire U0_n_11;
+  wire U0_n_12;
+  wire U0_n_13;
+  wire U0_n_14;
+  wire U0_n_15;
+  wire U0_n_16;
+  wire U0_n_17;
+  wire U0_n_18;
+  wire U0_n_19;
+  wire U0_n_20;
+  wire U0_n_21;
+  wire U0_n_22;
+  wire U0_n_23;
+  wire U0_n_24;
+  wire U0_n_25;
+  wire U0_n_26;
+  wire U0_n_27;
+  wire U0_n_28;
+  wire U0_n_29;
+  wire U0_n_30;
+  wire U0_n_31;
+  wire U0_n_32;
+  wire U0_n_33;
+  wire U0_n_34;
+  wire U0_n_35;
+  wire U0_n_36;
+  wire U0_n_37;
+  wire U0_n_38;
+  wire U0_n_39;
+  wire U0_n_8;
+  wire U0_n_9;
+  wire integral_i0_carry_i_8_n_0;
+  wire proportional_i0__0_i_10_n_0;
+  wire proportional_i0__0_i_11_n_0;
+  wire proportional_i0__0_i_12_n_0;
+  wire proportional_i0__0_i_13_n_0;
+  wire proportional_i0__0_i_14_n_0;
+  wire proportional_i0__0_i_15_n_0;
+  wire proportional_i0__0_i_1_n_0;
+  wire proportional_i0__0_i_2_n_0;
+  wire proportional_i0__0_i_3_n_0;
+  wire proportional_i0__0_i_4_n_0;
+  wire proportional_i0__0_i_5_n_0;
+  wire proportional_i0__0_i_6_n_0;
+  wire proportional_i0__0_i_7_n_0;
+  wire proportional_i0__0_i_8_n_0;
+  wire proportional_i0__0_i_9_n_0;
+  wire proportional_i0_i_10_n_0;
+  wire proportional_i0_i_11_n_0;
+  wire proportional_i0_i_12_n_0;
+  wire proportional_i0_i_13_n_0;
+  wire proportional_i0_i_14_n_0;
+  wire proportional_i0_i_15_n_0;
+  wire proportional_i0_i_16_n_0;
+  wire proportional_i0_i_17_n_0;
+  wire proportional_i0_i_1_n_0;
+  wire proportional_i0_i_2_n_0;
+  wire proportional_i0_i_3_n_0;
+  wire proportional_i0_i_4_n_0;
+  wire proportional_i0_i_5_n_0;
+  wire proportional_i0_i_6_n_0;
+  wire proportional_i0_i_7_n_0;
+  wire proportional_i0_i_8_n_0;
+  wire proportional_i0_i_9_n_0;
+  wire s00_axi_aclk;
+  wire [5:0]s00_axi_araddr;
+  wire s00_axi_aresetn;
+  wire s00_axi_arready;
+  wire s00_axi_arvalid;
+  wire [5:0]s00_axi_awaddr;
+  wire s00_axi_awready;
+  wire s00_axi_awvalid;
+  wire s00_axi_bready;
+  wire s00_axi_bvalid;
+  wire [31:0]s00_axi_rdata;
+  wire s00_axi_rready;
+  wire s00_axi_rvalid;
+  wire [31:0]s00_axi_wdata;
+  wire s00_axi_wready;
+  wire [3:0]s00_axi_wstrb;
+  wire s00_axi_wvalid;
+
+  assign s00_axi_bresp[1] = \<const0> ;
+  assign s00_axi_bresp[0] = \<const0> ;
+  assign s00_axi_rresp[1] = \<const0> ;
+  assign s00_axi_rresp[0] = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  evo_v1_PID_0_0_PID_v1_0 U0
+       (.Command(Command),
+        .D({U0_n_8,U0_n_9,U0_n_10,U0_n_11,U0_n_12,U0_n_13,U0_n_14,U0_n_15,U0_n_16,U0_n_17,U0_n_18,U0_n_19,U0_n_20,U0_n_21,U0_n_22,U0_n_23,U0_n_24,U0_n_25,U0_n_26,U0_n_27,U0_n_28,U0_n_29,U0_n_30,U0_n_31,U0_n_32,U0_n_33,U0_n_34,U0_n_35,U0_n_36,U0_n_37,U0_n_38,U0_n_39}),
+        .Ended(Ended),
+        .Error(Error),
+        .Q({proportional_i0_i_1_n_0,proportional_i0_i_2_n_0,proportional_i0_i_3_n_0,proportional_i0_i_4_n_0,proportional_i0_i_5_n_0,proportional_i0_i_6_n_0,proportional_i0_i_7_n_0,proportional_i0_i_8_n_0,proportional_i0_i_9_n_0,proportional_i0_i_10_n_0,proportional_i0_i_11_n_0,proportional_i0_i_12_n_0,proportional_i0_i_13_n_0,proportional_i0_i_14_n_0,proportional_i0_i_15_n_0,proportional_i0_i_16_n_0,proportional_i0_i_17_n_0}),
+        .Reset(Reset),
+        .enable_i(\PID_v1_0_S00_AXI_inst/enable_i ),
+        .error_choice0(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .integral_i0_carry_i_8(integral_i0_carry_i_8_n_0),
+        .proportional_i0__0_i_1({proportional_i0__0_i_1_n_0,proportional_i0__0_i_2_n_0,proportional_i0__0_i_3_n_0,proportional_i0__0_i_4_n_0,proportional_i0__0_i_5_n_0,proportional_i0__0_i_6_n_0,proportional_i0__0_i_7_n_0,proportional_i0__0_i_8_n_0,proportional_i0__0_i_9_n_0,proportional_i0__0_i_10_n_0,proportional_i0__0_i_11_n_0,proportional_i0__0_i_12_n_0,proportional_i0__0_i_13_n_0,proportional_i0__0_i_14_n_0,proportional_i0__0_i_15_n_0}),
+        .reset_i(\PID_v1_0_S00_AXI_inst/reset_i ),
+        .s00_axi_aclk(s00_axi_aclk),
+        .s00_axi_araddr(s00_axi_araddr[5:2]),
+        .s00_axi_aresetn(s00_axi_aresetn),
+        .s00_axi_arready(s00_axi_arready),
+        .s00_axi_arvalid(s00_axi_arvalid),
+        .s00_axi_awaddr(s00_axi_awaddr[5:2]),
+        .s00_axi_awready(s00_axi_awready),
+        .s00_axi_awvalid(s00_axi_awvalid),
+        .s00_axi_bready(s00_axi_bready),
+        .s00_axi_bvalid(s00_axi_bvalid),
+        .s00_axi_rdata(s00_axi_rdata),
+        .s00_axi_rready(s00_axi_rready),
+        .s00_axi_rvalid(s00_axi_rvalid),
+        .s00_axi_wdata(s00_axi_wdata),
+        .s00_axi_wready(s00_axi_wready),
+        .s00_axi_wstrb(s00_axi_wstrb),
+        .s00_axi_wvalid(s00_axi_wvalid));
+  FDCE integral_i0_carry_i_8
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/enable_i ),
+        .CLR(\PID_v1_0_S00_AXI_inst/reset_i ),
+        .D(1'b1),
+        .Q(integral_i0_carry_i_8_n_0));
+  FDRE proportional_i0__0_i_1
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_8),
+        .Q(proportional_i0__0_i_1_n_0),
+        .R(1'b0));
+  FDRE proportional_i0__0_i_10
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_17),
+        .Q(proportional_i0__0_i_10_n_0),
+        .R(1'b0));
+  FDRE proportional_i0__0_i_11
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_18),
+        .Q(proportional_i0__0_i_11_n_0),
+        .R(1'b0));
+  FDRE proportional_i0__0_i_12
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_19),
+        .Q(proportional_i0__0_i_12_n_0),
+        .R(1'b0));
+  FDRE proportional_i0__0_i_13
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_20),
+        .Q(proportional_i0__0_i_13_n_0),
+        .R(1'b0));
+  FDRE proportional_i0__0_i_14
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_21),
+        .Q(proportional_i0__0_i_14_n_0),
+        .R(1'b0));
+  FDRE proportional_i0__0_i_15
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_22),
+        .Q(proportional_i0__0_i_15_n_0),
+        .R(1'b0));
+  FDRE proportional_i0__0_i_2
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_9),
+        .Q(proportional_i0__0_i_2_n_0),
+        .R(1'b0));
+  FDRE proportional_i0__0_i_3
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_10),
+        .Q(proportional_i0__0_i_3_n_0),
+        .R(1'b0));
+  FDRE proportional_i0__0_i_4
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_11),
+        .Q(proportional_i0__0_i_4_n_0),
+        .R(1'b0));
+  FDRE proportional_i0__0_i_5
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_12),
+        .Q(proportional_i0__0_i_5_n_0),
+        .R(1'b0));
+  FDRE proportional_i0__0_i_6
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_13),
+        .Q(proportional_i0__0_i_6_n_0),
+        .R(1'b0));
+  FDRE proportional_i0__0_i_7
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_14),
+        .Q(proportional_i0__0_i_7_n_0),
+        .R(1'b0));
+  FDRE proportional_i0__0_i_8
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_15),
+        .Q(proportional_i0__0_i_8_n_0),
+        .R(1'b0));
+  FDRE proportional_i0__0_i_9
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_16),
+        .Q(proportional_i0__0_i_9_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_1
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_23),
+        .Q(proportional_i0_i_1_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_10
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_32),
+        .Q(proportional_i0_i_10_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_11
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_33),
+        .Q(proportional_i0_i_11_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_12
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_34),
+        .Q(proportional_i0_i_12_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_13
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_35),
+        .Q(proportional_i0_i_13_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_14
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_36),
+        .Q(proportional_i0_i_14_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_15
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_37),
+        .Q(proportional_i0_i_15_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_16
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_38),
+        .Q(proportional_i0_i_16_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_17
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_39),
+        .Q(proportional_i0_i_17_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_2
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_24),
+        .Q(proportional_i0_i_2_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_3
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_25),
+        .Q(proportional_i0_i_3_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_4
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_26),
+        .Q(proportional_i0_i_4_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_5
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_27),
+        .Q(proportional_i0_i_5_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_6
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_28),
+        .Q(proportional_i0_i_6_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_7
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_29),
+        .Q(proportional_i0_i_7_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_8
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_30),
+        .Q(proportional_i0_i_8_n_0),
+        .R(1'b0));
+  FDRE proportional_i0_i_9
+       (.C(s00_axi_aclk),
+        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
+        .D(U0_n_31),
+        .Q(proportional_i0_i_9_n_0),
+        .R(1'b0));
+endmodule
+
+(* ORIG_REF_NAME = "PID_v1_0" *) 
 module evo_v1_PID_0_0_PID_v1_0
    (s00_axi_awready,
     s00_axi_wready,
@@ -156,6 +537,7 @@ module evo_v1_PID_0_0_PID_v1_0
         .O(axi_rvalid_i_1_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "PID_v1_0_S00_AXI" *) 
 module evo_v1_PID_0_0_PID_v1_0_S00_AXI
    (s00_axi_awready,
     s00_axi_wready,
@@ -19123,386 +19505,6 @@ module evo_v1_PID_0_0_PID_v1_0_S00_AXI
         .CLR(AR),
         .D(variation_i0[9]),
         .Q(variation_i[9]));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "Test_PID_0_0,PID_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "PID_v1_0,Vivado 2017.2" *) 
-(* NotValidForBitStream *)
-module evo_v1_PID_0_0
-   (Reset,
-    Error,
-    Command,
-    Ended,
-    s00_axi_awaddr,
-    s00_axi_awprot,
-    s00_axi_awvalid,
-    s00_axi_awready,
-    s00_axi_wdata,
-    s00_axi_wstrb,
-    s00_axi_wvalid,
-    s00_axi_wready,
-    s00_axi_bresp,
-    s00_axi_bvalid,
-    s00_axi_bready,
-    s00_axi_araddr,
-    s00_axi_arprot,
-    s00_axi_arvalid,
-    s00_axi_arready,
-    s00_axi_rdata,
-    s00_axi_rresp,
-    s00_axi_rvalid,
-    s00_axi_rready,
-    s00_axi_aclk,
-    s00_axi_aresetn);
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 Reset RST" *) input Reset;
-  input [31:0]Error;
-  output [31:0]Command;
-  output Ended;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) input [5:0]s00_axi_awaddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY" *) output s00_axi_awready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WDATA" *) input [31:0]s00_axi_wdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB" *) input [3:0]s00_axi_wstrb;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WVALID" *) input s00_axi_wvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WREADY" *) output s00_axi_wready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BRESP" *) output [1:0]s00_axi_bresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BVALID" *) output s00_axi_bvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BREADY" *) input s00_axi_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *) input [5:0]s00_axi_araddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT" *) input [2:0]s00_axi_arprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID" *) input s00_axi_arvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY" *) output s00_axi_arready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) input s00_axi_rready;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK, xilinx.com:signal:clock:1.0 s00_axi_aclk CLK" *) input s00_axi_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST, xilinx.com:signal:reset:1.0 s00_axi_aresetn RST" *) input s00_axi_aresetn;
-
-  wire \<const0> ;
-  wire [31:0]Command;
-  wire Ended;
-  wire [31:0]Error;
-  wire \PID_v1_0_S00_AXI_inst/enable_i ;
-  wire \PID_v1_0_S00_AXI_inst/error_choice0 ;
-  wire \PID_v1_0_S00_AXI_inst/reset_i ;
-  wire Reset;
-  wire U0_n_10;
-  wire U0_n_11;
-  wire U0_n_12;
-  wire U0_n_13;
-  wire U0_n_14;
-  wire U0_n_15;
-  wire U0_n_16;
-  wire U0_n_17;
-  wire U0_n_18;
-  wire U0_n_19;
-  wire U0_n_20;
-  wire U0_n_21;
-  wire U0_n_22;
-  wire U0_n_23;
-  wire U0_n_24;
-  wire U0_n_25;
-  wire U0_n_26;
-  wire U0_n_27;
-  wire U0_n_28;
-  wire U0_n_29;
-  wire U0_n_30;
-  wire U0_n_31;
-  wire U0_n_32;
-  wire U0_n_33;
-  wire U0_n_34;
-  wire U0_n_35;
-  wire U0_n_36;
-  wire U0_n_37;
-  wire U0_n_38;
-  wire U0_n_39;
-  wire U0_n_8;
-  wire U0_n_9;
-  wire integral_i0_carry_i_8_n_0;
-  wire proportional_i0__0_i_10_n_0;
-  wire proportional_i0__0_i_11_n_0;
-  wire proportional_i0__0_i_12_n_0;
-  wire proportional_i0__0_i_13_n_0;
-  wire proportional_i0__0_i_14_n_0;
-  wire proportional_i0__0_i_15_n_0;
-  wire proportional_i0__0_i_1_n_0;
-  wire proportional_i0__0_i_2_n_0;
-  wire proportional_i0__0_i_3_n_0;
-  wire proportional_i0__0_i_4_n_0;
-  wire proportional_i0__0_i_5_n_0;
-  wire proportional_i0__0_i_6_n_0;
-  wire proportional_i0__0_i_7_n_0;
-  wire proportional_i0__0_i_8_n_0;
-  wire proportional_i0__0_i_9_n_0;
-  wire proportional_i0_i_10_n_0;
-  wire proportional_i0_i_11_n_0;
-  wire proportional_i0_i_12_n_0;
-  wire proportional_i0_i_13_n_0;
-  wire proportional_i0_i_14_n_0;
-  wire proportional_i0_i_15_n_0;
-  wire proportional_i0_i_16_n_0;
-  wire proportional_i0_i_17_n_0;
-  wire proportional_i0_i_1_n_0;
-  wire proportional_i0_i_2_n_0;
-  wire proportional_i0_i_3_n_0;
-  wire proportional_i0_i_4_n_0;
-  wire proportional_i0_i_5_n_0;
-  wire proportional_i0_i_6_n_0;
-  wire proportional_i0_i_7_n_0;
-  wire proportional_i0_i_8_n_0;
-  wire proportional_i0_i_9_n_0;
-  wire s00_axi_aclk;
-  wire [5:0]s00_axi_araddr;
-  wire s00_axi_aresetn;
-  wire s00_axi_arready;
-  wire s00_axi_arvalid;
-  wire [5:0]s00_axi_awaddr;
-  wire s00_axi_awready;
-  wire s00_axi_awvalid;
-  wire s00_axi_bready;
-  wire s00_axi_bvalid;
-  wire [31:0]s00_axi_rdata;
-  wire s00_axi_rready;
-  wire s00_axi_rvalid;
-  wire [31:0]s00_axi_wdata;
-  wire s00_axi_wready;
-  wire [3:0]s00_axi_wstrb;
-  wire s00_axi_wvalid;
-
-  assign s00_axi_bresp[1] = \<const0> ;
-  assign s00_axi_bresp[0] = \<const0> ;
-  assign s00_axi_rresp[1] = \<const0> ;
-  assign s00_axi_rresp[0] = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  evo_v1_PID_0_0_PID_v1_0 U0
-       (.Command(Command),
-        .D({U0_n_8,U0_n_9,U0_n_10,U0_n_11,U0_n_12,U0_n_13,U0_n_14,U0_n_15,U0_n_16,U0_n_17,U0_n_18,U0_n_19,U0_n_20,U0_n_21,U0_n_22,U0_n_23,U0_n_24,U0_n_25,U0_n_26,U0_n_27,U0_n_28,U0_n_29,U0_n_30,U0_n_31,U0_n_32,U0_n_33,U0_n_34,U0_n_35,U0_n_36,U0_n_37,U0_n_38,U0_n_39}),
-        .Ended(Ended),
-        .Error(Error),
-        .Q({proportional_i0_i_1_n_0,proportional_i0_i_2_n_0,proportional_i0_i_3_n_0,proportional_i0_i_4_n_0,proportional_i0_i_5_n_0,proportional_i0_i_6_n_0,proportional_i0_i_7_n_0,proportional_i0_i_8_n_0,proportional_i0_i_9_n_0,proportional_i0_i_10_n_0,proportional_i0_i_11_n_0,proportional_i0_i_12_n_0,proportional_i0_i_13_n_0,proportional_i0_i_14_n_0,proportional_i0_i_15_n_0,proportional_i0_i_16_n_0,proportional_i0_i_17_n_0}),
-        .Reset(Reset),
-        .enable_i(\PID_v1_0_S00_AXI_inst/enable_i ),
-        .error_choice0(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .integral_i0_carry_i_8(integral_i0_carry_i_8_n_0),
-        .proportional_i0__0_i_1({proportional_i0__0_i_1_n_0,proportional_i0__0_i_2_n_0,proportional_i0__0_i_3_n_0,proportional_i0__0_i_4_n_0,proportional_i0__0_i_5_n_0,proportional_i0__0_i_6_n_0,proportional_i0__0_i_7_n_0,proportional_i0__0_i_8_n_0,proportional_i0__0_i_9_n_0,proportional_i0__0_i_10_n_0,proportional_i0__0_i_11_n_0,proportional_i0__0_i_12_n_0,proportional_i0__0_i_13_n_0,proportional_i0__0_i_14_n_0,proportional_i0__0_i_15_n_0}),
-        .reset_i(\PID_v1_0_S00_AXI_inst/reset_i ),
-        .s00_axi_aclk(s00_axi_aclk),
-        .s00_axi_araddr(s00_axi_araddr[5:2]),
-        .s00_axi_aresetn(s00_axi_aresetn),
-        .s00_axi_arready(s00_axi_arready),
-        .s00_axi_arvalid(s00_axi_arvalid),
-        .s00_axi_awaddr(s00_axi_awaddr[5:2]),
-        .s00_axi_awready(s00_axi_awready),
-        .s00_axi_awvalid(s00_axi_awvalid),
-        .s00_axi_bready(s00_axi_bready),
-        .s00_axi_bvalid(s00_axi_bvalid),
-        .s00_axi_rdata(s00_axi_rdata),
-        .s00_axi_rready(s00_axi_rready),
-        .s00_axi_rvalid(s00_axi_rvalid),
-        .s00_axi_wdata(s00_axi_wdata),
-        .s00_axi_wready(s00_axi_wready),
-        .s00_axi_wstrb(s00_axi_wstrb),
-        .s00_axi_wvalid(s00_axi_wvalid));
-  FDCE integral_i0_carry_i_8
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/enable_i ),
-        .CLR(\PID_v1_0_S00_AXI_inst/reset_i ),
-        .D(1'b1),
-        .Q(integral_i0_carry_i_8_n_0));
-  FDRE proportional_i0__0_i_1
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_8),
-        .Q(proportional_i0__0_i_1_n_0),
-        .R(1'b0));
-  FDRE proportional_i0__0_i_10
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_17),
-        .Q(proportional_i0__0_i_10_n_0),
-        .R(1'b0));
-  FDRE proportional_i0__0_i_11
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_18),
-        .Q(proportional_i0__0_i_11_n_0),
-        .R(1'b0));
-  FDRE proportional_i0__0_i_12
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_19),
-        .Q(proportional_i0__0_i_12_n_0),
-        .R(1'b0));
-  FDRE proportional_i0__0_i_13
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_20),
-        .Q(proportional_i0__0_i_13_n_0),
-        .R(1'b0));
-  FDRE proportional_i0__0_i_14
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_21),
-        .Q(proportional_i0__0_i_14_n_0),
-        .R(1'b0));
-  FDRE proportional_i0__0_i_15
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_22),
-        .Q(proportional_i0__0_i_15_n_0),
-        .R(1'b0));
-  FDRE proportional_i0__0_i_2
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_9),
-        .Q(proportional_i0__0_i_2_n_0),
-        .R(1'b0));
-  FDRE proportional_i0__0_i_3
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_10),
-        .Q(proportional_i0__0_i_3_n_0),
-        .R(1'b0));
-  FDRE proportional_i0__0_i_4
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_11),
-        .Q(proportional_i0__0_i_4_n_0),
-        .R(1'b0));
-  FDRE proportional_i0__0_i_5
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_12),
-        .Q(proportional_i0__0_i_5_n_0),
-        .R(1'b0));
-  FDRE proportional_i0__0_i_6
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_13),
-        .Q(proportional_i0__0_i_6_n_0),
-        .R(1'b0));
-  FDRE proportional_i0__0_i_7
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_14),
-        .Q(proportional_i0__0_i_7_n_0),
-        .R(1'b0));
-  FDRE proportional_i0__0_i_8
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_15),
-        .Q(proportional_i0__0_i_8_n_0),
-        .R(1'b0));
-  FDRE proportional_i0__0_i_9
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_16),
-        .Q(proportional_i0__0_i_9_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_1
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_23),
-        .Q(proportional_i0_i_1_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_10
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_32),
-        .Q(proportional_i0_i_10_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_11
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_33),
-        .Q(proportional_i0_i_11_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_12
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_34),
-        .Q(proportional_i0_i_12_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_13
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_35),
-        .Q(proportional_i0_i_13_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_14
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_36),
-        .Q(proportional_i0_i_14_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_15
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_37),
-        .Q(proportional_i0_i_15_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_16
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_38),
-        .Q(proportional_i0_i_16_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_17
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_39),
-        .Q(proportional_i0_i_17_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_2
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_24),
-        .Q(proportional_i0_i_2_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_3
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_25),
-        .Q(proportional_i0_i_3_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_4
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_26),
-        .Q(proportional_i0_i_4_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_5
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_27),
-        .Q(proportional_i0_i_5_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_6
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_28),
-        .Q(proportional_i0_i_6_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_7
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_29),
-        .Q(proportional_i0_i_7_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_8
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_30),
-        .Q(proportional_i0_i_8_n_0),
-        .R(1'b0));
-  FDRE proportional_i0_i_9
-       (.C(s00_axi_aclk),
-        .CE(\PID_v1_0_S00_AXI_inst/error_choice0 ),
-        .D(U0_n_31),
-        .Q(proportional_i0_i_9_n_0),
-        .R(1'b0));
 endmodule
 `ifndef GLBL
 `define GLBL

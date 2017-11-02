@@ -5,12 +5,12 @@
  *      Author: LogOut
  */
 
-#include <stdio.h>
-#include "platform.h"
-#include "xil_printf.h"
-
-#include "sleep.h"
 #include "xgpio.h"
+#include "sleep.h"
+#include "xparameters.h"
+
+#include "read.h"
+#include "write.h"
 
 #include "Motor.h"
 #include "Encoder.h"
@@ -19,50 +19,100 @@
 #include "Subtractor.h"
 
 
+#define INPUT_DEVICE_ID XPAR_GPIO_0_DEVICE_ID
+#define BUTTON 1
+#define SWITCH 2
+u32 inputDirectionMask = 0xF;
+#define OUTPUT_DEVICE_ID XPAR_GPIO_1_DEVICE_ID
+#define LED 1
+u32 outputDirectionMask = 0x0;
+int Debug_Initialization(XGpio *In, XGpio *Out);
+
+#include "xuartps.h"
+#define UART_PS_DEVICE_ID XPAR_XUARTPS_0_DEVICE_ID
+u8 command[16];
+u8 result[16];
+int UartPs_Initialization(XUartPs * Uart, u16 deviceId);
+
+#define SUBTRACTOR_LEFT_DEVICE_ID XPAR_SUBTRACTOR_0_DEVICE_ID
+#define SUBTRACTOR_RIGHT_DEVICE_ID XPAR_SUBTRACTOR_1_DEVICE_ID
+
 int main()
 {
-	XGpio input, output;
-   int button_data = 0;
-   int switch_data = 0;
+	XGpio Input, Output;
+	XUartPs UartPs;
+	Subtractor SubLeft, SubRight;
 
-   XGpio_Initialize(&input, XPAR_AXI_GPIO_0_DEVICE_ID);	//initialize input XGpio variable
-   XGpio_Initialize(&output, XPAR_AXI_GPIO_1_DEVICE_ID);	//initialize output XGpio variable
+	int button_data = 0;
+	int switch_data = 0;
 
-   XGpio_SetDataDirection(&input, 1, 0xF);			//set first channel tristate buffer to input
-   XGpio_SetDataDirection(&input, 2, 0xF);			//set second channel tristate buffer to input
+	Debug_Initialization(&Input, &Output);
+	UartPs_Initialization(&UartPs, UART_PS_DEVICE_ID);
+	Subtractor_Initialize(&SubLeft, SUBTRACTOR_LEFT_DEVICE_ID);
+	Subtractor_Initialize(&SubRight, SUBTRACTOR_RIGHT_DEVICE_ID);
 
-   XGpio_SetDataDirection(&output, 1, 0x0);		//set first channel tristate buffer to output
+	while(1){
+		memset(command, '\0', sizeof(command));
+		memset(result, '\0', sizeof(result));
 
-   init_platform();
+		read(&UartPs, command, sizeof(command));
+		write(&UartPs, command, sizeof(command));
+		usleep(1000000);
+		strcpy(result, "OK0000000Dragon0");
+		write(&UartPs, result, sizeof(result));
 
-   while(1){
-	  switch_data = XGpio_DiscreteRead(&input, 2);	//get switch data
+		switch_data = XGpio_DiscreteRead(&Input, SWITCH);	//get switch data
+		XGpio_DiscreteWrite(&Output, 1, switch_data);	//write switch data to the LEDs
+		button_data = XGpio_DiscreteRead(&Input, BUTTON);	//get button data
+		//print message dependent on whether one or more buttons are pressed
+		if(button_data == 0b0000){} //do nothing
+		else if(button_data == 0b0001)
+			write(&UartPs, (u8 *)"OKbutton0Pressed", 16);
+		else if(button_data == 0b0010)
+			write(&UartPs, (u8 *)"OKbutton1Pressed", 16);
+		else if(button_data == 0b0100)
+			write(&UartPs, (u8 *)"OKbutton2Pressed", 16);
+		else if(button_data == 0b1000)
+			write(&UartPs, (u8 *)"OKbutton3Pressed", 16);
+		else
+			write(&UartPs, (u8 *)"OKmultipleButton", 16);
+	}
+	return XST_SUCCESS;
+}
 
-	  XGpio_DiscreteWrite(&output, 1, switch_data);	//write switch data to the LEDs
+int UartPs_Initialization(XUartPs * Uart, u16 deviceId)
+{
+	int status;
+	XUartPs_Config *config;
 
-	  button_data = XGpio_DiscreteRead(&input, 1);	//get button data
+	config = XUartPs_LookupConfig(deviceId);
+	if (config == NULL)
+		return XST_FAILURE;
 
-	  //print message dependent on whether one or more buttons are pressed
-	  if(button_data == 0b0000){} //do nothing
+	status = XUartPs_CfgInitialize(Uart, config, config->BaseAddress);
+	if (status != XST_SUCCESS)
+		return XST_FAILURE;
 
-	  else if(button_data == 0b0001)
-		 xil_printf("button 0 pressed\n\r");
+	XUartPs_SetBaudRate(Uart, 115200);
 
-	  else if(button_data == 0b0010)
-		 xil_printf("button 1 pressed\n\r");
+	return XST_SUCCESS;
+}
 
-	  else if(button_data == 0b0100)
-		 xil_printf("button 2 pressed\n\r");
+int Debug_Initialization(XGpio *In, XGpio *Out)
+{
+	int status;
 
-	  else if(button_data == 0b1000)
-		 xil_printf("button 3 pressed\n\r");
+	status = XGpio_Initialize(In, INPUT_DEVICE_ID);	//initialize input XGpio variable
+	if (status != XST_SUCCESS)
+			return XST_FAILURE;
+	status = XGpio_Initialize(Out, OUTPUT_DEVICE_ID);	//initialize output XGpio variable
+	if (status != XST_SUCCESS)
+			return XST_FAILURE;
 
-	  else
-		 xil_printf("multiple buttons pressed\n\r");
+	XGpio_SetDataDirection(In, BUTTON, inputDirectionMask);			//set first channel tristate buffer to input
+	XGpio_SetDataDirection(In, SWITCH, inputDirectionMask);			//set second channel tristate buffer to input
 
-	  usleep(200000);			//delay
+	XGpio_SetDataDirection(Out, LED, outputDirectionMask);		//set first channel tristate buffer to output
 
-   }
-   cleanup_platform();
-   return 0;
+	return XST_SUCCESS;
 }

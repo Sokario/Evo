@@ -190,9 +190,17 @@ proc create_root_design { parentCell } {
 
   # Create instance: PID_0, and set properties
   set PID_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:PID:1.0 PID_0 ]
+  set_property -dict [ list \
+CONFIG.MAX {1} \
+CONFIG.MIN {1} \
+ ] $PID_0
 
   # Create instance: PID_1, and set properties
   set PID_1 [ create_bd_cell -type ip -vlnv xilinx.com:user:PID:1.0 PID_1 ]
+  set_property -dict [ list \
+CONFIG.MAX {1} \
+CONFIG.MIN {1} \
+ ] $PID_1
 
   # Create instance: Subtractor_0, and set properties
   set Subtractor_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:Subtractor:1.0 Subtractor_0 ]

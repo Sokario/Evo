@@ -1,0 +1,94 @@
+/*
+ * main.c
+ *
+ *  Created on: 25 oct. 2017
+ *      Author: LogOut
+ */
+
+#include "xparameters.h"
+#include "sleep.h"
+#include "xgpio.h"
+
+#include "read.h"
+#include "write.h"
+
+#include "Motor.h"
+#include "Encoder.h"
+#include "Derivator.h"
+#include "PID.h"
+#include "Subtractor.h"
+
+
+#include "xuartps.h"
+XUartPs  UartPs;
+u8 command[16];
+u8 result[16];
+
+int UartPs_Initialization(u16 deviceId);
+
+int main()
+{
+	XGpio input, output;
+	int button_data = 0;
+	int switch_data = 0;
+
+	XGpio_Initialize(&input, XPAR_AXI_GPIO_0_DEVICE_ID);	//initialize input XGpio variable
+	XGpio_Initialize(&output, XPAR_AXI_GPIO_1_DEVICE_ID);	//initialize output XGpio variable
+
+	XGpio_SetDataDirection(&input, 1, 0xF);			//set first channel tristate buffer to input
+	XGpio_SetDataDirection(&input, 2, 0xF);			//set second channel tristate buffer to input
+
+	XGpio_SetDataDirection(&output, 1, 0x0);		//set first channel tristate buffer to output
+
+	UartPs_Initialization(UART_PS_DEVICE_ID);
+
+	while(1){
+		memset(command, '\0', sizeof(command));
+		memset(result, '\0', sizeof(result));
+
+		read(&UartPs, command, sizeof(command));
+		write(&UartPs, command, sizeof(command));
+		usleep(1000000);
+		strcpy(result, "OK0000000Dragon0");
+		write(&UartPs, result, sizeof(result));
+		usleep(1000000);
+
+		switch_data = XGpio_DiscreteRead(&input, 2);	//get switch data
+		XGpio_DiscreteWrite(&output, 1, switch_data);	//write switch data to the LEDs
+		button_data = XGpio_DiscreteRead(&input, 1);	//get button data
+		//print message dependent on whether one or more buttons are pressed
+		if(button_data == 0b0000){} //do nothing
+		else if(button_data == 0b0001)
+			write(&UartPs, (u8 *)"OKbutton0Pressed", 16);
+		else if(button_data == 0b0010)
+			write(&UartPs, (u8 *)"OKbutton1Pressed", 16);
+		else if(button_data == 0b0100)
+			write(&UartPs, (u8 *)"OKbutton2Pressed", 16);
+		else if(button_data == 0b1000)
+			write(&UartPs, (u8 *)"OKbutton3Pressed", 16);
+		else
+			write(&UartPs, (u8 *)"OKmultipleButton", 16);
+		usleep(1000000);			//delay
+	}
+	return XST_SUCCESS;
+}
+
+int UartPs_Initialization(u16 deviceId)
+{
+	int status;
+	XUartPs_Config *config;
+
+	config = XUartPs_LookupConfig(deviceId);
+	if (config == NULL) {
+		return XST_FAILURE;
+	}
+
+	status = XUartPs_CfgInitialize(&Uart_Ps, config, config->BaseAddress);
+	if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	XUartPs_SetBaudRate(&Uart_Ps, 115200);
+
+	return XST_SUCCESS;
+}
