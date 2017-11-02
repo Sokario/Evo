@@ -56,21 +56,24 @@ int main()
 		memset(command, '\0', sizeof(command));
 		memset(result, '\0', sizeof(result));
 
-		// Echo communication
 		read(&UartPs, command, sizeof(command));
 		write(&UartPs, command, sizeof(command));
 		usleep(500000);
+		strcpy(result, "OK0000000Dragon0");
+		write(&UartPs, result, sizeof(result));
+		usleep(500000);
 
-		// Subtractor test
 		Subtractor_SetOverRide(&SubLeft, 3);
-		Subtractor_SetAdd(&SubLeft, 123456000);
+		Subtractor_SetAdd(&SubLeft, 2000);
 		Subtractor_SetSubtract(&SubLeft, 1000);
-		u32 value = Subtractor_GetResult(&SubLeft);
-		char str[16];
-		itoa(value, str, 10);
-		write(&UartPs, (u8 *)str, sizeof(str));
+		if (Subtractor_GetResult(&SubLeft) == 1000){
+			write(&UartPs, (u8 *)"Subtractor GOOD!", 16);
+			char str[16];
+			itoa(1000, str, 10);
+			write(&UartPs, (u8 *)str, sizeof(str));
+		}else
+			write(&UartPs, (u8 *)"Subtractor NOPE!", 16);
 
-		// Debug
 		switch_data = XGpio_DiscreteRead(&Input, SWITCH);	//get switch data
 		XGpio_DiscreteWrite(&Output, 1, switch_data);	//write switch data to the LEDs
 		button_data = XGpio_DiscreteRead(&Input, BUTTON);	//get button data

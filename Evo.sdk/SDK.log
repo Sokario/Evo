@@ -6043,3 +6043,453 @@ con
 ----------------End of Script----------------
 
 11:26:45 INFO  : Launch script is exported to file 'C:\Projet\Vivado\Evo\Evo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_evo.elf_on_local.tcl'
+11:42:29 INFO  : Disconnected from the channel tcfchan#18.
+11:42:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771968A" && level==0} -index 1' command is executed.
+11:42:30 INFO  : 'fpga -state' command is executed.
+11:42:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:42:30 INFO  : Jtag cable 'Digilent Zybo 210279771968A' is selected.
+11:42:31 INFO  : 'jtag frequency' command is executed.
+11:42:31 INFO  : Sourcing of 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:42:31 INFO  : Context for 'APU' is selected.
+11:42:33 INFO  : Hardware design information is loaded from 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf'.
+11:42:33 INFO  : 'configparams force-mem-access 1' command is executed.
+11:42:33 INFO  : Context for 'APU' is selected.
+11:42:33 INFO  : 'stop' command is executed.
+11:42:33 INFO  : 'ps7_init' command is executed.
+11:42:33 INFO  : 'ps7_post_config' command is executed.
+11:42:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:42:33 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:42:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:42:34 INFO  : The application 'C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:42:34 INFO  : 'configparams force-mem-access 0' command is executed.
+11:42:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+loadhw -hw C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+dow C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:42:34 INFO  : Memory regions updated for context APU
+11:42:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:42:34 INFO  : 'con' command is executed.
+11:42:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+con
+----------------End of Script----------------
+
+11:42:34 INFO  : Launch script is exported to file 'C:\Projet\Vivado\Evo\Evo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_evo.elf_on_local.tcl'
+11:43:11 INFO  : Disconnected from the channel tcfchan#19.
+11:43:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771968A" && level==0} -index 1' command is executed.
+11:43:12 INFO  : 'fpga -state' command is executed.
+11:43:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:43:13 INFO  : Jtag cable 'Digilent Zybo 210279771968A' is selected.
+11:43:13 INFO  : 'jtag frequency' command is executed.
+11:43:13 INFO  : Sourcing of 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:43:13 INFO  : Context for 'APU' is selected.
+11:43:14 INFO  : Hardware design information is loaded from 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf'.
+11:43:14 INFO  : 'configparams force-mem-access 1' command is executed.
+11:43:14 INFO  : Context for 'APU' is selected.
+11:43:15 INFO  : 'stop' command is executed.
+11:43:15 INFO  : 'ps7_init' command is executed.
+11:43:15 INFO  : 'ps7_post_config' command is executed.
+11:43:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:43:15 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:43:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:43:15 INFO  : The application 'C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:43:15 INFO  : 'configparams force-mem-access 0' command is executed.
+11:43:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+loadhw -hw C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+dow C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:43:15 INFO  : Memory regions updated for context APU
+11:43:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:43:15 INFO  : 'con' command is executed.
+11:43:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+con
+----------------End of Script----------------
+
+11:43:15 INFO  : Launch script is exported to file 'C:\Projet\Vivado\Evo\Evo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_evo.elf_on_local.tcl'
+11:43:40 INFO  : Disconnected from the channel tcfchan#20.
+11:43:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771968A" && level==0} -index 1' command is executed.
+11:43:41 INFO  : 'fpga -state' command is executed.
+11:43:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:43:42 INFO  : Jtag cable 'Digilent Zybo 210279771968A' is selected.
+11:43:42 INFO  : 'jtag frequency' command is executed.
+11:43:42 INFO  : Sourcing of 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:43:42 INFO  : Context for 'APU' is selected.
+11:43:44 INFO  : Hardware design information is loaded from 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf'.
+11:43:44 INFO  : 'configparams force-mem-access 1' command is executed.
+11:43:44 INFO  : Context for 'APU' is selected.
+11:43:44 INFO  : 'stop' command is executed.
+11:43:44 INFO  : 'ps7_init' command is executed.
+11:43:44 INFO  : 'ps7_post_config' command is executed.
+11:43:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:43:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:43:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:43:45 INFO  : The application 'C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:43:45 INFO  : 'configparams force-mem-access 0' command is executed.
+11:43:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+loadhw -hw C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+dow C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:43:45 INFO  : Memory regions updated for context APU
+11:43:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:43:45 INFO  : 'con' command is executed.
+11:43:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+con
+----------------End of Script----------------
+
+11:43:45 INFO  : Launch script is exported to file 'C:\Projet\Vivado\Evo\Evo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_evo.elf_on_local.tcl'
+11:51:12 INFO  : Disconnected from the channel tcfchan#21.
+11:51:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771968A" && level==0} -index 1' command is executed.
+11:51:13 INFO  : 'fpga -state' command is executed.
+11:51:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:51:13 INFO  : Jtag cable 'Digilent Zybo 210279771968A' is selected.
+11:51:13 INFO  : 'jtag frequency' command is executed.
+11:51:13 INFO  : Sourcing of 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:51:13 INFO  : Context for 'APU' is selected.
+11:51:16 INFO  : Hardware design information is loaded from 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf'.
+11:51:16 INFO  : 'configparams force-mem-access 1' command is executed.
+11:51:16 INFO  : Context for 'APU' is selected.
+11:51:16 INFO  : 'stop' command is executed.
+11:51:16 INFO  : 'ps7_init' command is executed.
+11:51:16 INFO  : 'ps7_post_config' command is executed.
+11:51:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:51:16 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:51:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:51:16 INFO  : The application 'C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:51:16 INFO  : 'configparams force-mem-access 0' command is executed.
+11:51:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+loadhw -hw C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+dow C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:51:16 INFO  : Memory regions updated for context APU
+11:51:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:51:17 INFO  : 'con' command is executed.
+11:51:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+con
+----------------End of Script----------------
+
+11:51:17 INFO  : Launch script is exported to file 'C:\Projet\Vivado\Evo\Evo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_evo.elf_on_local.tcl'
+11:57:04 INFO  : Disconnected from the channel tcfchan#22.
+11:57:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771968A" && level==0} -index 1' command is executed.
+11:57:05 INFO  : 'fpga -state' command is executed.
+11:57:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:57:05 INFO  : Jtag cable 'Digilent Zybo 210279771968A' is selected.
+11:57:05 INFO  : 'jtag frequency' command is executed.
+11:57:05 INFO  : Sourcing of 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:57:05 INFO  : Context for 'APU' is selected.
+11:57:08 INFO  : Hardware design information is loaded from 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf'.
+11:57:08 INFO  : 'configparams force-mem-access 1' command is executed.
+11:57:08 INFO  : Context for 'APU' is selected.
+11:57:08 INFO  : 'stop' command is executed.
+11:57:08 INFO  : 'ps7_init' command is executed.
+11:57:08 INFO  : 'ps7_post_config' command is executed.
+11:57:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:57:08 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:57:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:57:08 INFO  : The application 'C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:57:08 INFO  : 'configparams force-mem-access 0' command is executed.
+11:57:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+loadhw -hw C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+dow C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:57:08 INFO  : Memory regions updated for context APU
+11:57:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:57:09 INFO  : 'con' command is executed.
+11:57:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+con
+----------------End of Script----------------
+
+11:57:09 INFO  : Launch script is exported to file 'C:\Projet\Vivado\Evo\Evo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_evo.elf_on_local.tcl'
+11:58:01 INFO  : Disconnected from the channel tcfchan#23.
+11:58:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771968A" && level==0} -index 1' command is executed.
+11:58:02 INFO  : 'fpga -state' command is executed.
+11:58:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:58:02 INFO  : Jtag cable 'Digilent Zybo 210279771968A' is selected.
+11:58:02 INFO  : 'jtag frequency' command is executed.
+11:58:02 INFO  : Sourcing of 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:58:02 INFO  : Context for 'APU' is selected.
+11:58:05 INFO  : Hardware design information is loaded from 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf'.
+11:58:05 INFO  : 'configparams force-mem-access 1' command is executed.
+11:58:05 INFO  : Context for 'APU' is selected.
+11:58:05 INFO  : 'stop' command is executed.
+11:58:05 INFO  : 'ps7_init' command is executed.
+11:58:05 INFO  : 'ps7_post_config' command is executed.
+11:58:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:58:05 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:58:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:58:06 INFO  : The application 'C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:58:06 INFO  : 'configparams force-mem-access 0' command is executed.
+11:58:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+loadhw -hw C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+dow C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:58:06 INFO  : Memory regions updated for context APU
+11:58:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:58:06 INFO  : 'con' command is executed.
+11:58:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+con
+----------------End of Script----------------
+
+11:58:06 INFO  : Launch script is exported to file 'C:\Projet\Vivado\Evo\Evo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_evo.elf_on_local.tcl'
+11:58:44 INFO  : Disconnected from the channel tcfchan#24.
+11:58:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771968A" && level==0} -index 1' command is executed.
+11:58:45 INFO  : 'fpga -state' command is executed.
+11:58:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:58:45 INFO  : Jtag cable 'Digilent Zybo 210279771968A' is selected.
+11:58:45 INFO  : 'jtag frequency' command is executed.
+11:58:45 INFO  : Sourcing of 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:58:45 INFO  : Context for 'APU' is selected.
+11:58:48 INFO  : Hardware design information is loaded from 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf'.
+11:58:48 INFO  : 'configparams force-mem-access 1' command is executed.
+11:58:48 INFO  : Context for 'APU' is selected.
+11:58:48 INFO  : 'stop' command is executed.
+11:58:48 INFO  : 'ps7_init' command is executed.
+11:58:48 INFO  : 'ps7_post_config' command is executed.
+11:58:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:58:48 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:58:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:58:48 INFO  : The application 'C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:58:48 INFO  : 'configparams force-mem-access 0' command is executed.
+11:58:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+loadhw -hw C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+dow C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:58:48 INFO  : Memory regions updated for context APU
+11:58:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:58:49 INFO  : 'con' command is executed.
+11:58:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+con
+----------------End of Script----------------
+
+11:58:49 INFO  : Launch script is exported to file 'C:\Projet\Vivado\Evo\Evo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_evo.elf_on_local.tcl'
+12:00:53 INFO  : Disconnected from the channel tcfchan#25.
+12:00:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771968A" && level==0} -index 1' command is executed.
+12:00:55 INFO  : 'fpga -state' command is executed.
+12:00:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:00:55 INFO  : Jtag cable 'Digilent Zybo 210279771968A' is selected.
+12:00:55 INFO  : 'jtag frequency' command is executed.
+12:00:55 INFO  : Sourcing of 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:00:55 INFO  : Context for 'APU' is selected.
+12:00:57 INFO  : Hardware design information is loaded from 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf'.
+12:00:57 INFO  : 'configparams force-mem-access 1' command is executed.
+12:00:57 INFO  : Context for 'APU' is selected.
+12:00:57 INFO  : 'stop' command is executed.
+12:00:58 INFO  : 'ps7_init' command is executed.
+12:00:58 INFO  : 'ps7_post_config' command is executed.
+12:00:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:00:58 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:00:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:00:58 INFO  : The application 'C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:00:58 INFO  : 'configparams force-mem-access 0' command is executed.
+12:00:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+loadhw -hw C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+dow C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:00:58 INFO  : Memory regions updated for context APU
+12:00:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:00:58 INFO  : 'con' command is executed.
+12:00:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+con
+----------------End of Script----------------
+
+12:00:58 INFO  : Launch script is exported to file 'C:\Projet\Vivado\Evo\Evo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_evo.elf_on_local.tcl'
+12:01:33 INFO  : Disconnected from the channel tcfchan#26.
+12:01:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771968A" && level==0} -index 1' command is executed.
+12:01:34 INFO  : 'fpga -state' command is executed.
+12:01:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:01:35 INFO  : Jtag cable 'Digilent Zybo 210279771968A' is selected.
+12:01:35 INFO  : 'jtag frequency' command is executed.
+12:01:35 INFO  : Sourcing of 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:01:35 INFO  : Context for 'APU' is selected.
+12:01:37 INFO  : Hardware design information is loaded from 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf'.
+12:01:37 INFO  : 'configparams force-mem-access 1' command is executed.
+12:01:37 INFO  : Context for 'APU' is selected.
+12:01:37 INFO  : 'stop' command is executed.
+12:01:38 INFO  : 'ps7_init' command is executed.
+12:01:38 INFO  : 'ps7_post_config' command is executed.
+12:01:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:01:38 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:01:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:01:38 INFO  : The application 'C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:01:38 INFO  : 'configparams force-mem-access 0' command is executed.
+12:01:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+loadhw -hw C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+dow C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:01:38 INFO  : Memory regions updated for context APU
+12:01:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:01:38 INFO  : 'con' command is executed.
+12:01:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+con
+----------------End of Script----------------
+
+12:01:38 INFO  : Launch script is exported to file 'C:\Projet\Vivado\Evo\Evo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_evo.elf_on_local.tcl'
+12:02:29 INFO  : Disconnected from the channel tcfchan#27.
+12:02:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771968A" && level==0} -index 1' command is executed.
+12:02:30 INFO  : 'fpga -state' command is executed.
+12:02:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:02:31 INFO  : Jtag cable 'Digilent Zybo 210279771968A' is selected.
+12:02:31 INFO  : 'jtag frequency' command is executed.
+12:02:31 INFO  : Sourcing of 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:02:31 INFO  : Context for 'APU' is selected.
+12:02:33 INFO  : Hardware design information is loaded from 'C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf'.
+12:02:33 INFO  : 'configparams force-mem-access 1' command is executed.
+12:02:33 INFO  : Context for 'APU' is selected.
+12:02:33 INFO  : 'stop' command is executed.
+12:02:34 INFO  : 'ps7_init' command is executed.
+12:02:34 INFO  : 'ps7_post_config' command is executed.
+12:02:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:02:34 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:02:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:02:34 INFO  : The application 'C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:02:34 INFO  : 'configparams force-mem-access 0' command is executed.
+12:02:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+loadhw -hw C:/Projet/Vivado/Evo/Evo.sdk/evo_v1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+dow C:/Projet/Vivado/Evo/Evo.sdk/Evo/Debug/Evo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:02:34 INFO  : Memory regions updated for context APU
+12:02:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:02:34 INFO  : 'con' command is executed.
+12:02:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771968A"} -index 0
+con
+----------------End of Script----------------
+
+12:02:34 INFO  : Launch script is exported to file 'C:\Projet\Vivado\Evo\Evo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_evo.elf_on_local.tcl'

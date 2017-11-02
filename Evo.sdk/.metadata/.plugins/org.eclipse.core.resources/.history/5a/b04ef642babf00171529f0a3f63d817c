@@ -6,7 +6,6 @@
  */
 
 #include "xgpio.h"
-#include "stdlib.h"
 #include "sleep.h"
 #include "xparameters.h"
 
@@ -56,21 +55,12 @@ int main()
 		memset(command, '\0', sizeof(command));
 		memset(result, '\0', sizeof(result));
 
-		// Echo communication
 		read(&UartPs, command, sizeof(command));
 		write(&UartPs, command, sizeof(command));
-		usleep(500000);
+		usleep(1000000);
+		strcpy(result, "OK0000000Dragon0");
+		write(&UartPs, result, sizeof(result));
 
-		// Subtractor test
-		Subtractor_SetOverRide(&SubLeft, 3);
-		Subtractor_SetAdd(&SubLeft, 123456000);
-		Subtractor_SetSubtract(&SubLeft, 1000);
-		u32 value = Subtractor_GetResult(&SubLeft);
-		char str[16];
-		itoa(value, str, 10);
-		write(&UartPs, (u8 *)str, sizeof(str));
-
-		// Debug
 		switch_data = XGpio_DiscreteRead(&Input, SWITCH);	//get switch data
 		XGpio_DiscreteWrite(&Output, 1, switch_data);	//write switch data to the LEDs
 		button_data = XGpio_DiscreteRead(&Input, BUTTON);	//get button data
