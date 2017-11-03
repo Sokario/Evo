@@ -10,6 +10,6 @@
 
 #include "xuartps.h"
 
-void write(XUartPs *ptr, u8 *str, u32 size);
+void writeMonitor(XUartPs *ptr, u8 *str, u32 size);
 
 #endif /* SRC_WRITE_H_ */

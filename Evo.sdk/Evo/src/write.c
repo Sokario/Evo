@@ -11,7 +11,7 @@
 #include "xcoresightpsdcc.h"
 
 
-void write(XUartPs *ptr, u8 *str, u32 size)
+void writeMonitor(XUartPs *ptr, u8 *str, u32 size)
 {
 	int SentCount = 0;
 	while (XUartPs_IsSending(ptr));

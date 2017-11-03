@@ -58,113 +58,17 @@ int main()
 	int button_data = 0, switch_data = 0, led_data = 0;
 
 	// Communication-Debug initialization
-	if (UartPs_Initialization(&UartPs, UART_PS_DEVICE_ID) != XST_SUCCESS) {
-		write(&UartPs, (u8 *)"UART FAILURE", 16);
+	if (DEBUG_Initialization() != XST_SUCCESS)
 		led_data &= ~(1 << 0);
-	} else {
-		write(&UartPs, (u8 *)"UART SUCCESS", 16);
+	else
 		led_data |= 1 << 0;
-	}
-	usleep(1000000);
-	if (Gpio_Initialization(&Input, &Output, INPUT_DEVICE_ID, OUTPUT_DEVICE_ID) != XST_SUCCESS) {
-		write(&UartPs, (u8 *)"DEBUG FAILURE", 16);
-		led_data &= ~(1 << 0);
-	} else {
-		write(&UartPs, (u8 *)"DEBUG SUCCESS", 16);
-		led_data |= 1 << 0;
-	}
-	usleep(1000000);
 	XGpio_DiscreteWrite(&Output, LED, led_data);
 
-	// Subtractor initialization
-	if (Subtractor_Initialization(&SubLeft, SUBTRACTOR_LEFT_DEVICE_ID) != XST_SUCCESS) {
-		write(&UartPs, (u8 *)"SUB0 FAILURE", 16);
+	// PL initialization
+	if (ASSERV_Initialization() != XST_SUCCESS)
 		led_data &= ~(1 << 1);
-	} else {
-		write(&UartPs, (u8 *)"SUB0 SUCCESS", 16);
+	else
 		led_data |= 1 << 1;
-	}
-	usleep(1000000);
-	if (Subtractor_Initialization(&SubRight, SUBTRACTOR_RIGHT_DEVICE_ID) != XST_SUCCESS) {
-		write(&UartPs, (u8 *)"SUB1 FAILURE", 16);
-		led_data &= ~(1 << 1);
-	} else {
-		write(&UartPs, (u8 *)"SUB1 SUCCESS", 16);
-		led_data |= 1 << 1;
-	}
-	usleep(1000000);
-
-	// PID test
-	if (PID_Initialization(&PIDLeftMotor, PID_LEFT_MOTOR_DEVICE_ID) != XST_SUCCESS) {
-		write(&UartPs, (u8 *)"PID0 FAILURE", 16);
-		led_data &= ~(1 << 1);
-	} else {
-		write(&UartPs, (u8 *)"PID0 SUCCESS", 16);
-		led_data |= 1 << 1;
-	}
-	usleep(1000000);
-	if (PID_Initialization(&PIDRightMotor, PID_RIGHT_MOTOR_DEVICE_ID) != XST_SUCCESS) {
-		write(&UartPs, (u8 *)"PID1 FAILURE", 16);
-		led_data &= ~(1 << 1);
-	} else {
-		write(&UartPs, (u8 *)"PID1 SUCCESS", 16);
-		led_data |= 1 << 1;
-	}
-	usleep(1000000);
-
-	// Derivator test
-	if (Derivator_Initialization(&DerivLeft, DERIVATOR_LEFT_DEVICE_ID) != XST_SUCCESS) {
-		write(&UartPs, (u8 *)"DERIV0 FAILURE", 16);
-		led_data &= ~(1 << 1);
-	} else {
-		write(&UartPs, (u8 *)"DERIV0 SUCCESS", 16);
-		led_data |= 1 << 1;
-	}
-	usleep(1000000);
-	if (Derivator_Initialization(&DerivRight, DERIVATOR_RIGHT_DEVICE_ID) != XST_SUCCESS) {
-		write(&UartPs, (u8 *)"DERIV1 FAILURE", 16);
-		led_data &= ~(1 << 1);
-	} else {
-		write(&UartPs, (u8 *)"DERIV1 SUCCESS", 16);
-		led_data |= 1 << 1;
-	}
-	usleep(1000000);
-
-	// Encoder test
-	if (Encoder_Initialization(&EncLeft, ENCODER_LEFT_DEVICE_ID) != XST_SUCCESS) {
-		write(&UartPs, (u8 *)"ENC0 FAILURE", 16);
-		led_data &= ~(1 << 1);
-	} else {
-		write(&UartPs, (u8 *)"ENC0 SUCCESS", 16);
-		led_data |= 1 << 1;
-	}
-	usleep(1000000);
-	if (Encoder_Initialization(&EncRight, ENCODER_RIGHT_DEVICE_ID) != XST_SUCCESS) {
-		write(&UartPs, (u8 *)"ENC1 FAILURE", 16);
-		led_data &= ~(1 << 1);
-	} else {
-		write(&UartPs, (u8 *)"ENC1 SUCCESS", 16);
-		led_data |= 1 << 1;
-	}
-	usleep(1000000);
-
-	// Motor test
-	if (Motor_Initialization(&MotLeft, MOTOR_LEFT_DEVICE_ID) != XST_SUCCESS) {
-		write(&UartPs, (u8 *)"MOT0 FAILURE", 16);
-		led_data &= ~(1 << 1);
-	} else {
-		write(&UartPs, (u8 *)"MOT0 SUCCESS", 16);
-		led_data |= 1 << 1;
-	}
-	usleep(1000000);
-	if (Motor_Initialization(&MotRight, MOTOR_RIGHT_DEVICE_ID) != XST_SUCCESS) {
-		write(&UartPs, (u8 *)"MOT1 FAILURE", 16);
-		led_data &= ~(1 << 1);
-	} else {
-		write(&UartPs, (u8 *)"MOT1 SUCCESS", 16);
-		led_data |= 1 << 1;
-	}
-	usleep(1000000);
 	XGpio_DiscreteWrite(&Output, LED, led_data);
 
 
@@ -173,11 +77,14 @@ int main()
 		memset(result, '\0', sizeof(result));
 
 		// Echo communication
-		read(&UartPs, command, sizeof(command));
+		readMonitor(&UartPs, command, sizeof(command));
 		led_data |= 1 << 2;
 		XGpio_DiscreteWrite(&Output, LED, led_data);
 
-		write(&UartPs, command, sizeof(command));
+		writeMonitor(&UartPs, command, sizeof(command));
+		usleep(500000);
+		parser(command, result);
+		writeMonitor(&UartPs, result, sizeof(result));
 		usleep(500000);
 
 		// Debug
@@ -187,18 +94,140 @@ int main()
 		//print message dependent on whether one or more buttons are pressed
 		if(button_data == 0b0000){} //do nothing
 		else if(button_data == 0b0001)
-			write(&UartPs, (u8 *)"OKbutton0Pressed", 16);
+			writeMonitor(&UartPs, (u8 *)"OKbutton0Pressed", 16);
 		else if(button_data == 0b0010)
-			write(&UartPs, (u8 *)"OKbutton1Pressed", 16);
+			writeMonitor(&UartPs, (u8 *)"OKbutton1Pressed", 16);
 		else if(button_data == 0b0100)
-			write(&UartPs, (u8 *)"OKbutton2Pressed", 16);
+			writeMonitor(&UartPs, (u8 *)"OKbutton2Pressed", 16);
 		else if(button_data == 0b1000)
-			write(&UartPs, (u8 *)"OKbutton3Pressed", 16);
+			writeMonitor(&UartPs, (u8 *)"OKbutton3Pressed", 16);
 		else
-			write(&UartPs, (u8 *)"OKmultipleButton", 16);
+			writeMonitor(&UartPs, (u8 *)"OKmultipleButton", 16);
 
 		led_data &= ~(1 << 2);
 		XGpio_DiscreteWrite(&Output, LED, led_data);
 	}
 	return XST_SUCCESS;
+}
+
+int DEBUG_Initialization()
+{
+	int status = XST_FAILURE;
+	// Communication initialization
+	if (UartPs_Initialization(&UartPs, UART_PS_DEVICE_ID) != XST_SUCCESS)
+		return XST_FAILURE;
+	else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: UartPS", 20);
+		status = XST_SUCCESS;
+	}
+	usleep(500000);
+
+	// Debug initialization
+	if (Gpio_Initialization(&Input, &Output, INPUT_DEVICE_ID, OUTPUT_DEVICE_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Debug Gpio", 24);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Debug Gpio", 24);
+		status = XST_SUCCESS;
+	}
+	usleep(500000);
+
+	return status;
+}
+
+int ASSERV_Initialization()
+{
+	int status = XST_SUCCESS;
+
+	// Subtractor initialization
+	if (Subtractor_Initialization(&SubLeft, SUBTRACTOR_LEFT_DEVICE_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Subtractor Left", 29);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Subtractor Left", 29);
+		status = XST_SUCCESS;
+	}
+	usleep(500000);
+	if (Subtractor_Initialization(&SubRight, SUBTRACTOR_RIGHT_DEVICE_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Subtractor Right", 30);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Subtractor Right", 30);
+		status = XST_SUCCESS;
+	}
+	usleep(500000);
+
+	// PID test
+	if (PID_Initialization(&PIDLeftMotor, PID_LEFT_MOTOR_DEVICE_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: PID Left Motor", 28);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: PID Left Motor", 28);
+		status = XST_SUCCESS;
+	}
+	usleep(500000);
+	if (PID_Initialization(&PIDRightMotor, PID_RIGHT_MOTOR_DEVICE_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: PID Right Motor", 29);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: PID Right Motor", 29);
+		status = XST_SUCCESS;
+	}
+	usleep(500000);
+
+	// Derivator test
+	if (Derivator_Initialization(&DerivLeft, DERIVATOR_LEFT_DEVICE_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Derivator Left", 28);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Derivator Left", 28);
+		status = XST_SUCCESS;
+	}
+	usleep(500000);
+	if (Derivator_Initialization(&DerivRight, DERIVATOR_RIGHT_DEVICE_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Derivator Right", 29);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Derivator Right", 29);
+		status = XST_SUCCESS;
+	}
+	usleep(500000);
+
+	// Encoder test
+	if (Encoder_Initialization(&EncLeft, ENCODER_LEFT_DEVICE_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Encoder Left", 26);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Encoder Left", 26);
+		status = XST_SUCCESS;
+	}
+	usleep(500000);
+	if (Encoder_Initialization(&EncRight, ENCODER_RIGHT_DEVICE_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Encoder Right", 27);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Encoder Right", 27);
+		status = XST_SUCCESS;
+	}
+	usleep(500000);
+
+	// Motor test
+	if (Motor_Initialization(&MotLeft, MOTOR_LEFT_DEVICE_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Motor Left", 24);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Motor Left", 24);
+		status = XST_SUCCESS;
+	}
+	usleep(500000);
+	if (Motor_Initialization(&MotRight, MOTOR_RIGHT_DEVICE_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Motor Right", 25);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Motor Right", 25);
+		status = XST_SUCCESS;
+	}
+	usleep(500000);
+
+	return status;
 }

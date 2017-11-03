@@ -26591,3 +26591,2520 @@ arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
   40596	   1276	  22792	  64664	   fc98	Evo.elf
 'Finished building: Evo.elf.size'
 ' '
+15:47:25 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'DEBUG_Initialization':
+../src/main.c:211:3: error: 'led_data' undeclared (first use in this function)
+   led_data &= ~(1 << 0);
+   ^~~~~~~~
+../src/main.c:211:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:227:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:232:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Erreur 1
+15:47:46 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'DEBUG_Initialization':
+../src/main.c:218:3: error: 'led_data' undeclared (first use in this function)
+   led_data &= ~(1 << 0);
+   ^~~~~~~~
+../src/main.c:218:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:224:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:229:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Erreur 1
+15:47:56 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'DEBUG_Initialization':
+../src/main.c:218:3: error: 'led_data' undeclared (first use in this function)
+   led_data &= ~(1 << 0);
+   ^~~~~~~~
+../src/main.c:218:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:224:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:229:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Erreur 1
+15:48:11 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'DEBUG_Initialization':
+../src/main.c:221:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:226:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40944	   1276	  22792	  65012	   fdf4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:48:22 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'DEBUG_Initialization':
+../src/main.c:221:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:226:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40944	   1276	  22792	  65012	   fdf4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:49:11 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'DEBUG_Initialization':
+../src/main.c:209:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:214:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40680	   1276	  22792	  64748	   fcec	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:49:14 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+15:51:00 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:218:3: error: 'led_data' undeclared (first use in this function)
+   led_data &= ~(1 << 1);
+   ^~~~~~~~
+../src/main.c:218:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:304:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Erreur 1
+15:51:49 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:215:2: error: unknown type name 'bool'
+  bool success = false;
+  ^~~~
+../src/main.c:215:17: error: 'false' undeclared (first use in this function)
+  bool success = false;
+                 ^~~~~
+../src/main.c:215:17: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:219:3: error: 'led_data' undeclared (first use in this function)
+   led_data &= ~(1 << 1);
+   ^~~~~~~~
+../src/main.c:215:7: warning: unused variable 'success' [-Wunused-variable]
+  bool success = false;
+       ^~~~~~~
+../src/main.c:305:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Erreur 1
+15:51:57 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:215:2: error: unknown type name 'bool'
+  bool success = False;
+  ^~~~
+../src/main.c:215:17: error: 'False' undeclared (first use in this function)
+  bool success = False;
+                 ^~~~~
+../src/main.c:215:17: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:219:3: error: 'led_data' undeclared (first use in this function)
+   led_data &= ~(1 << 1);
+   ^~~~~~~~
+../src/main.c:215:7: warning: unused variable 'success' [-Wunused-variable]
+  bool success = False;
+       ^~~~~~~
+../src/main.c:305:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Erreur 1
+15:52:05 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:215:2: error: unknown type name 'bool'
+  bool success = true;
+  ^~~~
+../src/main.c:215:17: error: 'true' undeclared (first use in this function)
+  bool success = true;
+                 ^~~~
+../src/main.c:215:17: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:219:3: error: 'led_data' undeclared (first use in this function)
+   led_data &= ~(1 << 1);
+   ^~~~~~~~
+../src/main.c:215:7: warning: unused variable 'success' [-Wunused-variable]
+  bool success = true;
+       ^~~~~~~
+../src/main.c:305:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Erreur 1
+15:52:12 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:215:2: error: unknown type name 'bool'
+  bool success = 0;
+  ^~~~
+../src/main.c:219:3: error: 'led_data' undeclared (first use in this function)
+   led_data &= ~(1 << 1);
+   ^~~~~~~~
+../src/main.c:219:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:215:7: warning: unused variable 'success' [-Wunused-variable]
+  bool success = 0;
+       ^~~~~~~
+../src/main.c:305:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Erreur 1
+15:52:26 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:219:3: error: 'led_data' undeclared (first use in this function)
+   led_data &= ~(1 << 1);
+   ^~~~~~~~
+../src/main.c:219:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:215:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = 0;
+      ^~~~~~~
+../src/main.c:305:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Erreur 1
+15:52:54 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:222:3: error: 'led_data' undeclared (first use in this function)
+   led_data |= 1 << 1;
+   ^~~~~~~~
+../src/main.c:222:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:215:6: warning: variable 'success' set but not used [-Wunused-but-set-variable]
+  int success = XST_SUCCESS;
+      ^~~~~~~
+../src/main.c:305:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Erreur 1
+15:54:38 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:230:3: error: 'led_data' undeclared (first use in this function)
+   led_data |= 1 << 1;
+   ^~~~~~~~
+../src/main.c:230:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:215:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  int status = XST_SUCCESS;
+      ^~~~~~
+../src/main.c:305:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Erreur 1
+15:55:34 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41724	   1276	  22792	  65792	  10100	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:59:36 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42252	   1276	  22792	  66320	  10310	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+16:00:05 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42332	   1276	  22792	  66400	  10360	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+16:01:04 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42240	   1276	  22792	  66308	  10304	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+16:01:21 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40896	   1276	  22792	  64964	   fdc4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+16:01:24 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+16:03:23 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40896	   1276	  22792	  64964	   fdc4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+16:03:25 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+16:06:21 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/parser.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/parser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+../src/parser.c: In function 'parser':
+../src/parser.c:13:6: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+  if (strcmp(cmd, "RN00000000000000") == 0)
+      ^~~~~~
+../src/parser.c:14:3: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   strcpy(result, "OK00000000000000");
+   ^~~~~~
+../src/parser.c:14:3: warning: incompatible implicit declaration of built-in function 'strcpy'
+../src/parser.c:14:3: note: include '<string.h>' or provide a declaration of 'strcpy'
+../src/parser.c:14:10: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+   strcpy(result, "OK00000000000000");
+          ^~~~~~
+../src/parser.c:14:10: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+'Finished building: ../src/parser.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41740	   1276	  22792	  65808	  10110	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+16:06:38 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:163:25: error: conflicting types for 'read'
+ _READ_WRITE_RETURN_TYPE _EXFUN(read, (int __fd, void *__buf, size_t __nbyte ));
+                         ^
+In file included from ../src/main.c:13:0:
+../src/read.h:13:6: note: previous declaration of 'read' was here
+ void read(XUartPs *ptr, u8 *str, int size);
+      ^~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: error: conflicting types for 'write'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+In file included from ../src/main.c:14:0:
+../src/write.h:13:6: note: previous declaration of 'write' was here
+ void write(XUartPs *ptr, u8 *str, u32 size);
+      ^~~~~
+../src/main.c: In function 'main':
+../src/main.c:80:8: warning: passing argument 1 of 'read' makes integer from pointer without a cast [-Wint-conversion]
+   read(&UartPs, command, sizeof(command));
+        ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:163:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(read, (int __fd, void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:84:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, command, sizeof(command));
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:94:10: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+    write(&UartPs, (u8 *)"OKbutton0Pressed", 16);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:96:10: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+    write(&UartPs, (u8 *)"OKbutton1Pressed", 16);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:98:10: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+    write(&UartPs, (u8 *)"OKbutton2Pressed", 16);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:100:10: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+    write(&UartPs, (u8 *)"OKbutton3Pressed", 16);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:102:10: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+    write(&UartPs, (u8 *)"OKmultipleButton", 16);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'DEBUG_Initialization':
+../src/main.c:116:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: UartPS", 20);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:121:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Debug Gpio", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:123:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Debug Gpio", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:135:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Subtractor Left", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:138:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Subtractor Left", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:143:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Subtractor Right", 30);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:146:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Subtractor Right", 30);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:153:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: PID Left Motor", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:156:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: PID Left Motor", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:161:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: PID Right Motor", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:164:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: PID Right Motor", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:171:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Derivator Left", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:174:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Derivator Left", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:179:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Derivator Right", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:182:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Derivator Right", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:189:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Encoder Left", 26);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:192:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Encoder Left", 26);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:197:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Encoder Right", 27);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:200:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Encoder Right", 27);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:207:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Motor Left", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:210:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Motor Left", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:215:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Motor Right", 25);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:218:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Motor Right", 25);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+make: *** [src/main.o] Erreur 1
+16:06:42 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:163:25: error: conflicting types for 'read'
+ _READ_WRITE_RETURN_TYPE _EXFUN(read, (int __fd, void *__buf, size_t __nbyte ));
+                         ^
+In file included from ../src/main.c:13:0:
+../src/read.h:13:6: note: previous declaration of 'read' was here
+ void read(XUartPs *ptr, u8 *str, int size);
+      ^~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: error: conflicting types for 'write'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+In file included from ../src/main.c:14:0:
+../src/write.h:13:6: note: previous declaration of 'write' was here
+ void write(XUartPs *ptr, u8 *str, u32 size);
+      ^~~~~
+../src/main.c: In function 'main':
+../src/main.c:80:8: warning: passing argument 1 of 'read' makes integer from pointer without a cast [-Wint-conversion]
+   read(&UartPs, command, sizeof(command));
+        ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:163:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(read, (int __fd, void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:84:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, command, sizeof(command));
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:94:10: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+    write(&UartPs, (u8 *)"OKbutton0Pressed", 16);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:96:10: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+    write(&UartPs, (u8 *)"OKbutton1Pressed", 16);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:98:10: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+    write(&UartPs, (u8 *)"OKbutton2Pressed", 16);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:100:10: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+    write(&UartPs, (u8 *)"OKbutton3Pressed", 16);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:102:10: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+    write(&UartPs, (u8 *)"OKmultipleButton", 16);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'DEBUG_Initialization':
+../src/main.c:116:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: UartPS", 20);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:121:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Debug Gpio", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:123:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Debug Gpio", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:135:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Subtractor Left", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:138:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Subtractor Left", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:143:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Subtractor Right", 30);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:146:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Subtractor Right", 30);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:153:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: PID Left Motor", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:156:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: PID Left Motor", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:161:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: PID Right Motor", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:164:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: PID Right Motor", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:171:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Derivator Left", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:174:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Derivator Left", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:179:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Derivator Right", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:182:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Derivator Right", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:189:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Encoder Left", 26);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:192:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Encoder Left", 26);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:197:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Encoder Right", 27);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:200:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Encoder Right", 27);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:207:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Motor Left", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:210:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Motor Left", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:215:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Motor Right", 25);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:218:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Motor Right", 25);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+make: *** [src/main.o] Erreur 1
+16:08:55 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:80:8: warning: passing argument 1 of 'read' makes integer from pointer without a cast [-Wint-conversion]
+   read(&UartPs, command, sizeof(command));
+        ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:163:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(read, (int __fd, void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:84:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, command, sizeof(command));
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:94:10: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+    write(&UartPs, (u8 *)"OKbutton0Pressed", 16);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:96:10: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+    write(&UartPs, (u8 *)"OKbutton1Pressed", 16);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:98:10: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+    write(&UartPs, (u8 *)"OKbutton2Pressed", 16);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:100:10: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+    write(&UartPs, (u8 *)"OKbutton3Pressed", 16);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:102:10: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+    write(&UartPs, (u8 *)"OKmultipleButton", 16);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'DEBUG_Initialization':
+../src/main.c:116:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: UartPS", 20);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:121:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Debug Gpio", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:123:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Debug Gpio", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:135:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Subtractor Left", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:138:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Subtractor Left", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:143:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Subtractor Right", 30);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:146:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Subtractor Right", 30);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:153:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: PID Left Motor", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:156:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: PID Left Motor", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:161:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: PID Right Motor", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:164:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: PID Right Motor", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:171:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Derivator Left", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:174:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Derivator Left", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:179:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Derivator Right", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:182:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Derivator Right", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:189:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Encoder Left", 26);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:192:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Encoder Left", 26);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:197:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Encoder Right", 27);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:200:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Encoder Right", 27);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:207:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Motor Left", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:210:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Motor Left", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:215:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Motor Right", 25);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:218:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Motor Right", 25);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/parser.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/parser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+../src/parser.c: In function 'parser':
+../src/parser.c:13:6: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+  if (strcmp(cmd, "RN00000000000000") == 0)
+      ^~~~~~
+../src/parser.c:14:3: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   strcpy(result, "OK00000000000000");
+   ^~~~~~
+../src/parser.c:14:3: warning: incompatible implicit declaration of built-in function 'strcpy'
+../src/parser.c:14:3: note: include '<string.h>' or provide a declaration of 'strcpy'
+../src/parser.c:14:10: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+   strcpy(result, "OK00000000000000");
+          ^~~~~~
+../src/parser.c:14:10: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+'Finished building: ../src/parser.c'
+' '
+'Building file: ../src/read.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/read.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/read.d" -MT"src/read.o" -o "src/read.o" "../src/read.c"
+'Finished building: ../src/read.c'
+' '
+'Building file: ../src/write.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/write.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/write.d" -MT"src/write.o" -o "src/write.o" "../src/write.c"
+'Finished building: ../src/write.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42156	   1276	  22792	  66224	  102b0	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+16:10:53 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'DEBUG_Initialization':
+../src/main.c:112:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  int status = XST_FAILURE;
+      ^~~~~~
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:141:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Subtractor Left", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:144:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Subtractor Left", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:149:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Subtractor Right", 30);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:152:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Subtractor Right", 30);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:159:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: PID Left Motor", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:162:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: PID Left Motor", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:167:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: PID Right Motor", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:170:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: PID Right Motor", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:177:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Derivator Left", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:180:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Derivator Left", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:185:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Derivator Right", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:188:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Derivator Right", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:195:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Encoder Left", 26);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:198:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Encoder Left", 26);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:203:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Encoder Right", 27);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:206:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Encoder Right", 27);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:213:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Motor Left", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:216:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Motor Left", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:221:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Motor Right", 25);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:224:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Motor Right", 25);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42060	   1276	  22792	  66128	  10250	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+16:11:00 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:141:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Subtractor Left", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:144:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Subtractor Left", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:149:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Subtractor Right", 30);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:152:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Subtractor Right", 30);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:159:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: PID Left Motor", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:162:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: PID Left Motor", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:167:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: PID Right Motor", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:170:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: PID Right Motor", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:177:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Derivator Left", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:180:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Derivator Left", 28);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:185:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Derivator Right", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:188:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Derivator Right", 29);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:195:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Encoder Left", 26);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:198:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Encoder Left", 26);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:203:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Encoder Right", 27);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:206:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Encoder Right", 27);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:213:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Motor Left", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:216:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Motor Left", 24);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:221:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT FAILURE: Motor Right", 25);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+../src/main.c:224:9: warning: passing argument 1 of 'write' makes integer from pointer without a cast [-Wint-conversion]
+   write(&UartPs, (u8 *)"INIT SUCCESS: Motor Right", 25);
+         ^
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
+                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
+                 from ../src/main.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\sys\unistd.h:209:25: note: expected 'int' but argument is of type 'XUartPs * {aka struct <anonymous> *}'
+ _READ_WRITE_RETURN_TYPE _EXFUN(write, (int __fd, const void *__buf, size_t __nbyte ));
+                         ^
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  42060	   1276	  22792	  66128	  10250	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+16:13:48 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:80:3: warning: implicit declaration of function 'readMonitor' [-Wimplicit-function-declaration]
+   readMonitor(&UartPs, command, sizeof(command));
+   ^~~~~~~~~~~
+../src/main.c:84:3: warning: implicit declaration of function 'writeMonitor' [-Wimplicit-function-declaration]
+   writeMonitor(&UartPs, command, sizeof(command));
+   ^~~~~~~~~~~~
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:80: undefined reference to `readMonitor'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:84: undefined reference to `writeMonitor'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:94: undefined reference to `writeMonitor'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:96: undefined reference to `writeMonitor'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:98: undefined reference to `writeMonitor'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:100: undefined reference to `writeMonitor'
+./src/main.o:C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:102: more undefined references to `writeMonitor' follow
+collect2.exe: error: ld returned 1 exit status
+make: *** [Evo.elf] Erreur 1
+16:14:14 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/read.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/read.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/read.d" -MT"src/read.o" -o "src/read.o" "../src/read.c"
+'Finished building: ../src/read.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:84: undefined reference to `writeMonitor'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:94: undefined reference to `writeMonitor'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:96: undefined reference to `writeMonitor'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:98: undefined reference to `writeMonitor'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:100: undefined reference to `writeMonitor'
+./src/main.o:C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:102: more undefined references to `writeMonitor' follow
+collect2.exe: error: ld returned 1 exit status
+make: *** [Evo.elf] Erreur 1
+16:14:16 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:80:3: warning: implicit declaration of function 'readMonitor' [-Wimplicit-function-declaration]
+   readMonitor(&UartPs, command, sizeof(command));
+   ^~~~~~~~~~~
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:216:3: warning: implicit declaration of function 'writeMonitoring' [-Wimplicit-function-declaration]
+   writeMonitoring(&UartPs, (u8 *)"INIT SUCCESS: Motor Left", 24);
+   ^~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:84: undefined reference to `writeMonitor'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:94: undefined reference to `writeMonitor'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:96: undefined reference to `writeMonitor'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:98: undefined reference to `writeMonitor'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:100: undefined reference to `writeMonitor'
+./src/main.o:C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:102: more undefined references to `writeMonitor' follow
+collect2.exe: error: ld returned 1 exit status
+make: *** [Evo.elf] Erreur 1
+16:14:18 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/write.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/write.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/write.d" -MT"src/write.o" -o "src/write.o" "../src/write.c"
+'Finished building: ../src/write.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `ASSERV_Initialization':
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:216: undefined reference to `writeMonitoring'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Evo.elf] Erreur 1
+16:14:19 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: In function 'ASSERV_Initialization':
+../src/main.c:216:3: warning: implicit declaration of function 'writeMonitoring' [-Wimplicit-function-declaration]
+   writeMonitoring(&UartPs, (u8 *)"INIT SUCCESS: Motor Left", 24);
+   ^~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `ASSERV_Initialization':
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:216: undefined reference to `writeMonitoring'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Evo.elf] Erreur 1
+16:14:32 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41804	   1276	  22792	  65872	  10150	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+16:14:35 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+16:15:27 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41836	   1276	  22792	  65904	  10170	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+16:15:41 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41836	   1276	  22792	  65904	  10170	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+16:15:43 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».

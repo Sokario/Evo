@@ -10,6 +10,7 @@
 
 #include "xil_types.h"
 #include "xstatus.h"
+#include "unistd.h"
 
 int parser(u8 *cmd, u8 *result);
 

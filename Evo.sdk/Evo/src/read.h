@@ -10,6 +10,6 @@
 
 #include "xuartps.h"
 
-void read(XUartPs *ptr, u8 *str, int size);
+void readMonitor(XUartPs *ptr, u8 *str, int size);
 
 #endif /* SRC_READ_H_ */
