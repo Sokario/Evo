@@ -25397,3 +25397,1197 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Rien à faire pour « main-build ».
+15:22:36 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:68:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40592	   1284	  22792	  64668	   fc9c	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:22:40 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+15:27:24 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/parser.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/parser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+'Finished building: ../src/parser.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40592	   1284	  22792	  64668	   fc9c	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:27:42 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+15:28:24 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+15:28:45 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/parser.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/parser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+../src/parser.c:8:12: error: unknown type name 'u8'
+ int parser(u8 *cmd, u8 *result);
+            ^~
+../src/parser.c:8:21: error: unknown type name 'u8'
+ int parser(u8 *cmd, u8 *result);
+                     ^~
+make: *** [src/parser.o] Erreur 1
+15:28:54 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/parser.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/parser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+../src/parser.c:8:12: error: unknown type name 'u8'
+ int parser(u8 *cmd, u8 *result);
+            ^~
+../src/parser.c:8:21: error: unknown type name 'u8'
+ int parser(u8 *cmd, u8 *result);
+                     ^~
+make: *** [src/parser.o] Erreur 1
+15:29:32 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/parser.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/parser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+../src/parser.c:10:12: error: unknown type name 'u8'
+ int parser(u8 *cmd, u8 *result);
+            ^~
+../src/parser.c:10:21: error: unknown type name 'u8'
+ int parser(u8 *cmd, u8 *result);
+                     ^~
+make: *** [src/parser.o] Erreur 1
+15:30:03 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/parser.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/parser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+../src/parser.c:8:22: fatal error: xil_type.h: No such file or directory
+ #include "xil_type.h"
+                      ^
+compilation terminated.
+make: *** [src/parser.o] Erreur 1
+15:30:05 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/parser.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/parser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+'Finished building: ../src/parser.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40592	   1284	  22792	  64668	   fc9c	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:30:21 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/parser.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/parser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+../src/parser.c: In function 'parser':
+../src/parser.c:14:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/parser.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40632	   1284	  22792	  64708	   fcc4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:30:30 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/parser.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/parser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+../src/parser.c: In function 'parser':
+../src/parser.c:15:9: error: 'XST_SUCCESS' undeclared (first use in this function)
+  return XST_SUCCESS;
+         ^~~~~~~~~~~
+../src/parser.c:15:9: note: each undeclared identifier is reported only once for each function it appears in
+../src/parser.c:16:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/parser.o] Erreur 1
+15:30:53 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/parser.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/parser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+'Finished building: ../src/parser.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40632	   1284	  22792	  64708	   fcc4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:31:27 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:15:19: fatal error: paser.h: No such file or directory
+ #include "paser.h"
+                   ^
+compilation terminated.
+make: *** [src/main.o] Erreur 1
+15:31:30 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:68:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40632	   1284	  22792	  64708	   fcc4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:31:42 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:67:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40632	   1284	  22792	  64708	   fcc4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:31:59 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:15:21: fatal error: init_PL.h: No such file or directory
+ #include "init_PL.h"
+                     ^
+compilation terminated.
+make: *** [src/main.o] Erreur 1
+15:32:04 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:15:20: fatal error: initPL.h: No such file or directory
+ #include "initPL.h"
+                    ^
+compilation terminated.
+make: *** [src/main.o] Erreur 1
+15:32:21 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:68:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40632	   1284	  22792	  64708	   fcc4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:32:34 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+'Finished building: ../src/initPL.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40632	   1284	  22792	  64708	   fcc4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:33:28 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:68:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40632	   1284	  22792	  64708	   fcc4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:33:39 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:66:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:77: undefined reference to `Gpio_Initialization'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Evo.elf] Erreur 1
+15:33:52 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:66:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40632	   1284	  22792	  64708	   fcc4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:34:14 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:15:0:
+../src/initPL.h:13:31: error: unknown type name 'Subtractor'
+ int Subtractor_Initialization(Subtractor *sub, u16 deviceId);
+                               ^~~~~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:66:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+make: *** [src/main.o] Erreur 1
+15:35:04 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:15:0:
+../src/initPL.h:13:31: error: unknown type name 'Subtractor'
+ int Subtractor_Initialization(Subtractor *sub, u16 deviceId);
+                               ^~~~~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:82:6: warning: implicit declaration of function 'Subtractor_Initialization' [-Wimplicit-function-declaration]
+  if (Subtractor_Initialization(&SubLeft, SUBTRACTOR_LEFT_DEVICE_ID) != XST_SUCCESS) {
+      ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:100:6: warning: implicit declaration of function 'PID_Initialization' [-Wimplicit-function-declaration]
+  if (PID_Initialization(&PIDLeftMotor, PID_LEFT_MOTOR_DEVICE_ID) != XST_SUCCESS) {
+      ^~~~~~~~~~~~~~~~~~
+../src/main.c:118:6: warning: implicit declaration of function 'Derivator_Initialization' [-Wimplicit-function-declaration]
+  if (Derivator_Initialization(&DerivLeft, DERIVATOR_LEFT_DEVICE_ID) != XST_SUCCESS) {
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:136:6: warning: implicit declaration of function 'Encoder_Initialization' [-Wimplicit-function-declaration]
+  if (Encoder_Initialization(&EncLeft, ENCODER_LEFT_DEVICE_ID) != XST_SUCCESS) {
+      ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:154:6: warning: implicit declaration of function 'Motor_Initialization' [-Wimplicit-function-declaration]
+  if (Motor_Initialization(&MotLeft, MOTOR_LEFT_DEVICE_ID) != XST_SUCCESS) {
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:60:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:239:5: error: conflicting types for 'Subtractor_Initialization'
+ int Subtractor_Initialization(Subtractor *sub, u16 deviceId)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:240:1: note: an argument type that has a default promotion can't match an empty parameter name list declaration
+ {
+ ^
+../src/main.c:82:6: note: previous implicit declaration of 'Subtractor_Initialization' was here
+  if (Subtractor_Initialization(&SubLeft, SUBTRACTOR_LEFT_DEVICE_ID) != XST_SUCCESS) {
+      ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:257:5: error: conflicting types for 'PID_Initialization'
+ int PID_Initialization(PID *pid, u16 deviceId)
+     ^~~~~~~~~~~~~~~~~~
+../src/main.c:258:1: note: an argument type that has a default promotion can't match an empty parameter name list declaration
+ {
+ ^
+../src/main.c:100:6: note: previous implicit declaration of 'PID_Initialization' was here
+  if (PID_Initialization(&PIDLeftMotor, PID_LEFT_MOTOR_DEVICE_ID) != XST_SUCCESS) {
+      ^~~~~~~~~~~~~~~~~~
+../src/main.c:329:5: error: conflicting types for 'Derivator_Initialization'
+ int Derivator_Initialization(Derivator *deriv, u16 deviceId)
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:330:1: note: an argument type that has a default promotion can't match an empty parameter name list declaration
+ {
+ ^
+../src/main.c:118:6: note: previous implicit declaration of 'Derivator_Initialization' was here
+  if (Derivator_Initialization(&DerivLeft, DERIVATOR_LEFT_DEVICE_ID) != XST_SUCCESS) {
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:353:5: error: conflicting types for 'Encoder_Initialization'
+ int Encoder_Initialization(Encoder *enc, u16 deviceId)
+     ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:354:1: note: an argument type that has a default promotion can't match an empty parameter name list declaration
+ {
+ ^
+../src/main.c:136:6: note: previous implicit declaration of 'Encoder_Initialization' was here
+  if (Encoder_Initialization(&EncLeft, ENCODER_LEFT_DEVICE_ID) != XST_SUCCESS) {
+      ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:366:5: error: conflicting types for 'Motor_Initialization'
+ int Motor_Initialization(Motor *mot, u16 deviceId)
+     ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:367:1: note: an argument type that has a default promotion can't match an empty parameter name list declaration
+ {
+ ^
+../src/main.c:154:6: note: previous implicit declaration of 'Motor_Initialization' was here
+  if (Motor_Initialization(&MotLeft, MOTOR_LEFT_DEVICE_ID) != XST_SUCCESS) {
+      ^~~~~~~~~~~~~~~~~~~~
+make: *** [src/main.o] Erreur 1
+15:36:15 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:60:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40632	   1284	  22792	  64708	   fcc4	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:36:50 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:60:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:63: undefined reference to `UartPs_Initialization'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:71: undefined reference to `Gpio_Initialization'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:82: undefined reference to `Subtractor_Initialization'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:90: undefined reference to `Subtractor_Initialization'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:100: undefined reference to `PID_Initialization'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:108: undefined reference to `PID_Initialization'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:118: undefined reference to `Derivator_Initialization'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:126: undefined reference to `Derivator_Initialization'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:136: undefined reference to `Encoder_Initialization'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:144: undefined reference to `Encoder_Initialization'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:154: undefined reference to `Motor_Initialization'
+C:\Projet\Vivado\Evo\Evo.sdk\Evo\Debug/../src/main.c:162: undefined reference to `Motor_Initialization'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Evo.elf] Erreur 1
+15:36:56 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+../src/initPL.c:9:27: error: unknown type name 'XUartPs'
+ int UartPs_Initialization(XUartPs *Uart, u16 deviceId)
+                           ^~~~~~~
+../src/initPL.c:9:42: error: unknown type name 'u16'
+ int UartPs_Initialization(XUartPs *Uart, u16 deviceId)
+                                          ^~~
+../src/initPL.c:25:25: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                         ^~~~~
+../src/initPL.c:25:36: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                                    ^~~~~
+../src/initPL.c:25:48: error: unknown type name 'u16'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                                                ^~~
+../src/initPL.c:25:65: error: unknown type name 'u16'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                                                                 ^~~
+../src/initPL.c:40:31: error: unknown type name 'Subtractor'
+ int Subtractor_Initialization(Subtractor *sub, u16 deviceId)
+                               ^~~~~~~~~~
+../src/initPL.c:40:48: error: unknown type name 'u16'
+ int Subtractor_Initialization(Subtractor *sub, u16 deviceId)
+                                                ^~~
+../src/initPL.c:58:24: error: unknown type name 'PID'
+ int PID_Initialization(PID *pid, u16 deviceId)
+                        ^~~
+../src/initPL.c:58:34: error: unknown type name 'u16'
+ int PID_Initialization(PID *pid, u16 deviceId)
+                                  ^~~
+../src/initPL.c:130:30: error: unknown type name 'Derivator'
+ int Derivator_Initialization(Derivator *deriv, u16 deviceId)
+                              ^~~~~~~~~
+../src/initPL.c:130:48: error: unknown type name 'u16'
+ int Derivator_Initialization(Derivator *deriv, u16 deviceId)
+                                                ^~~
+../src/initPL.c:154:28: error: unknown type name 'Encoder'
+ int Encoder_Initialization(Encoder *enc, u16 deviceId)
+                            ^~~~~~~
+../src/initPL.c:154:42: error: unknown type name 'u16'
+ int Encoder_Initialization(Encoder *enc, u16 deviceId)
+                                          ^~~
+../src/initPL.c:167:26: error: unknown type name 'Motor'
+ int Motor_Initialization(Motor *mot, u16 deviceId)
+                          ^~~~~
+../src/initPL.c:167:38: error: unknown type name 'u16'
+ int Motor_Initialization(Motor *mot, u16 deviceId)
+                                      ^~~
+make: *** [src/initPL.o] Erreur 1
+15:37:21 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+../src/initPL.c:9:27: error: unknown type name 'XUartPs'
+ int UartPs_Initialization(XUartPs *Uart, u16 deviceId)
+                           ^~~~~~~
+../src/initPL.c:9:42: error: unknown type name 'u16'
+ int UartPs_Initialization(XUartPs *Uart, u16 deviceId)
+                                          ^~~
+../src/initPL.c:25:25: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                         ^~~~~
+../src/initPL.c:25:36: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                                    ^~~~~
+../src/initPL.c:25:48: error: unknown type name 'u16'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                                                ^~~
+../src/initPL.c:25:65: error: unknown type name 'u16'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                                                                 ^~~
+../src/initPL.c:40:31: error: unknown type name 'Subtractor'
+ int Subtractor_Initialization(Subtractor *sub, u16 deviceId)
+                               ^~~~~~~~~~
+../src/initPL.c:40:48: error: unknown type name 'u16'
+ int Subtractor_Initialization(Subtractor *sub, u16 deviceId)
+                                                ^~~
+../src/initPL.c:58:24: error: unknown type name 'PID'
+ int PID_Initialization(PID *pid, u16 deviceId)
+                        ^~~
+../src/initPL.c:58:34: error: unknown type name 'u16'
+ int PID_Initialization(PID *pid, u16 deviceId)
+                                  ^~~
+../src/initPL.c:130:30: error: unknown type name 'Derivator'
+ int Derivator_Initialization(Derivator *deriv, u16 deviceId)
+                              ^~~~~~~~~
+../src/initPL.c:130:48: error: unknown type name 'u16'
+ int Derivator_Initialization(Derivator *deriv, u16 deviceId)
+                                                ^~~
+../src/initPL.c:154:28: error: unknown type name 'Encoder'
+ int Encoder_Initialization(Encoder *enc, u16 deviceId)
+                            ^~~~~~~
+../src/initPL.c:154:42: error: unknown type name 'u16'
+ int Encoder_Initialization(Encoder *enc, u16 deviceId)
+                                          ^~~
+../src/initPL.c:167:26: error: unknown type name 'Motor'
+ int Motor_Initialization(Motor *mot, u16 deviceId)
+                          ^~~~~
+../src/initPL.c:167:38: error: unknown type name 'u16'
+ int Motor_Initialization(Motor *mot, u16 deviceId)
+                                      ^~~
+make: *** [src/initPL.o] Erreur 1
+15:37:33 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+../src/initPL.c:10:27: error: unknown type name 'XUartPs'
+ int UartPs_Initialization(XUartPs *Uart, u16 deviceId)
+                           ^~~~~~~
+../src/initPL.c:26:25: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                         ^~~~~
+../src/initPL.c:26:36: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                                    ^~~~~
+../src/initPL.c:41:31: error: unknown type name 'Subtractor'
+ int Subtractor_Initialization(Subtractor *sub, u16 deviceId)
+                               ^~~~~~~~~~
+../src/initPL.c:59:24: error: unknown type name 'PID'
+ int PID_Initialization(PID *pid, u16 deviceId)
+                        ^~~
+../src/initPL.c:131:30: error: unknown type name 'Derivator'
+ int Derivator_Initialization(Derivator *deriv, u16 deviceId)
+                              ^~~~~~~~~
+../src/initPL.c:155:28: error: unknown type name 'Encoder'
+ int Encoder_Initialization(Encoder *enc, u16 deviceId)
+                            ^~~~~~~
+../src/initPL.c:168:26: error: unknown type name 'Motor'
+ int Motor_Initialization(Motor *mot, u16 deviceId)
+                          ^~~~~
+make: *** [src/initPL.o] Erreur 1
+15:38:33 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+In file included from ../src/initPL.c:8:0:
+../src/initPl.h:19:27: error: unknown type name 'XUartPs'
+ int UartPs_Initialization(XUartPs *Uart, u16 deviceId);
+                           ^~~~~~~
+../src/initPl.h:20:25: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId);
+                         ^~~~~
+../src/initPl.h:20:36: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId);
+                                    ^~~~~
+../src/initPL.c:10:27: error: unknown type name 'XUartPs'
+ int UartPs_Initialization(XUartPs *Uart, u16 deviceId)
+                           ^~~~~~~
+../src/initPL.c:26:25: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                         ^~~~~
+../src/initPL.c:26:36: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                                    ^~~~~
+../src/initPL.c: In function 'PID_Initialization':
+../src/initPL.c:122:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(waitting);
+   ^~~~~~
+../src/initPL.c: In function 'Motor_Initialization':
+../src/initPL.c:177:29: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  if (Motor_GetSpeed(mot) != abs(test))
+                             ^~~
+make: *** [src/initPL.o] Erreur 1
+15:38:36 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+In file included from ../src/initPL.c:8:0:
+../src/initPL.h:19:27: error: unknown type name 'XUartPs'
+ int UartPs_Initialization(XUartPs *Uart, u16 deviceId);
+                           ^~~~~~~
+../src/initPL.h:20:25: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId);
+                         ^~~~~
+../src/initPL.h:20:36: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId);
+                                    ^~~~~
+../src/initPL.c:10:27: error: unknown type name 'XUartPs'
+ int UartPs_Initialization(XUartPs *Uart, u16 deviceId)
+                           ^~~~~~~
+../src/initPL.c:26:25: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                         ^~~~~
+../src/initPL.c:26:36: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                                    ^~~~~
+../src/initPL.c: In function 'PID_Initialization':
+../src/initPL.c:122:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(waitting);
+   ^~~~~~
+../src/initPL.c: In function 'Motor_Initialization':
+../src/initPL.c:177:29: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  if (Motor_GetSpeed(mot) != abs(test))
+                             ^~~
+make: *** [src/initPL.o] Erreur 1
+15:39:03 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+In file included from ../src/initPL.c:8:0:
+../src/initPL.h:13:2: error: invalid preprocessing directive #incldue
+ #incldue "XGpio.h"
+  ^~~~~~~
+In file included from ../src/initPL.c:8:0:
+../src/initPL.h:22:25: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId);
+                         ^~~~~
+../src/initPL.h:22:36: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId);
+                                    ^~~~~
+../src/initPL.c:26:25: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                         ^~~~~
+../src/initPL.c:26:36: error: unknown type name 'XGpio'
+ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId)
+                                    ^~~~~
+../src/initPL.c: In function 'PID_Initialization':
+../src/initPL.c:122:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(waitting);
+   ^~~~~~
+../src/initPL.c: In function 'Motor_Initialization':
+../src/initPL.c:177:29: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  if (Motor_GetSpeed(mot) != abs(test))
+                             ^~~
+make: *** [src/initPL.o] Erreur 1
+15:39:21 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+../src/initPL.c: In function 'Gpio_Initialization':
+../src/initPL.c:33:29: error: 'BUTTON' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, BUTTON, inputDirectionMask);   //set first channel tristate buffer to input
+                             ^~~~~~
+../src/initPL.c:33:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/initPL.c:33:37: error: 'inputDirectionMask' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, BUTTON, inputDirectionMask);   //set first channel tristate buffer to input
+                                     ^~~~~~~~~~~~~~~~~~
+../src/initPL.c:34:29: error: 'SWITCH' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, SWITCH, inputDirectionMask);   //set second channel tristate buffer to input
+                             ^~~~~~
+../src/initPL.c:36:30: error: 'LED' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, outputDirectionMask);  //set first channel tristate buffer to output
+                              ^~~
+../src/initPL.c:36:35: error: 'outputDirectionMask' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, outputDirectionMask);  //set first channel tristate buffer to output
+                                   ^~~~~~~~~~~~~~~~~~~
+../src/initPL.c: In function 'PID_Initialization':
+../src/initPL.c:122:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(waitting);
+   ^~~~~~
+../src/initPL.c: In function 'Motor_Initialization':
+../src/initPL.c:177:29: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  if (Motor_GetSpeed(mot) != abs(test))
+                             ^~~
+make: *** [src/initPL.o] Erreur 1
+15:40:05 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+../src/initPL.c: In function 'Gpio_Initialization':
+../src/initPL.c:33:29: error: 'BUTTON' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, BUTTON, inputDirectionMask);   //set first channel tristate buffer to input
+                             ^~~~~~
+../src/initPL.c:33:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/initPL.c:33:37: error: 'inputDirectionMask' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, BUTTON, inputDirectionMask);   //set first channel tristate buffer to input
+                                     ^~~~~~~~~~~~~~~~~~
+../src/initPL.c:34:29: error: 'SWITCH' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, SWITCH, inputDirectionMask);   //set second channel tristate buffer to input
+                             ^~~~~~
+../src/initPL.c:36:30: error: 'LED' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, outputDirectionMask);  //set first channel tristate buffer to output
+                              ^~~
+../src/initPL.c:36:35: error: 'outputDirectionMask' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, outputDirectionMask);  //set first channel tristate buffer to output
+                                   ^~~~~~~~~~~~~~~~~~~
+../src/initPL.c: In function 'PID_Initialization':
+../src/initPL.c:122:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(waitting);
+   ^~~~~~
+../src/initPL.c: In function 'Motor_Initialization':
+../src/initPL.c:177:29: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  if (Motor_GetSpeed(mot) != abs(test))
+                             ^~~
+make: *** [src/initPL.o] Erreur 1
+15:40:08 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+../src/initPL.c: In function 'Gpio_Initialization':
+../src/initPL.c:33:29: error: 'BUTTON' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, BUTTON, inputDirectionMask);   //set first channel tristate buffer to input
+                             ^~~~~~
+../src/initPL.c:33:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/initPL.c:33:37: error: 'inputDirectionMask' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, BUTTON, inputDirectionMask);   //set first channel tristate buffer to input
+                                     ^~~~~~~~~~~~~~~~~~
+../src/initPL.c:34:29: error: 'SWITCH' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, SWITCH, inputDirectionMask);   //set second channel tristate buffer to input
+                             ^~~~~~
+../src/initPL.c:36:30: error: 'LED' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, outputDirectionMask);  //set first channel tristate buffer to output
+                              ^~~
+../src/initPL.c:36:35: error: 'outputDirectionMask' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, outputDirectionMask);  //set first channel tristate buffer to output
+                                   ^~~~~~~~~~~~~~~~~~~
+../src/initPL.c: In function 'PID_Initialization':
+../src/initPL.c:122:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(waitting);
+   ^~~~~~
+../src/initPL.c: In function 'Motor_Initialization':
+../src/initPL.c:177:29: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  if (Motor_GetSpeed(mot) != abs(test))
+                             ^~~
+make: *** [src/initPL.o] Erreur 1
+15:41:13 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+../src/initPL.c: In function 'Gpio_Initialization':
+../src/initPL.c:33:29: error: 'BUTTON' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, BUTTON, inputDirectionMask);   //set first channel tristate buffer to input
+                             ^~~~~~
+../src/initPL.c:33:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/initPL.c:33:37: error: 'inputDirectionMask' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, BUTTON, inputDirectionMask);   //set first channel tristate buffer to input
+                                     ^~~~~~~~~~~~~~~~~~
+../src/initPL.c:34:29: error: 'SWITCH' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, SWITCH, inputDirectionMask);   //set second channel tristate buffer to input
+                             ^~~~~~
+../src/initPL.c:36:30: error: 'LED' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, outputDirectionMask);  //set first channel tristate buffer to output
+                              ^~~
+../src/initPL.c:36:35: error: 'outputDirectionMask' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, outputDirectionMask);  //set first channel tristate buffer to output
+                                   ^~~~~~~~~~~~~~~~~~~
+../src/initPL.c: In function 'PID_Initialization':
+../src/initPL.c:122:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(waitting);
+   ^~~~~~
+../src/initPL.c: In function 'Motor_Initialization':
+../src/initPL.c:177:29: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  if (Motor_GetSpeed(mot) != abs(test))
+                             ^~~
+make: *** [src/initPL.o] Erreur 1
+15:41:15 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+../src/initPL.c: In function 'Gpio_Initialization':
+../src/initPL.c:33:29: error: 'BUTTON' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, BUTTON, inputDirectionMask);   //set first channel tristate buffer to input
+                             ^~~~~~
+../src/initPL.c:33:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/initPL.c:33:37: error: 'inputDirectionMask' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, BUTTON, inputDirectionMask);   //set first channel tristate buffer to input
+                                     ^~~~~~~~~~~~~~~~~~
+../src/initPL.c:34:29: error: 'SWITCH' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, SWITCH, inputDirectionMask);   //set second channel tristate buffer to input
+                             ^~~~~~
+../src/initPL.c:36:30: error: 'LED' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, outputDirectionMask);  //set first channel tristate buffer to output
+                              ^~~
+../src/initPL.c:36:35: error: 'outputDirectionMask' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, outputDirectionMask);  //set first channel tristate buffer to output
+                                   ^~~~~~~~~~~~~~~~~~~
+../src/initPL.c: In function 'PID_Initialization':
+../src/initPL.c:122:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(waitting);
+   ^~~~~~
+../src/initPL.c: In function 'Motor_Initialization':
+../src/initPL.c:177:29: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  if (Motor_GetSpeed(mot) != abs(test))
+                             ^~~
+make: *** [src/initPL.o] Erreur 1
+15:41:47 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+../src/initPL.c: In function 'Gpio_Initialization':
+../src/initPL.c:33:29: error: 'BUTTON' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, BUTTON, inputDirectionMask);   //set first channel tristate buffer to input
+                             ^~~~~~
+../src/initPL.c:33:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/initPL.c:33:37: error: 'inputDirectionMask' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, BUTTON, inputDirectionMask);   //set first channel tristate buffer to input
+                                     ^~~~~~~~~~~~~~~~~~
+../src/initPL.c:34:29: error: 'SWITCH' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, SWITCH, inputDirectionMask);   //set second channel tristate buffer to input
+                             ^~~~~~
+../src/initPL.c:36:30: error: 'LED' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, outputDirectionMask);  //set first channel tristate buffer to output
+                              ^~~
+../src/initPL.c:36:35: error: 'outputDirectionMask' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, outputDirectionMask);  //set first channel tristate buffer to output
+                                   ^~~~~~~~~~~~~~~~~~~
+../src/initPL.c: In function 'PID_Initialization':
+../src/initPL.c:122:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(waitting);
+   ^~~~~~
+../src/initPL.c: In function 'Motor_Initialization':
+../src/initPL.c:177:29: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  if (Motor_GetSpeed(mot) != abs(test))
+                             ^~~
+make: *** [src/initPL.o] Erreur 1
+15:42:07 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+../src/initPL.c: In function 'Gpio_Initialization':
+../src/initPL.c:33:29: error: 'BUTTON' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, BUTTON, INPUT_DIRECTION_MASK);   //set first channel tristate buffer to input
+                             ^~~~~~
+../src/initPL.c:33:29: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/initPL.c:8:0:
+../src/initPL.h:22:33: error: expected ')' before ';' token
+ #define INPUT_DIRECTION_MASK 0xF;
+                                 ^
+../src/initPL.c:33:37: note: in expansion of macro 'INPUT_DIRECTION_MASK'
+  XGpio_SetDataDirection(In, BUTTON, INPUT_DIRECTION_MASK);   //set first channel tristate buffer to input
+                                     ^~~~~~~~~~~~~~~~~~~~
+../src/initPL.c:34:29: error: 'SWITCH' undeclared (first use in this function)
+  XGpio_SetDataDirection(In, SWITCH, INPUT_DIRECTION_MASK);   //set second channel tristate buffer to input
+                             ^~~~~~
+In file included from ../src/initPL.c:8:0:
+../src/initPL.h:22:33: error: expected ')' before ';' token
+ #define INPUT_DIRECTION_MASK 0xF;
+                                 ^
+../src/initPL.c:34:37: note: in expansion of macro 'INPUT_DIRECTION_MASK'
+  XGpio_SetDataDirection(In, SWITCH, INPUT_DIRECTION_MASK);   //set second channel tristate buffer to input
+                                     ^~~~~~~~~~~~~~~~~~~~
+../src/initPL.c:36:30: error: 'LED' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, OUTPUT_DIRECTION_MASK);  //set first channel tristate buffer to output
+                              ^~~
+../src/initPL.c: In function 'PID_Initialization':
+../src/initPL.c:122:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(waitting);
+   ^~~~~~
+../src/initPL.c: In function 'Motor_Initialization':
+../src/initPL.c:177:29: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  if (Motor_GetSpeed(mot) != abs(test))
+                             ^~~
+make: *** [src/initPL.o] Erreur 1
+15:42:24 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+../src/initPL.c: In function 'Gpio_Initialization':
+../src/initPL.c:36:30: error: 'LED' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, OUTPUT_DIRECTION_MASK);  //set first channel tristate buffer to output
+                              ^~~
+../src/initPL.c:36:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/initPL.c: In function 'PID_Initialization':
+../src/initPL.c:122:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(waitting);
+   ^~~~~~
+../src/initPL.c: In function 'Motor_Initialization':
+../src/initPL.c:177:29: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  if (Motor_GetSpeed(mot) != abs(test))
+                             ^~~
+make: *** [src/initPL.o] Erreur 1
+15:42:30 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+../src/initPL.c: In function 'Gpio_Initialization':
+../src/initPL.c:36:30: error: 'LED' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, OUTPUT_DIRECTION_MASK);  //set first channel tristate buffer to output
+                              ^~~
+../src/initPL.c:36:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/initPL.c: In function 'PID_Initialization':
+../src/initPL.c:122:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(waitting);
+   ^~~~~~
+../src/initPL.c: In function 'Motor_Initialization':
+../src/initPL.c:177:29: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  if (Motor_GetSpeed(mot) != abs(test))
+                             ^~~
+make: *** [src/initPL.o] Erreur 1
+15:42:37 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+../src/initPL.c: In function 'Gpio_Initialization':
+../src/initPL.c:36:30: error: 'LED' undeclared (first use in this function)
+  XGpio_SetDataDirection(Out, LED, OUTPUT_DIRECTION_MASK);  //set first channel tristate buffer to output
+                              ^~~
+../src/initPL.c:36:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/initPL.c: In function 'PID_Initialization':
+../src/initPL.c:122:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(waitting);
+   ^~~~~~
+../src/initPL.c: In function 'Motor_Initialization':
+../src/initPL.c:177:29: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  if (Motor_GetSpeed(mot) != abs(test))
+                             ^~~
+make: *** [src/initPL.o] Erreur 1
+15:42:42 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+../src/initPL.c: In function 'PID_Initialization':
+../src/initPL.c:122:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(waitting);
+   ^~~~~~
+../src/initPL.c: In function 'Motor_Initialization':
+../src/initPL.c:177:29: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  if (Motor_GetSpeed(mot) != abs(test))
+                             ^~~
+'Finished building: ../src/initPL.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:55:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/parser.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/parser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+'Finished building: ../src/parser.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40596	   1276	  22792	  64664	   fc98	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:42:48 **** Incremental Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+15:43:32 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initPL.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initPL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initPL.d" -MT"src/initPL.o" -o "src/initPL.o" "../src/initPL.c"
+../src/initPL.c: In function 'PID_Initialization':
+../src/initPL.c:122:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(waitting);
+   ^~~~~~
+../src/initPL.c: In function 'Motor_Initialization':
+../src/initPL.c:177:29: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  if (Motor_GetSpeed(mot) != abs(test))
+                             ^~~
+'Finished building: ../src/initPL.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:55:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40596	   1276	  22792	  64664	   fc98	Evo.elf
+'Finished building: Evo.elf.size'
+' '
+15:43:44 **** Auto Build of configuration Debug for project Evo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
+  int button_data = 0, switch_data = 0, led_data = 0;
+                       ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40596	   1276	  22792	  64664	   fc98	Evo.elf
+'Finished building: Evo.elf.size'
+' '

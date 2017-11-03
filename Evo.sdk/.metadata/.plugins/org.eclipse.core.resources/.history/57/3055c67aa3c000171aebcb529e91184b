@@ -1,0 +1,10 @@
+/*
+ * parser.c
+ *
+ *  Created on: 3 nov. 2017
+ *      Author: LogOut
+ */
+
+#include "xparameters.h"
+
+int parser(u8 *cmd, u8 *result);

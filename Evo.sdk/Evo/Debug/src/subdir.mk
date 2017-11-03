@@ -7,19 +7,25 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 C_SRCS += \
+../src/initPL.c \
 ../src/main.c \
+../src/parser.c \
 ../src/platform.c \
 ../src/read.c \
 ../src/write.c 
 
 OBJS += \
+./src/initPL.o \
 ./src/main.o \
+./src/parser.o \
 ./src/platform.o \
 ./src/read.o \
 ./src/write.o 
 
 C_DEPS += \
+./src/initPL.d \
 ./src/main.d \
+./src/parser.d \
 ./src/platform.d \
 ./src/read.d \
 ./src/write.d 

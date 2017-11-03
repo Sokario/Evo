@@ -16,12 +16,15 @@ src/main.o src/main.o: ../src/main.c \
  ../../Evo_bsp/ps7_cortexa9_0/include/xuartps.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xuartps_hw.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xplatform_info.h ../src/write.h \
- ../../Evo_bsp/ps7_cortexa9_0/include/Motor.h \
- ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h \
+ ../src/initPL.h ../../Evo_bsp/ps7_cortexa9_0/include/xil_types.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/XUartPs.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/XGpio.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/Subtractor.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/PID.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/Derivator.h \
- ../../Evo_bsp/ps7_cortexa9_0/include/Encoder.h
+ ../../Evo_bsp/ps7_cortexa9_0/include/Encoder.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/Motor.h ../src/parser.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/xstatus.h
 
 ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:
 
@@ -61,9 +64,13 @@ src/main.o src/main.o: ../src/main.c \
 
 ../src/write.h:
 
-../../Evo_bsp/ps7_cortexa9_0/include/Motor.h:
+../src/initPL.h:
 
-../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:
+../../Evo_bsp/ps7_cortexa9_0/include/xil_types.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/XUartPs.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/XGpio.h:
 
 ../../Evo_bsp/ps7_cortexa9_0/include/Subtractor.h:
 
@@ -72,3 +79,9 @@ src/main.o src/main.o: ../src/main.c \
 ../../Evo_bsp/ps7_cortexa9_0/include/Derivator.h:
 
 ../../Evo_bsp/ps7_cortexa9_0/include/Encoder.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/Motor.h:
+
+../src/parser.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/xstatus.h:

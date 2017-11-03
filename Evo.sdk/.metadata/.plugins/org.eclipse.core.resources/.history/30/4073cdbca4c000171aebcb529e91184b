@@ -1,0 +1,30 @@
+/*
+ * initPL.h
+ *
+ *  Created on: 3 nov. 2017
+ *      Author: LogOut
+ */
+
+#ifndef SRC_INITPL_H_
+#define SRC_INITPL_H_
+
+#include "xil_types.h"
+
+#include "Subtractor.h"
+#include "PID.h"
+#include "Derivator.h"
+#include "Encoder.h"
+#include "Motor.h"
+
+int UartPs_Initialization(XUartPs *Uart, u16 deviceId);
+int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId);
+int Subtractor_Initialization(Subtractor *sub, u16 deviceId);
+int PID_Initialization(PID *pid, u16 deviceId);
+int Derivator_Initialization(Derivator *deriv, u16 deviceId);
+int Encoder_Initialization(Encoder *enc, u16 deviceId);
+int Motor_Initialization(Motor *mot, u16 deviceId);
+
+int DEBUG_Initialization();
+int ASSERV_Initialization();
+
+#endif /* SRC_INITPL_H_ */
