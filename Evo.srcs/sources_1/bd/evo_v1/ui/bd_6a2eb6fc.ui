@@ -21,8 +21,8 @@ preplace inst axi_gpio_1 -pg 1 -lvl 3 -y 910 -defaultsOSRD
 preplace inst PID_1 -pg 1 -lvl 4 -y 1240 -defaultsOSRD
 preplace inst Motor_0 -pg 1 -lvl 5 -y 1070 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -y 1090 -defaultsOSRD
-preplace inst Encoder_0 -pg 1 -lvl 3 -y 1460 -defaultsOSRD
 preplace inst Motor_1 -pg 1 -lvl 5 -y 1240 -defaultsOSRD
+preplace inst Encoder_0 -pg 1 -lvl 3 -y 1460 -defaultsOSRD
 preplace inst Subtractor_0 -pg 1 -lvl 3 -y 1070 -defaultsOSRD
 preplace inst Encoder_1 -pg 1 -lvl 3 -y 1670 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -y 880 -defaultsOSRD

@@ -14,34 +14,34 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7304 
+INFO: Helper process launched with PID 3024 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 377.594 ; gain = 77.844
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 378.563 ; gain = 78.555
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'evo_v1_Motor_1_0' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Motor_1_0/synth/evo_v1_Motor_1_0.vhd:86]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter PWM_COUNTER_MAX bound to: 2500 - type: integer 
-INFO: [Synth 8-3491] module 'Motor_v1_0' declared at 'c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/bf25/hdl/Motor_v1_0.vhd:5' bound to instance 'U0' of component 'Motor_v1_0' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Motor_1_0/synth/evo_v1_Motor_1_0.vhd:152]
-INFO: [Synth 8-638] synthesizing module 'Motor_v1_0' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/bf25/hdl/Motor_v1_0.vhd:52]
+INFO: [Synth 8-3491] module 'Motor_v1_0' declared at 'c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/f16f/hdl/Motor_v1_0.vhd:5' bound to instance 'U0' of component 'Motor_v1_0' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Motor_1_0/synth/evo_v1_Motor_1_0.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'Motor_v1_0' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/f16f/hdl/Motor_v1_0.vhd:52]
 	Parameter PWM_COUNTER_MAX bound to: 2500 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter PWM_COUNTER_MAX bound to: 2500 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'Motor_v1_0_S00_AXI' declared at 'c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/bf25/hdl/Motor_v1_0_S00_AXI.vhd:5' bound to instance 'Motor_v1_0_S00_AXI_inst' of component 'Motor_v1_0_S00_AXI' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/bf25/hdl/Motor_v1_0.vhd:93]
-INFO: [Synth 8-638] synthesizing module 'Motor_v1_0_S00_AXI' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/bf25/hdl/Motor_v1_0_S00_AXI.vhd:89]
+INFO: [Synth 8-3491] module 'Motor_v1_0_S00_AXI' declared at 'c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/f16f/hdl/Motor_v1_0_S00_AXI.vhd:5' bound to instance 'Motor_v1_0_S00_AXI_inst' of component 'Motor_v1_0_S00_AXI' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/f16f/hdl/Motor_v1_0.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'Motor_v1_0_S00_AXI' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/f16f/hdl/Motor_v1_0_S00_AXI.vhd:89]
 	Parameter PWM_COUNTER_MAX bound to: 2500 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-226] default block is never used [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/bf25/hdl/Motor_v1_0_S00_AXI.vhd:232]
-INFO: [Synth 8-226] default block is never used [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/bf25/hdl/Motor_v1_0_S00_AXI.vhd:362]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg2_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/bf25/hdl/Motor_v1_0_S00_AXI.vhd:227]
-WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/bf25/hdl/Motor_v1_0_S00_AXI.vhd:230]
-WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/bf25/hdl/Motor_v1_0_S00_AXI.vhd:361]
-INFO: [Synth 8-256] done synthesizing module 'Motor_v1_0_S00_AXI' (1#1) [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/bf25/hdl/Motor_v1_0_S00_AXI.vhd:89]
-INFO: [Synth 8-256] done synthesizing module 'Motor_v1_0' (2#1) [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/bf25/hdl/Motor_v1_0.vhd:52]
+INFO: [Synth 8-226] default block is never used [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/f16f/hdl/Motor_v1_0_S00_AXI.vhd:232]
+INFO: [Synth 8-226] default block is never used [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/f16f/hdl/Motor_v1_0_S00_AXI.vhd:362]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/f16f/hdl/Motor_v1_0_S00_AXI.vhd:228]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/f16f/hdl/Motor_v1_0_S00_AXI.vhd:230]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/f16f/hdl/Motor_v1_0_S00_AXI.vhd:361]
+INFO: [Synth 8-256] done synthesizing module 'Motor_v1_0_S00_AXI' (1#1) [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/f16f/hdl/Motor_v1_0_S00_AXI.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'Motor_v1_0' (2#1) [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/f16f/hdl/Motor_v1_0.vhd:52]
 INFO: [Synth 8-256] done synthesizing module 'evo_v1_Motor_1_0' (3#1) [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Motor_1_0/synth/evo_v1_Motor_1_0.vhd:86]
 WARNING: [Synth 8-3331] design Motor_v1_0_S00_AXI has unconnected port Speed[31]
 WARNING: [Synth 8-3331] design Motor_v1_0_S00_AXI has unconnected port Speed[30]
@@ -69,7 +69,7 @@ WARNING: [Synth 8-3331] design Motor_v1_0_S00_AXI has unconnected port S_AXI_ARP
 WARNING: [Synth 8-3331] design Motor_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design Motor_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 417.922 ; gain = 118.172
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 418.641 ; gain = 118.633
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -79,7 +79,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 417.922 ; gain = 118.172
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 418.641 ; gain = 118.633
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -91,26 +91,26 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 710.863 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 711.832 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 710.863 ; gain = 411.113
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 711.832 ; gain = 411.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 710.863 ; gain = 411.113
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 711.832 ; gain = 411.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 710.863 ; gain = 411.113
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 711.832 ; gain = 411.824
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "Enable" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 710.863 ; gain = 411.113
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 711.832 ; gain = 411.824
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -208,12 +208,31 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/Motor
 INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/aw_en_reg) is unused and will be removed from module evo_v1_Motor_1_0.
 INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module evo_v1_Motor_1_0.
 INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[31]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[30]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[29]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[28]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[27]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[26]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[25]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[24]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[23]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[22]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[21]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[20]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[19]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[18]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[17]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[16]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[15]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[14]) is unused and will be removed from module evo_v1_Motor_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/slv_reg2_reg[13]) is unused and will be removed from module evo_v1_Motor_1_0.
 INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module evo_v1_Motor_1_0.
 INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module evo_v1_Motor_1_0.
 INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module evo_v1_Motor_1_0.
 INFO: [Synth 8-3332] Sequential element (U0/Motor_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module evo_v1_Motor_1_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 710.863 ; gain = 411.113
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 711.832 ; gain = 411.824
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -225,13 +244,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 710.863 ; gain = 411.113
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 711.832 ; gain = 411.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 710.863 ; gain = 411.113
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 711.832 ; gain = 411.824
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -243,7 +262,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 710.863 ; gain = 411.113
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 711.832 ; gain = 411.824
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -267,7 +286,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 710.863 ; gain = 411.113
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 711.832 ; gain = 411.824
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -280,7 +299,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 710.863 ; gain = 411.113
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 711.832 ; gain = 411.824
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -292,25 +311,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 710.863 ; gain = 411.113
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 711.832 ; gain = 411.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 710.863 ; gain = 411.113
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 711.832 ; gain = 411.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 710.863 ; gain = 411.113
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 711.832 ; gain = 411.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 710.863 ; gain = 411.113
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 711.832 ; gain = 411.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -327,13 +346,13 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |CARRY4 |     8|
-|2     |LUT1   |    14|
-|3     |LUT2   |     3|
-|4     |LUT3   |    16|
-|5     |LUT4   |    55|
-|6     |LUT5   |    17|
-|7     |LUT6   |    20|
-|8     |FDRE   |   147|
+|2     |LUT1   |    13|
+|3     |LUT2   |     2|
+|4     |LUT3   |     3|
+|5     |LUT4   |    51|
+|6     |LUT5   |    10|
+|7     |LUT6   |    63|
+|8     |FDRE   |   128|
 |9     |FDSE   |     2|
 +------+-------+------+
 
@@ -341,16 +360,16 @@ Report Instance Areas:
 +------+----------------------------+-------------------+------+
 |      |Instance                    |Module             |Cells |
 +------+----------------------------+-------------------+------+
-|1     |top                         |                   |   282|
-|2     |  U0                        |Motor_v1_0         |   282|
-|3     |    Motor_v1_0_S00_AXI_inst |Motor_v1_0_S00_AXI |   282|
+|1     |top                         |                   |   280|
+|2     |  U0                        |Motor_v1_0         |   280|
+|3     |    Motor_v1_0_S00_AXI_inst |Motor_v1_0_S00_AXI |   280|
 +------+----------------------------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 710.863 ; gain = 411.113
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 711.832 ; gain = 411.824
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 25 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 710.863 ; gain = 118.172
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 710.863 ; gain = 411.113
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 711.832 ; gain = 118.633
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 711.832 ; gain = 411.824
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -359,12 +378,12 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-34 Infos, 53 Warnings, 0 Critical Warnings and 0 Errors encountered.
+53 Infos, 53 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 710.863 ; gain = 412.738
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 711.832 ; gain = 414.449
 INFO: [Common 17-1381] The checkpoint 'C:/Projet/Vivado/Evo/Evo.runs/evo_v1_Motor_1_0_synth_1/evo_v1_Motor_1_0.dcp' has been generated.
-INFO: [Coretcl 2-1486] Found existing duplicate IP cache entry 6a7d491bc7f4f3ef, use '-force' option to overwrite
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Motor_1_0/evo_v1_Motor_1_0.xci
 INFO: [Coretcl 2-1174] Renamed 2 cell refs.
 INFO: [Common 17-1381] The checkpoint 'C:/Projet/Vivado/Evo/Evo.runs/evo_v1_Motor_1_0_synth_1/evo_v1_Motor_1_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 710.863 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 31 15:11:47 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 711.832 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  3 14:38:09 2017...

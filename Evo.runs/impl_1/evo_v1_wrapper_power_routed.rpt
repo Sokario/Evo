@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Thu Nov  2 15:19:21 2017
+| Date             : Fri Nov  3 14:40:51 2017
 | Host             : LogOut-AsusPro running 64-bit major release  (build 9200)
 | Command          : report_power -file evo_v1_wrapper_power_routed.rpt -pb evo_v1_wrapper_power_summary_routed.pb -rpx evo_v1_wrapper_power_routed.rpx
 | Design           : evo_v1_wrapper
@@ -50,14 +50,14 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.010 |        3 |       --- |             --- |
-| Slice Logic             |     0.005 |     8637 |       --- |             --- |
-|   LUT as Logic          |     0.004 |     3074 |     17600 |           17.47 |
+| Slice Logic             |     0.005 |     8703 |       --- |             --- |
+|   LUT as Logic          |     0.004 |     3124 |     17600 |           17.75 |
 |   CARRY4                |    <0.001 |      298 |      4400 |            6.77 |
-|   Register              |    <0.001 |     3883 |     35200 |           11.03 |
+|   Register              |    <0.001 |     3909 |     35200 |           11.11 |
 |   LUT as Shift Register |    <0.001 |       62 |      6000 |            1.03 |
 |   F7/F8 Muxes           |    <0.001 |       62 |     17600 |            0.35 |
 |   Others                |     0.000 |      241 |       --- |             --- |
-| Signals                 |     0.006 |     7585 |       --- |             --- |
+| Signals                 |     0.006 |     7667 |       --- |             --- |
 | DSPs                    |    <0.001 |       24 |        80 |           30.00 |
 | I/O                     |     0.003 |       20 |       100 |           20.00 |
 | PS7                     |     1.556 |        1 |       --- |             --- |
