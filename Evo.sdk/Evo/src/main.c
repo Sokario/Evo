@@ -8,6 +8,7 @@
 #include "xgpio.h"
 #include "stdlib.h"
 #include "sleep.h"
+#include "string.h"
 #include "xparameters.h"
 
 #include "read.h"
@@ -18,8 +19,9 @@
 #include "xuartps.h"
 XUartPs UartPs;
 #define UART_PS_DEVICE_ID XPAR_XUARTPS_0_DEVICE_ID
-u8 command[16];
-u8 result[16];
+u8 command[8];
+u8 result[8];
+u32 cmd_value;
 
 XGpio Input, Output;
 #define INPUT_DEVICE_ID XPAR_GPIO_0_DEVICE_ID
@@ -76,20 +78,20 @@ int main()
 		memset(command, '\0', sizeof(command));
 		memset(result, '\0', sizeof(result));
 
-		// Echo communication
+		// Read communication
 		readMonitor(&UartPs, command, sizeof(command));
-		led_data |= 1 << 2;
-		XGpio_DiscreteWrite(&Output, LED, led_data);
+		XGpio_DiscreteWrite(&Output, LED, XGpio_DiscreteRead(&Output, LED) | 1 << 2);
 
-		writeMonitor(&UartPs, command, sizeof(command));
+		// Command analyzer
+		cmd_value = parser(command, result, &UartPs);
 		usleep(500000);
-		parser(command, result);
+
+		// Write communication
 		writeMonitor(&UartPs, result, sizeof(result));
 		usleep(500000);
 
 		// Debug
 		switch_data = XGpio_DiscreteRead(&Input, SWITCH);	//get switch data
-//		XGpio_DiscreteWrite(&Output, 1, switch_data);	//write switch data to the LEDs
 		button_data = XGpio_DiscreteRead(&Input, BUTTON);	//get button data
 		//print message dependent on whether one or more buttons are pressed
 		if(button_data == 0b0000){} //do nothing
@@ -104,8 +106,7 @@ int main()
 		else
 			writeMonitor(&UartPs, (u8 *)"OKmultipleButton", 16);
 
-		led_data &= ~(1 << 2);
-		XGpio_DiscreteWrite(&Output, LED, led_data);
+		XGpio_DiscreteWrite(&Output, LED, XGpio_DiscreteRead(&Output, LED) & ~(1 << 2));
 	}
 	return XST_SUCCESS;
 }

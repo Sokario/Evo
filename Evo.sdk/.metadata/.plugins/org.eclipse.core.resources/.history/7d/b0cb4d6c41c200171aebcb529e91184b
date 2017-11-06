@@ -1,0 +1,31 @@
+/*
+ * parser.c
+ *
+ *  Created on: 3 nov. 2017
+ *      Author: LogOut
+ */
+
+#include "parser.h"
+
+u32 parser(u8 *cmd, u8 *result, XUartPs *uart)
+{
+	u32 status = -1;
+	u32 cmd_value = 0;
+
+	cmd_value = strtol((char *)cmd, 16);
+	char str[32];
+	itoa(cmd_value, str, 10);
+	writeMonitor(uart, str, 2*sizeof(str));
+	strcpy(result, cmd);
+
+/*	if ((cmd_value & TYPE_MASK) == 0x10000000) {
+		status = 0;
+		strcpy(result, "OK000000");
+	} else if ((cmd[0] == 'R') && (cmd[1] == 'N')) {
+		status = 1;
+		strcpy(result, "CR000000");
+	} else
+		strcpy(result, "ER000000");*/
+
+	return cmd_value;
+}

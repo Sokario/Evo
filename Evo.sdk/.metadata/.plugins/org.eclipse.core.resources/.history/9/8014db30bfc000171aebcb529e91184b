@@ -1,0 +1,24 @@
+/*
+ * parser.c
+ *
+ *  Created on: 3 nov. 2017
+ *      Author: LogOut
+ */
+
+#include "parser.h"
+
+u32 parser(u8 *cmd, u8 *result)
+{
+	u32 status = -1;
+
+	if ((cmd[0] == 'O') && (cmd[0] == 'K')) {
+		status = 0;
+		strcpy(result, "OK00000000000000");
+	} else if ((cmd[0] == 'R') && (cmd[0] == 'N')) {
+		status = 1;
+		strcpy(result, "CR00000000000000");
+	} else
+		strcpy(result, "ER00000000000000");
+
+	return status;
+}
