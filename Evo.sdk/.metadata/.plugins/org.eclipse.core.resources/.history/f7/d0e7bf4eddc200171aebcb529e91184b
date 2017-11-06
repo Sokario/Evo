@@ -1,0 +1,148 @@
+/*
+ * parser.c
+ *
+ *  Created on: 3 nov. 2017
+ *      Author: LogOut
+ */
+
+#include "parser.h"
+
+#define ACK_ERROR_UNKNOW_MASK 	0x30000000
+#define ACK_ERROR_CMD_MASK 		0x31000000
+#define ACK_ERROR_DATA_MASK 	0x32000000
+#define ACK_RESEND_MASK 		0x34000000
+#define ACK_OK_MASK 			0x38000000
+#define ACK_END_MASK 			0x3C000000
+
+u32 parser(u8 *cmd, u8 *result, XUartPs *uart)
+{
+	u32 status = XST_FAILURE;
+	u32 cmd_value = 0, data_value = 0;
+
+	cmd_value = strtol((char *)cmd, NULL, 16);
+	data_value = cmd_value & DATA_MASK;
+	cmd_value &= CMD_MASK;
+
+	switch (cmd_value) {
+		case QUIT_CMD :
+			status = XST_SUCCESS;
+			strcpy(result, "QUIT0000");
+			break;
+
+		case CMD_STOP_MASK :
+			status = 1;
+			strcpy(result, "STOP0000");
+			break;
+
+		case CMD_SET_ANGLE_MASK :
+			status = 2;
+			strcpy(result, "SETA0000");
+			break;
+
+		case CMD_SET_DISTANCE_MASK :
+			status = 3;
+			strcpy(result, "SETD0000");
+			break;
+
+		case CMD_GET_ANGLE_MASK :
+			status = 4;
+			strcpy(result, "GETA0000");
+			break;
+
+		case CMD_GET_DISTANCE_MASK :
+			status = 5;
+			strcpy(result, "GETD0000");
+			break;
+
+		case CMD_RUN_ALL_MASK :
+			status = 6;
+			strcpy(result, "RUN00000");
+			break;
+
+		case CMD_RUN_ANGLE_MASK :
+			status = 7;
+			strcpy(result, "RUNA0000");
+			break;
+
+		case CMD_RUN_DISTANCE_MASK :
+			status = 8;
+			strcpy(result, "RUND0000");
+			break;
+
+		case INFO_RUNNING_MASK :
+			status = 9;
+			strcpy(result, "INFOR000");
+			break;
+
+		case INFO_POS_ANGLE_MASK :
+			status = 10;
+			strcpy(result, "INFOA000");
+			break;
+
+		case INFO_POS_X_MASK :
+			status = 11;
+			strcpy(result, "INFOX000");
+			break;
+
+		case INFO_POS_DISTANCE_MASK :
+			status = 12;
+			strcpy(result, "INFOD000");
+			break;
+
+		case INFO_POS_Y_MASK :
+			status = 13;
+			strcpy(result, "INFOY000");
+			break;
+
+		case INFO_CAPT_TOR_MASK :
+			status = 14;
+			strcpy(result, "INFOTOR0");
+			break;
+
+		case INFO_CAPT_GP2_MASK :
+			status = 15;
+			strcpy(result, "INFOGP20");
+			break;
+
+		case INFO_CAPT_COLOR_MASK :
+			status = 16;
+			strcpy(result, "INFOCOLO");
+			break;
+
+		case ACK_ERROR_UNKNOW_MASK :
+			status = 17;
+			strcpy(result, "ERU00000");
+			break;
+
+		case ACK_ERROR_CMD_MASK :
+			status = 18;
+			strcpy(result, "ERCMD000");
+			break;
+
+		case ACK_ERROR_DATA_MASK :
+			status = 19;
+			strcpy(result, "ERDATA00");
+			break;
+
+		case ACK_RESEND_MASK :
+			status = 20;
+			strcpy(result, "RESEND00");
+			break;
+
+		case ACK_OK_MASK :
+			status = 21;
+			strcpy(result, "OK000000");
+			break;
+
+		case ACK_END_MASK :
+			status = 22;
+			strcpy(result, "END00000");
+			break;
+
+		default :
+			status = XST_FAILURE;
+			strcpy(result, "ER000000");
+	}
+
+	return status;
+}

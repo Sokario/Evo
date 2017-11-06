@@ -1,8 +1,9 @@
 src/parser.o src/parser.o: ../src/parser.c ../src/parser.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xil_types.h \
- ../../Evo_bsp/ps7_cortexa9_0/include/xuartps.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/xstatus.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xil_types.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xil_assert.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/xuartps.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xstatus.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xuartps_hw.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h \
@@ -18,11 +19,13 @@ src/parser.o src/parser.o: ../src/parser.c ../src/parser.h \
 
 ../../Evo_bsp/ps7_cortexa9_0/include/xil_types.h:
 
-../../Evo_bsp/ps7_cortexa9_0/include/xuartps.h:
+../../Evo_bsp/ps7_cortexa9_0/include/xstatus.h:
 
 ../../Evo_bsp/ps7_cortexa9_0/include/xil_types.h:
 
 ../../Evo_bsp/ps7_cortexa9_0/include/xil_assert.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/xuartps.h:
 
 ../../Evo_bsp/ps7_cortexa9_0/include/xstatus.h:
 

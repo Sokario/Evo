@@ -1,8 +1,303 @@
-17:02:36 **** Incremental Build of configuration Debug for project Evo ****
+16:56:31 **** Auto Build of configuration Debug for project Evo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Rien à faire pour « main-build ».
+'Building file: ../src/parser.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/parser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+../src/parser.c: In function 'receiverParser':
+../src/parser.c:22:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "QUIT0000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:27:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "STOP0000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:32:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "SETA0000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:37:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "SETD0000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:42:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "SETX0000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:47:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "SETY0000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:52:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "GETA0000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:57:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "GETD0000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:62:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "GETX0000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:67:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "GETY0000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:72:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "RUNA0000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:77:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "RUND0000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:82:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "RUNX0000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:87:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "RUNY0000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:92:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "RUN00000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:97:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "QUADR000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:102:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "PIDINIT0");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:107:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "PIDCONF0");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:112:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "PIDSETKP");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:117:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "PIDSETKI");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:122:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "PIDSETKD");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:127:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "PIDGETKP");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:132:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "PIDGETKI");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:137:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "PIDGETKD");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:142:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "CONV0000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:147:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "VAR00000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:152:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "RESPOK00");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:157:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "RESPDONE");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:162:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "RESPER00");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:167:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "RESPRUN0");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+../src/parser.c:172:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+    strcpy(result, "ER000000");
+           ^~~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/parser.h:13,
+                 from ../src/parser.c:8:
+c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
+        ^
+'Finished building: ../src/parser.c'
+' '
+'Building target: Evo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/platform.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Evo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  44104	   1280	  22776	  68160	  10a40	Evo.elf
+'Finished building: Evo.elf.size'
+' '
 
-17:02:36 Build Finished (took 186ms)
+16:56:32 Build Finished (took 741ms)
 

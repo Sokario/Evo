@@ -9,77 +9,152 @@
 #define SRC_PARSER_H_
 
 #include "xil_types.h"
+#include "xstatus.h"
 #include "stdlib.h"
 #include "string.h"
 
 #include "xuartps.h"
 #include "write.h"
 
-#define TYPE_MASK 0xF0000000
-#define CMD_MASK 0x0F000000
-#define DATA_MASK 0x00FFFFFF
 
-#define CMD_TYPE 0x10000000
-#define INFO_TYPE 0x20000000
-#define ACK_TYPE 0x30000000
-#define QUIT_TYPE 0xFF000000
+#define CMD_MASK 				0xFF000000
+#define DATA_MASK 				0x00FFFFFF
+#define QUIT_CMD 				0xF0000000
+
+#define STOP_CMD 				0x10000000
+
+#define SET_CMD 				0x20000000
+#define SET_ANGLE_MASK 			0x21000000
+#define SET_DISTANCE_MASK 		0x22000000
+#define SET_X_MASK 				0x23000000
+#define SET_Y_MASK 				0x24000000
+
+#define GET_CMD 				0x30000000
+#define GET_ANGLE_MASK 			0x31000000
+#define GET_DISTANCE_MASK 		0x32000000
+#define GET_X_MASK 				0x33000000
+#define GET_Y_MASK 				0x34000000
+
+#define RUN_CMD 				0x40000000
+#define RUN_DISTANCE_MASK 		0x41000000
+#define RUN_ANGLE_MASK 			0x42000000
+#define RUN_X_MASK 				0x43000000
+#define RUN_Y_MASK 				0x44000000
+#define RUN_ALL_MASK 			0x45000000
+
+#define QUADR_CMD				0x50000000
+
+#define PID_CMD					0x60000000
+#define PID_INIT_MASK			0x61000000
+#define PID_CONFIG_MASK			0x62000000
+#define PID_SET_KP_MASK			0x63000000
+#define PID_SET_KI_MASK			0x64000000
+#define PID_SET_KD_MASK			0x65000000
+#define PID_GET_KP_MASK			0x66000000
+#define PID_GET_KI_MASK			0x67000000
+#define PID_GET_KD_MASK			0x68000000
+
+#define CONV_CMD				0x70000000
+
+#define VAR_CMD					0x80000000
+
+#define RESP_CMD				0x90000000
+#define RESP_OK_MASK			0x91000000
+#define RESP_DONE_MASK			0x92000000
+#define RESP_ERROR_MASK			0x93000000
+#define RESP_RUNNING_MASK		0x94000000
+
+#define CAPT_CMD				0xA0000000
+#define CAPT_GP2_MASK			0xA1000000
+#define CAPT_TOR_MASK			0xA2000000
+#define CAPT_COLOR_MASK			0xA3000000
 
 
-u32 parser(u8 *cmd, u8 *result, XUartPs * uart);
+int receiverParser(u8 *cmd, u8 *result, u32 *cmd_value, u32 *data_value);
 
 /****************************************************
-     * | XX | XX XX XX | 8 Hexa caracters
-     * |CMD type| Data | 8 Hexa caracters
-     *
-     * CMD type : 1 HEX
-     * 0000: -      ->      |       |       |
-     * 0001: CMD    -> SET  | GET   | RUN   | STOP
-     * 0010: INFO   -> CAPT | DIST  | ANGLE | RUNNING
-     * 0011: ACK    -> OK   | END   | ERROR | RESEND
-     * 0100: +1     ->      |       |       |
-     * 0101: +1     ->      |       |       |
-     * 0110: +1     ->      |       |       |
-     * 0111: +1     ->      |       |       |
-     * 1000: +1     ->      |       |       |
-     * 1001: +1     ->      |       |       |
-     * 1010: +1     ->      |       |       |
-     * 1011: +1     ->      |       |       |
-     * 1100: +1     ->      |       |       |
-     * 1101: +1     ->      |       |       |
-     * 1110: +1     ->      |       |       |
-     * 1111: QUIT   ->      |       |       |
-     * -------------------------------------------------
-     * CMD type : 2 HEX (1 HEX = CMD)
-     * 00|XX: STOP
-     * 01|01: SET Angle
-     * 01|10: SET Distance
-     * 10|01: GET Angle
-     * 10|10: GET Distance
-     * 11|00: RUN ALL
-     * 11|01: RUN ANGLE
-     * 11|10: RUN DISTANCE
-     * 11|11: RUN -
-     *
-     * CMD type : 2 HEX (1 HEX = INFO)
-     * 00|XX: RUNNING
-     * 01|01: POS 1: ANGLE
-     * 01|10: POS 1: X
-     * 10|01: POS 2: Distance
-     * 10|10: POS 2: Y
-     * 11|00: CAPT ToR
-     * 11|01: CAPT GP2
-     * 11|10: CAPT -
-     * 11|11: CAPT Color
-     *
-     * CMD type : 2 HEX (1 HEX = ACK)
-     * 00|00: ERROR unknow
-     * 00|01: ERROR cmd type
-     * 00|10: ERROR data
-     * 00|11: ERROR -
-     * 01|XX: RESEND
-     * 10|XX: OK    -> | XX : CMD type 2 HEX (1 HEX = CMD)
-     * 11|XX: END   -> | XX : CMD type 2 HEX (1 HEX = CMD)
-     *
+ * | XX | XX XX XX | 8 Hexa caracters
+ * |CMD type| Data | 8 Hexa caracters
+ *
+ * CMD type : 1 HEX
+ * -------------------------------------------------
+ * 0000: X      -> 0    | 0     | 0     | 0
+ * ----: CMD ASSERV										[IN]
+ * 0001: STOP   -> 0    | 0     | 0     | 0
+ * 0010: SET    -> ANG  | DIST  | X     | Y
+ * 0011: GET    -> ANG  | DIST  | X     | Y
+ * 0100: RUN    -> ANG  | DIST  | XY    | BASIC
+ * ----: CMD VARIABLE									[IN]
+ * 0101: QUADR  -> SET  | GET   | INIT  | CONFIG
+ * 0110: PID    -> SET  | GET   | INIT  | CONFIG
+ * 0111: CONV   -> SET  | GET   | INIT  | CONFIG
+ * 1000: VAR    -> SET  | GET   | INIT  | CONFIG
+ * ----: CMD RESPONSE									[OUT]
+ * 1001: RESP   -> OK   | DONE  | ERROR | RUNNING
+ * ----: CMD OTHER										[IN]
+ * 1010: CAPT   -> GP2  | ToR   | COLOR | -
+ * 1011: STATE  -> -    | -     | -     | -
+ * 1100: STATE  -> -    | -     | -     | -
+ * 1101: STATE  -> -    | -     | -     | -
+ * 1110: STATE  -> -    | -     | -     | -
+ * 1111: QUIT   -> 0    | 0     | 0     | 0
+ * -------------------------------------------------
+ * CMD type : 2 HEX (1 HEX = SET)
+ * 00|01: SET angle
+ * 00|10: SET distance
+ * 00|11: SET x
+ * 01|00: SET y
+ *
+ * CMD type : 2 HEX (1 HEX = GET)
+ * 00|01: GET angle
+ * 00|10: GET distance
+ * 00|11: GET x
+ * 01|00: GET y
+ *
+ * CMD type : 2 HEX (1 HEX = RUN)
+ * 00|01: RUN angle
+ * 00|10: RUN distance
+ * 00|11: RUN x
+ * 01|00: RUN y
+ * 01|01: RUN all
+ *
+ * CMD type : 2 HEX (1 HEX = QUADR)
+ * 00|01: QUADR init
+ * 00|10: QUADR config
+ * 00|11: QUADR set A
+ * 01|00: QUADR set B
+ * 01|01: QUADR set C
+ * 01|10: QUADR get A
+ * 01|11: QUADR get B
+ * 10|00: QUADR get C
+ *
+ * CMD type : 2 HEX (1 HEX = PID)
+ * 00|01: PID init
+ * 00|10: PID config
+ * 00|11: PID set Kp
+ * 01|00: PID set Ki
+ * 01|01: PID set Kd
+ * 01|10: PID get Kp
+ * 01|11: PID get Ki
+ * 10|00: PID get Kd
+ *
+ * CMD type : 2 HEX (1 HEX = CONV/VAR)
+ * 00|01: CONV/VAR init
+ * 00|10: CONV/VAR config
+ * 00|11: CONV/VAR set A
+ * 01|00: CONV/VAR get A
+ *
+ * CMD type : 2 HEX (1 HEX = RESP)
+ * 00|01: RESP ok
+ * 00|10: RESP done
+ * 00|11: RESP error
+ * 01|00: RESP running
+ *
+ * CMD type : 2 HEX (1 HEX = CAPT)
+ * 00|01: CAPT GP2
+ * 00|10: CAPT ToR
+ * 00|11: CAPT color
+ *
 ****************************************************/
 
 #endif /* SRC_PARSER_H_ */
