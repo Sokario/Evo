@@ -24,7 +24,15 @@ src/main.o src/main.o: ../src/main.c \
  ../../Evo_bsp/ps7_cortexa9_0/include/Derivator.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/Encoder.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/Motor.h ../src/parser.h \
- ../../Evo_bsp/ps7_cortexa9_0/include/xstatus.h
+ ../../Evo_bsp/ps7_cortexa9_0/include/xstatus.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/Gpio_IRQ.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/Gpio_Controller.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/xscugic.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/xscugic_hw.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/xil_exception.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/xil_exception.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/xil_cache.h
 
 ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:
 
@@ -85,3 +93,19 @@ src/main.o src/main.o: ../src/main.c \
 ../src/parser.h:
 
 ../../Evo_bsp/ps7_cortexa9_0/include/xstatus.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/Gpio_IRQ.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/Gpio_Controller.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/xscugic.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/xscugic_hw.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/xil_exception.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/xil_exception.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/xil_cache.h:

@@ -18,39 +18,182 @@
 
 #include "xuartps.h"
 XUartPs UartPs;
-#define UART_PS_DEVICE_ID XPAR_XUARTPS_0_DEVICE_ID
+#define UART_PS_DEVICE_ID 			XPAR_XUARTPS_0_DEVICE_ID
 u8 command[8];
 u8 result[8];
 u32 cmd_value;
 
 XGpio Input, Output;
-#define INPUT_DEVICE_ID XPAR_GPIO_0_DEVICE_ID
-#define OUTPUT_DEVICE_ID XPAR_GPIO_1_DEVICE_ID
+#define INPUT_DEVICE_ID 			XPAR_GPIO_0_DEVICE_ID
+#define OUTPUT_DEVICE_ID 			XPAR_GPIO_1_DEVICE_ID
 
 #include "Subtractor.h"
 Subtractor SubLeft, SubRight;
-#define SUBTRACTOR_LEFT_DEVICE_ID XPAR_SUBTRACTOR_0_DEVICE_ID
-#define SUBTRACTOR_RIGHT_DEVICE_ID XPAR_SUBTRACTOR_1_DEVICE_ID
+#define SUBTRACTOR_LEFT_DEVICE_ID 	XPAR_SUBTRACTOR_0_DEVICE_ID
+#define SUBTRACTOR_RIGHT_DEVICE_ID 	XPAR_SUBTRACTOR_1_DEVICE_ID
 
 #include "PID.h"
 PID PIDLeftMotor, PIDRightMotor;
-#define PID_LEFT_MOTOR_DEVICE_ID XPAR_PID_0_DEVICE_ID
-#define PID_RIGHT_MOTOR_DEVICE_ID XPAR_PID_1_DEVICE_ID
+#define PID_LEFT_MOTOR_DEVICE_ID 	XPAR_PID_0_DEVICE_ID
+#define PID_RIGHT_MOTOR_DEVICE_ID 	XPAR_PID_1_DEVICE_ID
 
 #include "Derivator.h"
 Derivator DerivLeft, DerivRight;
-#define DERIVATOR_LEFT_DEVICE_ID XPAR_DERIVATOR_0_DEVICE_ID
-#define DERIVATOR_RIGHT_DEVICE_ID XPAR_DERIVATOR_1_DEVICE_ID
+#define DERIVATOR_LEFT_DEVICE_ID 	XPAR_DERIVATOR_0_DEVICE_ID
+#define DERIVATOR_RIGHT_DEVICE_ID	XPAR_DERIVATOR_1_DEVICE_ID
 
 #include "Encoder.h"
 Encoder EncLeft, EncRight;
-#define ENCODER_LEFT_DEVICE_ID XPAR_ENCODER_0_DEVICE_ID
-#define ENCODER_RIGHT_DEVICE_ID XPAR_ENCODER_1_DEVICE_ID
+#define ENCODER_LEFT_DEVICE_ID 		XPAR_ENCODER_0_DEVICE_ID
+#define ENCODER_RIGHT_DEVICE_ID		XPAR_ENCODER_1_DEVICE_ID
 
 #include "Motor.h"
 Motor MotLeft, MotRight;
-#define MOTOR_LEFT_DEVICE_ID XPAR_MOTOR_0_DEVICE_ID
-#define MOTOR_RIGHT_DEVICE_ID XPAR_MOTOR_1_DEVICE_ID
+#define MOTOR_LEFT_DEVICE_ID 		XPAR_MOTOR_0_DEVICE_ID
+#define MOTOR_RIGHT_DEVICE_ID 		XPAR_MOTOR_1_DEVICE_ID
+
+#include "Gpio_IRQ.h"
+#include "Gpio_Controller.h"
+#include "xscugic.h"
+#define IRQ_DEVICE_ID				XPAR_SCUGIC_0_DEVICE_ID
+#define IRQ_ID						XPAR_FABRIC_GPIO_IRQ_0_INTERRUPT_INTR
+XScuGic IRQController;
+int ScuGic_Initialization(XScuGic *gic, u16 DeviceId);
+
+/***************************** Include Files *********************************/
+
+#include "xil_io.h"
+#include "xil_exception.h"
+#include "xil_cache.h"
+
+/************************** Function Prototypes ******************************/
+int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr);
+void DeviceDriverHandler(void *CallbackRef);
+volatile static int InterruptProcessed = 0;
+
+/************************** Variable Definitions *****************************/
+
+/*
+ * Create a shared variable to be used by the main thread of processing and
+ * the interrupt processing
+ */
+
+int ScuGic_Initialization(XScuGic *gic, u16 DeviceId)
+{
+	XScuGic_Config *gicConfig;
+
+	/*
+	 * Initialize the interrupt controller driver so that it is ready to
+	 * use.
+	 */
+	gicConfig = XScuGic_LookupConfig(DeviceId);
+	if (NULL == gicConfig) {
+		return XST_FAILURE;
+	}
+
+	if (XScuGic_CfgInitialize(gic, gicConfig, gicConfig->CpuBaseAddress) != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+
+	/*
+	 * Perform a self-test to ensure that the hardware was built
+	 * correctly
+	 */
+	if (XScuGic_SelfTest(gic) != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+
+	/*
+	 * Setup the Interrupt System
+	 */
+	if (SetUpInterruptSystem(gic) != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Connect a device driver handler that will be called when an
+	 * interrupt for the device occurs, the device driver handler performs
+	 * the specific interrupt processing for the device
+	 */
+
+	if (XScuGic_Connect(gic, IRQ_ID, (Xil_ExceptionHandler)DeviceDriverHandler, (void *)NULL) != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Enable the interrupt for the device and then cause (simulate) an
+	 * interrupt so the handlers will be called
+	 */
+	XScuGic_Enable(gic, IRQ_ID);
+
+	/*
+	 *  Simulate the Interrupt
+	 */
+	Xil_Out32(XPAR_GPIO_CONTROLLER_0_S00_AXI_BASEADDR + GPIO_CONTROLLER_S00_AXI_SLV_REG0_OFFSET, 0);
+	Xil_Out32(XPAR_GPIO_CONTROLLER_0_S00_AXI_BASEADDR + GPIO_CONTROLLER_S00_AXI_SLV_REG0_OFFSET, 0b11111);
+
+	while (1) {
+		if (InterruptProcessed > 0) {
+			break;
+		}
+	}
+
+	return XST_SUCCESS;
+}
+
+/****************************************************************************
+* @param	XScuGicInstancePtr is the instance of the interrupt controller
+*		that needs to be worked on.
+*
+* @return	None.
+*
+* @note		None.
+*
+****************************************************************************/
+int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr)
+{
+
+	/*
+	 * Connect the interrupt controller interrupt handler to the hardware
+	 * interrupt handling logic in the ARM processor.
+	 */
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+			(Xil_ExceptionHandler) XScuGic_InterruptHandler,
+			XScuGicInstancePtr);
+
+	/*
+	 * Enable interrupts in the ARM
+	 */
+	Xil_ExceptionEnable();
+
+	return XST_SUCCESS;
+}
+
+/****************************************************************************
+*
+* @param	CallbackRef is passed back to the device driver's interrupt
+*		handler by the XScuGic driver.  It was given to the XScuGic
+*		driver in the XScuGic_Connect() function call.  It is typically
+*		a pointer to the device driver instance variable.
+*		In this example, we do not care about the callback
+*		reference, so we passed it a 0 when connecting the handler to
+*		the XScuGic driver and we make no use of it here.
+*
+* @return	None.
+*
+* @note		None.
+*
+****************************************************************************/
+void DeviceDriverHandler(void *CallbackRef)
+{
+	/*
+	 * Indicate the interrupt has been processed using a shared variable
+	 */
+	InterruptProcessed += 1;
+}
+
 
 int DEBUG_Initialization();
 int ASSERV_Initialization();
@@ -59,7 +202,6 @@ int main()
 {
 	int button_data = 0, switch_data = 0, led_data = 0;
 	u32 cmd_value = 0, data_value = 0;
-	int status = 0;
 
 	// Communication-Debug initialization
 	if (DEBUG_Initialization() != XST_SUCCESS)
@@ -73,8 +215,13 @@ int main()
 		led_data &= ~(1 << 1);
 	else
 		led_data |= 1 << 1;
-	XGpio_DiscreteWrite(&Output, LED, led_data);
 
+	if (ScuGic_Initialization(&IRQController, IRQ_DEVICE_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"GIC Example Test Failed\r\n", 64);
+		return XST_FAILURE;
+	}
+
+	XGpio_DiscreteWrite(&Output, LED, led_data);
 
 	while(1) {
 		memset(command, '\0', sizeof(command));

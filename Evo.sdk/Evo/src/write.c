@@ -5,10 +5,7 @@
  *      Author: LogOut
  */
 
-#include "xparameters.h"
-#include "xuartps.h"
-#include "sleep.h"
-#include "xcoresightpsdcc.h"
+#include "write.h"
 
 
 void writeMonitor(XUartPs *ptr, u8 *str, u32 size)

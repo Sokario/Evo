@@ -57,6 +57,28 @@
 
 /******************************************************************/
 
+/* Definitions for driver GPIO_CONTROLLER */
+#define XPAR_GPIO_CONTROLLER_NUM_INSTANCES 1
+
+/* Definitions for peripheral GPIO_CONTROLLER_0 */
+#define XPAR_GPIO_CONTROLLER_0_DEVICE_ID 0
+#define XPAR_GPIO_CONTROLLER_0_S00_AXI_BASEADDR 0x43CB0000
+#define XPAR_GPIO_CONTROLLER_0_S00_AXI_HIGHADDR 0x43CBFFFF
+
+
+/******************************************************************/
+
+/* Definitions for driver GPIO_IRQ */
+#define XPAR_GPIO_IRQ_NUM_INSTANCES 1
+
+/* Definitions for peripheral GPIO_IRQ_0 */
+#define XPAR_GPIO_IRQ_0_DEVICE_ID 0
+#define XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR 0x43CA0000
+#define XPAR_GPIO_IRQ_0_S00_AXI_HIGHADDR 0x43CAFFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver MOTOR */
 #define XPAR_MOTOR_NUM_INSTANCES 2
 
@@ -370,6 +392,15 @@
 #define XPAR_XQSPIPS_0_QSPI_CLK_FREQ_HZ 200000000
 #define XPAR_XQSPIPS_0_QSPI_MODE 0
 
+
+/******************************************************************/
+
+/* Definitions for Fabric interrupts connected to ps7_scugic_0 */
+#define XPAR_FABRIC_GPIO_IRQ_0_INTERRUPT_INTR 61U
+
+/******************************************************************/
+
+/* Canonical definitions for Fabric interrupts connected to ps7_scugic_0 */
 
 /******************************************************************/
 

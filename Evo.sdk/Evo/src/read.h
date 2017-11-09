@@ -8,6 +8,7 @@
 #ifndef SRC_READ_H_
 #define SRC_READ_H_
 
+#include "xparameters.h"
 #include "xuartps.h"
 
 void readMonitor(XUartPs *ptr, u8 *str, int size);

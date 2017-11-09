@@ -1,4 +1,4 @@
-src/read.o src/read.o: ../src/read.c \
+src/read.o src/read.o: ../src/read.c ../src/read.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xparameters.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xparameters_ps.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xuartps.h \
@@ -13,6 +13,8 @@ src/read.o src/read.o: ../src/read.c \
  ../../Evo_bsp/ps7_cortexa9_0/include/xreg_cortexa9.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xplatform_info.h
+
+../src/read.h:
 
 ../../Evo_bsp/ps7_cortexa9_0/include/xparameters.h:
 

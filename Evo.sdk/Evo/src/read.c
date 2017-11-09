@@ -5,10 +5,7 @@
  *      Author: LogOut
  */
 
-#include "xparameters.h"
-//#include "xuartlite_l.h"
-#include "xuartps.h"
-//#include "xil_printf.h"
+#include "read.h"
 
 void readMonitor(XUartPs *ptr, u8 *str, int size)
 {

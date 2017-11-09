@@ -13,7 +13,9 @@ src/parser.o src/parser.o: ../src/parser.c ../src/parser.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xpseudo_asm.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xreg_cortexa9.h \
  ../../Evo_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h \
- ../../Evo_bsp/ps7_cortexa9_0/include/xplatform_info.h ../src/write.h
+ ../../Evo_bsp/ps7_cortexa9_0/include/xplatform_info.h ../src/write.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/xparameters.h \
+ ../../Evo_bsp/ps7_cortexa9_0/include/sleep.h
 
 ../src/parser.h:
 
@@ -48,3 +50,7 @@ src/parser.o src/parser.o: ../src/parser.c ../src/parser.h \
 ../../Evo_bsp/ps7_cortexa9_0/include/xplatform_info.h:
 
 ../src/write.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/xparameters.h:
+
+../../Evo_bsp/ps7_cortexa9_0/include/sleep.h:
