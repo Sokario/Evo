@@ -53,7 +53,10 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Projet/Vivado/Evo/Evo.cache/wt [current_project]
   set_property parent.project_path C:/Projet/Vivado/Evo/Evo.xpr [current_project]
-  set_property ip_repo_paths C:/Projet/Vivado/Custom_IP [current_project]
+  set_property ip_repo_paths {
+  C:/Projet/Vivado/Custom_IP/Vivado_17.2/Zybo_target/Ip/ADC_IRQ/ADC_IRQ_1.0
+  C:/Projet/Vivado/Custom_IP
+} [current_project]
   set_property ip_output_repo C:/Projet/Vivado/Evo/Evo.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]

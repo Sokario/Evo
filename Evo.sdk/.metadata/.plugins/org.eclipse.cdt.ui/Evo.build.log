@@ -1,39 +1,8 @@
-19:58:21 **** Auto Build of configuration Debug for project Evo ****
+15:00:15 **** Incremental Build of configuration Debug for project Evo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Evo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:238:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
-    strcpy(result, "RESENDXX");
-           ^~~~~~
-In file included from c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
-                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
-                 from ../../Evo_bsp/ps7_cortexa9_0/include/xil_io.h:65,
-                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
-                 from ../../Evo_bsp/ps7_cortexa9_0/include/xgpio.h:136,
-                 from ../src/main.c:8:
-c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
- char  *_EXFUN(strcpy,(char *__restrict, const char *__restrict));
-        ^
-../src/main.c:203:23: warning: variable 'switch_data' set but not used [-Wunused-but-set-variable]
-  int button_data = 0, switch_data = 0, led_data = 0;
-                       ^~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: Evo.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Evo_bsp/ps7_cortexa9_0/lib -o "Evo.elf"  ./src/initPL.o ./src/main.o ./src/parser.o ./src/read.o ./src/write.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Evo.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Evo.elf  |tee "Evo.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  47544	   2856	  22808	  73208	  11df8	Evo.elf
-'Finished building: Evo.elf.size'
-' '
+make: Rien à faire pour « main-build ».
 
-19:58:22 Build Finished (took 643ms)
+15:00:16 Build Finished (took 186ms)
 

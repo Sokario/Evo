@@ -162,12 +162,12 @@
 
 ##Pmod Header JA (XADC)
 ##IO_L21N_T3_DQS_AD14N_35
-#set_property PACKAGE_PIN N16 [get_ports {ja_n[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {ja_n[0]}]
+set_property PACKAGE_PIN N16 [get_ports {vauxn14}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vauxn14}]
 
 ##IO_L21P_T3_DQS_AD14P_35
-#set_property PACKAGE_PIN N15 [get_ports {ja_p[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {ja_p[0]}]
+set_property PACKAGE_PIN N15 [get_ports {vauxp14}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vauxp14}]
 
 ##IO_L22N_T3_AD7N_35
 #set_property PACKAGE_PIN L15 [get_ports {ja_n[1]}]

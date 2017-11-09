@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Wed Nov  8 19:09:18 2017
+--Date        : Thu Nov  9 16:40:31 2017
 --Host        : LogOut-AsusPro running 64-bit major release  (build 9200)
 --Command     : generate_target evo_v1_wrapper.bd
 --Design      : evo_v1_wrapper
@@ -44,7 +44,9 @@ entity evo_v1_wrapper is
     Sens_R : out STD_LOGIC;
     btns_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     leds_4bits_tri_io : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 )
+    sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    vauxn14 : in STD_LOGIC;
+    vauxp14 : in STD_LOGIC
   );
 end evo_v1_wrapper;
 
@@ -84,7 +86,9 @@ architecture STRUCTURE of evo_v1_wrapper is
     Sens_L : out STD_LOGIC;
     PWM_L : out STD_LOGIC;
     Sens_R : out STD_LOGIC;
-    PWM_R : out STD_LOGIC
+    PWM_R : out STD_LOGIC;
+    vauxn14 : in STD_LOGIC;
+    vauxp14 : in STD_LOGIC
   );
   end component evo_v1;
   component IOBUF is
@@ -156,7 +160,9 @@ evo_v1_i: component evo_v1
       leds_4bits_tri_t(2) => leds_4bits_tri_t_2(2),
       leds_4bits_tri_t(1) => leds_4bits_tri_t_1(1),
       leds_4bits_tri_t(0) => leds_4bits_tri_t_0(0),
-      sws_4bits_tri_i(3 downto 0) => sws_4bits_tri_i(3 downto 0)
+      sws_4bits_tri_i(3 downto 0) => sws_4bits_tri_i(3 downto 0),
+      vauxn14 => vauxn14,
+      vauxp14 => vauxp14
     );
 leds_4bits_tri_iobuf_0: component IOBUF
      port map (

@@ -14,7 +14,10 @@ set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
-set_property ip_repo_paths c:/Projet/Vivado/Custom_IP [current_project]
+set_property ip_repo_paths {
+  c:/Projet/Vivado/Custom_IP/Vivado_17.2/Zybo_target/Ip/ADC_IRQ/ADC_IRQ_1.0
+  c:/Projet/Vivado/Custom_IP
+} [current_project]
 set_property ip_output_repo c:/Projet/Vivado/Evo/Evo.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib C:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/hdl/evo_v1_wrapper.vhd
@@ -30,6 +33,8 @@ set_property used_in_implementation false [get_files -all c:/Projet/Vivado/Evo/E
 set_property used_in_implementation false [get_files -all c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_rst_ps7_0_100M_0_2/evo_v1_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_rst_ps7_0_100M_0_2/evo_v1_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_rst_ps7_0_100M_0_2/evo_v1_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_xadc_wiz_0_0/evo_v1_xadc_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_xadc_wiz_0_0/evo_v1_xadc_wiz_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_auto_pc_0/evo_v1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/evo_v1_ooc.xdc]
 set_property is_locked true [get_files C:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/evo_v1.bd]

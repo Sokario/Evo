@@ -17,7 +17,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
 set_property ip_repo_paths {
-  c:/Projet/Vivado/Custom_IP/Vivado_17.2/Zybo_target/Ip/Gpio_Controller/Gpio_Controller_1.0
+  c:/Projet/Vivado/Custom_IP/Vivado_17.2/Zybo_target/Ip/ADC_IRQ/ADC_IRQ_1.0
   c:/Projet/Vivado/Custom_IP
 } [current_project]
 set_property ip_output_repo c:/Projet/Vivado/Evo/Evo.cache/ip [current_project]

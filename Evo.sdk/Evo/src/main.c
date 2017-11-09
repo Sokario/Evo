@@ -67,7 +67,6 @@ int ScuGic_Initialization(XScuGic *gic, u16 DeviceId);
 #include "xil_cache.h"
 
 /************************** Function Prototypes ******************************/
-int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr);
 void DeviceDriverHandler(void *CallbackRef);
 volatile static int InterruptProcessed = 0;
 
@@ -82,35 +81,27 @@ int ScuGic_Initialization(XScuGic *gic, u16 DeviceId)
 {
 	XScuGic_Config *gicConfig;
 
-	/*
-	 * Initialize the interrupt controller driver so that it is ready to
-	 * use.
-	 */
 	gicConfig = XScuGic_LookupConfig(DeviceId);
-	if (NULL == gicConfig) {
+	if (NULL == gicConfig)
 		return XST_FAILURE;
-	}
 
-	if (XScuGic_CfgInitialize(gic, gicConfig, gicConfig->CpuBaseAddress) != XST_SUCCESS) {
+	if (XScuGic_CfgInitialize(gic, gicConfig, gicConfig->CpuBaseAddress) != XST_SUCCESS)
 		return XST_FAILURE;
-	}
 
 
 	/*
 	 * Perform a self-test to ensure that the hardware was built
 	 * correctly
 	 */
-	if (XScuGic_SelfTest(gic) != XST_SUCCESS) {
+	if (XScuGic_SelfTest(gic) != XST_SUCCESS)
 		return XST_FAILURE;
-	}
 
 
 	/*
 	 * Setup the Interrupt System
 	 */
-	if (SetUpInterruptSystem(gic) != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, gic);
+	Xil_ExceptionEnable();
 
 	/*
 	 * Connect a device driver handler that will be called when an
@@ -118,9 +109,8 @@ int ScuGic_Initialization(XScuGic *gic, u16 DeviceId)
 	 * the specific interrupt processing for the device
 	 */
 
-	if (XScuGic_Connect(gic, IRQ_ID, (Xil_ExceptionHandler)DeviceDriverHandler, (void *)NULL) != XST_SUCCESS) {
+	if (XScuGic_Connect(gic, IRQ_ID, (Xil_ExceptionHandler)DeviceDriverHandler, (void *)NULL) != XST_SUCCESS)
 		return XST_FAILURE;
-	}
 
 	/*
 	 * Enable the interrupt for the device and then cause (simulate) an
@@ -135,38 +125,9 @@ int ScuGic_Initialization(XScuGic *gic, u16 DeviceId)
 	Xil_Out32(XPAR_GPIO_CONTROLLER_0_S00_AXI_BASEADDR + GPIO_CONTROLLER_S00_AXI_SLV_REG0_OFFSET, 0b11111);
 
 	while (1) {
-		if (InterruptProcessed > 0) {
+		if (InterruptProcessed > 0)
 			break;
-		}
 	}
-
-	return XST_SUCCESS;
-}
-
-/****************************************************************************
-* @param	XScuGicInstancePtr is the instance of the interrupt controller
-*		that needs to be worked on.
-*
-* @return	None.
-*
-* @note		None.
-*
-****************************************************************************/
-int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr)
-{
-
-	/*
-	 * Connect the interrupt controller interrupt handler to the hardware
-	 * interrupt handling logic in the ARM processor.
-	 */
-	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
-			(Xil_ExceptionHandler) XScuGic_InterruptHandler,
-			XScuGicInstancePtr);
-
-	/*
-	 * Enable interrupts in the ARM
-	 */
-	Xil_ExceptionEnable();
 
 	return XST_SUCCESS;
 }

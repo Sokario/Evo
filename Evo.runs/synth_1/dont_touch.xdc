@@ -60,6 +60,21 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==evo_v1_Gpio_IRQ
 # IP: bd/evo_v1/ip/evo_v1_Gpio_Controller_0_0/evo_v1_Gpio_Controller_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==evo_v1_Gpio_Controller_0_0 || ORIG_REF_NAME==evo_v1_Gpio_Controller_0_0}]
 
+# IP: bd/evo_v1/ip/evo_v1_xadc_wiz_0_0/evo_v1_xadc_wiz_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==evo_v1_xadc_wiz_0_0 || ORIG_REF_NAME==evo_v1_xadc_wiz_0_0}]
+
+# IP: bd/evo_v1/ip/evo_v1_xlconstant_0_0/evo_v1_xlconstant_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==evo_v1_xlconstant_0_0 || ORIG_REF_NAME==evo_v1_xlconstant_0_0}]
+
+# IP: bd/evo_v1/ip/evo_v1_xlconstant_0_1/evo_v1_xlconstant_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==evo_v1_xlconstant_0_1 || ORIG_REF_NAME==evo_v1_xlconstant_0_1}]
+
+# IP: bd/evo_v1/ip/evo_v1_ADC_IRQ_0_0/evo_v1_ADC_IRQ_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==evo_v1_ADC_IRQ_0_0 || ORIG_REF_NAME==evo_v1_ADC_IRQ_0_0}]
+
+# IP: bd/evo_v1/ip/evo_v1_xlconcat_0_0/evo_v1_xlconcat_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==evo_v1_xlconcat_0_0 || ORIG_REF_NAME==evo_v1_xlconcat_0_0}]
+
 # IP: bd/evo_v1/ip/evo_v1_auto_pc_0/evo_v1_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==evo_v1_auto_pc_0 || ORIG_REF_NAME==evo_v1_auto_pc_0}]
 

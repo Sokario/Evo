@@ -1,4 +1,8 @@
 set_property SRC_FILE_INFO {cfile:C:/Projet/Vivado/Evo/Evo.srcs/constrs_1/imports/Vivado/ZYBO_Master.xdc rfile:../../../Evo.srcs/constrs_1/imports/Vivado/ZYBO_Master.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:165 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN N16 [get_ports {vauxn14}]
+set_property src_info {type:XDC file:1 line:169 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN N15 [get_ports {vauxp14}]
 set_property src_info {type:XDC file:1 line:298 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN V12 [get_ports QuadA_R]
 set_property src_info {type:XDC file:1 line:302 export:INPUT save:INPUT read:READ} [current_design]
