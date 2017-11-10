@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Thu Nov  9 16:40:30 2017
+--Date        : Fri Nov 10 11:39:47 2017
 --Host        : LogOut-AsusPro running 64-bit major release  (build 9200)
 --Command     : generate_target evo_v1.bd
 --Design      : evo_v1
@@ -4525,7 +4525,7 @@ architecture STRUCTURE of evo_v1 is
     M_AXI_GP0_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    IRQ_F2P : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    IRQ_F2P : in STD_LOGIC_VECTOR ( 0 to 0 );
     FCLK_CLK0 : out STD_LOGIC;
     FCLK_RESET0_N : out STD_LOGIC;
     MIO : inout STD_LOGIC_VECTOR ( 53 downto 0 );
@@ -4926,33 +4926,6 @@ architecture STRUCTURE of evo_v1 is
     s00_axi_aresetn : in STD_LOGIC
   );
   end component evo_v1_Gpio_Controller_0_0;
-  component evo_v1_Gpio_IRQ_0_0 is
-  port (
-    Gpio : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    Interrupt : out STD_LOGIC;
-    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_awvalid : in STD_LOGIC;
-    s00_axi_awready : out STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_wready : out STD_LOGIC;
-    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_bvalid : out STD_LOGIC;
-    s00_axi_bready : in STD_LOGIC;
-    s00_axi_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_arvalid : in STD_LOGIC;
-    s00_axi_arready : out STD_LOGIC;
-    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_rvalid : out STD_LOGIC;
-    s00_axi_rready : in STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC
-  );
-  end component evo_v1_Gpio_IRQ_0_0;
   component evo_v1_xadc_wiz_0_0 is
   port (
     di_in : in STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -5023,6 +4996,33 @@ architecture STRUCTURE of evo_v1 is
     dout : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   end component evo_v1_xlconcat_0_0;
+  component evo_v1_Gpio_IRQ_0_0 is
+  port (
+    Gpio : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    Interrupt : out STD_LOGIC;
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_awready : out STD_LOGIC;
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_wvalid : in STD_LOGIC;
+    s00_axi_wready : out STD_LOGIC;
+    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    s00_axi_bready : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rready : in STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
+    s00_axi_aresetn : in STD_LOGIC
+  );
+  end component evo_v1_Gpio_IRQ_0_0;
   signal ADC_IRQ_0_Addr : STD_LOGIC_VECTOR ( 6 downto 0 );
   signal ADC_IRQ_0_Addr_ready : STD_LOGIC;
   signal ADC_IRQ_0_Interrupt : STD_LOGIC;
@@ -5400,7 +5400,6 @@ architecture STRUCTURE of evo_v1 is
   signal xadc_wiz_0_drdy_out : STD_LOGIC;
   signal xadc_wiz_0_eoc_out : STD_LOGIC;
   signal xadc_wiz_0_eos_out : STD_LOGIC;
-  signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_Motor_0_Enable_UNCONNECTED : STD_LOGIC;
@@ -5420,6 +5419,7 @@ architecture STRUCTURE of evo_v1 is
   signal NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_xadc_wiz_0_alarm_out_UNCONNECTED : STD_LOGIC;
   signal NLW_xadc_wiz_0_busy_out_UNCONNECTED : STD_LOGIC;
+  signal NLW_xlconcat_0_dout_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
 begin
   PWM_L <= Motor_0_PWM;
   PWM_R <= Motor_1_PWM;
@@ -5867,7 +5867,7 @@ processing_system7_0: component evo_v1_processing_system7_0_0
       ENET0_MDIO_T => NLW_processing_system7_0_ENET0_MDIO_T_UNCONNECTED,
       FCLK_CLK0 => processing_system7_0_FCLK_CLK0,
       FCLK_RESET0_N => processing_system7_0_FCLK_RESET0_N,
-      IRQ_F2P(1 downto 0) => xlconcat_0_dout(1 downto 0),
+      IRQ_F2P(0) => Gpio_IRQ_0_Interrupt,
       MIO(53 downto 0) => FIXED_IO_mio(53 downto 0),
       M_AXI_GP0_ACLK => processing_system7_0_FCLK_CLK0,
       M_AXI_GP0_ARADDR(31 downto 0) => processing_system7_0_M_AXI_GP0_ARADDR(31 downto 0),
@@ -6309,9 +6309,9 @@ xadc_wiz_0: component evo_v1_xadc_wiz_0_0
     );
 xlconcat_0: component evo_v1_xlconcat_0_0
      port map (
-      In0(0) => Gpio_IRQ_0_Interrupt,
+      In0(0) => '0',
       In1(0) => ADC_IRQ_0_Interrupt,
-      dout(1 downto 0) => xlconcat_0_dout(1 downto 0)
+      dout(1 downto 0) => NLW_xlconcat_0_dout_UNCONNECTED(1 downto 0)
     );
 xlconstant_0: component evo_v1_xlconstant_0_0
      port map (

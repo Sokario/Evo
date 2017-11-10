@@ -16,10 +16,7 @@ set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
-set_property ip_repo_paths {
-  c:/Projet/Vivado/Custom_IP/Vivado_17.2/Zybo_target/Ip/ADC_IRQ/ADC_IRQ_1.0
-  c:/Projet/Vivado/Custom_IP
-} [current_project]
+set_property ip_repo_paths c:/Projet/Vivado/Custom_IP [current_project]
 set_property ip_output_repo c:/Projet/Vivado/Evo/Evo.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet C:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_processing_system7_0_0_2/evo_v1_processing_system7_0_0.xci

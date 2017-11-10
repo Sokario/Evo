@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:Gpio_IRQ:1.0
--- IP Revision: 9
+-- IP Revision: 17
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -89,7 +89,8 @@ ARCHITECTURE evo_v1_Gpio_IRQ_0_0_arch OF evo_v1_Gpio_IRQ_0_0 IS
       C_S00_AXI_DATA_WIDTH : INTEGER; -- Width of S_AXI data bus
       C_S00_AXI_ADDR_WIDTH : INTEGER; -- Width of S_AXI address bus
       GPIO_DATA_WIDTH : INTEGER;
-      EDGE_POLARITY : STD_LOGIC
+      EDGE_POLARITY : STD_LOGIC;
+      DIVIDER : INTEGER
     );
     PORT (
       Gpio : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -146,7 +147,8 @@ BEGIN
       C_S00_AXI_DATA_WIDTH => 32,
       C_S00_AXI_ADDR_WIDTH => 5,
       GPIO_DATA_WIDTH => 4,
-      EDGE_POLARITY => '1'
+      EDGE_POLARITY => '1',
+      DIVIDER => 390625
     )
     PORT MAP (
       Gpio => Gpio,
