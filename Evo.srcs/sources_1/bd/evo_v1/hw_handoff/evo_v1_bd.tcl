@@ -467,7 +467,7 @@ CONFIG.CONST_VAL {0} \
   connect_bd_net -net Encoder_0_Increments [get_bd_pins Derivator_0/Increments] [get_bd_pins Encoder_0/Increments]
   connect_bd_net -net Encoder_1_Increments [get_bd_pins Derivator_1/Increments] [get_bd_pins Encoder_1/Increments]
   connect_bd_net -net Gpio_Controller_0_Gpio [get_bd_pins Gpio_Controller_0/Gpio] [get_bd_pins Gpio_IRQ_0/Gpio]
-  connect_bd_net -net Gpio_IRQ_0_Interrupt [get_bd_pins Gpio_IRQ_0/Interrupt] [get_bd_pins processing_system7_0/IRQ_F2P]
+  connect_bd_net -net Gpio_IRQ_0_Interrupt [get_bd_pins Gpio_IRQ_0/Interrupt] [get_bd_pins xlconcat_0/In0]
   connect_bd_net -net Motor_0_PWM [get_bd_ports PWM_L] [get_bd_pins Motor_0/PWM]
   connect_bd_net -net Motor_0_Sens [get_bd_ports Sens_L] [get_bd_pins Motor_0/Sens]
   connect_bd_net -net Motor_1_PWM [get_bd_ports PWM_R] [get_bd_pins Motor_1/PWM]
@@ -491,6 +491,7 @@ CONFIG.CONST_VAL {0} \
   connect_bd_net -net xadc_wiz_0_drdy_out [get_bd_pins ADC_IRQ_0/Data_ready] [get_bd_pins xadc_wiz_0/drdy_out]
   connect_bd_net -net xadc_wiz_0_eoc_out [get_bd_pins ADC_IRQ_0/Eoc] [get_bd_pins xadc_wiz_0/eoc_out]
   connect_bd_net -net xadc_wiz_0_eos_out [get_bd_pins ADC_IRQ_0/Eos] [get_bd_pins xadc_wiz_0/eos_out]
+  connect_bd_net -net xlconcat_0_dout [get_bd_pins processing_system7_0/IRQ_F2P] [get_bd_pins xlconcat_0/dout]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins xadc_wiz_0/di_in] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins xadc_wiz_0/dwe_in] [get_bd_pins xlconstant_1/dout]
 

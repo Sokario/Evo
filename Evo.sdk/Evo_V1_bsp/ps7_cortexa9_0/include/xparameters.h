@@ -18,8 +18,8 @@
 
 #include "xparameters_ps.h"
 
-#define STDIN_BASEADDRESS 0xE0001000
-#define STDOUT_BASEADDRESS 0xE0001000
+#define STDIN_BASEADDRESS 0xF8800000
+#define STDOUT_BASEADDRESS 0xF8800000
 
 /******************************************************************/
 
@@ -408,6 +408,7 @@
 
 /* Definitions for Fabric interrupts connected to ps7_scugic_0 */
 #define XPAR_FABRIC_GPIO_IRQ_0_INTERRUPT_INTR 61U
+#define XPAR_FABRIC_ADC_IRQ_0_INTERRUPT_INTR 62U
 
 /******************************************************************/
 

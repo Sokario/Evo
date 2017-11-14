@@ -12,7 +12,7 @@ int receiverParser(u8 *cmd, u8 *result, u32 *cmd_value, u32 *data_value)
 {
 	u32 status = XST_FAILURE;
 
-	*cmd_value = strtol((char *)cmd, NULL, 16);
+	*cmd_value = strtoll((char *)cmd, NULL, 16);
 	*data_value = *cmd_value & DATA_MASK;
 	*cmd_value &= CMD_MASK;
 
@@ -167,9 +167,19 @@ int receiverParser(u8 *cmd, u8 *result, u32 *cmd_value, u32 *data_value)
 			strcpy(result, "RESPRUN0");
 			break;
 
+		case IRQ_GPIO_MASK :
+			status = XST_SUCCESS;
+			strcpy(result, "IRQGPIO0");
+			break;
+
+		case IRQ_ADC_MASK :
+			status = XST_SUCCESS;
+			strcpy(result, "IRQADC00");
+			break;
+
 		default :
 			status = XST_FAILURE;
-			strcpy(result, "ER000000");
+			itoa(*cmd_value, result, 16);
 	}
 
 	*cmd_value = *cmd_value >> 24;

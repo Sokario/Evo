@@ -11,6 +11,10 @@
 #include "string.h"
 #include "xparameters.h"
 
+#include "xil_io.h"
+#include "xil_exception.h"
+#include "xil_cache.h"
+
 #include "read.h"
 #include "write.h"
 #include "initPL.h"
@@ -52,132 +56,59 @@ Motor MotLeft, MotRight;
 #define MOTOR_LEFT_DEVICE_ID 		XPAR_MOTOR_0_DEVICE_ID
 #define MOTOR_RIGHT_DEVICE_ID 		XPAR_MOTOR_1_DEVICE_ID
 
-#include "Gpio_IRQ.h"
-#include "Gpio_Controller.h"
 #include "xscugic.h"
-#define IRQ_DEVICE_ID				XPAR_SCUGIC_0_DEVICE_ID
-#define IRQ_ID						XPAR_FABRIC_GPIO_IRQ_0_INTERRUPT_INTR
-XScuGic IRQController;
-int ScuGic_Initialization(XScuGic *gic, u16 DeviceId);
+#define SCUGIC_DEVICE_ID				XPAR_PS7_SCUGIC_0_DEVICE_ID
+XScuGic IRQ_Controller;
+int ScuGic_SetHandler(XScuGic *gic, u16 interruptId);
 
-/***************************** Include Files *********************************/
 
-#include "xil_io.h"
-#include "xil_exception.h"
-#include "xil_cache.h"
+#include "Gpio_Controller.h"
+int Gpio_IRQ_Simulation();
 
-/************************** Function Prototypes ******************************/
-void DeviceDriverHandler(void *CallbackRef);
-int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr);
-volatile static int InterruptProcessed = 0;
-
-/************************** Variable Definitions *****************************/
-
-/*
- * Create a shared variable to be used by the main thread of processing and
- * the interrupt processing
- */
-
-int ScuGic_Initialization(XScuGic *gic, u16 DeviceId)
-{
-	XScuGic_Config *gicConfig;
-
-	gicConfig = XScuGic_LookupConfig(DeviceId);
-	if (NULL == gicConfig)
-		return XST_FAILURE;
-
-	if (XScuGic_CfgInitialize(gic, gicConfig, gicConfig->CpuBaseAddress) != XST_SUCCESS)
-		return XST_FAILURE;
-
-	/*
-	 * Perform a self-test to ensure that the hardware was built
-	 * correctly
-	 */
-	if (XScuGic_SelfTest(gic) != XST_SUCCESS)
-		return XST_FAILURE;
-
-	/*
-	 * Setup the Interrupt System
-	 */
-	SetUpInterruptSystem(gic);
-
-	/*
-	 * Connect a device driver handler that will be called when an
-	 * interrupt for the device occurs, the device driver handler performs
-	 * the specific interrupt processing for the device
-	 */
-	if (XScuGic_Connect(gic, IRQ_ID, (Xil_ExceptionHandler)DeviceDriverHandler, (void *)NULL) != XST_SUCCESS)
-		return XST_FAILURE;
-
-	/*
-	 * Enable the interrupt for the device and then cause (simulate) an
-	 * interrupt so the handlers will be called
-	 */
-	XScuGic_Enable(gic, IRQ_ID);
-
-	/*
-	 *  Simulate the Interrupt
-	 */
-	Xil_Out32(XPAR_GPIO_CONTROLLER_0_S00_AXI_BASEADDR + GPIO_CONTROLLER_S00_AXI_SLV_REG0_OFFSET, 0);
-	usleep(500000);
-	Xil_Out32(XPAR_GPIO_CONTROLLER_0_S00_AXI_BASEADDR + GPIO_CONTROLLER_S00_AXI_SLV_REG0_OFFSET, 0b11111);
-
-	while (1) {
-		if (InterruptProcessed > 0)
-			break;
-	}
-
-	return XST_SUCCESS;
-}
-
-int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr)
-{
-
-	/*
-	 * Connect the interrupt controller interrupt handler to the hardware
-	 * interrupt handling logic in the ARM processor.
-	 */
-	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, XScuGicInstancePtr);
-
-	/*
-	 * Enable interrupts in the ARM
-	 */
-	Xil_ExceptionEnable();
-
-	return XST_SUCCESS;
-}
-
-/****************************************************************************
-*
-* @param	CallbackRef is passed back to the device driver's interrupt
-*		handler by the XScuGic driver.  It was given to the XScuGic
-*		driver in the XScuGic_Connect() function call.  It is typically
-*		a pointer to the device driver instance variable.
-*		In this example, we do not care about the callback
-*		reference, so we passed it a 0 when connecting the handler to
-*		the XScuGic driver and we make no use of it here.
-*
-* @return	None.
-*
-* @note		None.
-*
-****************************************************************************/
-void DeviceDriverHandler(void *CallbackRef)
-{
-	/*
-	 * Indicate the interrupt has been processed using a shared variable
-	 */
-	InterruptProcessed += 1;
-}
-
+#include "Gpio_IRQ.h"
+#define GPIO_IRQ_ID						XPAR_FABRIC_GPIO_IRQ_0_INTERRUPT_INTR
+void GPIO_IRQ_Handler(void *CallbackRef);
+volatile static int gpioInterrupt = 0;
 
 int DEBUG_Initialization();
 int ASSERV_Initialization();
+int IRQ_Initialization();
+
+int ScuGic_SetHandler(XScuGic *gic, u16 interruptId)
+{
+	if (XScuGic_Connect(gic, interruptId, (Xil_ExceptionHandler)GPIO_IRQ_Handler, (void *)NULL) != XST_SUCCESS)
+		return XST_FAILURE;
+
+	if ((gic == NULL) && (gic->IsReady != XIL_COMPONENT_IS_READY))
+		return XST_FAILURE;
+	else
+		XScuGic_Enable(gic, interruptId);
+
+	return XST_SUCCESS;
+}
+
+int Gpio_IRQ_Simulation()
+{
+	Xil_Out32(XPAR_GPIO_CONTROLLER_0_S00_AXI_BASEADDR + GPIO_CONTROLLER_S00_AXI_SLV_REG0_OFFSET, 0b0);
+	usleep(500000);
+	Xil_Out32(XPAR_GPIO_CONTROLLER_0_S00_AXI_BASEADDR + GPIO_CONTROLLER_S00_AXI_SLV_REG0_OFFSET, 0b1111);
+	usleep(500000);
+	return XST_SUCCESS;
+}
+
+void GPIO_IRQ_Handler(void *CallbackRef)
+{
+	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG4_OFFSET, 0b11);
+	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG4_OFFSET, 0b10);
+	gpioInterrupt += 1;
+}
 
 int main()
 {
 	int button_data = 0, switch_data = 0, led_data = 0;
 	u32 cmd_value = 0, data_value = 0;
+	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG0_OFFSET, 0);
+	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG4_OFFSET, 0b10);
 
 	// Communication-Debug initialization
 	if (DEBUG_Initialization() != XST_SUCCESS)
@@ -192,8 +123,7 @@ int main()
 	else
 		led_data |= 1 << 1;
 
-	if (ScuGic_Initialization(&IRQController, IRQ_DEVICE_ID) != XST_SUCCESS) {
-		writeMonitor(&UartPs, (u8 *)"GIC Example Test Failed\r\n", 64);
+	if (IRQ_Initialization() != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
 
@@ -211,26 +141,25 @@ int main()
 		if (receiverParser(command, result, &cmd_value, & data_value) == XST_SUCCESS)
 			writeMonitor(&UartPs, result, sizeof(result));
 		else {
+			writeMonitor(&UartPs, result, sizeof(result));
+			usleep(500000);
 			strcpy(result, "RESENDXX");
 			writeMonitor(&UartPs, result, sizeof(result));
 		}
 		usleep(500000);
 
+		if (cmd_value == (IRQ_GPIO_MASK >> 24)) {
+			Gpio_IRQ_Simulation();
+			char string[16];
+			itoa(gpioInterrupt, string, 10);
+			strcpy(result, string);
+			writeMonitor(&UartPs, result, sizeof(result));
+		}
+		usleep(500000);
+
 		// Debug
-		switch_data = XGpio_DiscreteRead(&Input, SWITCH);	//get switch data
-		button_data = XGpio_DiscreteRead(&Input, BUTTON);	//get button data
-		//print message dependent on whether one or more buttons are pressed
-		if(button_data == 0b0000){} //do nothing
-		else if(button_data == 0b0001)
-			writeMonitor(&UartPs, (u8 *)"OKbutton0Pressed", 16);
-		else if(button_data == 0b0010)
-			writeMonitor(&UartPs, (u8 *)"OKbutton1Pressed", 16);
-		else if(button_data == 0b0100)
-			writeMonitor(&UartPs, (u8 *)"OKbutton2Pressed", 16);
-		else if(button_data == 0b1000)
-			writeMonitor(&UartPs, (u8 *)"OKbutton3Pressed", 16);
-		else
-			writeMonitor(&UartPs, (u8 *)"OKmultipleButton", 16);
+//		switch_data = XGpio_DiscreteRead(&Input, SWITCH);	//get switch data
+//		button_data = XGpio_DiscreteRead(&Input, BUTTON);	//get button data
 
 		XGpio_DiscreteWrite(&Output, LED, XGpio_DiscreteRead(&Output, LED) & ~(1 << 2));
 	}
@@ -357,4 +286,44 @@ int ASSERV_Initialization()
 	usleep(500000);
 
 	return status;
+}
+
+int IRQ_Initialization()
+{
+	int status = XST_SUCCESS;
+	XScuGic_Config *gicConfig;
+
+	gicConfig = XScuGic_LookupConfig(SCUGIC_DEVICE_ID);
+	if (NULL == gicConfig)
+		return XST_FAILURE;
+
+	if (XScuGic_CfgInitialize(&IRQ_Controller, gicConfig, gicConfig->CpuBaseAddress) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: ScuGic", 20);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: ScuGic", 20);
+		status = XST_SUCCESS;
+	}
+	usleep(500000);
+
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, &IRQ_Controller);
+	Xil_ExceptionEnable();
+
+	if (ScuGic_SetHandler(&IRQ_Controller, GPIO_IRQ_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: GPIO Handler", 26);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: GPIO Handler", 26);
+		status = XST_SUCCESS;
+	}
+
+	// Interrupt simulation
+	Gpio_IRQ_Simulation();
+
+	for (int i = 0; i < 10; i++) {
+		if (gpioInterrupt > 0)
+			return XST_SUCCESS;
+	}
+
+	return XST_FAILURE;
 }

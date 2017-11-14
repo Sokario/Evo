@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Fri Nov 10 11:43:14 2017
+| Date             : Tue Nov 14 15:31:16 2017
 | Host             : LogOut-AsusPro running 64-bit major release  (build 9200)
 | Command          : report_power -file evo_v1_wrapper_power_routed.rpt -pb evo_v1_wrapper_power_summary_routed.pb -rpx evo_v1_wrapper_power_routed.rpx
 | Design           : evo_v1_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.716 |
+| Total On-Chip Power (W)  | 1.715 |
 | Dynamic (W)              | 1.585 |
 | Device Static (W)        | 0.130 |
 | Effective TJA (C/W)      | 11.5  |
@@ -50,20 +50,20 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.012 |        3 |       --- |             --- |
-| Slice Logic             |     0.005 |    11100 |       --- |             --- |
-|   LUT as Logic          |     0.004 |     3844 |     17600 |           21.84 |
-|   CARRY4                |    <0.001 |      313 |      4400 |            7.11 |
-|   Register              |    <0.001 |     5385 |     35200 |           15.30 |
+| Slice Logic             |     0.005 |    11007 |       --- |             --- |
+|   LUT as Logic          |     0.004 |     3802 |     17600 |           21.60 |
+|   CARRY4                |    <0.001 |      298 |      4400 |            6.77 |
+|   Register              |    <0.001 |     5371 |     35200 |           15.26 |
+|   F7/F8 Muxes           |    <0.001 |      194 |     17600 |            1.10 |
 |   LUT as Shift Register |    <0.001 |       62 |      6000 |            1.03 |
-|   F7/F8 Muxes           |    <0.001 |      217 |     17600 |            1.23 |
-|   Others                |     0.000 |      249 |       --- |             --- |
-| Signals                 |     0.007 |     9605 |       --- |             --- |
+|   Others                |     0.000 |      250 |       --- |             --- |
+| Signals                 |     0.007 |     9571 |       --- |             --- |
 | DSPs                    |    <0.001 |       24 |        80 |           30.00 |
 | I/O                     |     0.003 |       22 |       100 |           22.00 |
 | XADC                    |     0.002 |        1 |       --- |             --- |
 | PS7                     |     1.556 |        1 |       --- |             --- |
 | Static Power            |     0.130 |          |           |                 |
-| Total                   |     1.716 |          |           |                 |
+| Total                   |     1.715 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.032 |       0.025 |      0.007 |
+| Vccint    |       1.000 |     0.031 |       0.024 |      0.007 |
 | Vccaux    |       1.800 |     0.012 |       0.000 |      0.012 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -248,6 +248,7 @@ Table of Contents
 |         SEQ                                      |    <0.001 |
 |           SEQ_COUNTER                            |    <0.001 |
 |     xadc_wiz_0                                   |     0.002 |
+|     xlconcat_0                                   |     0.000 |
 |     xlconstant_0                                 |     0.000 |
 |     xlconstant_1                                 |     0.000 |
 |   leds_4bits_tri_iobuf_0                         |    <0.001 |

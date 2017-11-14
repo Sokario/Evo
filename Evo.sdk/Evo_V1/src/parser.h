@@ -69,6 +69,10 @@
 #define CAPT_TOR_MASK			0xA2000000
 #define CAPT_COLOR_MASK			0xA3000000
 
+#define IRQ_CMD					0xB0000000
+#define IRQ_GPIO_MASK			0xB1000000
+#define IRQ_ADC_MASK			0xB2000000
+
 
 int receiverParser(u8 *cmd, u8 *result, u32 *cmd_value, u32 *data_value);
 

@@ -569,7 +569,7 @@
         <spirit:instanceName>Gpio_IRQ_0</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="Gpio_IRQ" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">evo_v1_Gpio_IRQ_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">evo_v1_Gpio_IRQ_0_1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="GPIO_DATA_WIDTH">4</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
@@ -641,11 +641,6 @@
         <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="Subtractor_1"/>
       </spirit:interconnection>
       <spirit:interconnection>
-        <spirit:name>ps7_0_axi_periph_M12_AXI</spirit:name>
-        <spirit:activeInterface spirit:busRef="M12_AXI" spirit:componentRef="ps7_0_axi_periph"/>
-        <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="Gpio_IRQ_0"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
         <spirit:name>ps7_0_axi_periph_M13_AXI</spirit:name>
         <spirit:activeInterface spirit:busRef="M13_AXI" spirit:componentRef="ps7_0_axi_periph"/>
         <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="Gpio_Controller_0"/>
@@ -654,6 +649,11 @@
         <spirit:name>ps7_0_axi_periph_M14_AXI</spirit:name>
         <spirit:activeInterface spirit:busRef="M14_AXI" spirit:componentRef="ps7_0_axi_periph"/>
         <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="ADC_IRQ_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>ps7_0_axi_periph_M12_AXI</spirit:name>
+        <spirit:activeInterface spirit:busRef="M12_AXI" spirit:componentRef="ps7_0_axi_periph"/>
+        <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="Gpio_IRQ_0"/>
       </spirit:interconnection>
     </spirit:interconnections>
     <spirit:adHocConnections>
@@ -822,11 +822,6 @@
         <spirit:externalPortReference spirit:portRef="PWM_R"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>Gpio_Controller_0_Gpio</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Gpio_Controller_0" spirit:portRef="Gpio"/>
-        <spirit:internalPortReference spirit:componentRef="Gpio_IRQ_0" spirit:portRef="Gpio"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>xlconstant_0_dout</spirit:name>
         <spirit:internalPortReference spirit:componentRef="xlconstant_0" spirit:portRef="dout"/>
         <spirit:internalPortReference spirit:componentRef="xadc_wiz_0" spirit:portRef="di_in"/>
@@ -887,8 +882,18 @@
         <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In1"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
+        <spirit:name>Gpio_Controller_0_Gpio</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="Gpio_Controller_0" spirit:portRef="Gpio"/>
+        <spirit:internalPortReference spirit:componentRef="Gpio_IRQ_0" spirit:portRef="Gpio"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
         <spirit:name>Gpio_IRQ_0_Interrupt</spirit:name>
         <spirit:internalPortReference spirit:componentRef="Gpio_IRQ_0" spirit:portRef="Interrupt"/>
+        <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>xlconcat_0_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="dout"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="IRQ_F2P"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>

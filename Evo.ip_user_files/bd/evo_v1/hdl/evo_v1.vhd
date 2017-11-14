@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Fri Nov 10 11:25:16 2017
+--Date        : Tue Nov 14 12:24:15 2017
 --Host        : LogOut-AsusPro running 64-bit major release  (build 9200)
 --Command     : generate_target evo_v1.bd
 --Design      : evo_v1
@@ -4467,7 +4467,7 @@ entity evo_v1 is
     vauxp14 : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of evo_v1 : entity is "evo_v1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=evo_v1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=40,numReposBlks=23,numNonXlnxBlks=0,numHierBlks=17,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=16,da_board_cnt=5,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of evo_v1 : entity is "evo_v1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=evo_v1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=40,numReposBlks=23,numNonXlnxBlks=0,numHierBlks=17,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=17,da_board_cnt=5,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of evo_v1 : entity is "evo_v1.hwdef";
 end evo_v1;
@@ -4996,7 +4996,7 @@ architecture STRUCTURE of evo_v1 is
     dout : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   end component evo_v1_xlconcat_0_0;
-  component evo_v1_Gpio_IRQ_0_0 is
+  component evo_v1_Gpio_IRQ_0_1 is
   port (
     Gpio : in STD_LOGIC_VECTOR ( 3 downto 0 );
     Interrupt : out STD_LOGIC;
@@ -5022,7 +5022,7 @@ architecture STRUCTURE of evo_v1 is
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC
   );
-  end component evo_v1_Gpio_IRQ_0_0;
+  end component evo_v1_Gpio_IRQ_0_1;
   signal ADC_IRQ_0_Addr : STD_LOGIC_VECTOR ( 6 downto 0 );
   signal ADC_IRQ_0_Addr_ready : STD_LOGIC;
   signal ADC_IRQ_0_Interrupt : STD_LOGIC;
@@ -5601,7 +5601,7 @@ Gpio_Controller_0: component evo_v1_Gpio_Controller_0_0
       s00_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M13_AXI_WSTRB(3 downto 0),
       s00_axi_wvalid => ps7_0_axi_periph_M13_AXI_WVALID
     );
-Gpio_IRQ_0: component evo_v1_Gpio_IRQ_0_0
+Gpio_IRQ_0: component evo_v1_Gpio_IRQ_0_1
      port map (
       Gpio(3 downto 0) => Gpio_Controller_0_Gpio(3 downto 0),
       Interrupt => Gpio_IRQ_0_Interrupt,
