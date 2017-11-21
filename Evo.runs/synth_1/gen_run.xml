@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1510669691">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1510837339">
   <File Type="RDS-PROPCONSTRS" Name="evo_v1_wrapper_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="evo_v1_wrapper.tcl"/>
   <File Type="RDS-RDS" Name="evo_v1_wrapper.vds"/>
@@ -51,12 +51,11 @@
   <BlockFileSet Type="BlockSrcs" Name="evo_v1_PID_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="evo_v1_axi_gpio_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="evo_v1_axi_gpio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="evo_v1_Gpio_Controller_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="evo_v1_PID_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="evo_v1_Motor_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="evo_v1_xlconstant_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="evo_v1_Motor_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="evo_v1_xadc_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="evo_v1_xlconstant_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="evo_v1_xlconstant_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="evo_v1_ADC_IRQ_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="evo_v1_Gpio_IRQ_0_1"/>

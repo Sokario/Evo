@@ -493,14 +493,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>Gpio_Controller_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="Gpio_Controller" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">evo_v1_Gpio_Controller_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="GPIO_DATA_WIDTH">4</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>xadc_wiz_0</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="xadc_wiz" spirit:vendor="xilinx.com" spirit:version="3.3"/>
         <spirit:configurableElementValues>
@@ -641,11 +633,6 @@
         <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="Subtractor_1"/>
       </spirit:interconnection>
       <spirit:interconnection>
-        <spirit:name>ps7_0_axi_periph_M13_AXI</spirit:name>
-        <spirit:activeInterface spirit:busRef="M13_AXI" spirit:componentRef="ps7_0_axi_periph"/>
-        <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="Gpio_Controller_0"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
         <spirit:name>ps7_0_axi_periph_M14_AXI</spirit:name>
         <spirit:activeInterface spirit:busRef="M14_AXI" spirit:componentRef="ps7_0_axi_periph"/>
         <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="ADC_IRQ_0"/>
@@ -674,7 +661,6 @@
         <spirit:internalPortReference spirit:componentRef="Derivator_1" spirit:portRef="s00_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="Motor_0" spirit:portRef="s00_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="Motor_1" spirit:portRef="s00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="Gpio_Controller_0" spirit:portRef="s00_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="xadc_wiz_0" spirit:portRef="dclk_in"/>
         <spirit:internalPortReference spirit:componentRef="ADC_IRQ_0" spirit:portRef="s00_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="S00_ACLK"/>
@@ -711,7 +697,6 @@
         <spirit:internalPortReference spirit:componentRef="Derivator_1" spirit:portRef="s00_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="Motor_0" spirit:portRef="s00_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="Motor_1" spirit:portRef="s00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="Gpio_Controller_0" spirit:portRef="s00_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="ADC_IRQ_0" spirit:portRef="s00_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M00_ARESETN"/>
@@ -880,11 +865,6 @@
         <spirit:name>ADC_IRQ_0_Interrupt</spirit:name>
         <spirit:internalPortReference spirit:componentRef="ADC_IRQ_0" spirit:portRef="Interrupt"/>
         <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In1"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Gpio_Controller_0_Gpio</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Gpio_Controller_0" spirit:portRef="Gpio"/>
-        <spirit:internalPortReference spirit:componentRef="Gpio_IRQ_0" spirit:portRef="Gpio"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>Gpio_IRQ_0_Interrupt</spirit:name>
@@ -5574,12 +5554,6 @@
             <spirit:name>SEG_Encoder_1_S00_AXI_reg</spirit:name>
             <spirit:displayName>/Encoder_1/S00_AXI/S00_AXI_reg</spirit:displayName>
             <spirit:addressOffset>0x43C30000</spirit:addressOffset>
-            <spirit:range>64K</spirit:range>
-          </spirit:segment>
-          <spirit:segment>
-            <spirit:name>SEG_Gpio_Controller_0_S00_AXI_reg</spirit:name>
-            <spirit:displayName>/Gpio_Controller_0/S00_AXI/S00_AXI_reg</spirit:displayName>
-            <spirit:addressOffset>0x43CB0000</spirit:addressOffset>
             <spirit:range>64K</spirit:range>
           </spirit:segment>
           <spirit:segment>

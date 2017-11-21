@@ -1,4 +1,4 @@
-15:34:08 **** Auto Build of project Evo_V1_bsp ****
+14:09:35 **** Auto Build of project Evo_V1_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/ADC_IRQ_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/ADC_IRQ_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
@@ -18,8 +18,6 @@ make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=a
 make -C ps7_cortexa9_0/libsrc/emacps_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/Encoder_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/Encoder_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/Gpio_Controller_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/Gpio_Controller_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/Gpio_IRQ_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/Gpio_IRQ_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
@@ -187,19 +185,101 @@ Encoder_selftest.c: In function 'ENCODER_Reg_SelfTest':
 Encoder_selftest.c:51:56: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
     if ( ENCODER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
                                                         ^~
-"Running Make libs in ps7_cortexa9_0/libsrc/Gpio_Controller_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/Gpio_Controller_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-"Compiling Gpio_Controller..."
-Gpio_Controller_selftest.c: In function 'GPIO_CONTROLLER_Reg_SelfTest':
-Gpio_Controller_selftest.c:52:64: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if ( GPIO_CONTROLLER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-                                                                ^~
-Gpio_Controller_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
 "Running Make libs in ps7_cortexa9_0/libsrc/Gpio_IRQ_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/Gpio_IRQ_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
 "Compiling Gpio_IRQ..."
+In file included from Gpio_IRQ.h:11:0,
+                 from Gpio_IRQ.c:4:
+Gpio_IRQ.c: In function 'GPIO_IRQ_SetOverRide':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Gpio_IRQ.c:142:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Gpio_IRQ.c:139:6: note: declared here
+ void GPIO_IRQ_SetOverRide(GPIO_IRQ *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~
+In file included from Gpio_IRQ.h:11:0,
+                 from Gpio_IRQ.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Gpio_IRQ.c:143:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Gpio_IRQ.c:139:6: note: declared here
+ void GPIO_IRQ_SetOverRide(GPIO_IRQ *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~
+In file included from Gpio_IRQ.h:11:0,
+                 from Gpio_IRQ.c:4:
+Gpio_IRQ.c: In function 'GPIO_IRQ_SetGpio':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Gpio_IRQ.c:160:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Gpio_IRQ.c:157:6: note: declared here
+ void GPIO_IRQ_SetGpio(GPIO_IRQ *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~
+In file included from Gpio_IRQ.h:11:0,
+                 from Gpio_IRQ.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Gpio_IRQ.c:161:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Gpio_IRQ.c:157:6: note: declared here
+ void GPIO_IRQ_SetGpio(GPIO_IRQ *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~
+In file included from Gpio_IRQ.h:11:0,
+                 from Gpio_IRQ.c:4:
+Gpio_IRQ.c: In function 'GPIO_IRQ_SetLast':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Gpio_IRQ.c:178:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Gpio_IRQ.c:175:6: note: declared here
+ void GPIO_IRQ_SetLast(GPIO_IRQ *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~
+In file included from Gpio_IRQ.h:11:0,
+                 from Gpio_IRQ.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Gpio_IRQ.c:179:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Gpio_IRQ.c:175:6: note: declared here
+ void GPIO_IRQ_SetLast(GPIO_IRQ *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~
+In file included from Gpio_IRQ.h:11:0,
+                 from Gpio_IRQ.c:4:
+Gpio_IRQ.c: In function 'GPIO_IRQ_SetIrqManagement':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Gpio_IRQ.c:196:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Gpio_IRQ.c:193:6: note: declared here
+ void GPIO_IRQ_SetIrqManagement(GPIO_IRQ *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Gpio_IRQ.h:11:0,
+                 from Gpio_IRQ.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Gpio_IRQ.c:197:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Gpio_IRQ.c:193:6: note: declared here
+ void GPIO_IRQ_SetIrqManagement(GPIO_IRQ *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~
 Gpio_IRQ_selftest.c: In function 'GPIO_IRQ_Reg_SelfTest':
 Gpio_IRQ_selftest.c:52:57: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
     if ( GPIO_IRQ_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
@@ -1173,5 +1253,5 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm
 "Compiling xadcps"
 'Finished building libraries'
 
-15:34:37 Build Finished (took 29s.258ms)
+14:10:01 Build Finished (took 26s.570ms)
 

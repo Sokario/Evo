@@ -2,16 +2,21 @@
 #ifndef GPIO_IRQ_H
 #define GPIO_IRQ_H
 
+#ifdef _cplusplus
+extern "C" {
+#endif
 
 /****************** Include Files ********************/
 #include "xil_types.h"
+#include "xil_assert.h"
 #include "xstatus.h"
+#include "xil_io.h"
 
-#define GPIO_IRQ_S00_AXI_SLV_REG0_OFFSET 0
-#define GPIO_IRQ_S00_AXI_SLV_REG1_OFFSET 4
-#define GPIO_IRQ_S00_AXI_SLV_REG2_OFFSET 8
-#define GPIO_IRQ_S00_AXI_SLV_REG3_OFFSET 12
-#define GPIO_IRQ_S00_AXI_SLV_REG4_OFFSET 16
+#define GPIO_IRQ_S00_AXI_SLV_REG0_OFFSET 0  // OverRide
+#define GPIO_IRQ_S00_AXI_SLV_REG1_OFFSET 4  // Gpio
+#define GPIO_IRQ_S00_AXI_SLV_REG2_OFFSET 8  // Last
+#define GPIO_IRQ_S00_AXI_SLV_REG3_OFFSET 12 // Interrupt
+#define GPIO_IRQ_S00_AXI_SLV_REG4_OFFSET 16 // Interrupt managment
 #define GPIO_IRQ_S00_AXI_SLV_REG5_OFFSET 20
 #define GPIO_IRQ_S00_AXI_SLV_REG6_OFFSET 24
 #define GPIO_IRQ_S00_AXI_SLV_REG7_OFFSET 28
@@ -57,6 +62,29 @@
  */
 #define GPIO_IRQ_mReadReg(BaseAddress, RegOffset) \
     Xil_In32((BaseAddress) + (RegOffset))
+    
+/************************** Constant Definitions ****************************/
+    
+/**
+ * This typedef contains configuration information for the device.
+ */
+typedef struct {
+    u16 DeviceId;        /* Unique ID  of device */
+    UINTPTR BaseAddress;    /* Device base address */
+} GPIO_IRQ_Config;
+
+/**
+ * The Motor driver instance data. The user is required to allocate a
+ * variable of this type for every MOTOR device in the system. A pointer
+ * to a variable of this type is then passed to the driver API functions.
+ */
+typedef struct {
+    UINTPTR BaseAddress;    /* Device base address */
+    u32 IsReady;        /* Device is initialized and ready */
+} GPIO_IRQ;
+
+/************************** Variable Definitions ***************************/
+extern GPIO_IRQ_Config GPIO_IRQ_ConfigTable[];
 
 /************************** Function Prototypes ****************************/
 /**
@@ -79,5 +107,30 @@
  *
  */
 XStatus GPIO_IRQ_Reg_SelfTest(void * baseaddr_p);
+
+/*
+ * Initialization functions
+ */
+GPIO_IRQ_Config *GPIO_IRQ_LookupConfig(u16 DeviceId);
+int GPIO_IRQ_Initialize(GPIO_IRQ *InstancePtr, u16 DeviceId);
+int GPIO_IRQ_CfgInitialize(GPIO_IRQ *InstancePtr, UINTPTR EffectiveAddr);
+
+/*
+ * API Basic functions implemented
+ */
+void GPIO_IRQ_SetOverRide(GPIO_IRQ *InstancePtr, u32 Data);
+u32 GPIO_IRQ_GetOverRide(GPIO_IRQ *InstancePtr);
+void GPIO_IRQ_SetGpio(GPIO_IRQ *InstancePtr, u32 Data);
+u32 GPIO_IRQ_GetGpio(GPIO_IRQ *InstancePtr);
+void GPIO_IRQ_SetLast(GPIO_IRQ *InstancePtr, u32 Data);
+u32 GPIO_IRQ_GetLast(GPIO_IRQ *InstancePtr);
+void GPIO_IRQ_SetIrqManagement(GPIO_IRQ *InstancePtr, u32 Data);
+u32 GPIO_IRQ_GetIrqManagement(GPIO_IRQ *InstancePtr);
+
+u32 GPIO_IRQ_GetIrq(GPIO_IRQ *InstancePtr);
+
+#ifdef _cplusplus
+}
+#endif
 
 #endif // GPIO_IRQ_H

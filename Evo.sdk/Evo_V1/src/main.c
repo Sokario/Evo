@@ -61,13 +61,10 @@ Motor MotLeft, MotRight;
 XScuGic IRQ_Controller;
 int ScuGic_SetHandler(XScuGic *gic, u16 interruptId);
 
-
-#include "Gpio_Controller.h"
-int Gpio_IRQ_Simulation();
-
 #include "Gpio_IRQ.h"
 #define GPIO_IRQ_ID						XPAR_FABRIC_GPIO_IRQ_0_INTERRUPT_INTR
 void GPIO_IRQ_Handler(void *CallbackRef);
+void Gpio_IRQ_Simulation();
 volatile static int gpioInterrupt = 0;
 
 int DEBUG_Initialization();
@@ -87,13 +84,12 @@ int ScuGic_SetHandler(XScuGic *gic, u16 interruptId)
 	return XST_SUCCESS;
 }
 
-int Gpio_IRQ_Simulation()
+void Gpio_IRQ_Simulation()
 {
-	Xil_Out32(XPAR_GPIO_CONTROLLER_0_S00_AXI_BASEADDR + GPIO_CONTROLLER_S00_AXI_SLV_REG0_OFFSET, 0b0);
+	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG1_OFFSET, 0b0000);
 	usleep(500000);
-	Xil_Out32(XPAR_GPIO_CONTROLLER_0_S00_AXI_BASEADDR + GPIO_CONTROLLER_S00_AXI_SLV_REG0_OFFSET, 0b1111);
+	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG1_OFFSET, 0b1111);
 	usleep(500000);
-	return XST_SUCCESS;
 }
 
 void GPIO_IRQ_Handler(void *CallbackRef)
@@ -107,7 +103,7 @@ int main()
 {
 	int button_data = 0, switch_data = 0, led_data = 0;
 	u32 cmd_value = 0, data_value = 0;
-	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG0_OFFSET, 0);
+	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG0_OFFSET, 0b01);
 	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG4_OFFSET, 0b10);
 
 	// Communication-Debug initialization
@@ -310,10 +306,10 @@ int IRQ_Initialization()
 	Xil_ExceptionEnable();
 
 	if (ScuGic_SetHandler(&IRQ_Controller, GPIO_IRQ_ID) != XST_SUCCESS) {
-		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: GPIO Handler", 26);
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: IRQ GPIO Handler", 30);
 		status = XST_FAILURE;
 	} else {
-		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: GPIO Handler", 26);
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: IRQ GPIO Handler", 30);
 		status = XST_SUCCESS;
 	}
 

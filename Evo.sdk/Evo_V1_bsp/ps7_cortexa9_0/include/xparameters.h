@@ -68,17 +68,6 @@
 
 /******************************************************************/
 
-/* Definitions for driver GPIO_CONTROLLER */
-#define XPAR_GPIO_CONTROLLER_NUM_INSTANCES 1
-
-/* Definitions for peripheral GPIO_CONTROLLER_0 */
-#define XPAR_GPIO_CONTROLLER_0_DEVICE_ID 0
-#define XPAR_GPIO_CONTROLLER_0_S00_AXI_BASEADDR 0x43CB0000
-#define XPAR_GPIO_CONTROLLER_0_S00_AXI_HIGHADDR 0x43CBFFFF
-
-
-/******************************************************************/
-
 /* Definitions for driver GPIO_IRQ */
 #define XPAR_GPIO_IRQ_NUM_INSTANCES 1
 

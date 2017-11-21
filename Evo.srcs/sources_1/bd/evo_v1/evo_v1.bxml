@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="evo_v1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1510669685"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1510669685"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1510669685"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1510837335"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1510837335"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1510837335"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\evo_v1_ps7_0_axi_periph_0\evo_v1_ps7_0_axi_periph_0.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph"/>
@@ -138,14 +138,6 @@
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\evo_v1_Gpio_Controller_0_0\evo_v1_Gpio_Controller_0_0.xci" Type="IP">
-        <Instance HierarchyPath="Gpio_Controller_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\evo_v1_xadc_wiz_0_0\evo_v1_xadc_wiz_0_0.xci" Type="IP">

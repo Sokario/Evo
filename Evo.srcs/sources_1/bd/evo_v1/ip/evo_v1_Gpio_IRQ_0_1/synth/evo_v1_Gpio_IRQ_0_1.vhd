@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:Gpio_IRQ:1.0
--- IP Revision: 34
+-- IP Revision: 38
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -89,8 +89,7 @@ ARCHITECTURE evo_v1_Gpio_IRQ_0_1_arch OF evo_v1_Gpio_IRQ_0_1 IS
       C_S00_AXI_DATA_WIDTH : INTEGER; -- Width of S_AXI data bus
       C_S00_AXI_ADDR_WIDTH : INTEGER; -- Width of S_AXI address bus
       GPIO_DATA_WIDTH : INTEGER;
-      EDGE_POLARITY : STD_LOGIC;
-      DIVIDER : INTEGER
+      EDGE_POLARITY : STD_LOGIC
     );
     PORT (
       Gpio : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -123,7 +122,7 @@ ARCHITECTURE evo_v1_Gpio_IRQ_0_1_arch OF evo_v1_Gpio_IRQ_0_1 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF evo_v1_Gpio_IRQ_0_1_arch : ARCHITECTURE IS "evo_v1_Gpio_IRQ_0_1,Gpio_IRQ_v1_0,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF evo_v1_Gpio_IRQ_0_1_arch: ARCHITECTURE IS "evo_v1_Gpio_IRQ_0_1,Gpio_IRQ_v1_0,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Gpio_IRQ,x_ipVersion=1.0,x_ipCoreRevision=34,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5,GPIO_DATA_WIDTH=4,EDGE_POLARITY=1,DIVIDER=390625}";
+  ATTRIBUTE CORE_GENERATION_INFO OF evo_v1_Gpio_IRQ_0_1_arch: ARCHITECTURE IS "evo_v1_Gpio_IRQ_0_1,Gpio_IRQ_v1_0,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Gpio_IRQ,x_ipVersion=1.0,x_ipCoreRevision=38,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5,GPIO_DATA_WIDTH=4,EDGE_POLARITY=1}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF Interrupt: SIGNAL IS "xilinx.com:signal:interrupt:1.0 Interrupt INTERRUPT";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR";
@@ -153,8 +152,7 @@ BEGIN
       C_S00_AXI_DATA_WIDTH => 32,
       C_S00_AXI_ADDR_WIDTH => 5,
       GPIO_DATA_WIDTH => 4,
-      EDGE_POLARITY => '1',
-      DIVIDER => 390625
+      EDGE_POLARITY => '1'
     )
     PORT MAP (
       Gpio => Gpio,
