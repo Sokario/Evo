@@ -38,6 +38,40 @@ int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId
 	return XST_SUCCESS;
 }
 
+int Quadramp_Initialization(Quadramp *ramp, u16 deviceId)
+{
+	u32 test_a = 2000, test_b = -3000;
+	#define FULL_QUADRAMP_OVERRIDE					0b11111111
+	#define QUADRAMP_OVERRIDE_RESET 				0b00000001
+	#define QUADRAMP_OVERRIDE_COMMAND 				0b00000010
+	#define QUADRAMP_OVERRIDE_UPPER_LIMIT 			0b00000100
+	#define QUADRAMP_OVERRIDE_LOWER_LIMIT 			0b00001000
+	#define QUADRAMP_OVERRIDE_INCREMENT_POSITIVE 	0b00010000
+	#define QUADRAMP_OVERRIDE_iNCREMENT_NEGATIVE 	0b00100000
+	#define QUADRAMP_OVERRIDE_VARIATION				0b01000000
+	#define QUADRAMP_OVERRIDE_DIVIDER 				0b10000000
+
+	if (Quadramp_Initialize(ramp, deviceId) != XST_SUCCESS)
+		return XST_FAILURE;
+
+	Quadramp_SetOverRide(ramp, QUADRAMP_OVERRIDE_COMMAND);
+	if (Quadramp_GetOverRide(ramp) != QUADRAMP_OVERRIDE_COMMAND)
+			return XST_FAILURE;
+	Quadramp_SetCommand(ramp, test_a);
+	if (Quadramp_GetCommand(ramp) != test_a)
+		return XST_FAILURE;
+
+	Quadramp_SetCommand(ramp, test_b);
+	for (int i = 0; i < 200; i++) {
+		if (Quadramp_GetRamp(ramp) == -2500)
+				return XST_SUCCESS;
+		usleep(100000);
+	}
+
+	Quadramp_SetOverRide(ramp, 0);
+	return XST_SUCCESS;
+}
+
 int Subtractor_Initialization(Subtractor *sub, u16 deviceId)
 {
 	u32 test_a = 1000, test_b = 200;
@@ -59,7 +93,7 @@ int Subtractor_Initialization(Subtractor *sub, u16 deviceId)
 int PID_Initialization(PID *pid, u16 deviceId)
 {
 	u32 test = 200;
-	u32 waittingTime = 600;
+	u32 waittingTime = 800;
 	u32 waitting = 3907;
 	#define PID_OVERRIDE_ERROR 			0b00000001
 	#define PID_OVERRIDE_RESET 			0b00000010
@@ -174,7 +208,7 @@ int Motor_Initialization(Motor *mot, u16 deviceId)
 
 	Motor_SetOverRide(mot, 1);
 	Motor_SetSpeed(mot, test);
-	if (Motor_GetSpeed(mot) != abs(test))
+	if ((Motor_GetSpeed(mot) != test) && (Motor_GetSpeed(mot) != -test))
 		return XST_FAILURE;
 
 	Motor_SetOverRide(mot, 0);

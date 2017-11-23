@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Fabric" key="selection"/>
+		<item value="usleep" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="usleep"/>
+			<item value="500000"/>
+			<item value="1000000"/>
+			<item value="43CC"/>
 			<item value="fabric"/>
 			<item value="DistributorInit"/>
 			<item value="XPAR_CPU_ID"/>
 			<item value="XPAR_CPUID"/>
-			<item value="DoDistributorInit"/>
-			<item value="single"/>
-			<item value="INT_ID"/>
-			<item value="scugic"/>
 		</list>
 		<list key="replacehistory">
+			<item value="200000"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

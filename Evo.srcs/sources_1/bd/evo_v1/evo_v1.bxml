@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="evo_v1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1510837335"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1510837335"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1510837335"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1511447453"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1511447453"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1511447453"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\evo_v1_ps7_0_axi_periph_0\evo_v1_ps7_0_axi_periph_0.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph"/>
@@ -182,6 +182,22 @@
       </File>
       <File Name="ip\evo_v1_Gpio_IRQ_0_1\evo_v1_Gpio_IRQ_0_1.xci" Type="IP">
         <Instance HierarchyPath="Gpio_IRQ_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\evo_v1_Quadramp_0_1\evo_v1_Quadramp_0_1.xci" Type="IP">
+        <Instance HierarchyPath="Quadramp_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\evo_v1_Quadramp_1_1\evo_v1_Quadramp_1_1.xci" Type="IP">
+        <Instance HierarchyPath="Quadramp_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

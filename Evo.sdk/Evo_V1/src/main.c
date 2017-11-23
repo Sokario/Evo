@@ -31,6 +31,11 @@ XGpio Input, Output;
 #define INPUT_DEVICE_ID 			XPAR_GPIO_0_DEVICE_ID
 #define OUTPUT_DEVICE_ID 			XPAR_GPIO_1_DEVICE_ID
 
+#include "Quadramp.h"
+Quadramp RampLeft, RampRight;
+#define QUADRAMP_LEFT_DEVICE_ID 	XPAR_QUADRAMP_0_DEVICE_ID
+#define QUADRAMP_RIGHT_DEVICE_ID 	XPAR_QUADRAMP_1_DEVICE_ID
+
 #include "Subtractor.h"
 Subtractor SubLeft, SubRight;
 #define SUBTRACTOR_LEFT_DEVICE_ID 	XPAR_SUBTRACTOR_0_DEVICE_ID
@@ -87,9 +92,9 @@ int ScuGic_SetHandler(XScuGic *gic, u16 interruptId)
 void Gpio_IRQ_Simulation()
 {
 	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG1_OFFSET, 0b0000);
-	usleep(500000);
+	usleep(200000);
 	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG1_OFFSET, 0b1111);
-	usleep(500000);
+	usleep(200000);
 }
 
 void GPIO_IRQ_Handler(void *CallbackRef)
@@ -138,11 +143,11 @@ int main()
 			writeMonitor(&UartPs, result, sizeof(result));
 		else {
 			writeMonitor(&UartPs, result, sizeof(result));
-			usleep(500000);
+			usleep(200000);
 			strcpy(result, "RESENDXX");
 			writeMonitor(&UartPs, result, sizeof(result));
 		}
-		usleep(500000);
+		usleep(200000);
 
 		if (cmd_value == (IRQ_GPIO_MASK >> 24)) {
 			Gpio_IRQ_Simulation();
@@ -151,7 +156,7 @@ int main()
 			strcpy(result, string);
 			writeMonitor(&UartPs, result, sizeof(result));
 		}
-		usleep(500000);
+		usleep(200000);
 
 		// Debug
 //		switch_data = XGpio_DiscreteRead(&Input, SWITCH);	//get switch data
@@ -172,7 +177,7 @@ int DEBUG_Initialization()
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: UartPS", 20);
 		status = XST_SUCCESS;
 	}
-	usleep(500000);
+	usleep(200000);
 
 	// Debug initialization
 	if (Gpio_Initialization(&Input, &Output, INPUT_DEVICE_ID, OUTPUT_DEVICE_ID) != XST_SUCCESS) {
@@ -182,7 +187,7 @@ int DEBUG_Initialization()
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Debug Gpio", 24);
 		status = XST_SUCCESS;
 	}
-	usleep(500000);
+	usleep(200000);
 
 	return status;
 }
@@ -190,6 +195,24 @@ int DEBUG_Initialization()
 int ASSERV_Initialization()
 {
 	int status = XST_SUCCESS;
+
+	// QuadRamp test
+	if (Quadramp_Initialization(&RampLeft, QUADRAMP_LEFT_DEVICE_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Quadramp Left", 27);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Quadramp Left", 27);
+		status = XST_SUCCESS;
+	}
+	usleep(200000);
+	if (Quadramp_Initialization(&RampRight, QUADRAMP_RIGHT_DEVICE_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Quadramp Right", 28);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Quadramp Right", 28);
+		status = XST_SUCCESS;
+	}
+	usleep(200000);
 
 	// Subtractor initialization
 	if (Subtractor_Initialization(&SubLeft, SUBTRACTOR_LEFT_DEVICE_ID) != XST_SUCCESS) {
@@ -199,7 +222,7 @@ int ASSERV_Initialization()
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Subtractor Left", 29);
 		status = XST_SUCCESS;
 	}
-	usleep(500000);
+	usleep(200000);
 	if (Subtractor_Initialization(&SubRight, SUBTRACTOR_RIGHT_DEVICE_ID) != XST_SUCCESS) {
 		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Subtractor Right", 30);
 		status = XST_FAILURE;
@@ -207,7 +230,7 @@ int ASSERV_Initialization()
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Subtractor Right", 30);
 		status = XST_SUCCESS;
 	}
-	usleep(500000);
+	usleep(200000);
 
 	// PID test
 	if (PID_Initialization(&PIDLeftMotor, PID_LEFT_MOTOR_DEVICE_ID) != XST_SUCCESS) {
@@ -217,7 +240,7 @@ int ASSERV_Initialization()
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: PID Left Motor", 28);
 		status = XST_SUCCESS;
 	}
-	usleep(500000);
+	usleep(200000);
 	if (PID_Initialization(&PIDRightMotor, PID_RIGHT_MOTOR_DEVICE_ID) != XST_SUCCESS) {
 		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: PID Right Motor", 29);
 		status = XST_FAILURE;
@@ -225,7 +248,7 @@ int ASSERV_Initialization()
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: PID Right Motor", 29);
 		status = XST_SUCCESS;
 	}
-	usleep(500000);
+	usleep(200000);
 
 	// Derivator test
 	if (Derivator_Initialization(&DerivLeft, DERIVATOR_LEFT_DEVICE_ID) != XST_SUCCESS) {
@@ -235,7 +258,7 @@ int ASSERV_Initialization()
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Derivator Left", 28);
 		status = XST_SUCCESS;
 	}
-	usleep(500000);
+	usleep(200000);
 	if (Derivator_Initialization(&DerivRight, DERIVATOR_RIGHT_DEVICE_ID) != XST_SUCCESS) {
 		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Derivator Right", 29);
 		status = XST_FAILURE;
@@ -243,7 +266,7 @@ int ASSERV_Initialization()
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Derivator Right", 29);
 		status = XST_SUCCESS;
 	}
-	usleep(500000);
+	usleep(200000);
 
 	// Encoder test
 	if (Encoder_Initialization(&EncLeft, ENCODER_LEFT_DEVICE_ID) != XST_SUCCESS) {
@@ -253,7 +276,7 @@ int ASSERV_Initialization()
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Encoder Left", 26);
 		status = XST_SUCCESS;
 	}
-	usleep(500000);
+	usleep(200000);
 	if (Encoder_Initialization(&EncRight, ENCODER_RIGHT_DEVICE_ID) != XST_SUCCESS) {
 		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Encoder Right", 27);
 		status = XST_FAILURE;
@@ -261,7 +284,7 @@ int ASSERV_Initialization()
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Encoder Right", 27);
 		status = XST_SUCCESS;
 	}
-	usleep(500000);
+	usleep(200000);
 
 	// Motor test
 	if (Motor_Initialization(&MotLeft, MOTOR_LEFT_DEVICE_ID) != XST_SUCCESS) {
@@ -271,7 +294,7 @@ int ASSERV_Initialization()
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Motor Left", 24);
 		status = XST_SUCCESS;
 	}
-	usleep(500000);
+	usleep(200000);
 	if (Motor_Initialization(&MotRight, MOTOR_RIGHT_DEVICE_ID) != XST_SUCCESS) {
 		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Motor Right", 25);
 		status = XST_FAILURE;
@@ -279,7 +302,7 @@ int ASSERV_Initialization()
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Motor Right", 25);
 		status = XST_SUCCESS;
 	}
-	usleep(500000);
+	usleep(200000);
 
 	return status;
 }
@@ -300,7 +323,7 @@ int IRQ_Initialization()
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: ScuGic", 20);
 		status = XST_SUCCESS;
 	}
-	usleep(500000);
+	usleep(200000);
 
 	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, &IRQ_Controller);
 	Xil_ExceptionEnable();
@@ -317,9 +340,12 @@ int IRQ_Initialization()
 	Gpio_IRQ_Simulation();
 
 	for (int i = 0; i < 10; i++) {
-		if (gpioInterrupt > 0)
-			return XST_SUCCESS;
+		if (gpioInterrupt > 0) {
+			status = XST_SUCCESS;
+			break;
+		} else
+			status = XST_FAILURE;
 	}
 
-	return XST_FAILURE;
+	return status;
 }

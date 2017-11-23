@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Thu Nov 16 14:03:44 2017
+| Date         : Thu Nov 23 15:32:48 2017
 | Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
 | Command      : report_utilization -file evo_v1_wrapper_utilization_synth.rpt -pb evo_v1_wrapper_utilization_synth.pb
 | Design       : evo_v1_wrapper
@@ -189,6 +189,8 @@ Table of Contents
 | evo_v1_auto_pc_0              |    1 |
 | evo_v1_Subtractor_1_0         |    1 |
 | evo_v1_Subtractor_0_0         |    1 |
+| evo_v1_Quadramp_1_1           |    1 |
+| evo_v1_Quadramp_0_1           |    1 |
 | evo_v1_PID_1_0                |    1 |
 | evo_v1_PID_0_0                |    1 |
 | evo_v1_Motor_1_0              |    1 |

@@ -1,4 +1,4 @@
-14:09:35 **** Auto Build of project Evo_V1_bsp ****
+15:45:33 **** Auto Build of project Evo_V1_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/ADC_IRQ_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/ADC_IRQ_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
@@ -30,6 +30,8 @@ make -C ps7_cortexa9_0/libsrc/Motor_v1_0/src -s include  "SHELL=CMD" "COMPILER=a
 make -C ps7_cortexa9_0/libsrc/PID_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_3/src"
 make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/Quadramp_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/Quadramp_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_7/src"
 make -C ps7_cortexa9_0/libsrc/scugic_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
@@ -1141,6 +1143,200 @@ PID_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
 "Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_3/src"
 make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
 "Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/Quadramp_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/Quadramp_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling Quadramp..."
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+Quadramp.c: In function 'Quadramp_SetOverRide':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:142:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:139:6: note: declared here
+ void Quadramp_SetOverRide(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:143:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:139:6: note: declared here
+ void Quadramp_SetOverRide(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+Quadramp.c: In function 'Quadramp_SetReset':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:160:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:157:6: note: declared here
+ void Quadramp_SetReset(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:161:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:157:6: note: declared here
+ void Quadramp_SetReset(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+Quadramp.c: In function 'Quadramp_SetCommand':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:178:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:175:6: note: declared here
+ void Quadramp_SetCommand(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:179:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:175:6: note: declared here
+ void Quadramp_SetCommand(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+Quadramp.c: In function 'Quadramp_SetUpperLimit':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:196:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:193:6: note: declared here
+ void Quadramp_SetUpperLimit(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:197:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:193:6: note: declared here
+ void Quadramp_SetUpperLimit(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+Quadramp.c: In function 'Quadramp_SetLowerLimit':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:214:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:211:6: note: declared here
+ void Quadramp_SetLowerLimit(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:215:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:211:6: note: declared here
+ void Quadramp_SetLowerLimit(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+Quadramp.c: In function 'Quadramp_SetIncrementPositive':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:232:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:229:6: note: declared here
+ void Quadramp_SetIncrementPositive(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:233:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:229:6: note: declared here
+ void Quadramp_SetIncrementPositive(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+Quadramp.c: In function 'Quadramp_SetIncrementNegative':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:250:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:247:6: note: declared here
+ void Quadramp_SetIncrementNegative(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:251:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:247:6: note: declared here
+ void Quadramp_SetIncrementNegative(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+Quadramp.c: In function 'Quadramp_SetDivider':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:268:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:265:6: note: declared here
+ void Quadramp_SetDivider(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~
+In file included from Quadramp.h:11:0,
+                 from Quadramp.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Quadramp.c:269:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Quadramp.c:265:6: note: declared here
+ void Quadramp_SetDivider(Quadramp *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~
+Quadramp_selftest.c: In function 'QUADRAMP_Reg_SelfTest':
+Quadramp_selftest.c:52:57: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( QUADRAMP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                         ^~
+Quadramp_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
 "Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_7/src"
 make -C ps7_cortexa9_0/libsrc/scugic_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
 "Compiling scugic"
@@ -1253,5 +1449,5 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm
 "Compiling xadcps"
 'Finished building libraries'
 
-14:10:01 Build Finished (took 26s.570ms)
+15:46:06 Build Finished (took 32s.616ms)
 
