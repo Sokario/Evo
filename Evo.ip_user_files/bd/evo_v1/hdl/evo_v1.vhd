@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Thu Nov 23 15:00:19 2017
+--Date        : Tue Nov 28 14:47:22 2017
 --Host        : LogOut-AsusPro running 64-bit major release  (build 9200)
 --Command     : generate_target evo_v1.bd
 --Design      : evo_v1
@@ -4724,7 +4724,7 @@ entity evo_v1 is
     vauxp14 : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of evo_v1 : entity is "evo_v1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=evo_v1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=42,numReposBlks=24,numNonXlnxBlks=0,numHierBlks=18,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=20,da_board_cnt=5,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of evo_v1 : entity is "evo_v1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=evo_v1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=44,numReposBlks=26,numNonXlnxBlks=0,numHierBlks=18,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=20,da_board_cnt=5,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of evo_v1 : entity is "evo_v1.hwdef";
 end evo_v1;
@@ -5187,39 +5187,6 @@ architecture STRUCTURE of evo_v1 is
     dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component evo_v1_xlconstant_0_1;
-  component evo_v1_ADC_IRQ_0_0 is
-  port (
-    Data_ready : in STD_LOGIC;
-    Data : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    Channel : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    Eoc : in STD_LOGIC;
-    Eos : in STD_LOGIC;
-    Addr : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    Addr_ready : out STD_LOGIC;
-    Interrupt : out STD_LOGIC;
-    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
-    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_awvalid : in STD_LOGIC;
-    s00_axi_awready : out STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_wready : out STD_LOGIC;
-    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_bvalid : out STD_LOGIC;
-    s00_axi_bready : in STD_LOGIC;
-    s00_axi_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
-    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_arvalid : in STD_LOGIC;
-    s00_axi_arready : out STD_LOGIC;
-    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_rvalid : out STD_LOGIC;
-    s00_axi_rready : in STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC
-  );
-  end component evo_v1_ADC_IRQ_0_0;
   component evo_v1_xlconcat_0_0 is
   port (
     In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -5227,33 +5194,6 @@ architecture STRUCTURE of evo_v1 is
     dout : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   end component evo_v1_xlconcat_0_0;
-  component evo_v1_Gpio_IRQ_0_1 is
-  port (
-    Gpio : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    Interrupt : out STD_LOGIC;
-    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_awvalid : in STD_LOGIC;
-    s00_axi_awready : out STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_wready : out STD_LOGIC;
-    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_bvalid : out STD_LOGIC;
-    s00_axi_bready : in STD_LOGIC;
-    s00_axi_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_arvalid : in STD_LOGIC;
-    s00_axi_arready : out STD_LOGIC;
-    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_rvalid : out STD_LOGIC;
-    s00_axi_rready : in STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC
-  );
-  end component evo_v1_Gpio_IRQ_0_1;
   component evo_v1_Quadramp_0_1 is
   port (
     Reset : in STD_LOGIC;
@@ -5310,6 +5250,77 @@ architecture STRUCTURE of evo_v1 is
     s00_axi_aresetn : in STD_LOGIC
   );
   end component evo_v1_Quadramp_1_1;
+  component evo_v1_xlconstant_0_2 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component evo_v1_xlconstant_0_2;
+  component evo_v1_xlconstant_0_3 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component evo_v1_xlconstant_0_3;
+  component evo_v1_ADC_IRQ_0_0 is
+  port (
+    Reset : in STD_LOGIC;
+    Data_ready : in STD_LOGIC;
+    Data : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    Channel : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    Eoc : in STD_LOGIC;
+    Eos : in STD_LOGIC;
+    Addr : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    Addr_ready : out STD_LOGIC;
+    Interrupt : out STD_LOGIC;
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_awready : out STD_LOGIC;
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_wvalid : in STD_LOGIC;
+    s00_axi_wready : out STD_LOGIC;
+    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    s00_axi_bready : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rready : in STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
+    s00_axi_aresetn : in STD_LOGIC
+  );
+  end component evo_v1_ADC_IRQ_0_0;
+  component evo_v1_Gpio_IRQ_0_1 is
+  port (
+    Gpio : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    Interrupt : out STD_LOGIC;
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_awready : out STD_LOGIC;
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_wvalid : in STD_LOGIC;
+    s00_axi_wready : out STD_LOGIC;
+    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    s00_axi_bready : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rready : in STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
+    s00_axi_aresetn : in STD_LOGIC
+  );
+  end component evo_v1_Gpio_IRQ_0_1;
   signal ADC_IRQ_0_Addr : STD_LOGIC_VECTOR ( 6 downto 0 );
   signal ADC_IRQ_0_Addr_ready : STD_LOGIC;
   signal ADC_IRQ_0_Interrupt : STD_LOGIC;
@@ -5710,6 +5721,8 @@ architecture STRUCTURE of evo_v1 is
   signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal xlconstant_2_dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal xlconstant_3_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_Motor_0_Enable_UNCONNECTED : STD_LOGIC;
   signal NLW_Motor_1_Enable_UNCONNECTED : STD_LOGIC;
   signal NLW_PID_0_Ended_UNCONNECTED : STD_LOGIC;
@@ -5753,6 +5766,7 @@ ADC_IRQ_0: component evo_v1_ADC_IRQ_0_0
       Eoc => xadc_wiz_0_eoc_out,
       Eos => xadc_wiz_0_eos_out,
       Interrupt => ADC_IRQ_0_Interrupt,
+      Reset => '0',
       s00_axi_aclk => processing_system7_0_FCLK_CLK0,
       s00_axi_araddr(6 downto 0) => ps7_0_axi_periph_M13_AXI_ARADDR(6 downto 0),
       s00_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),
@@ -6661,8 +6675,8 @@ xadc_wiz_0: component evo_v1_xadc_wiz_0_0
       eos_out => xadc_wiz_0_eos_out,
       vauxn14 => vauxn14_1,
       vauxp14 => vauxp14_1,
-      vn_in => '0',
-      vp_in => '0'
+      vn_in => xlconstant_2_dout(0),
+      vp_in => xlconstant_3_dout(0)
     );
 xlconcat_0: component evo_v1_xlconcat_0_0
      port map (
@@ -6677,5 +6691,13 @@ xlconstant_0: component evo_v1_xlconstant_0_0
 xlconstant_1: component evo_v1_xlconstant_0_1
      port map (
       dout(0) => xlconstant_1_dout(0)
+    );
+xlconstant_2: component evo_v1_xlconstant_0_2
+     port map (
+      dout(0) => xlconstant_2_dout(0)
+    );
+xlconstant_3: component evo_v1_xlconstant_0_3
+     port map (
+      dout(0) => xlconstant_3_dout(0)
     );
 end STRUCTURE;

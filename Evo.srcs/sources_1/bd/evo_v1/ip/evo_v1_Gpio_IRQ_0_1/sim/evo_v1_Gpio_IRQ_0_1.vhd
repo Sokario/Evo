@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:Gpio_IRQ:1.0
--- IP Revision: 38
+-- IP Revision: 42
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;

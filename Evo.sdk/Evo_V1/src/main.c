@@ -69,8 +69,9 @@ int ScuGic_SetHandler(XScuGic *gic, u16 interruptId);
 #include "Gpio_IRQ.h"
 #define GPIO_IRQ_ID						XPAR_FABRIC_GPIO_IRQ_0_INTERRUPT_INTR
 void GPIO_IRQ_Handler(void *CallbackRef);
-void Gpio_IRQ_Simulation();
-volatile static int gpioInterrupt = 0;
+void Gpio_IRQ_Simulation(u32 value);
+volatile static int gpioProcessed = FALSE;
+volatile static u32 gpioValue = 0;
 
 int DEBUG_Initialization();
 int ASSERV_Initialization();
@@ -89,11 +90,11 @@ int ScuGic_SetHandler(XScuGic *gic, u16 interruptId)
 	return XST_SUCCESS;
 }
 
-void Gpio_IRQ_Simulation()
+void Gpio_IRQ_Simulation(u32 value)
 {
-	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG1_OFFSET, 0b0000);
+	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG1_OFFSET, 0);
 	usleep(200000);
-	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG1_OFFSET, 0b1111);
+	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG1_OFFSET, value);
 	usleep(200000);
 }
 
@@ -101,7 +102,8 @@ void GPIO_IRQ_Handler(void *CallbackRef)
 {
 	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG4_OFFSET, 0b11);
 	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG4_OFFSET, 0b10);
-	gpioInterrupt += 1;
+	gpioValue = Xil_In32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG1_OFFSET);
+	gpioProcessed = TRUE;
 }
 
 int main()
@@ -124,9 +126,12 @@ int main()
 	else
 		led_data |= 1 << 1;
 
-	if (IRQ_Initialization() != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
+	// IRQ initialization
+	if (IRQ_Initialization() != XST_SUCCESS)
+		led_data &= ~(1 << 1);
+	else
+		led_data |= 1 << 1;
+	usleep(200000);
 
 	XGpio_DiscreteWrite(&Output, LED, led_data);
 
@@ -150,9 +155,13 @@ int main()
 		usleep(200000);
 
 		if (cmd_value == (IRQ_GPIO_MASK >> 24)) {
-			Gpio_IRQ_Simulation();
+			Gpio_IRQ_Simulation(0b1 << data_value);
 			char string[16];
-			itoa(gpioInterrupt, string, 10);
+			if (gpioProcessed) {
+				itoa(gpioValue, string, 10);
+				gpioProcessed = FALSE;
+			} else
+				itoa(1000 * (0b1 << data_value), string, 10);
 			strcpy(result, string);
 			writeMonitor(&UartPs, result, sizeof(result));
 		}
@@ -335,17 +344,24 @@ int IRQ_Initialization()
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: IRQ GPIO Handler", 30);
 		status = XST_SUCCESS;
 	}
+	usleep(200000);
 
 	// Interrupt simulation
-	Gpio_IRQ_Simulation();
+	Gpio_IRQ_Simulation(0b1111);
 
 	for (int i = 0; i < 10; i++) {
-		if (gpioInterrupt > 0) {
+		if (gpioProcessed) {
 			status = XST_SUCCESS;
+			gpioProcessed = FALSE;
 			break;
 		} else
 			status = XST_FAILURE;
 	}
+	if (status == XST_FAILURE)
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: IRQ GPIO Test", 27);
+	else
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: IRQ GPIO Test", 27);
+	usleep(200000);
 
 	return status;
 }

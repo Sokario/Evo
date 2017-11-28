@@ -78,6 +78,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==evo_v1_Quadramp
 # IP: bd/evo_v1/ip/evo_v1_Quadramp_1_1/evo_v1_Quadramp_1_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==evo_v1_Quadramp_1_1 || ORIG_REF_NAME==evo_v1_Quadramp_1_1}]
 
+# IP: bd/evo_v1/ip/evo_v1_xlconstant_0_2/evo_v1_xlconstant_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==evo_v1_xlconstant_0_2 || ORIG_REF_NAME==evo_v1_xlconstant_0_2}]
+
+# IP: bd/evo_v1/ip/evo_v1_xlconstant_0_3/evo_v1_xlconstant_0_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==evo_v1_xlconstant_0_3 || ORIG_REF_NAME==evo_v1_xlconstant_0_3}]
+
 # IP: bd/evo_v1/ip/evo_v1_auto_pc_0/evo_v1_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==evo_v1_auto_pc_0 || ORIG_REF_NAME==evo_v1_auto_pc_0}]
 

@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:ADC_IRQ:1.0
--- IP Revision: 2
+-- IP Revision: 3
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -55,6 +55,7 @@ USE ieee.numeric_std.ALL;
 
 ENTITY evo_v1_ADC_IRQ_0_0 IS
   PORT (
+    Reset : IN STD_LOGIC;
     Data_ready : IN STD_LOGIC;
     Data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     Channel : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
@@ -93,9 +94,11 @@ ARCHITECTURE evo_v1_ADC_IRQ_0_0_arch OF evo_v1_ADC_IRQ_0_0 IS
   COMPONENT ADC_IRQ_v1_0 IS
     GENERIC (
       C_S00_AXI_DATA_WIDTH : INTEGER; -- Width of S_AXI data bus
-      C_S00_AXI_ADDR_WIDTH : INTEGER -- Width of S_AXI address bus
+      C_S00_AXI_ADDR_WIDTH : INTEGER; -- Width of S_AXI address bus
+      MAXIMUM : INTEGER
     );
     PORT (
+      Reset : IN STD_LOGIC;
       Data_ready : IN STD_LOGIC;
       Data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       Channel : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
@@ -132,8 +135,9 @@ ARCHITECTURE evo_v1_ADC_IRQ_0_0_arch OF evo_v1_ADC_IRQ_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF evo_v1_ADC_IRQ_0_0_arch : ARCHITECTURE IS "evo_v1_ADC_IRQ_0_0,ADC_IRQ_v1_0,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF evo_v1_ADC_IRQ_0_0_arch: ARCHITECTURE IS "evo_v1_ADC_IRQ_0_0,ADC_IRQ_v1_0,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=ADC_IRQ,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=7}";
+  ATTRIBUTE CORE_GENERATION_INFO OF evo_v1_ADC_IRQ_0_0_arch: ARCHITECTURE IS "evo_v1_ADC_IRQ_0_0,ADC_IRQ_v1_0,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=ADC_IRQ,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=7,MAXIMUM=65536}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
+  ATTRIBUTE X_INTERFACE_INFO OF Reset: SIGNAL IS "xilinx.com:signal:reset:1.0 Reset RST";
   ATTRIBUTE X_INTERFACE_INFO OF Interrupt: SIGNAL IS "xilinx.com:signal:interrupt:1.0 Interrupt INTERRUPT";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awprot: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT";
@@ -160,9 +164,11 @@ BEGIN
   U0 : ADC_IRQ_v1_0
     GENERIC MAP (
       C_S00_AXI_DATA_WIDTH => 32,
-      C_S00_AXI_ADDR_WIDTH => 7
+      C_S00_AXI_ADDR_WIDTH => 7,
+      MAXIMUM => 65536
     )
     PORT MAP (
+      Reset => Reset,
       Data_ready => Data_ready,
       Data => Data,
       Channel => Channel,

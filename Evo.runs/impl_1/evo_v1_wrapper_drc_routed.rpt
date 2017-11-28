@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Thu Nov 23 15:35:03 2017
+| Date         : Tue Nov 28 14:53:57 2017
 | Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
 | Command      : report_drc -file evo_v1_wrapper_drc_routed.rpt -pb evo_v1_wrapper_drc_routed.pb -rpx evo_v1_wrapper_drc_routed.rpx
 | Design       : evo_v1_wrapper
@@ -24,16 +24,17 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 548
-+--------+----------+---------------------------+------------+
-| Rule   | Severity | Description               | Violations |
-+--------+----------+---------------------------+------------+
-| DPIP-1 | Warning  | Input pipelining          | 28         |
-| DPIR-1 | Warning  | Asynchronous driver check | 280        |
-| DPOP-1 | Warning  | PREG Output pipelining    | 12         |
-| DPOP-2 | Warning  | MREG Output pipelining    | 24         |
-| DPOR-1 | Warning  | Asynchronous load check   | 204        |
-+--------+----------+---------------------------+------------+
+             Violations found: 550
++----------+----------+---------------------------+------------+
+| Rule     | Severity | Description               | Violations |
++----------+----------+---------------------------+------------+
+| DPIP-1   | Warning  | Input pipelining          | 28         |
+| DPIR-1   | Warning  | Asynchronous driver check | 280        |
+| DPOP-1   | Warning  | PREG Output pipelining    | 12         |
+| DPOP-2   | Warning  | MREG Output pipelining    | 24         |
+| DPOR-1   | Warning  | Asynchronous load check   | 204        |
+| PDRC-153 | Warning  | Gated clock check         | 2          |
++----------+----------+---------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -2775,6 +2776,16 @@ Related violations: <none>
 DPOR-1#204 Warning
 Asynchronous load check  
 DSP evo_v1_i/PID_1/U0/PID_v1_0_S00_AXI_inst/proportional_i0__1 output is connected to registers with an asynchronous reset (evo_v1_i/PID_1/U0/PID_v1_0_S00_AXI_inst/proportional_i_reg[9]__1). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net evo_v1_i/ADC_IRQ_0/U0/ADC_IRQ_v1_0_S00_AXI_inst/addr_i_reg[4]_i_1_n_0 is a gated clock net sourced by a combinational pin evo_v1_i/ADC_IRQ_0/U0/ADC_IRQ_v1_0_S00_AXI_inst/addr_i_reg[4]_i_1/O, cell evo_v1_i/ADC_IRQ_0/U0/ADC_IRQ_v1_0_S00_AXI_inst/addr_i_reg[4]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net evo_v1_i/ADC_IRQ_0/U0/ADC_IRQ_v1_0_S00_AXI_inst/value_i_reg[15]_i_1_n_0 is a gated clock net sourced by a combinational pin evo_v1_i/ADC_IRQ_0/U0/ADC_IRQ_v1_0_S00_AXI_inst/value_i_reg[15]_i_1/O, cell evo_v1_i/ADC_IRQ_0/U0/ADC_IRQ_v1_0_S00_AXI_inst/value_i_reg[15]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 
