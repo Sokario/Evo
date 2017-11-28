@@ -32881,3 +32881,5 @@ con
 ----------------End of Script----------------
 
 15:05:09 INFO  : Launch script is exported to file 'C:\Projet\Vivado\Evo\Evo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_evo_v1.elf_on_local.tcl'
+15:41:11 INFO  : Disconnected from the channel tcfchan#7.
+15:41:14 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
