@@ -13,6 +13,7 @@
 #include "XUartPs.h"
 #include "XGpio.h"
 
+#include "Odometer.h"
 #include "Quadramp.h"
 #include "Subtractor.h"
 #include "PID.h"
@@ -29,6 +30,7 @@
 int UartPs_Initialization(XUartPs *Uart, u16 deviceId);
 int Gpio_Initialization(XGpio *In, XGpio *Out, u16 in_deviceId, u16 out_deviceId);
 
+int Odometer_Initialization(Odometer *odo, u16 deviceId);
 int Quadramp_Initialization(Quadramp *ramp, u16 deviceId);
 int Subtractor_Initialization(Subtractor *sub, u16 deviceId);
 int PID_Initialization(PID *pid, u16 deviceId);

@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Tue Nov 28 16:36:59 2017
+--Date        : Thu Nov 30 21:25:22 2017
 --Host        : LogOut-AsusPro running 64-bit major release  (build 9200)
 --Command     : generate_target evo_v1_wrapper.bd
 --Design      : evo_v1_wrapper
@@ -34,6 +34,7 @@ entity evo_v1_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    Gpio_IRQ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     PWM_L : out STD_LOGIC;
     PWM_R : out STD_LOGIC;
     QuadA_L : in STD_LOGIC;
@@ -88,7 +89,8 @@ architecture STRUCTURE of evo_v1_wrapper is
     Sens_R : out STD_LOGIC;
     PWM_R : out STD_LOGIC;
     vauxn14 : in STD_LOGIC;
-    vauxp14 : in STD_LOGIC
+    vauxp14 : in STD_LOGIC;
+    Gpio_IRQ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component evo_v1;
   component IOBUF is
@@ -139,6 +141,7 @@ evo_v1_i: component evo_v1
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      Gpio_IRQ(3 downto 0) => Gpio_IRQ(3 downto 0),
       PWM_L => PWM_L,
       PWM_R => PWM_R,
       QuadA_L => QuadA_L,

@@ -96,6 +96,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver ODOMETER */
+#define XPAR_ODOMETER_NUM_INSTANCES 1
+
+/* Definitions for peripheral ODOMETER_0 */
+#define XPAR_ODOMETER_0_DEVICE_ID 0
+#define XPAR_ODOMETER_0_S00_AXI_BASEADDR 0x43CE0000
+#define XPAR_ODOMETER_0_S00_AXI_HIGHADDR 0x43CEFFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver PID */
 #define XPAR_PID_NUM_INSTANCES 2
 

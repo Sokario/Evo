@@ -262,20 +262,20 @@ set_property IOSTANDARD LVCMOS33 [get_ports {vauxp14}]
 
 ##Pmod Header JD
 ##IO_L5N_T0_34
-#set_property PACKAGE_PIN T15 [get_ports {jd_n[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {jd_n[0]}]
+set_property PACKAGE_PIN T14 [get_ports {Gpio_IRQ[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {Gpio_IRQ[0]}]
 
 ##IO_L5P_T0_34
-#set_property PACKAGE_PIN T14 [get_ports {jd_p[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {jd_p[0]}]
+set_property PACKAGE_PIN T15 [get_ports {Gpio_IRQ[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {Gpio_IRQ[1]}]
 
 ##IO_L6N_T0_VREF_34
-#set_property PACKAGE_PIN R14 [get_ports {jd_n[1]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {jd_n[1]}]
+set_property PACKAGE_PIN P14 [get_ports {Gpio_IRQ[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {Gpio_IRQ[2]}]
 
 ##IO_L6P_T0_34
-#set_property PACKAGE_PIN P14 [get_ports {jd_p[1]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {jd_p[1]}]
+set_property PACKAGE_PIN R14 [get_ports {Gpio_IRQ[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {Gpio_IRQ[3]}]
 
 ##IO_L11N_T1_SRCC_34
 #set_property PACKAGE_PIN U15 [get_ports {jd_n[2]}]

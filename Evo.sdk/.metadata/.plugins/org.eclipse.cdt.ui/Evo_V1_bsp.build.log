@@ -1,4 +1,4 @@
-14:55:48 **** Auto Build of project Evo_V1_bsp ****
+21:32:29 **** Auto Build of project Evo_V1_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/ADC_IRQ_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/ADC_IRQ_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
@@ -26,6 +26,8 @@ make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=ar
 make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/Motor_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/Motor_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/Odometer_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/Odometer_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/PID_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/PID_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_3/src"
@@ -121,6 +123,29 @@ Derivator.c:161:5: note: in expansion of macro 'Xil_AssertNonvoid'
 Derivator.c:157:6: note: declared here
  void Derivator_SetIncrements(Derivator *InstancePtr, u32 Data)
       ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from Derivator.h:11:0,
+                 from Derivator.c:4:
+Derivator.c: In function 'Derivator_SetDivider':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Derivator.c:178:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Derivator.c:175:6: note: declared here
+ void Derivator_SetDivider(Derivator *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~
+In file included from Derivator.h:11:0,
+                 from Derivator.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Derivator.c:179:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Derivator.c:175:6: note: declared here
+ void Derivator_SetDivider(Derivator *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~
 Derivator_selftest.c: In function 'DERIVATOR_Reg_SelfTest':
 Derivator_selftest.c:51:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
     if ( DERIVATOR_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
@@ -371,6 +396,404 @@ Motor_selftest.c: In function 'MOTOR_Reg_SelfTest':
 Motor_selftest.c:51:54: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
     if ( MOTOR_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
                                                       ^~
+"Running Make libs in ps7_cortexa9_0/libsrc/Odometer_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/Odometer_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling Odometer..."
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_SetOverRide':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:142:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:139:6: note: declared here
+ void Odometer_SetOverRide(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:143:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:139:6: note: declared here
+ void Odometer_SetOverRide(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_SetIncrementsLeft':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:160:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:157:6: note: declared here
+ void Odometer_SetIncrementsLeft(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:161:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:157:6: note: declared here
+ void Odometer_SetIncrementsLeft(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_SetIncrementsRight':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:178:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:175:6: note: declared here
+ void Odometer_SetIncrementsRight(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:179:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:175:6: note: declared here
+ void Odometer_SetIncrementsRight(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_SetLap':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:196:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:193:6: note: declared here
+ void Odometer_SetLap(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:197:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:193:6: note: declared here
+ void Odometer_SetLap(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_SetReset':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:215:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:212:6: note: declared here
+ void Odometer_SetReset(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:216:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:212:6: note: declared here
+ void Odometer_SetReset(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_PS_OverRide_Left':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:244:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:241:6: note: declared here
+ void Odometer_PS_OverRide_Left(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:245:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:241:6: note: declared here
+ void Odometer_PS_OverRide_Left(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_PS_OverRide_DataLeft':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:256:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:253:6: note: declared here
+ void Odometer_PS_OverRide_DataLeft(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:257:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:253:6: note: declared here
+ void Odometer_PS_OverRide_DataLeft(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_PL_OverRide_Left':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:266:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:263:6: note: declared here
+ void Odometer_PL_OverRide_Left(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:267:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:263:6: note: declared here
+ void Odometer_PL_OverRide_Left(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_PS_OverRide_Right':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:278:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:275:6: note: declared here
+ void Odometer_PS_OverRide_Right(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:279:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:275:6: note: declared here
+ void Odometer_PS_OverRide_Right(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_PS_OverRide_DataRight':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:290:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:287:6: note: declared here
+ void Odometer_PS_OverRide_DataRight(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:291:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:287:6: note: declared here
+ void Odometer_PS_OverRide_DataRight(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_PL_OverRide_Right':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:300:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:297:6: note: declared here
+ void Odometer_PL_OverRide_Right(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:301:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:297:6: note: declared here
+ void Odometer_PL_OverRide_Right(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_PS_OverRide_Reset':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:312:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:309:6: note: declared here
+ void Odometer_PS_OverRide_Reset(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:313:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:309:6: note: declared here
+ void Odometer_PS_OverRide_Reset(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_PS_OverRide_DataReset':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:324:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:321:6: note: declared here
+ void Odometer_PS_OverRide_DataReset(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:325:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:321:6: note: declared here
+ void Odometer_PS_OverRide_DataReset(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_PL_OverRide_Reset':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:334:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:331:6: note: declared here
+ void Odometer_PL_OverRide_Reset(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:335:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:331:6: note: declared here
+ void Odometer_PL_OverRide_Reset(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_PS_OverRide_Lap':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:346:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:343:6: note: declared here
+ void Odometer_PS_OverRide_Lap(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:347:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:343:6: note: declared here
+ void Odometer_PS_OverRide_Lap(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_PS_OverRide_DataLap':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:358:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:355:6: note: declared here
+ void Odometer_PS_OverRide_DataLap(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:359:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:355:6: note: declared here
+ void Odometer_PS_OverRide_DataLap(Odometer *InstancePtr, u32 Data)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+Odometer.c: In function 'Odometer_PL_OverRide_Lap':
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:368:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr != NULL);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:365:6: note: declared here
+ void Odometer_PL_OverRide_Lap(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from Odometer.h:11:0,
+                 from Odometer.c:4:
+../../../include/xil_assert.h:137:16: warning: 'return' with a value, in function returning void
+         return 0;                                  \
+                ^
+Odometer.c:369:5: note: in expansion of macro 'Xil_AssertNonvoid'
+     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+     ^~~~~~~~~~~~~~~~~
+Odometer.c:365:6: note: declared here
+ void Odometer_PL_OverRide_Lap(Odometer *InstancePtr)
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+Odometer_selftest.c: In function 'ODOMETER_Reg_SelfTest':
+Odometer_selftest.c:51:57: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( ODOMETER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                         ^~
 "Running Make libs in ps7_cortexa9_0/libsrc/PID_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/PID_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
 "Compiling PID..."
@@ -1449,5 +1872,5 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm
 "Compiling xadcps"
 'Finished building libraries'
 
-14:56:18 Build Finished (took 30s.287ms)
+21:33:01 Build Finished (took 32s.379ms)
 

@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:Derivator:1.0
--- IP Revision: 8
+-- IP Revision: 10
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -88,7 +88,6 @@ ARCHITECTURE evo_v1_Derivator_0_0_arch OF evo_v1_Derivator_0_0 IS
     GENERIC (
       C_S00_AXI_DATA_WIDTH : INTEGER; -- Width of S_AXI data bus
       C_S00_AXI_ADDR_WIDTH : INTEGER; -- Width of S_AXI address bus
-      FREQUENCE_ACK : INTEGER;
       DIVIDER : INTEGER
     );
     PORT (
@@ -144,7 +143,6 @@ BEGIN
     GENERIC MAP (
       C_S00_AXI_DATA_WIDTH => 32,
       C_S00_AXI_ADDR_WIDTH => 4,
-      FREQUENCE_ACK => 256,
       DIVIDER => 390625
     )
     PORT MAP (

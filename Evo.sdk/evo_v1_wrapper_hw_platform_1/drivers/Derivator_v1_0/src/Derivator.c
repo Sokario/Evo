@@ -172,6 +172,24 @@ u32 Derivator_GetIncrements(Derivator *InstancePtr)
     return DERIVATOR_mReadReg(InstancePtr->BaseAddress, DERIVATOR_S00_AXI_SLV_REG1_OFFSET);
 }
 
+void Derivator_SetDivider(Derivator *InstancePtr, u32 Data)
+{
+    /* Asserts */
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+    
+    DERIVATOR_mWriteReg(InstancePtr->BaseAddress, DERIVATOR_S00_AXI_SLV_REG3_OFFSET, Data);
+}
+
+u32 Derivator_GetDivider(Derivator *InstancePtr)
+{
+    /* Asserts */
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+    
+    return DERIVATOR_mReadReg(InstancePtr->BaseAddress, DERIVATOR_S00_AXI_SLV_REG3_OFFSET);
+}
+
 u32 Derivator_GetSpeed(Derivator *InstancePtr)
 {
     /* Asserts */
@@ -179,13 +197,4 @@ u32 Derivator_GetSpeed(Derivator *InstancePtr)
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
     
     return DERIVATOR_mReadReg(InstancePtr->BaseAddress, DERIVATOR_S00_AXI_SLV_REG2_OFFSET);
-}
-
-u32 Derivator_GetFrequence(Derivator *InstancePtr)
-{
-    /* Asserts */
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-    
-    return DERIVATOR_mReadReg(InstancePtr->BaseAddress, DERIVATOR_S00_AXI_SLV_REG3_OFFSET);
 }

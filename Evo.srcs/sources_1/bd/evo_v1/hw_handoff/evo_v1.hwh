@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Nov 28 16:37:01 2017" VIVADOVERSION="2017.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov 30 21:25:24 2017" VIVADOVERSION="2017.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="evo_v1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -78,6 +78,11 @@
     <PORT DIR="I" NAME="vauxp14" SIGIS="undef" SIGNAME="External_Ports_vauxp14">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxp14"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="Gpio_IRQ" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Gpio_IRQ">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Gpio_IRQ_0" PORT="Gpio"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -375,7 +380,6 @@
       <PARAMETERS>
         <PARAMETER NAME="C_S00_AXI_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_S00_AXI_ADDR_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="FREQUENCE_ACK" VALUE="256"/>
         <PARAMETER NAME="DIVIDER" VALUE="390625"/>
         <PARAMETER NAME="Component_Name" VALUE="evo_v1_Derivator_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -565,7 +569,6 @@
       <PARAMETERS>
         <PARAMETER NAME="C_S00_AXI_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_S00_AXI_ADDR_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="FREQUENCE_ACK" VALUE="256"/>
         <PARAMETER NAME="DIVIDER" VALUE="390625"/>
         <PARAMETER NAME="Component_Name" VALUE="evo_v1_Derivator_1_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -774,8 +777,8 @@
         <PORT DIR="I" NAME="Reset" SIGIS="rst"/>
         <PORT DIR="O" LEFT="31" NAME="Increments" RIGHT="0" SIGIS="undef" SIGNAME="Encoder_0_Increments">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Derivator_0" PORT="Increments"/>
             <CONNECTION INSTANCE="Odometer_0" PORT="Increments_Left"/>
+            <CONNECTION INSTANCE="Derivator_0" PORT="Increments"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="s00_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Encoder_0_s00_axi_awaddr">
@@ -969,8 +972,8 @@
         <PORT DIR="I" NAME="Reset" SIGIS="rst"/>
         <PORT DIR="O" LEFT="31" NAME="Increments" RIGHT="0" SIGIS="undef" SIGNAME="Encoder_1_Increments">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Derivator_1" PORT="Increments"/>
             <CONNECTION INSTANCE="Odometer_0" PORT="Increments_Right"/>
+            <CONNECTION INSTANCE="Derivator_1" PORT="Increments"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="s00_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Encoder_1_s00_axi_awaddr">
@@ -1153,7 +1156,11 @@
         <PARAMETER NAME="C_S00_AXI_HIGHADDR" VALUE="0x43CAFFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="3" NAME="Gpio" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="Gpio" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Gpio_IRQ">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Gpio_IRQ"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="Interrupt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="Gpio_IRQ_0_Interrupt">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconcat_0" PORT="In0"/>
@@ -4938,16 +4945,14 @@
             <CONNECTION INSTANCE="Subtractor_1" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="PID_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="PID_1" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="Derivator_0" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="Derivator_1" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="Motor_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="Motor_1" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="xadc_wiz_0" PORT="dclk_in"/>
-            <CONNECTION INSTANCE="Quadramp_0" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="Quadramp_1" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="ADC_IRQ_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="Gpio_IRQ_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="Odometer_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="Derivator_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="Derivator_1" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ACLK"/>
@@ -4967,6 +4972,8 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M14_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M15_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M16_ACLK"/>
+            <CONNECTION INSTANCE="Quadramp_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="Quadramp_1" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -7956,15 +7963,13 @@
             <CONNECTION INSTANCE="Subtractor_1" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="PID_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="PID_1" PORT="s00_axi_aresetn"/>
-            <CONNECTION INSTANCE="Derivator_0" PORT="s00_axi_aresetn"/>
-            <CONNECTION INSTANCE="Derivator_1" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="Motor_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="Motor_1" PORT="s00_axi_aresetn"/>
-            <CONNECTION INSTANCE="Quadramp_0" PORT="s00_axi_aresetn"/>
-            <CONNECTION INSTANCE="Quadramp_1" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="ADC_IRQ_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="Gpio_IRQ_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="Odometer_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="Derivator_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="Derivator_1" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M01_ARESETN"/>
@@ -7983,6 +7988,8 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M14_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M15_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M16_ARESETN"/>
+            <CONNECTION INSTANCE="Quadramp_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="Quadramp_1" PORT="s00_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

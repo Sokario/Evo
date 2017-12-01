@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Tue Nov 28 16:36:59 2017
+--Date        : Thu Nov 30 21:25:22 2017
 --Host        : LogOut-AsusPro running 64-bit major release  (build 9200)
 --Command     : generate_target evo_v1.bd
 --Design      : evo_v1
@@ -5807,6 +5807,7 @@ entity evo_v1 is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    Gpio_IRQ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     PWM_L : out STD_LOGIC;
     PWM_R : out STD_LOGIC;
     QuadA_L : in STD_LOGIC;
@@ -6145,60 +6146,6 @@ architecture STRUCTURE of evo_v1 is
     s00_axi_aresetn : in STD_LOGIC
   );
   end component evo_v1_PID_1_0;
-  component evo_v1_Derivator_0_0 is
-  port (
-    Increments : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Speed : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_awvalid : in STD_LOGIC;
-    s00_axi_awready : out STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_wready : out STD_LOGIC;
-    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_bvalid : out STD_LOGIC;
-    s00_axi_bready : in STD_LOGIC;
-    s00_axi_araddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_arvalid : in STD_LOGIC;
-    s00_axi_arready : out STD_LOGIC;
-    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_rvalid : out STD_LOGIC;
-    s00_axi_rready : in STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC
-  );
-  end component evo_v1_Derivator_0_0;
-  component evo_v1_Derivator_1_0 is
-  port (
-    Increments : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Speed : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_awvalid : in STD_LOGIC;
-    s00_axi_awready : out STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_wready : out STD_LOGIC;
-    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_bvalid : out STD_LOGIC;
-    s00_axi_bready : in STD_LOGIC;
-    s00_axi_araddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_arvalid : in STD_LOGIC;
-    s00_axi_arready : out STD_LOGIC;
-    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_rvalid : out STD_LOGIC;
-    s00_axi_rready : in STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC
-  );
-  end component evo_v1_Derivator_1_0;
   component evo_v1_Motor_0_0 is
   port (
     Speed : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -6294,62 +6241,6 @@ architecture STRUCTURE of evo_v1 is
     dout : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   end component evo_v1_xlconcat_0_0;
-  component evo_v1_Quadramp_0_1 is
-  port (
-    Reset : in STD_LOGIC;
-    Command : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Ramp : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_awvalid : in STD_LOGIC;
-    s00_axi_awready : out STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_wready : out STD_LOGIC;
-    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_bvalid : out STD_LOGIC;
-    s00_axi_bready : in STD_LOGIC;
-    s00_axi_araddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_arvalid : in STD_LOGIC;
-    s00_axi_arready : out STD_LOGIC;
-    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_rvalid : out STD_LOGIC;
-    s00_axi_rready : in STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC
-  );
-  end component evo_v1_Quadramp_0_1;
-  component evo_v1_Quadramp_1_1 is
-  port (
-    Reset : in STD_LOGIC;
-    Command : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Ramp : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_awvalid : in STD_LOGIC;
-    s00_axi_awready : out STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_wready : out STD_LOGIC;
-    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_bvalid : out STD_LOGIC;
-    s00_axi_bready : in STD_LOGIC;
-    s00_axi_araddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_arvalid : in STD_LOGIC;
-    s00_axi_arready : out STD_LOGIC;
-    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_rvalid : out STD_LOGIC;
-    s00_axi_rready : in STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC
-  );
-  end component evo_v1_Quadramp_1_1;
   component evo_v1_xlconstant_0_2 is
   port (
     dout : out STD_LOGIC_VECTOR ( 0 to 0 )
@@ -6451,6 +6342,116 @@ architecture STRUCTURE of evo_v1 is
     s00_axi_aresetn : in STD_LOGIC
   );
   end component evo_v1_Odometer_0_0;
+  component evo_v1_Derivator_0_0 is
+  port (
+    Increments : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Speed : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_awready : out STD_LOGIC;
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_wvalid : in STD_LOGIC;
+    s00_axi_wready : out STD_LOGIC;
+    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    s00_axi_bready : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rready : in STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
+    s00_axi_aresetn : in STD_LOGIC
+  );
+  end component evo_v1_Derivator_0_0;
+  component evo_v1_Derivator_1_0 is
+  port (
+    Increments : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Speed : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_awready : out STD_LOGIC;
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_wvalid : in STD_LOGIC;
+    s00_axi_wready : out STD_LOGIC;
+    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    s00_axi_bready : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rready : in STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
+    s00_axi_aresetn : in STD_LOGIC
+  );
+  end component evo_v1_Derivator_1_0;
+  component evo_v1_Quadramp_0_1 is
+  port (
+    Reset : in STD_LOGIC;
+    Command : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Ramp : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_awready : out STD_LOGIC;
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_wvalid : in STD_LOGIC;
+    s00_axi_wready : out STD_LOGIC;
+    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    s00_axi_bready : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rready : in STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
+    s00_axi_aresetn : in STD_LOGIC
+  );
+  end component evo_v1_Quadramp_0_1;
+  component evo_v1_Quadramp_1_1 is
+  port (
+    Reset : in STD_LOGIC;
+    Command : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Ramp : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_awready : out STD_LOGIC;
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_wvalid : in STD_LOGIC;
+    s00_axi_wready : out STD_LOGIC;
+    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    s00_axi_bready : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rready : in STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
+    s00_axi_aresetn : in STD_LOGIC
+  );
+  end component evo_v1_Quadramp_1_1;
   signal ADC_IRQ_0_Addr : STD_LOGIC_VECTOR ( 6 downto 0 );
   signal ADC_IRQ_0_Addr_ready : STD_LOGIC;
   signal ADC_IRQ_0_Interrupt : STD_LOGIC;
@@ -6459,6 +6460,7 @@ architecture STRUCTURE of evo_v1 is
   signal Encoder_0_Increments : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal Encoder_1_Increments : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal Gpio_IRQ_0_Interrupt : STD_LOGIC;
+  signal Gpio_IRQ_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal Motor_0_PWM : STD_LOGIC;
   signal Motor_0_Sens : STD_LOGIC;
   signal Motor_1_PWM : STD_LOGIC;
@@ -6892,6 +6894,7 @@ architecture STRUCTURE of evo_v1 is
   signal NLW_xadc_wiz_0_alarm_out_UNCONNECTED : STD_LOGIC;
   signal NLW_xadc_wiz_0_busy_out_UNCONNECTED : STD_LOGIC;
 begin
+  Gpio_IRQ_1(3 downto 0) <= Gpio_IRQ(3 downto 0);
   PWM_L <= Motor_0_PWM;
   PWM_R <= Motor_1_PWM;
   QuadA_L_1 <= QuadA_L;
@@ -7050,7 +7053,7 @@ Encoder_1: component evo_v1_Encoder_1_1
     );
 Gpio_IRQ_0: component evo_v1_Gpio_IRQ_0_1
      port map (
-      Gpio(3 downto 0) => B"0000",
+      Gpio(3 downto 0) => Gpio_IRQ_1(3 downto 0),
       Interrupt => Gpio_IRQ_0_Interrupt,
       s00_axi_aclk => processing_system7_0_FCLK_CLK0,
       s00_axi_araddr(4 downto 0) => ps7_0_axi_periph_M12_AXI_ARADDR(4 downto 0),

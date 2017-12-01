@@ -1,6 +1,246 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Nov 30 21:24:58 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Quadramp_1_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of evo_v1_Quadramp_1_1 (xilinx.com:user:Quadramp:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Nov 30 21:24:58 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Quadramp_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of evo_v1_Quadramp_0_1 (xilinx.com:user:Quadramp:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Nov 30 20:43:08 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Quadramp_1_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of evo_v1_Quadramp_1_1 (xilinx.com:user:Quadramp:1.0) from (Rev. 15) to (Rev. 16)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Nov 30 20:43:08 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Quadramp_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of evo_v1_Quadramp_0_1 (xilinx.com:user:Quadramp:1.0) from (Rev. 15) to (Rev. 16)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Nov 30 20:19:41 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Derivator_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of evo_v1_Derivator_1_0 (xilinx.com:user:Derivator:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Nov 30 20:19:41 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Derivator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of evo_v1_Derivator_0_0 (xilinx.com:user:Derivator:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Nov 30 17:17:06 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Derivator_1_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of evo_v1_Derivator_1_0 (xilinx.com:user:Derivator:1.0) from (Rev. 8) to (Rev. 9)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+Parameter 'FREQUENCE_ACK' is no longer present on the upgraded IP 'evo_v1_Derivator_1_0', and cannot be set to '256'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:Derivator:1.0 -user_name evo_v1_Derivator_1_0
+set_property -dict "\
+  CONFIG.C_S00_AXI_ADDR_WIDTH {4} \
+  CONFIG.C_S00_AXI_BASEADDR {0xFFFFFFFF} \
+  CONFIG.C_S00_AXI_DATA_WIDTH {32} \
+  CONFIG.C_S00_AXI_HIGHADDR {0x00000000} \
+  CONFIG.Component_Name {evo_v1_Derivator_1_0} \
+  CONFIG.DIVIDER {390625} \
+  CONFIG.S00_AXI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.S00_AXI.WIZ_DATA_WIDTH {32} \
+  CONFIG.S00_AXI.WIZ_NUM_REG {4} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_BUSIF {S00_AXI} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_RESET {s00_axi_aresetn} \
+  CONFIG.S00_AXI_RST.POLARITY {ACTIVE_LOW} \
+  CONFIG.s00_axi_aclk.ASSOCIATED_BUSIF {S00_AXI} \
+  CONFIG.s00_axi_aclk.ASSOCIATED_RESET {s00_axi_aresetn} \
+  CONFIG.s00_axi_aresetn.POLARITY {ACTIVE_LOW} " [get_ips evo_v1_Derivator_1_0]
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Nov 30 17:17:06 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Derivator_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of evo_v1_Derivator_0_0 (xilinx.com:user:Derivator:1.0) from (Rev. 8) to (Rev. 9)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+Parameter 'FREQUENCE_ACK' is no longer present on the upgraded IP 'evo_v1_Derivator_0_0', and cannot be set to '256'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:Derivator:1.0 -user_name evo_v1_Derivator_0_0
+set_property -dict "\
+  CONFIG.C_S00_AXI_ADDR_WIDTH {4} \
+  CONFIG.C_S00_AXI_BASEADDR {0xFFFFFFFF} \
+  CONFIG.C_S00_AXI_DATA_WIDTH {32} \
+  CONFIG.C_S00_AXI_HIGHADDR {0x00000000} \
+  CONFIG.Component_Name {evo_v1_Derivator_0_0} \
+  CONFIG.DIVIDER {390625} \
+  CONFIG.S00_AXI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.S00_AXI.WIZ_DATA_WIDTH {32} \
+  CONFIG.S00_AXI.WIZ_NUM_REG {4} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_BUSIF {S00_AXI} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_RESET {s00_axi_aresetn} \
+  CONFIG.S00_AXI_RST.POLARITY {ACTIVE_LOW} \
+  CONFIG.s00_axi_aclk.ASSOCIATED_BUSIF {S00_AXI} \
+  CONFIG.s00_axi_aclk.ASSOCIATED_RESET {s00_axi_aresetn} \
+  CONFIG.s00_axi_aresetn.POLARITY {ACTIVE_LOW} " [get_ips evo_v1_Derivator_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
 | Date         : Tue Nov 28 14:49:47 2017
 | Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

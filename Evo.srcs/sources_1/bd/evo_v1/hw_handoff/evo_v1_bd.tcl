@@ -161,6 +161,7 @@ proc create_root_design { parentCell } {
   set sws_4bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 sws_4bits ]
 
   # Create ports
+  set Gpio_IRQ [ create_bd_port -dir I -from 3 -to 0 Gpio_IRQ ]
   set PWM_L [ create_bd_port -dir O PWM_L ]
   set PWM_R [ create_bd_port -dir O PWM_R ]
   set QuadA_L [ create_bd_port -dir I QuadA_L ]
@@ -486,6 +487,7 @@ CONFIG.CONST_WIDTH {1} \
   connect_bd_net -net Encoder_0_Increments [get_bd_pins Derivator_0/Increments] [get_bd_pins Encoder_0/Increments] [get_bd_pins Odometer_0/Increments_Left]
   connect_bd_net -net Encoder_1_Increments [get_bd_pins Derivator_1/Increments] [get_bd_pins Encoder_1/Increments] [get_bd_pins Odometer_0/Increments_Right]
   connect_bd_net -net Gpio_IRQ_0_Interrupt [get_bd_pins Gpio_IRQ_0/Interrupt] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net Gpio_IRQ_1 [get_bd_ports Gpio_IRQ] [get_bd_pins Gpio_IRQ_0/Gpio]
   connect_bd_net -net Motor_0_PWM [get_bd_ports PWM_L] [get_bd_pins Motor_0/PWM]
   connect_bd_net -net Motor_0_Sens [get_bd_ports Sens_L] [get_bd_pins Motor_0/Sens]
   connect_bd_net -net Motor_1_PWM [get_bd_ports PWM_R] [get_bd_pins Motor_1/PWM]
