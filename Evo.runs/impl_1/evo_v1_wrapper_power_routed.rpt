@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Thu Nov 30 21:29:41 2017
+| Date             : Mon Dec  4 14:18:59 2017
 | Host             : LogOut-AsusPro running 64-bit major release  (build 9200)
 | Command          : report_power -file evo_v1_wrapper_power_routed.rpt -pb evo_v1_wrapper_power_summary_routed.pb -rpx evo_v1_wrapper_power_routed.rpx
 | Design           : evo_v1_wrapper
@@ -49,17 +49,17 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.017 |        3 |       --- |             --- |
-| Slice Logic             |     0.009 |    16138 |       --- |             --- |
-|   LUT as Logic          |     0.007 |     5788 |     17600 |           32.89 |
-|   CARRY4                |     0.001 |      544 |      4400 |           12.36 |
-|   Register              |    <0.001 |     7530 |     35200 |           21.39 |
-|   F7/F8 Muxes           |    <0.001 |      311 |     17600 |            1.77 |
+| Clocks                  |     0.016 |        3 |       --- |             --- |
+| Slice Logic             |     0.009 |    17107 |       --- |             --- |
+|   LUT as Logic          |     0.007 |     6124 |     17600 |           34.80 |
+|   CARRY4                |     0.001 |      584 |      4400 |           13.27 |
+|   Register              |    <0.001 |     8061 |     35200 |           22.90 |
+|   F7/F8 Muxes           |    <0.001 |      317 |     17600 |            1.80 |
 |   LUT as Shift Register |    <0.001 |       62 |      6000 |            1.03 |
-|   Others                |     0.000 |      295 |       --- |             --- |
-| Signals                 |     0.014 |    13015 |       --- |             --- |
+|   Others                |     0.000 |      297 |       --- |             --- |
+| Signals                 |     0.014 |    13914 |       --- |             --- |
 | DSPs                    |    <0.001 |       24 |        80 |           30.00 |
-| I/O                     |     0.003 |       26 |       100 |           26.00 |
+| I/O                     |     0.003 |       34 |       100 |           34.00 |
 | XADC                    |     0.002 |        1 |       --- |             --- |
 | PS7                     |     1.556 |        1 |       --- |             --- |
 | Static Power            |     0.131 |          |           |                 |
@@ -151,9 +151,9 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | evo_v1_wrapper                                   |     1.601 |
 |   evo_v1_i                                       |     1.598 |
-|     ADC_IRQ_0                                    |     0.005 |
-|       U0                                         |     0.005 |
-|         ADC_IRQ_v1_0_S00_AXI_inst                |     0.005 |
+|     ADC_IRQ_0                                    |     0.004 |
+|       U0                                         |     0.004 |
+|         ADC_IRQ_v1_0_S00_AXI_inst                |     0.004 |
 |     Derivator_0                                  |     0.001 |
 |       U0                                         |     0.001 |
 |         Derivator_v1_0_S00_AXI_inst              |     0.001 |
@@ -178,10 +178,10 @@ Table of Contents
 |     Odometer_0                                   |     0.004 |
 |       U0                                         |     0.004 |
 |         Odometer_v1_0_S00_AXI_inst               |     0.004 |
-|     PID_0                                        |     0.004 |
+|     PID_0                                        |     0.003 |
 |       U0                                         |     0.003 |
 |         PID_v1_0_S00_AXI_inst                    |     0.003 |
-|     PID_1                                        |     0.004 |
+|     PID_1                                        |     0.003 |
 |       U0                                         |     0.003 |
 |         PID_v1_0_S00_AXI_inst                    |     0.003 |
 |     Quadramp_0                                   |     0.002 |
@@ -190,6 +190,9 @@ Table of Contents
 |     Quadramp_1                                   |     0.002 |
 |       U0                                         |     0.002 |
 |         Quadramp_v1_0_S00_AXI_inst               |     0.002 |
+|     Stepper_0                                    |     0.001 |
+|       U0                                         |     0.001 |
+|         Stepper_v1_0_S00_AXI_inst                |     0.001 |
 |     Subtractor_0                                 |    <0.001 |
 |       U0                                         |    <0.001 |
 |         Subtractor_v1_0_S00_AXI_inst             |    <0.001 |
@@ -211,8 +214,8 @@ Table of Contents
 |             I_DECODER                            |    <0.001 |
 |         gpio_core_1                              |    <0.001 |
 |           Not_Dual.INPUT_DOUBLE_REGS3            |    <0.001 |
-|     processing_system7_0                         |     1.562 |
-|       inst                                       |     1.562 |
+|     processing_system7_0                         |     1.563 |
+|       inst                                       |     1.563 |
 |     ps7_0_axi_periph                             |     0.006 |
 |       s00_couplers                               |     0.003 |
 |         auto_pc                                  |     0.003 |

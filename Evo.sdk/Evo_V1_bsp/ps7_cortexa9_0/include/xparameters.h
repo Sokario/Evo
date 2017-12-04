@@ -141,6 +141,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver STEPPER */
+#define XPAR_STEPPER_NUM_INSTANCES 1
+
+/* Definitions for peripheral STEPPER_0 */
+#define XPAR_STEPPER_0_DEVICE_ID 0
+#define XPAR_STEPPER_0_S00_AXI_BASEADDR 0x43CF0000
+#define XPAR_STEPPER_0_S00_AXI_HIGHADDR 0x43CFFFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver SUBTRACTOR */
 #define XPAR_SUBTRACTOR_NUM_INSTANCES 2
 
@@ -426,6 +437,7 @@
 /* Definitions for Fabric interrupts connected to ps7_scugic_0 */
 #define XPAR_FABRIC_GPIO_IRQ_0_INTERRUPT_INTR 61U
 #define XPAR_FABRIC_ADC_IRQ_0_INTERRUPT_INTR 62U
+#define XPAR_FABRIC_STEPPER_0_INTERRUPT_INTR 63U
 
 /******************************************************************/
 

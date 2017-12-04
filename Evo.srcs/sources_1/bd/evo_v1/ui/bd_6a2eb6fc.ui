@@ -2,32 +2,38 @@
    guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
 preplace port btns_4bits -pg 1 -y 1220 -defaultsOSRD
-preplace port DDR -pg 1 -y 860 -defaultsOSRD -left
+preplace port DDR -pg 1 -y 1760 -defaultsOSRD -left
+preplace port Stepper_Dir -pg 1 -y 1450 -defaultsOSRD
 preplace port QuadA_R -pg 1 -y 1270 -defaultsOSRD
+preplace port Stepper_Res -pg 1 -y 1370 -defaultsOSRD
 preplace port PWM_R -pg 1 -y 1630 -defaultsOSRD
 preplace port Sens_L -pg 1 -y 980 -defaultsOSRD
 preplace port sws_4bits -pg 1 -y 1240 -defaultsOSRD
+preplace port Stepper_Sleep -pg 1 -y 1390 -defaultsOSRD
 preplace port QuadB_R -pg 1 -y 1290 -defaultsOSRD
-preplace port leds_4bits -pg 1 -y 1380 -defaultsOSRD
-preplace port vauxp14 -pg 1 -y 1780 -defaultsOSRD
+preplace port leds_4bits -pg 1 -y 1260 -defaultsOSRD
+preplace port Stepper_Step -pg 1 -y 1430 -defaultsOSRD
+preplace port Stepper_En -pg 1 -y 1350 -defaultsOSRD
+preplace port vauxp14 -pg 1 -y 1660 -defaultsOSRD
 preplace port QuadA_L -pg 1 -y 1080 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 840 -defaultsOSRD -left
-preplace port vauxn14 -pg 1 -y 1760 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 1740 -defaultsOSRD -left
+preplace port vauxn14 -pg 1 -y 1640 -defaultsOSRD
 preplace port Sens_R -pg 1 -y 1610 -defaultsOSRD
 preplace port PWM_L -pg 1 -y 1000 -defaultsOSRD
 preplace port QuadB_L -pg 1 -y 1100 -defaultsOSRD
-preplace portBus Gpio_IRQ -pg 1 -y 1000 -defaultsOSRD
+preplace portBus Stepper_Select -pg 1 -y 1410 -defaultsOSRD
+preplace portBus Gpio_IRQ -pg 1 -y 990 -defaultsOSRD
 preplace inst Derivator_1 -pg 1 -lvl 6 -y 1730 -defaultsOSRD
 preplace inst Odometer_0 -pg 1 -lvl 2 -y 1250 -defaultsOSRD
 preplace inst Quadramp_0 -pg 1 -lvl 6 -y 950 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 1 -y 1440 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 2 -y 1440 -defaultsOSRD
 preplace inst Quadramp_1 -pg 1 -lvl 6 -y 1550 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 1 -y 1530 -defaultsOSRD
-preplace inst xadc_wiz_0 -pg 1 -lvl 2 -y 1560 -defaultsOSRD
-preplace inst Gpio_IRQ_0 -pg 1 -lvl 2 -y 1010 -defaultsOSRD
-preplace inst xlconstant_2 -pg 1 -lvl 1 -y 1620 -defaultsOSRD
-preplace inst xlconstant_3 -pg 1 -lvl 1 -y 1710 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 3 -y 1020 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -y 1470 -defaultsOSRD
+preplace inst xadc_wiz_0 -pg 1 -lvl 3 -y 1550 -defaultsOSRD
+preplace inst Gpio_IRQ_0 -pg 1 -lvl 2 -y 1000 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 1 -y 1560 -defaultsOSRD
+preplace inst xlconstant_3 -pg 1 -lvl 2 -y 1550 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 3 -y 1010 -defaultsOSRD
 preplace inst axi_gpio_0 -pg 1 -lvl 7 -y 1230 -defaultsOSRD
 preplace inst PID_0 -pg 1 -lvl 8 -y 1000 -defaultsOSRD
 preplace inst axi_gpio_1 -pg 1 -lvl 7 -y 1380 -defaultsOSRD
@@ -37,79 +43,88 @@ preplace inst Motor_0 -pg 1 -lvl 9 -y 1000 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 5 -y 1390 -defaultsOSRD
 preplace inst Motor_1 -pg 1 -lvl 9 -y 1630 -defaultsOSRD
 preplace inst Encoder_0 -pg 1 -lvl 1 -y 1110 -defaultsOSRD
+preplace inst Stepper_0 -pg 1 -lvl 8 -y 1410 -defaultsOSRD
 preplace inst Subtractor_0 -pg 1 -lvl 7 -y 1000 -defaultsOSRD
 preplace inst Encoder_1 -pg 1 -lvl 1 -y 1300 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 4 -y 1280 -defaultsOSRD
-preplace inst Derivator_0 -pg 1 -lvl 6 -y 1110 -defaultsOSRD
+preplace inst Derivator_0 -pg 1 -lvl 6 -y 1120 -defaultsOSRD
 preplace inst Subtractor_1 -pg 1 -lvl 7 -y 1630 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 4 -y 1010 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 0 5 NJ 860 NJ 860 NJ 860 NJ 860 920
-preplace netloc ps7_0_axi_periph_M12_AXI 1 1 5 -190 800 N 800 N 800 N 800 1290
-preplace netloc ps7_0_axi_periph_M02_AXI 1 5 4 1330 820 N 820 N 820 2440
-preplace netloc vauxp14_1 1 0 2 NJ 1780 -170
-preplace netloc xlconstant_1_dout 1 1 1 -230
-preplace netloc ps7_0_axi_periph_M09_AXI 1 5 3 N 1410 1750 1450 2100
-preplace netloc xlconstant_2_dout 1 1 1 -230
-preplace netloc ps7_0_axi_periph_M16_AXI 1 1 5 -170 810 N 810 N 810 N 810 1320
-preplace netloc xadc_wiz_0_eos_out 1 2 2 190 1530 N
-preplace netloc ps7_0_axi_periph_M15_AXI 1 5 1 1430
-preplace netloc ps7_0_axi_periph_M14_AXI 1 5 1 1420
-preplace netloc processing_system7_0_M_AXI_GP0 1 4 1 N
-preplace netloc ADC_IRQ_0_Interrupt 1 2 3 200J 1620 NJ 1620 920
+preplace inst processing_system7_0 -pg 1 -lvl 4 -y 1000 -defaultsOSRD
 preplace netloc QuadA_R_1 1 0 1 NJ
-preplace netloc Derivator_0_Speed 1 6 1 1730
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 9 -540 1010 -220 1150 N 1150 400 1190 960 930 1340 810 1770 1110 2120 1100 2440
-preplace netloc ps7_0_axi_periph_M07_AXI 1 5 1 1330
-preplace netloc Gpio_IRQ_0_Interrupt 1 2 1 NJ
-preplace netloc Motor_1_Sens 1 9 1 N
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 3 2 470 850 930
-preplace netloc Derivator_1_Speed 1 6 1 1800
-preplace netloc ps7_0_axi_periph_M03_AXI 1 5 4 N 1290 1730 1300 N 1300 2420
-preplace netloc Gpio_IRQ_1 1 0 2 NJ 1000 N
-preplace netloc Subtractor_0_Result 1 7 1 N
-preplace netloc Encoder_1_Increments 1 1 5 -230 750 N 750 N 750 N 750 1380
-preplace netloc ps7_0_axi_periph_M01_AXI 1 5 2 N 1250 1740
-preplace netloc Quadramp_1_Ramp 1 6 1 1730
-preplace netloc Encoder_0_Increments 1 1 5 -200 790 N 790 N 790 N 790 1400
-preplace netloc Subtractor_1_Result 1 7 1 N
-preplace netloc xlconcat_0_dout 1 3 1 N
-preplace netloc xadc_wiz_0_eoc_out 1 2 2 180 1510 N
-preplace netloc vauxn14_1 1 0 2 NJ 1760 -190
-preplace netloc xlconstant_0_dout 1 1 1 -230
-preplace netloc Motor_1_PWM 1 9 1 N
-preplace netloc PID_0_Command 1 8 1 N
-preplace netloc axi_gpio_0_GPIO2 1 7 3 N 1240 N 1240 N
-preplace netloc processing_system7_0_FIXED_IO 1 0 5 NJ 840 NJ 840 NJ 840 NJ 840 940
-preplace netloc ps7_0_axi_periph_M11_AXI 1 5 2 N 1450 1740
-preplace netloc ps7_0_axi_periph_M08_AXI 1 5 3 1360 860 1790 1090 2100
-preplace netloc ps7_0_axi_periph_M06_AXI 1 5 1 1390
+preplace netloc ps7_0_axi_periph_M08_AXI 1 5 3 1650 1040 1980 1090 2310
+preplace netloc ps7_0_axi_periph_M15_AXI 1 5 1 1710
+preplace netloc ps7_0_axi_periph_M09_AXI 1 5 3 N 1400 1990 1450 2310
+preplace netloc processing_system7_0_FIXED_IO 1 0 5 NJ 1740 NJ 1740 NJ 1740 NJ 1740 1210
 preplace netloc QuadB_L_1 1 0 1 NJ
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 9 -540 1410 -30 1150 N 1150 700 1150 1230 910 1680 840 2000 1110 2330 1110 2650
+preplace netloc xlconstant_3_dout 1 2 1 290
+preplace netloc vauxn14_1 1 0 3 NJ 1640 N 1640 N
+preplace netloc ps7_0_axi_periph_M02_AXI 1 5 4 1610 850 N 850 2340 1090 2630
+preplace netloc Encoder_0_Increments 1 1 5 -40 750 N 750 N 750 N 750 1700
+preplace netloc Stepper_0_Step 1 8 2 NJ 1430 N
+preplace netloc ps7_0_axi_periph_M04_AXI 1 0 6 -570 770 N 770 N 770 N 770 N 770 1590
+preplace netloc Motor_1_Sens 1 9 1 N
+preplace netloc ADC_IRQ_0_Addr_ready 1 2 3 340 1180 N 1180 1200
+preplace netloc xlconcat_0_dout 1 3 1 N
+preplace netloc ps7_0_axi_periph_M03_AXI 1 5 4 N 1280 2010 1300 N 1300 2630
+preplace netloc Stepper_0_Interrupt 1 2 7 360 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 2620
 preplace netloc axi_gpio_0_GPIO 1 7 3 N 1220 N 1220 N
-preplace netloc Motor_0_PWM 1 9 1 N
-preplace netloc Motor_0_Sens 1 9 1 N
-preplace netloc PID_1_Command 1 8 1 N
-preplace netloc ps7_0_axi_periph_M05_AXI 1 0 6 -560 770 N 770 N 770 N 770 N 770 1300
-preplace netloc ps7_0_axi_periph_M04_AXI 1 0 6 -570 760 N 760 N 760 N 760 N 760 1310
-preplace netloc Quadramp_0_Ramp 1 6 1 1780
-preplace netloc ADC_IRQ_0_Addr_ready 1 1 4 -190 1120 N 1120 450 1160 930
-preplace netloc ADC_IRQ_0_Addr 1 1 4 -160 1140 N 1140 440 1170 920
+preplace netloc Encoder_1_Increments 1 1 5 -60 760 N 760 N 760 N 760 1640
+preplace netloc ps7_0_axi_periph_M16_AXI 1 1 5 -20 820 N 820 N 820 N 820 1600
+preplace netloc processing_system7_0_DDR 1 0 5 NJ 1760 NJ 1760 NJ 1760 NJ 1760 1220
+preplace netloc axi_gpio_0_GPIO2 1 7 3 N 1240 N 1240 N
+preplace netloc xadc_wiz_0_drdy_out 1 2 2 350 1360 710
+preplace netloc Subtractor_0_Result 1 7 1 N
+preplace netloc ps7_0_axi_periph_M12_AXI 1 1 5 -30 810 N 810 N 810 N 810 1570
+preplace netloc vauxp14_1 1 0 3 NJ 1660 N 1660 N
+preplace netloc xlconstant_1_dout 1 1 2 -40 1490 320
 preplace netloc QuadB_R_1 1 0 1 NJ
+preplace netloc ps7_0_axi_periph_M00_AXI 1 5 2 1630 1210 N
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 3 2 730 840 1190
+preplace netloc ps7_0_axi_periph_M01_AXI 1 5 2 N 1240 2020
+preplace netloc ps7_0_axi_periph_M17_AXI 1 5 3 1700J 1310 NJ 1310 2310
+preplace netloc Quadramp_0_Ramp 1 6 1 2040
+preplace netloc Stepper_0_Reset 1 8 2 N 1370 NJ
+preplace netloc ps7_0_axi_periph_M10_AXI 1 5 2 1620 860 2050
+preplace netloc ADC_IRQ_0_Addr 1 2 3 360 1190 N 1190 1190
+preplace netloc Motor_1_PWM 1 9 1 N
+preplace netloc Derivator_1_Speed 1 6 1 2050
+preplace netloc PID_1_Command 1 8 1 N
+preplace netloc ps7_0_axi_periph_M07_AXI 1 5 1 1630
+preplace netloc xadc_wiz_0_eos_out 1 3 1 690
+preplace netloc xlconstant_2_dout 1 1 2 -40 1500 300
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 4 1 1260
+preplace netloc ps7_0_axi_periph_M13_AXI 1 3 3 740 850 N 850 1560
+preplace netloc ps7_0_axi_periph_M14_AXI 1 5 1 1690
+preplace netloc Subtractor_1_Result 1 7 1 N
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 9 -550 1400 -50 1350 310 1350 720 1160 1250 930 1670 820 2030 1100 2320 1100 2640
+preplace netloc xadc_wiz_0_eoc_out 1 3 1 680
+preplace netloc Stepper_0_Direction 1 8 2 NJ 1450 N
+preplace netloc PID_0_Command 1 8 1 N
 preplace netloc QuadA_L_1 1 0 1 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 9 -550 990 -210 930 N 930 430 1180 950 950 1410 840 1760 1100 2110 1090 2430
-preplace netloc axi_gpio_1_GPIO 1 7 3 N 1380 N 1380 N
-preplace netloc ps7_0_axi_periph_M10_AXI 1 5 2 1350 850 1800
-preplace netloc ps7_0_axi_periph_M00_AXI 1 5 2 1370 1210 N
-preplace netloc xadc_wiz_0_drdy_out 1 1 3 -170 1380 N 1380 410
-preplace netloc ps7_0_axi_periph_M13_AXI 1 3 3 460 820 N 820 1280
-preplace netloc xlconstant_3_dout 1 1 1 -220
-preplace netloc xadc_wiz_0_do_out 1 1 3 -180 1370 N 1370 420
-preplace netloc xadc_wiz_0_channel_out 1 2 2 170 1490 N
-preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 4 1 970
-levelinfo -pg 1 -590 -370 20 310 700 1130 1600 1970 2280 2570 2720 -top 0 -bot 3000
+preplace netloc Motor_0_Sens 1 9 1 N
+preplace netloc ps7_0_axi_periph_M06_AXI 1 5 1 1660
+preplace netloc Motor_0_PWM 1 9 1 N
+preplace netloc ps7_0_axi_periph_M11_AXI 1 5 2 N 1440 1980
+preplace netloc ps7_0_axi_periph_M05_AXI 1 0 6 -560 800 N 800 N 800 N 800 N 800 1580
+preplace netloc Gpio_IRQ_1 1 0 2 NJ 990 N
+preplace netloc Gpio_IRQ_0_Interrupt 1 2 1 330J
+preplace netloc ADC_IRQ_0_Interrupt 1 2 3 330J 1730 NJ 1730 1190
+preplace netloc axi_gpio_1_GPIO 1 7 3 2340 1260 N 1260 N
+preplace netloc xadc_wiz_0_do_out 1 2 2 370 1370 670
+preplace netloc xadc_wiz_0_channel_out 1 3 1 670
+preplace netloc Stepper_0_Enable 1 8 2 N 1350 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 4 1 1240
+preplace netloc xlconstant_0_dout 1 2 1 320
+preplace netloc Quadramp_1_Ramp 1 6 1 1970
+preplace netloc Stepper_0_Selection 1 8 2 NJ 1410 N
+preplace netloc Derivator_0_Speed 1 6 1 2020
+preplace netloc Stepper_0_Sleep 1 8 2 N 1390 NJ
+levelinfo -pg 1 -590 -200 140 530 970 1410 1840 2180 2480 2760 2890 -top 0 -bot 3000
 ",
 }
 {
-   da_axi4_cnt: "21",
+   da_axi4_cnt: "22",
    da_board_cnt: "5",
    da_clkrst_cnt: "1",
    da_ps7_cnt: "1",

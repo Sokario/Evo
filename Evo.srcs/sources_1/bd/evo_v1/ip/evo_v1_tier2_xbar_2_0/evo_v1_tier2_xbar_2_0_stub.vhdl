@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Tue Nov 28 16:33:41 2017
+-- Date        : Sat Dec  2 15:18:20 2017
 -- Host        : LogOut-AsusPro running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top evo_v1_tier2_xbar_2_0 -prefix
 --               evo_v1_tier2_xbar_2_0_ evo_v1_tier2_xbar_2_0_stub.vhdl

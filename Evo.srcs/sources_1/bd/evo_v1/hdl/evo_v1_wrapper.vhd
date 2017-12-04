@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Thu Nov 30 21:25:22 2017
+--Date        : Mon Dec  4 14:14:34 2017
 --Host        : LogOut-AsusPro running 64-bit major release  (build 9200)
 --Command     : generate_target evo_v1_wrapper.bd
 --Design      : evo_v1_wrapper
@@ -43,6 +43,12 @@ entity evo_v1_wrapper is
     QuadB_R : in STD_LOGIC;
     Sens_L : out STD_LOGIC;
     Sens_R : out STD_LOGIC;
+    Stepper_Dir : out STD_LOGIC;
+    Stepper_En : out STD_LOGIC;
+    Stepper_Res : out STD_LOGIC;
+    Stepper_Select : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    Stepper_Sleep : out STD_LOGIC;
+    Stepper_Step : out STD_LOGIC;
     btns_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     leds_4bits_tri_io : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -90,7 +96,13 @@ architecture STRUCTURE of evo_v1_wrapper is
     PWM_R : out STD_LOGIC;
     vauxn14 : in STD_LOGIC;
     vauxp14 : in STD_LOGIC;
-    Gpio_IRQ : in STD_LOGIC_VECTOR ( 3 downto 0 )
+    Gpio_IRQ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    Stepper_Res : out STD_LOGIC;
+    Stepper_En : out STD_LOGIC;
+    Stepper_Sleep : out STD_LOGIC;
+    Stepper_Select : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    Stepper_Step : out STD_LOGIC;
+    Stepper_Dir : out STD_LOGIC
   );
   end component evo_v1;
   component IOBUF is
@@ -150,6 +162,12 @@ evo_v1_i: component evo_v1
       QuadB_R => QuadB_R,
       Sens_L => Sens_L,
       Sens_R => Sens_R,
+      Stepper_Dir => Stepper_Dir,
+      Stepper_En => Stepper_En,
+      Stepper_Res => Stepper_Res,
+      Stepper_Select(2 downto 0) => Stepper_Select(2 downto 0),
+      Stepper_Sleep => Stepper_Sleep,
+      Stepper_Step => Stepper_Step,
       btns_4bits_tri_i(3 downto 0) => btns_4bits_tri_i(3 downto 0),
       leds_4bits_tri_i(3) => leds_4bits_tri_i_3(3),
       leds_4bits_tri_i(2) => leds_4bits_tri_i_2(2),

@@ -260,3 +260,11 @@ int Motor_Initialization(Motor *mot, u16 deviceId)
 	Motor_SetOverRide(mot, 0);
 	return XST_SUCCESS;
 }
+
+int Stepper_Initialization(Stepper *step, u16 deviceId)
+{
+	if (Stepper_Initialize(step, deviceId) != XST_SUCCESS)
+		return XST_FAILURE;
+
+	return XST_SUCCESS;
+}

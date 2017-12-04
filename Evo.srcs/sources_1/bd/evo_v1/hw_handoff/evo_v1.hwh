@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov 30 21:25:24 2017" VIVADOVERSION="2017.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec  4 14:14:36 2017" VIVADOVERSION="2017.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="evo_v1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -83,6 +83,36 @@
     <PORT DIR="I" LEFT="3" NAME="Gpio_IRQ" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Gpio_IRQ">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Gpio_IRQ_0" PORT="Gpio"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Stepper_Res" SIGIS="rst" SIGNAME="Stepper_0_Reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Stepper_0" PORT="Reset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Stepper_En" SIGIS="undef" SIGNAME="Stepper_0_Enable">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Stepper_0" PORT="Enable"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Stepper_Sleep" SIGIS="undef" SIGNAME="Stepper_0_Sleep">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Stepper_0" PORT="Sleep"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="Stepper_Select" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_Selection">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Stepper_0" PORT="Selection"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Stepper_Step" SIGIS="undef" SIGNAME="Stepper_0_Step">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Stepper_0" PORT="Step"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Stepper_Dir" SIGIS="undef" SIGNAME="Stepper_0_Direction">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Stepper_0" PORT="Direction"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -2686,6 +2716,220 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
+    <MODULE FULLNAME="/Stepper_0" HWVERSION="1.0" INSTANCE="Stepper_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Stepper" VLNV="xilinx.com:user:Stepper:1.0">
+      <DOCUMENTS/>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
+      </ADDRESSBLOCKS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_S00_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S00_AXI_ADDR_WIDTH" VALUE="6"/>
+        <PARAMETER NAME="DIVIDER" VALUE="200"/>
+        <PARAMETER NAME="Component_Name" VALUE="evo_v1_Stepper_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="C_S00_AXI_BASEADDR" VALUE="0x43CF0000"/>
+        <PARAMETER NAME="C_S00_AXI_HIGHADDR" VALUE="0x43CFFFFF"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="Enable" SIGIS="undef" SIGNAME="Stepper_0_Enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Stepper_En"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Reset" SIGIS="rst" SIGNAME="Stepper_0_Reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Stepper_Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Sleep" SIGIS="undef" SIGNAME="Stepper_0_Sleep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Stepper_Sleep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="Selection" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_Selection">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Stepper_Select"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Step" SIGIS="undef" SIGNAME="Stepper_0_Step">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Stepper_Step"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Direction" SIGIS="undef" SIGNAME="Stepper_0_Direction">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Stepper_Dir"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Interrupt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="Stepper_0_Interrupt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="s00_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s00_axi_awprot" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_awvalid" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axi_awready" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s00_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s00_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_wvalid" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axi_wready" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s00_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axi_bvalid" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_bready" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="s00_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s00_axi_arprot" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_arvalid" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axi_arready" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="s00_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s00_axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axi_rvalid" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_rready" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_AXI_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s00_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_aresetn" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="ps7_0_axi_periph_M17_AXI" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="WIZ_NUM_REG" VALUE="16"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="6"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="1"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="evo_v1_processing_system7_0_0_FCLK_CLK0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="s00_axi_awaddr"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="s00_axi_awprot"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="s00_axi_awvalid"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="s00_axi_awready"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="s00_axi_wdata"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="s00_axi_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="s00_axi_wvalid"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="s00_axi_wready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="s00_axi_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="s00_axi_bvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="s00_axi_bready"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="s00_axi_araddr"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="s00_axi_arprot"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="s00_axi_arvalid"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="s00_axi_arready"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="s00_axi_rdata"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="s00_axi_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="s00_axi_rvalid"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="s00_axi_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
     <MODULE FULLNAME="/Subtractor_0" HWVERSION="1.0" INSTANCE="Subtractor_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Subtractor" VLNV="xilinx.com:user:Subtractor:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
@@ -3820,7 +4064,7 @@
         <PARAMETER NAME="C_S_AXI_HP3_DATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_M_AXI_GP0_THREAD_ID_WIDTH" VALUE="12"/>
         <PARAMETER NAME="C_M_AXI_GP1_THREAD_ID_WIDTH" VALUE="12"/>
-        <PARAMETER NAME="C_NUM_F2P_INTR_INPUTS" VALUE="2"/>
+        <PARAMETER NAME="C_NUM_F2P_INTR_INPUTS" VALUE="3"/>
         <PARAMETER NAME="C_IRQ_F2P_MODE" VALUE="DIRECT"/>
         <PARAMETER NAME="C_DQ_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_DQS_WIDTH" VALUE="4"/>
@@ -4162,7 +4406,7 @@
         <PARAMETER NAME="PCW_S_AXI_HP2_DATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="PCW_S_AXI_HP3_ID_WIDTH" VALUE="6"/>
         <PARAMETER NAME="PCW_S_AXI_HP3_DATA_WIDTH" VALUE="64"/>
-        <PARAMETER NAME="PCW_NUM_F2P_INTR_INPUTS" VALUE="2"/>
+        <PARAMETER NAME="PCW_NUM_F2P_INTR_INPUTS" VALUE="3"/>
         <PARAMETER NAME="PCW_EN_DDR" VALUE="1"/>
         <PARAMETER NAME="PCW_EN_SMC" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_QSPI" VALUE="1"/>
@@ -4928,7 +5172,7 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_AXI_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="IRQ_F2P" RIGHT="0" SENSITIVITY="LEVEL_HIGH:LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="xlconcat_0_dout">
+        <PORT DIR="I" LEFT="2" NAME="IRQ_F2P" RIGHT="0" SENSITIVITY="LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="xlconcat_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconcat_0" PORT="dout"/>
           </CONNECTIONS>
@@ -4953,6 +5197,8 @@
             <CONNECTION INSTANCE="Odometer_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="Derivator_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="Derivator_1" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="Quadramp_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="Quadramp_1" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ACLK"/>
@@ -4972,8 +5218,8 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M14_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M15_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M16_ACLK"/>
-            <CONNECTION INSTANCE="Quadramp_0" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="Quadramp_1" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_ACLK"/>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -5160,6 +5406,7 @@
         <MEMRANGE ADDRESSBLOCK="S00_AXI_reg" BASENAME="C_S00_AXI_BASEADDR" BASEVALUE="0x43CC0000" HIGHNAME="C_S00_AXI_HIGHADDR" HIGHVALUE="0x43CCFFFF" INSTANCE="ADC_IRQ_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S00_AXI"/>
         <MEMRANGE ADDRESSBLOCK="S00_AXI_reg" BASENAME="C_S00_AXI_BASEADDR" BASEVALUE="0x43CD0000" HIGHNAME="C_S00_AXI_HIGHADDR" HIGHVALUE="0x43CDFFFF" INSTANCE="Quadramp_1" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S00_AXI"/>
         <MEMRANGE ADDRESSBLOCK="S00_AXI_reg" BASENAME="C_S00_AXI_BASEADDR" BASEVALUE="0x43CE0000" HIGHNAME="C_S00_AXI_HIGHADDR" HIGHVALUE="0x43CEFFFF" INSTANCE="Odometer_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S00_AXI"/>
+        <MEMRANGE ADDRESSBLOCK="S00_AXI_reg" BASENAME="C_S00_AXI_BASEADDR" BASEVALUE="0x43CF0000" HIGHNAME="C_S00_AXI_HIGHADDR" HIGHVALUE="0x43CFFFFF" INSTANCE="Stepper_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S00_AXI"/>
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="axi_gpio_0"/>
@@ -5179,6 +5426,7 @@
         <PERIPHERAL INSTANCE="ADC_IRQ_0"/>
         <PERIPHERAL INSTANCE="Quadramp_1"/>
         <PERIPHERAL INSTANCE="Odometer_0"/>
+        <PERIPHERAL INSTANCE="Stepper_0"/>
       </PERIPHERALS>
     </MODULE>
     <MODULE FULLNAME="/ps7_0_axi_periph" HWVERSION="2.1" INSTANCE="ps7_0_axi_periph" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_interconnect" VLNV="xilinx.com:ip:axi_interconnect:2.1">
@@ -5187,7 +5435,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="NUM_SI" VALUE="1"/>
-        <PARAMETER NAME="NUM_MI" VALUE="17"/>
+        <PARAMETER NAME="NUM_MI" VALUE="18"/>
         <PARAMETER NAME="STRATEGY" VALUE="0"/>
         <PARAMETER NAME="ENABLE_ADVANCED_OPTIONS" VALUE="0"/>
         <PARAMETER NAME="ENABLE_PROTOCOL_CHECKERS" VALUE="0"/>
@@ -5690,6 +5938,16 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="M16_ARESETN" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M17_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M17_ARESETN" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
@@ -7479,6 +7737,101 @@
             <CONNECTION INSTANCE="Odometer_0" PORT="s00_axi_rready"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M17_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M17_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M17_AXI_awvalid" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M17_AXI_awready" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M17_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M17_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M17_AXI_wvalid" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M17_AXI_wready" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M17_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M17_AXI_bvalid" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M17_AXI_bready" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M17_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M17_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M17_AXI_arvalid" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M17_AXI_arready" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M17_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M17_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M17_AXI_rvalid" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M17_AXI_rready" SIGIS="undef" SIGNAME="Stepper_0_s00_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="processing_system7_0_M_AXI_GP0" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -7910,6 +8263,29 @@
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M16_AXI_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="ps7_0_axi_periph_M17_AXI" DATAWIDTH="32" NAME="M17_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="M17_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M17_AXI_awprot"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="M17_AXI_awvalid"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="M17_AXI_awready"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="M17_AXI_wdata"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="M17_AXI_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="M17_AXI_wvalid"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="M17_AXI_wready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="M17_AXI_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="M17_AXI_bvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="M17_AXI_bready"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="M17_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M17_AXI_arprot"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="M17_AXI_arvalid"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="M17_AXI_arready"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="M17_AXI_rdata"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="M17_AXI_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="M17_AXI_rvalid"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="M17_AXI_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
     <MODULE FULLNAME="/rst_ps7_0_100M" HWVERSION="5.0" INSTANCE="rst_ps7_0_100M" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
@@ -7970,6 +8346,8 @@
             <CONNECTION INSTANCE="Odometer_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="Derivator_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="Derivator_1" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="Quadramp_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="Quadramp_1" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M01_ARESETN"/>
@@ -7988,8 +8366,8 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M14_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M15_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M16_ARESETN"/>
-            <CONNECTION INSTANCE="Quadramp_0" PORT="s00_axi_aresetn"/>
-            <CONNECTION INSTANCE="Quadramp_1" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M17_ARESETN"/>
+            <CONNECTION INSTANCE="Stepper_0" PORT="s00_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -8374,8 +8752,8 @@
         <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="dout_width" VALUE="2"/>
-        <PARAMETER NAME="NUM_PORTS" VALUE="2"/>
+        <PARAMETER NAME="dout_width" VALUE="3"/>
+        <PARAMETER NAME="NUM_PORTS" VALUE="3"/>
         <PARAMETER NAME="Component_Name" VALUE="evo_v1_xlconcat_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -8390,7 +8768,12 @@
             <CONNECTION INSTANCE="ADC_IRQ_0" PORT="Interrupt"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
+        <PORT DIR="I" LEFT="0" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="Stepper_0_Interrupt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Stepper_0" PORT="Interrupt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="IRQ_F2P"/>
           </CONNECTIONS>

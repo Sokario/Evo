@@ -20,6 +20,7 @@
 #include "Derivator.h"
 #include "Encoder.h"
 #include "Motor.h"
+#include "Stepper.h"
 
 #define INPUT_DIRECTION_MASK 0xF
 #define BUTTON 1
@@ -37,5 +38,6 @@ int PID_Initialization(PID *pid, u16 deviceId);
 int Derivator_Initialization(Derivator *deriv, u16 deviceId);
 int Encoder_Initialization(Encoder *enc, u16 deviceId);
 int Motor_Initialization(Motor *mot, u16 deviceId);
+int Stepper_Initialization(Stepper *step, u16 deviceId);
 
 #endif /* SRC_INITPL_H_ */

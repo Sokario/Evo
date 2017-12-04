@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date                      : Thu Nov 30 21:28:50 2017
+| Date                      : Mon Dec  4 14:18:07 2017
 | Host                      : LogOut-AsusPro running 64-bit major release  (build 9200)
 | Command                   : report_io -file evo_v1_wrapper_io_placed.rpt
 | Design                    : evo_v1_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           156 |
+|           164 |
 +---------------+
 
 
@@ -344,9 +344,9 @@ Table of Contents
 | T7         |                      |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | T8         |                      | Dedicated  | VCCO_13                 | VCCO          |                   |      13 |            |      |                     |                      |   any** |            |           |          |      |                  |
 | T9         |                      |            | NC                      | Not Connected |                   |         |            |      |                     |                      |         |            |           |          |      |                  |
-| T10        |                      | High Range | IO_L1N_T0_34            | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
-| T11        |                      | High Range | IO_L1P_T0_34            | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
-| T12        |                      | High Range | IO_L2P_T0_34            | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
+| T10        | Stepper_Step         | High Range | IO_L1N_T0_34            | OUTPUT        | LVCMOS33          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
+| T11        | Stepper_Sleep        | High Range | IO_L1P_T0_34            | OUTPUT        | LVCMOS33          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
+| T12        | Stepper_Select[2]    | High Range | IO_L2P_T0_34            | OUTPUT        | LVCMOS33          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | T13        |                      |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | T14        | Gpio_IRQ[0]          | High Range | IO_L5P_T0_34            | INPUT         | LVCMOS33          |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | T15        | Gpio_IRQ[1]          | High Range | IO_L5N_T0_34            | INPUT         | LVCMOS33          |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
@@ -366,7 +366,7 @@ Table of Contents
 | U9         |                      |            | NC                      | Not Connected |                   |         |            |      |                     |                      |         |            |           |          |      |                  |
 | U10        |                      |            | NC                      | Not Connected |                   |         |            |      |                     |                      |         |            |           |          |      |                  |
 | U11        |                      | Dedicated  | VCCO_13                 | VCCO          |                   |      13 |            |      |                     |                      |   any** |            |           |          |      |                  |
-| U12        |                      | High Range | IO_L2N_T0_34            | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
+| U12        | Stepper_Dir          | High Range | IO_L2N_T0_34            | OUTPUT        | LVCMOS33          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | U13        |                      | High Range | IO_L3P_T0_DQS_PUDC_B_34 | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | U14        |                      | High Range | IO_L11P_T1_SRCC_34      | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | U15        |                      | High Range | IO_L11N_T1_SRCC_34      | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
@@ -389,7 +389,7 @@ Table of Contents
 | V12        | QuadA_R              | High Range | IO_L4P_T0_34            | INPUT         | LVCMOS33          |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | V13        | QuadB_R              | High Range | IO_L3N_T0_DQS_34        | INPUT         | LVCMOS33          |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | V14        |                      | High Range | VCCO_34                 | VCCO          |                   |      34 |            |      |                     |                      |    3.30 |            |           |          |      |                  |
-| V15        |                      | High Range | IO_L10P_T1_34           | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
+| V15        | Stepper_En           | High Range | IO_L10P_T1_34           | OUTPUT        | LVCMOS33          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | V16        | btns_4bits_tri_i[2]  | High Range | IO_L18P_T2_34           | INPUT         | LVCMOS33          |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | V17        |                      | High Range | IO_L21P_T3_DQS_34       | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | V18        |                      | High Range | IO_L21N_T3_DQS_34       | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
@@ -408,8 +408,8 @@ Table of Contents
 | W11        |                      |            | NC                      | Not Connected |                   |         |            |      |                     |                      |         |            |           |          |      |                  |
 | W12        |                      |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | W13        | sws_4bits_tri_i[2]   | High Range | IO_L4N_T0_34            | INPUT         | LVCMOS33          |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
-| W14        |                      | High Range | IO_L8P_T1_34            | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
-| W15        |                      | High Range | IO_L10N_T1_34           | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
+| W14        | Stepper_Select[0]    | High Range | IO_L8P_T1_34            | OUTPUT        | LVCMOS33          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
+| W15        | Stepper_Res          | High Range | IO_L10N_T1_34           | OUTPUT        | LVCMOS33          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | W16        | QuadA_L              | High Range | IO_L18N_T2_34           | INPUT         | LVCMOS33          |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | W17        |                      | High Range | VCCO_34                 | VCCO          |                   |      34 |            |      |                     |                      |    3.30 |            |           |          |      |                  |
 | W18        |                      | High Range | IO_L22P_T3_34           | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
@@ -428,7 +428,7 @@ Table of Contents
 | Y11        |                      |            | NC                      | Not Connected |                   |         |            |      |                     |                      |         |            |           |          |      |                  |
 | Y12        |                      |            | NC                      | Not Connected |                   |         |            |      |                     |                      |         |            |           |          |      |                  |
 | Y13        |                      |            | NC                      | Not Connected |                   |         |            |      |                     |                      |         |            |           |          |      |                  |
-| Y14        |                      | High Range | IO_L8N_T1_34            | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
+| Y14        | Stepper_Select[1]    | High Range | IO_L8N_T1_34            | OUTPUT        | LVCMOS33          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | Y15        |                      |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | Y16        | btns_4bits_tri_i[3]  | High Range | IO_L7P_T1_34            | INPUT         | LVCMOS33          |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | Y17        | PWM_L                | High Range | IO_L7N_T1_34            | OUTPUT        | LVCMOS33          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |

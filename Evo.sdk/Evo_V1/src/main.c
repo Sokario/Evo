@@ -65,6 +65,10 @@ Motor MotLeft, MotRight;
 #define MOTOR_LEFT_DEVICE_ID 		XPAR_MOTOR_0_DEVICE_ID
 #define MOTOR_RIGHT_DEVICE_ID 		XPAR_MOTOR_1_DEVICE_ID
 
+#include "Stepper.h"
+Stepper Elevator;
+#define MOTOR_ELEVATOR_DEVICE_ID 		XPAR_STEPPER_0_DEVICE_ID
+
 #include "xscugic.h"
 #define SCUGIC_DEVICE_ID			XPAR_PS7_SCUGIC_0_DEVICE_ID
 XScuGic IRQ_Controller;
@@ -333,6 +337,16 @@ int ASSERV_Initialization()
 		status = XST_FAILURE;
 	} else {
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Motor Right", 25);
+		status = XST_SUCCESS;
+	}
+	usleep(200000);
+
+	// Elevator motor test
+	if (Stepper_Initialization(&Elevator, MOTOR_ELEVATOR_DEVICE_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Stepper Elevator", 30);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: Stepper Elevator", 30);
 		status = XST_SUCCESS;
 	}
 	usleep(200000);
