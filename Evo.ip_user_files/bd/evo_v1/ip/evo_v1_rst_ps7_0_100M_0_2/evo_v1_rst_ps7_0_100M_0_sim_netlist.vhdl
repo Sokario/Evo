@@ -1,11 +1,11 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Wed Oct 25 11:35:16 2017
+-- Date        : Mon Dec 11 17:57:54 2017
 -- Host        : LogOut-AsusPro running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top evo_v1_rst_ps7_0_100M_0 -prefix
---               evo_v1_rst_ps7_0_100M_0_ Test_rst_ps7_0_100M_0_sim_netlist.vhdl
--- Design      : Test_rst_ps7_0_100M_0
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_rst_ps7_0_100M_0_2/evo_v1_rst_ps7_0_100M_0_sim_netlist.vhdl
+-- Design      : evo_v1_rst_ps7_0_100M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z010clg400-1
@@ -25,6 +25,8 @@ entity evo_v1_rst_ps7_0_100M_0_cdc_sync is
     p_2_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of evo_v1_rst_ps7_0_100M_0_cdc_sync : entity is "cdc_sync";
 end evo_v1_rst_ps7_0_100M_0_cdc_sync;
 
 architecture STRUCTURE of evo_v1_rst_ps7_0_100M_0_cdc_sync is
@@ -233,6 +235,8 @@ entity evo_v1_rst_ps7_0_100M_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of evo_v1_rst_ps7_0_100M_0_upcnt_n : entity is "upcnt_n";
 end evo_v1_rst_ps7_0_100M_0_upcnt_n;
 
 architecture STRUCTURE of evo_v1_rst_ps7_0_100M_0_upcnt_n is
@@ -397,6 +401,8 @@ entity evo_v1_rst_ps7_0_100M_0_lpf is
     mb_debug_sys_rst : in STD_LOGIC;
     ext_reset_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of evo_v1_rst_ps7_0_100M_0_lpf : entity is "lpf";
 end evo_v1_rst_ps7_0_100M_0_lpf;
 
 architecture STRUCTURE of evo_v1_rst_ps7_0_100M_0_lpf is
@@ -578,6 +584,8 @@ entity evo_v1_rst_ps7_0_100M_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of evo_v1_rst_ps7_0_100M_0_sequence_psr : entity is "sequence_psr";
 end evo_v1_rst_ps7_0_100M_0_sequence_psr;
 
 architecture STRUCTURE of evo_v1_rst_ps7_0_100M_0_sequence_psr is
@@ -916,6 +924,8 @@ entity evo_v1_rst_ps7_0_100M_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of evo_v1_rst_ps7_0_100M_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of evo_v1_rst_ps7_0_100M_0_proc_sys_reset : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of evo_v1_rst_ps7_0_100M_0_proc_sys_reset : entity is "proc_sys_reset";
 end evo_v1_rst_ps7_0_100M_0_proc_sys_reset;
 
 architecture STRUCTURE of evo_v1_rst_ps7_0_100M_0_proc_sys_reset is
@@ -1026,7 +1036,7 @@ entity evo_v1_rst_ps7_0_100M_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of evo_v1_rst_ps7_0_100M_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of evo_v1_rst_ps7_0_100M_0 : entity is "Test_rst_ps7_0_100M_0,proc_sys_reset,{}";
+  attribute CHECK_LICENSE_TYPE of evo_v1_rst_ps7_0_100M_0 : entity is "evo_v1_rst_ps7_0_100M_0,proc_sys_reset,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of evo_v1_rst_ps7_0_100M_0 : entity is "yes";
   attribute x_core_info : string;

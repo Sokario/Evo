@@ -177,6 +177,26 @@ int receiverParser(u8 *cmd, u8 *result, u32 *cmd_value, u32 *data_value)
 			strcpy(result, "IRQADC00");
 			break;
 
+		case IRQ_STEPPER_MASK :
+			status = XST_SUCCESS;
+			strcpy(result, "IRQSTEP0");
+			break;
+
+		case STEPPER_SET_MASK :
+			status = XST_SUCCESS;
+			strcpy(result, "STEPSET0");
+			break;
+
+		case STEPPER_GET_MASK :
+			status = XST_SUCCESS;
+			strcpy(result, "STEPGET0");
+			break;
+
+		case STEPPER_STOP_MASK :
+			status = XST_SUCCESS;
+			strcpy(result, "STEPSTOP");
+			break;
+
 		default :
 			status = XST_FAILURE;
 			itoa(*cmd_value, result, 16);

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Mon Dec  4 14:18:49 2017
+| Date         : Tue Dec 12 16:03:04 2017
 | Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
 | Command      : report_drc -file evo_v1_wrapper_drc_routed.rpt -pb evo_v1_wrapper_drc_routed.pb -rpx evo_v1_wrapper_drc_routed.rpx
 | Design       : evo_v1_wrapper
@@ -24,17 +24,18 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 550
-+----------+----------+---------------------------+------------+
-| Rule     | Severity | Description               | Violations |
-+----------+----------+---------------------------+------------+
-| DPIP-1   | Warning  | Input pipelining          | 28         |
-| DPIR-1   | Warning  | Asynchronous driver check | 280        |
-| DPOP-1   | Warning  | PREG Output pipelining    | 12         |
-| DPOP-2   | Warning  | MREG Output pipelining    | 24         |
-| DPOR-1   | Warning  | Asynchronous load check   | 204        |
-| PDRC-153 | Warning  | Gated clock check         | 2          |
-+----------+----------+---------------------------+------------+
+             Violations found: 551
++-----------+----------+---------------------------+------------+
+| Rule      | Severity | Description               | Violations |
++-----------+----------+---------------------------+------------+
+| DPIP-1    | Warning  | Input pipelining          | 28         |
+| DPIR-1    | Warning  | Asynchronous driver check | 280        |
+| DPOP-1    | Warning  | PREG Output pipelining    | 12         |
+| DPOP-2    | Warning  | MREG Output pipelining    | 24         |
+| DPOR-1    | Warning  | Asynchronous load check   | 204        |
+| PDRC-153  | Warning  | Gated clock check         | 2          |
+| RTSTAT-10 | Warning  | No routable loads         | 1          |
++-----------+----------+---------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -2786,6 +2787,11 @@ Related violations: <none>
 PDRC-153#2 Warning
 Gated clock check  
 Net evo_v1_i/ADC_IRQ_0/U0/ADC_IRQ_v1_0_S00_AXI_inst/value_i_reg[15]_i_1_n_0 is a gated clock net sourced by a combinational pin evo_v1_i/ADC_IRQ_0/U0/ADC_IRQ_v1_0_S00_AXI_inst/value_i_reg[15]_i_1/O, cell evo_v1_i/ADC_IRQ_0/U0/ADC_IRQ_v1_0_S00_AXI_inst/value_i_reg[15]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+27 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_flags[7:0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/s_bscan_tms, evo_v1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[13], evo_v1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[14], evo_v1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[15] (the first 15 of 18 listed).
 Related violations: <none>
 
 

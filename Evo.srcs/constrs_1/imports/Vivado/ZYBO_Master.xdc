@@ -216,16 +216,16 @@ set_property IOSTANDARD LVCMOS33 [get_ports {vauxp14}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {jb_n[2]}]
 
 ##IO_L17P_T2_34
-#set_property PACKAGE_PIN Y18 [get_ports {jb_p[2]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {jb_p[2]}]
+set_property PACKAGE_PIN Y18 [get_ports {Reached}]
+set_property IOSTANDARD LVCMOS33 [get_ports {Reached}]
 
 ##IO_L22N_T3_34
-#set_property PACKAGE_PIN W19 [get_ports {jb_n[3]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {jb_n[3]}]
+set_property PACKAGE_PIN W19 [get_ports {Ended}]
+set_property IOSTANDARD LVCMOS33 [get_ports {Ended}]
 
 ##IO_L22P_T3_34
-#set_property PACKAGE_PIN W18 [get_ports {jb_p[3]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {jb_p[3]}]
+set_property PACKAGE_PIN W18 [get_ports {Rising}]
+set_property IOSTANDARD LVCMOS33 [get_ports {Rising}]
 
 ##Pmod Header JC
 ##IO_L10P_T1_34

@@ -1,6 +1,283 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Tue Dec 12 15:48:14 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Stepper_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of evo_v1_Stepper_0_0 (xilinx.com:user:Stepper:1.0) from (Rev. 16) to (Rev. 17)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'evo_v1_Stepper_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'Counter'
+
+-Upgrade has removed port 'Cpt'
+
+-Upgrade has removed port 'Ended'
+
+-Upgrade has removed port 'Previous'
+
+-Upgrade has removed port 'Reached'
+
+-Upgrade has removed port 'Rising'
+
+-Upgrade has removed port 'Target'
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Tue Dec 12 15:09:26 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Stepper_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of evo_v1_Stepper_0_0 (xilinx.com:user:Stepper:1.0) from (Rev. 15) to (Rev. 16)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Tue Dec 12 14:54:15 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Stepper_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of evo_v1_Stepper_0_0 (xilinx.com:user:Stepper:1.0) from (Rev. 14) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Tue Dec 12 14:31:00 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Stepper_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of evo_v1_Stepper_0_0 (xilinx.com:user:Stepper:1.0) from (Rev. 13) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Mon Dec 11 17:49:57 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Stepper_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of evo_v1_Stepper_0_0 (xilinx.com:user:Stepper:1.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Mon Dec 11 16:28:34 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Stepper_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of evo_v1_Stepper_0_0 (xilinx.com:user:Stepper:1.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Mon Dec 11 16:10:36 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Stepper_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of evo_v1_Stepper_0_0 (xilinx.com:user:Stepper:1.0) from (Rev. 10) to (Rev. 11)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'evo_v1_Stepper_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'Counter'
+
+-Upgrade has added port 'Cpt'
+
+-Upgrade has added port 'Ended'
+
+-Upgrade has added port 'Previous'
+
+-Upgrade has added port 'Reached'
+
+-Upgrade has added port 'Rising'
+
+-Upgrade has added port 'Target'
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Mon Dec 11 14:52:47 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Stepper_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of evo_v1_Stepper_0_0 (xilinx.com:user:Stepper:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Mon Dec 11 11:30:21 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Stepper_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of evo_v1_Stepper_0_0 (xilinx.com:user:Stepper:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Mon Dec 11 11:04:02 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Stepper_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of evo_v1_Stepper_0_0 (xilinx.com:user:Stepper:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Fri Dec  8 11:33:39 2017
+| Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'evo_v1_Stepper_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of evo_v1_Stepper_0_0 (xilinx.com:user:Stepper:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
 | Date         : Mon Dec  4 14:14:03 2017
 | Host         : LogOut-AsusPro running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

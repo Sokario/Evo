@@ -72,6 +72,12 @@
 #define IRQ_CMD					0xB0000000
 #define IRQ_GPIO_MASK			0xB1000000
 #define IRQ_ADC_MASK			0xB2000000
+#define IRQ_STEPPER_MASK		0xB3000000
+
+#define STEPPER_CMD				0xC0000000
+#define STEPPER_SET_MASK		0xC1000000
+#define STEPPER_GET_MASK		0xC2000000
+#define STEPPER_STOP_MASK		0xC3000000
 
 
 int receiverParser(u8 *cmd, u8 *result, u32 *cmd_value, u32 *data_value);
@@ -97,8 +103,8 @@ int receiverParser(u8 *cmd, u8 *result, u32 *cmd_value, u32 *data_value);
  * 1001: RESP   -> OK   | DONE  | ERROR | RUNNING
  * ----: CMD OTHER										[IN]
  * 1010: CAPT   -> GP2  | ToR   | COLOR | -
- * 1011: STATE  -> -    | -     | -     | -
- * 1100: STATE  -> -    | -     | -     | -
+ * 1011: IRQ	-> GPIO | ADC   | STEP  | -
+ * 1100: STEP   -> SET  | GET   | STOP  | -
  * 1101: STATE  -> -    | -     | -     | -
  * 1110: STATE  -> -    | -     | -     | -
  * 1111: QUIT   -> 0    | 0     | 0     | 0
@@ -158,6 +164,16 @@ int receiverParser(u8 *cmd, u8 *result, u32 *cmd_value, u32 *data_value);
  * 00|01: CAPT GP2
  * 00|10: CAPT ToR
  * 00|11: CAPT color
+ *
+ * CMD type : 2 HEX (1 HEX = IRQ)
+ * 00|01: IRQ GPIO
+ * 00|10: IRQ ADC
+ * 00|11: IRQ STEPPER
+ *
+ * CMD type : 2 HEX (1 HEX = STEP)
+ * 00|01: STEP SET
+ * 00|10: STEP GET
+ * 00|11: STEP STOP
  *
 ****************************************************/
 

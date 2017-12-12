@@ -154,7 +154,7 @@ u32 Stepper_GetOverRide(Stepper *InstancePtr)
     return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG0_OFFSET);
 }
 
-void Stepper_SetReset(Stepper *InstancePtr, u32 Data)
+void Stepper_SetHardReset(Stepper *InstancePtr, u32 Data)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -163,7 +163,7 @@ void Stepper_SetReset(Stepper *InstancePtr, u32 Data)
     STEPPER_mWriteReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG1_OFFSET, Data);
 }
 
-u32 Stepper_GetReset(Stepper *InstancePtr)
+u32 Stepper_GetHardReset(Stepper *InstancePtr)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -172,7 +172,7 @@ u32 Stepper_GetReset(Stepper *InstancePtr)
     return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG1_OFFSET);
 }
 
-void Stepper_SetEnable(Stepper *InstancePtr, u32 Data)
+void Stepper_SetHardEnable(Stepper *InstancePtr, u32 Data)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -181,7 +181,7 @@ void Stepper_SetEnable(Stepper *InstancePtr, u32 Data)
     STEPPER_mWriteReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG2_OFFSET, Data);
 }
 
-u32 Stepper_GetEnable(Stepper *InstancePtr)
+u32 Stepper_GetHardEnable(Stepper *InstancePtr)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -190,7 +190,7 @@ u32 Stepper_GetEnable(Stepper *InstancePtr)
     return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG2_OFFSET);
 }
 
-void Stepper_SetSleep(Stepper *InstancePtr, u32 Data)
+void Stepper_SetHardSleep(Stepper *InstancePtr, u32 Data)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -199,7 +199,7 @@ void Stepper_SetSleep(Stepper *InstancePtr, u32 Data)
     STEPPER_mWriteReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG3_OFFSET, Data);
 }
 
-u32 Stepper_GetSleep(Stepper *InstancePtr)
+u32 Stepper_GetHardSleep(Stepper *InstancePtr)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -208,7 +208,7 @@ u32 Stepper_GetSleep(Stepper *InstancePtr)
     return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG3_OFFSET);
 }
 
-void Stepper_SetDirection(Stepper *InstancePtr, u32 Data)
+void Stepper_SetHardDirection(Stepper *InstancePtr, u32 Data)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -217,7 +217,7 @@ void Stepper_SetDirection(Stepper *InstancePtr, u32 Data)
     STEPPER_mWriteReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG4_OFFSET, Data);
 }
 
-u32 Stepper_GetDirection(Stepper *InstancePtr)
+u32 Stepper_GeHardtDirection(Stepper *InstancePtr)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -226,7 +226,7 @@ u32 Stepper_GetDirection(Stepper *InstancePtr)
     return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG4_OFFSET);
 }
 
-void Stepper_SetStep(Stepper *InstancePtr, u32 Data)
+void Stepper_SetDivider(Stepper *InstancePtr, u32 Data)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -235,7 +235,7 @@ void Stepper_SetStep(Stepper *InstancePtr, u32 Data)
     STEPPER_mWriteReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG5_OFFSET, Data);
 }
 
-u32 Stepper_GetStep(Stepper *InstancePtr)
+u32 Stepper_GetDivider(Stepper *InstancePtr)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -244,7 +244,7 @@ u32 Stepper_GetStep(Stepper *InstancePtr)
     return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG5_OFFSET);
 }
 
-void Stepper_SetHold(Stepper *InstancePtr, u32 Data)
+void Stepper_SetTarget(Stepper *InstancePtr, u32 Data)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -253,7 +253,7 @@ void Stepper_SetHold(Stepper *InstancePtr, u32 Data)
     STEPPER_mWriteReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG6_OFFSET, Data);
 }
 
-u32 Stepper_GetHold(Stepper *InstancePtr)
+u32 Stepper_GetTarget(Stepper *InstancePtr)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -262,7 +262,7 @@ u32 Stepper_GetHold(Stepper *InstancePtr)
     return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG6_OFFSET);
 }
 
-void Stepper_SetDivider(Stepper *InstancePtr, u32 Data)
+void Stepper_SetMs1(Stepper *InstancePtr, u32 Data)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -271,7 +271,7 @@ void Stepper_SetDivider(Stepper *InstancePtr, u32 Data)
     STEPPER_mWriteReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG7_OFFSET, Data);
 }
 
-u32 Stepper_GetDivider(Stepper *InstancePtr)
+u32 Stepper_GetMs1(Stepper *InstancePtr)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -280,7 +280,7 @@ u32 Stepper_GetDivider(Stepper *InstancePtr)
     return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG7_OFFSET);
 }
 
-void Stepper_SetMs1(Stepper *InstancePtr, u32 Data)
+void Stepper_SetMs2(Stepper *InstancePtr, u32 Data)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -289,7 +289,7 @@ void Stepper_SetMs1(Stepper *InstancePtr, u32 Data)
     STEPPER_mWriteReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG8_OFFSET, Data);
 }
 
-u32 Stepper_GetMs1(Stepper *InstancePtr)
+u32 Stepper_GetMs2(Stepper *InstancePtr)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -298,7 +298,7 @@ u32 Stepper_GetMs1(Stepper *InstancePtr)
     return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG8_OFFSET);
 }
 
-void Stepper_SetMs2(Stepper *InstancePtr, u32 Data)
+void Stepper_SetMs3(Stepper *InstancePtr, u32 Data)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -307,7 +307,7 @@ void Stepper_SetMs2(Stepper *InstancePtr, u32 Data)
     STEPPER_mWriteReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG9_OFFSET, Data);
 }
 
-u32 Stepper_GetMs2(Stepper *InstancePtr)
+u32 Stepper_GetMs3(Stepper *InstancePtr)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -316,31 +316,13 @@ u32 Stepper_GetMs2(Stepper *InstancePtr)
     return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG9_OFFSET);
 }
 
-void Stepper_SetMs3(Stepper *InstancePtr, u32 Data)
-{
-    /* Asserts */
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-    
-    STEPPER_mWriteReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG10_OFFSET, Data);
-}
-
-u32 Stepper_GetMs3(Stepper *InstancePtr)
-{
-    /* Asserts */
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-    
-    return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG10_OFFSET);
-}
-
 void Stepper_SetIrqManager(Stepper *InstancePtr, u32 Data)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
     
-    STEPPER_mWriteReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG14_OFFSET, Data);
+    STEPPER_mWriteReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG12_OFFSET, Data);
 }
 
 u32 Stepper_GetIrqManager(Stepper *InstancePtr)
@@ -349,28 +331,19 @@ u32 Stepper_GetIrqManager(Stepper *InstancePtr)
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
     
-    return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG14_OFFSET);
-}
-
-u32 Stepper_GetTarget(Stepper *InstancePtr)
-{
-    /* Asserts */
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-    
-    return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG11_OFFSET);
-}
-
-u32 Stepper_GetEnded(Stepper *InstancePtr)
-{
-    /* Asserts */
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-    
     return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG12_OFFSET);
 }
 
-u32 Stepper_GetStepEnd(Stepper *InstancePtr)
+void Stepper_SetEnable(Stepper *InstancePtr, u32 Data)
+{
+    /* Asserts */
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+    
+    STEPPER_mWriteReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG13_OFFSET, Data);
+}
+
+u32 Stepper_GetEnable(Stepper *InstancePtr)
 {
     /* Asserts */
     Xil_AssertNonvoid(InstancePtr != NULL);
@@ -379,46 +352,66 @@ u32 Stepper_GetStepEnd(Stepper *InstancePtr)
     return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG13_OFFSET);
 }
 
+void Stepper_SetReset(Stepper *InstancePtr, u32 Data)
+{
+    /* Asserts */
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+    
+    STEPPER_mWriteReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG14_OFFSET, Data);
+}
+
+u32 Stepper_GetReset(Stepper *InstancePtr)
+{
+    /* Asserts */
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+    
+    return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG14_OFFSET);
+}
+
+void Stepper_SetInterrupt(Stepper *InstancePtr, u32 Data)
+{
+    /* Asserts */
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+    
+    STEPPER_mWriteReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG15_OFFSET, Data);
+}
+
+u32 Stepper_GetInterrupt(Stepper *InstancePtr)
+{
+    /* Asserts */
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+    
+    return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG15_OFFSET);
+}
+
+u32 Stepper_GetTargetStep(Stepper *InstancePtr)
+{
+    /* Asserts */
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+    
+    return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG10_OFFSET);
+}
+
+u32 Stepper_GetEnded(Stepper *InstancePtr)
+{
+    /* Asserts */
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+    
+    return STEPPER_mReadReg(InstancePtr->BaseAddress, STEPPER_S00_AXI_SLV_REG11_OFFSET);
+}
+
 ///////////////////////////////
-
-void Stepper_SetMode_Continuous(Stepper *InstancePtr)
-{
-    Stepper_SetHold(InstancePtr, 1);
-}
-
-void Stepper_SetMode_Step(Stepper *InstancePtr)
-{
-    Stepper_SetHold(InstancePtr, 0);
-}
-
-u32 Stepper_GetMode(Stepper *InstancePtr)
-{
-    return Stepper_GetHold(InstancePtr);
-}
-
-void Stepper_SetStep_Continuous(Stepper *InstancePtr, u32 Data)
-{
-    Stepper_SetStep(InstancePtr, Data);
-    Stepper_SetMode_Continuous(InstancePtr);
-}
-
-u32 Stepper_GetStep_Continuous(Stepper *InstancePtr)
-{    
-    return Stepper_GetTarget(InstancePtr);
-}
-
-void Stepper_PulseStep(Stepper *InstancePtr)
-{
-    Stepper_SetStep(InstancePtr, 0);
-    Stepper_SetStep(InstancePtr, 1);
-    Stepper_SetStep(InstancePtr, 0);
-}
 
 u32 Stepper_IrqAcquisition(Stepper *InstancePtr)
 {
-    u32 reg_value = Stepper_GetEnded(InstancePtr);
     Stepper_SetIrqManager(InstancePtr, 1);
     Stepper_SetIrqManager(InstancePtr, 0);
 
-    return reg_value;
+    return 0;
 }

@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Mon Dec  4 14:14:33 2017
+--Date        : Tue Dec 12 15:56:26 2017
 --Host        : LogOut-AsusPro running 64-bit major release  (build 9200)
 --Command     : generate_target evo_v1.bd
 --Design      : evo_v1
@@ -6088,7 +6088,7 @@ entity evo_v1 is
     vauxp14 : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of evo_v1 : entity is "evo_v1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=evo_v1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=54,numReposBlks=31,numNonXlnxBlks=0,numHierBlks=23,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=22,da_board_cnt=5,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of evo_v1 : entity is "evo_v1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=evo_v1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=55,numReposBlks=32,numNonXlnxBlks=0,numHierBlks=23,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=22,da_board_cnt=5,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of evo_v1 : entity is "evo_v1.hwdef";
 end evo_v1;
@@ -6716,6 +6716,13 @@ architecture STRUCTURE of evo_v1 is
     s00_axi_aresetn : in STD_LOGIC
   );
   end component evo_v1_Quadramp_1_1;
+  component evo_v1_system_ila_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component evo_v1_system_ila_0_0;
   component evo_v1_Stepper_0_0 is
   port (
     Enable : out STD_LOGIC;
@@ -6772,10 +6779,16 @@ architecture STRUCTURE of evo_v1 is
   signal Stepper_0_Direction : STD_LOGIC;
   signal Stepper_0_Enable : STD_LOGIC;
   signal Stepper_0_Interrupt : STD_LOGIC;
+  attribute DEBUG : string;
+  attribute DEBUG of Stepper_0_Interrupt : signal is "true";
+  attribute MARK_DEBUG : boolean;
+  attribute MARK_DEBUG of Stepper_0_Interrupt : signal is std.standard.true;
   signal Stepper_0_Reset : STD_LOGIC;
   signal Stepper_0_Selection : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal Stepper_0_Sleep : STD_LOGIC;
   signal Stepper_0_Step : STD_LOGIC;
+  attribute DEBUG of Stepper_0_Step : signal is "true";
+  attribute MARK_DEBUG of Stepper_0_Step : signal is std.standard.true;
   signal Subtractor_0_Result : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal Subtractor_1_Result : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_gpio_0_GPIO2_TRI_I : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -8242,6 +8255,12 @@ rst_ps7_0_100M: component evo_v1_rst_ps7_0_100M_0
       peripheral_aresetn(0) => rst_ps7_0_100M_peripheral_aresetn(0),
       peripheral_reset(0) => NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => processing_system7_0_FCLK_CLK0
+    );
+system_ila_0: component evo_v1_system_ila_0_0
+     port map (
+      clk => processing_system7_0_FCLK_CLK0,
+      probe0(0) => Stepper_0_Step,
+      probe1(0) => Stepper_0_Interrupt
     );
 xadc_wiz_0: component evo_v1_xadc_wiz_0_0
      port map (

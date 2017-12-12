@@ -1,11 +1,11 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Thu Nov 30 21:26:27 2017
+-- Date        : Thu Nov 30 21:26:25 2017
 -- Host        : LogOut-AsusPro running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Quadramp_1_1/evo_v1_Quadramp_1_1_stub.vhdl
--- Design      : evo_v1_Quadramp_1_1
+-- Command     : write_vhdl -force -mode synth_stub -rename_top evo_v1_Quadramp_1_1 -prefix
+--               evo_v1_Quadramp_1_1_ evo_v1_Quadramp_0_1_stub.vhdl
+-- Design      : evo_v1_Quadramp_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1
 -- --------------------------------------------------------------------------------

@@ -12,22 +12,22 @@ extern "C" {
 #include "xstatus.h"
 #include "xil_io.h"
 
-#define STEPPER_S00_AXI_SLV_REG0_OFFSET 0   // OverRide     (INOUT)
+#define STEPPER_S00_AXI_SLV_REG0_OFFSET 0   // OverRide     (IN)
 #define STEPPER_S00_AXI_SLV_REG1_OFFSET 4   // Reset        (INOUT)
 #define STEPPER_S00_AXI_SLV_REG2_OFFSET 8   // Enable       (INOUT)
 #define STEPPER_S00_AXI_SLV_REG3_OFFSET 12  // Sleep        (INOUT)
 #define STEPPER_S00_AXI_SLV_REG4_OFFSET 16  // Direction    (INOUT)
-#define STEPPER_S00_AXI_SLV_REG5_OFFSET 20  // Step         (INOUT)
-#define STEPPER_S00_AXI_SLV_REG6_OFFSET 24  // Hold         (INOUT)
-#define STEPPER_S00_AXI_SLV_REG7_OFFSET 28  // Divider      (INOUT)
-#define STEPPER_S00_AXI_SLV_REG8_OFFSET 32  // MS1          (INOUT)
-#define STEPPER_S00_AXI_SLV_REG9_OFFSET 36  // MS2          (INOUT)
-#define STEPPER_S00_AXI_SLV_REG10_OFFSET 40 // MS3          (INOUT)
-#define STEPPER_S00_AXI_SLV_REG11_OFFSET 44 // Target       (OUT)
-#define STEPPER_S00_AXI_SLV_REG12_OFFSET 48 // Ended        (OUT)
-#define STEPPER_S00_AXI_SLV_REG13_OFFSET 52 // Step End     (OUT)
-#define STEPPER_S00_AXI_SLV_REG14_OFFSET 56 // IRQ Manager  (INOUT)
-#define STEPPER_S00_AXI_SLV_REG15_OFFSET 60 // NULL
+#define STEPPER_S00_AXI_SLV_REG5_OFFSET 20  // Divier       (INOUT)
+#define STEPPER_S00_AXI_SLV_REG6_OFFSET 24  // Step Target  (INOUT)
+#define STEPPER_S00_AXI_SLV_REG7_OFFSET 28  // MS1          (INOUT)
+#define STEPPER_S00_AXI_SLV_REG8_OFFSET 32  // MS2          (INOUT)
+#define STEPPER_S00_AXI_SLV_REG9_OFFSET 36  // MS3          (INOUT)
+#define STEPPER_S00_AXI_SLV_REG10_OFFSET 40 // Cpt target   (OUT)
+#define STEPPER_S00_AXI_SLV_REG11_OFFSET 44 // Ended        (OUT)
+#define STEPPER_S00_AXI_SLV_REG12_OFFSET 48 // IRQ Manager  (IN)
+#define STEPPER_S00_AXI_SLV_REG13_OFFSET 52 // Enable cpt   (IN)
+#define STEPPER_S00_AXI_SLV_REG14_OFFSET 56 // Reset cpt    (IN)
+#define STEPPER_S00_AXI_SLV_REG15_OFFSET 60 // Interrupt    (IN)
 
 /**************************** Type Definitions *****************************/
 /**
@@ -127,20 +127,18 @@ int Stepper_CfgInitialize(Stepper *InstancePtr, UINTPTR EffectiveAddr);
  */
 void Stepper_SetOverRide(Stepper *InstancePtr, u32 Data);
 u32 Stepper_GetOverRide(Stepper *InstancePtr);
-void Stepper_SetReset(Stepper *InstancePtr, u32 Data);
-u32 Stepper_GetReset(Stepper *InstancePtr);
-void Stepper_SetEnable(Stepper *InstancePtr, u32 Data);
-u32 Stepper_GetEnable(Stepper *InstancePtr);
-void Stepper_SetSleep(Stepper *InstancePtr, u32 Data);
-u32 Stepper_GetSleep(Stepper *InstancePtr);
-void Stepper_SetDirection(Stepper *InstancePtr, u32 Data);
-u32 Stepper_GetDirection(Stepper *InstancePtr);
-void Stepper_SetStep(Stepper *InstancePtr, u32 Data);
-u32 Stepper_GetStep(Stepper *InstancePtr);
-void Stepper_SetHold(Stepper *InstancePtr, u32 Data);
-u32 Stepper_GetHold(Stepper *InstancePtr);
+void Stepper_SetHardReset(Stepper *InstancePtr, u32 Data);
+u32 Stepper_GetHardReset(Stepper *InstancePtr);
+void Stepper_SetHardEnable(Stepper *InstancePtr, u32 Data);
+u32 Stepper_GetHardEnable(Stepper *InstancePtr);
+void Stepper_SetHardSleep(Stepper *InstancePtr, u32 Data);
+u32 Stepper_GetHardSleep(Stepper *InstancePtr);
+void Stepper_SetHardDirection(Stepper *InstancePtr, u32 Data);
+u32 Stepper_GetHardDirection(Stepper *InstancePtr);
 void Stepper_SetDivider(Stepper *InstancePtr, u32 Data);
 u32 Stepper_GetDivider(Stepper *InstancePtr);
+void Stepper_SetTarget(Stepper *InstancePtr, u32 Data);
+u32 Stepper_GetTarget(Stepper *InstancePtr);
 void Stepper_SetMs1(Stepper *InstancePtr, u32 Data);
 u32 Stepper_GetMs1(Stepper *InstancePtr);
 void Stepper_SetMs2(Stepper *InstancePtr, u32 Data);
@@ -149,10 +147,15 @@ void Stepper_SetMs3(Stepper *InstancePtr, u32 Data);
 u32 Stepper_GetMs3(Stepper *InstancePtr);
 void Stepper_SetIrqManager(Stepper *InstancePtr, u32 Data);
 u32 Stepper_GetIrqManager(Stepper *InstancePtr);
+void Stepper_SetEnable(Stepper *InstancePtr, u32 Data);
+u32 Stepper_GetEnable(Stepper *InstancePtr);
+void Stepper_SetReset(Stepper *InstancePtr, u32 Data);
+u32 Stepper_GetReset(Stepper *InstancePtr);
+void Stepper_SetInterrupt(Stepper *InstancePtr, u32 Data);
+u32 Stepper_GetInterrupt(Stepper *InstancePtr);
 
-u32 Stepper_GetTarget(Stepper *InstancePtr);
+u32 Stepper_GetTargetStep(Stepper *InstancePtr);
 u32 Stepper_GetEnded(Stepper *InstancePtr);
-u32 Stepper_GetStepEnd(Stepper *InstancePtr);
 
 /*
  * API MACRO functions implemented
@@ -160,11 +163,6 @@ u32 Stepper_GetStepEnd(Stepper *InstancePtr);
 void Stepper_SetMode_Continuous(Stepper *InstancePtr);
 void Stepper_SetMode_Step(Stepper *InstancePtr);
 u32 Stepper_GetMode(Stepper *InstancePtr);
-
-void Stepper_SetStep_Continuous(Stepper *InstancePtr, u32 Data);
-u32 Stepper_GetStep_Continuous(Stepper *InstancePtr);
-
-void Stepper_PulseStep(Stepper *InstancePtr);
 
 u32 Stepper_IrqAcquisition(Stepper *InstancePtr);
 

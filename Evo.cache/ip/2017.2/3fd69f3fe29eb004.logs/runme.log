@@ -1,0 +1,754 @@
+
+*** Running vivado
+    with args -log evo_v1_Stepper_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source evo_v1_Stepper_0_0.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source evo_v1_Stepper_0_0.tcl -notrace
+Command: synth_design -top evo_v1_Stepper_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11952 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 384.887 ; gain = 80.082
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'evo_v1_Stepper_0_0' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Stepper_0_0/synth/evo_v1_Stepper_0_0.vhd:96]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter DIVIDER bound to: 200 - type: integer 
+INFO: [Synth 8-3491] module 'Stepper_v1_0' declared at 'c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0.vhd:5' bound to instance 'U0' of component 'Stepper_v1_0' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Stepper_0_0/synth/evo_v1_Stepper_0_0.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'Stepper_v1_0' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0.vhd:65]
+	Parameter DIVIDER bound to: 200 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter DIVIDER bound to: 200 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Stepper_v1_0_S00_AXI' declared at 'c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0_S00_AXI.vhd:5' bound to instance 'Stepper_v1_0_S00_AXI_inst' of component 'Stepper_v1_0_S00_AXI' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'Stepper_v1_0_S00_AXI' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0_S00_AXI.vhd:102]
+	Parameter DIVIDER bound to: 200 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0_S00_AXI.vhd:276]
+INFO: [Synth 8-226] default block is never used [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0_S00_AXI.vhd:514]
+WARNING: [Synth 8-614] signal 'slv_reg7' is read in the process but is not in the sensitivity list [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0_S00_AXI.vhd:509]
+WARNING: [Synth 8-614] signal 'slv_reg12' is read in the process but is not in the sensitivity list [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0_S00_AXI.vhd:509]
+WARNING: [Synth 8-614] signal 'slv_reg13' is read in the process but is not in the sensitivity list [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0_S00_AXI.vhd:509]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg10_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0_S00_AXI.vhd:267]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg11_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0_S00_AXI.vhd:268]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0_S00_AXI.vhd:274]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0_S00_AXI.vhd:513]
+INFO: [Synth 8-256] done synthesizing module 'Stepper_v1_0_S00_AXI' (1#1) [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0_S00_AXI.vhd:102]
+INFO: [Synth 8-256] done synthesizing module 'Stepper_v1_0' (2#1) [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/4163/hdl/Stepper_v1_0.vhd:65]
+ERROR: [Synth 8-549] port width mismatch for port 'Cpt': port width = 31, actual width = 32 [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Stepper_0_0/synth/evo_v1_Stepper_0_0.vhd:114]
+ERROR: [Synth 8-549] port width mismatch for port 'Target': port width = 31, actual width = 32 [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Stepper_0_0/synth/evo_v1_Stepper_0_0.vhd:115]
+ERROR: [Synth 8-549] port width mismatch for port 'Previous': port width = 31, actual width = 32 [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Stepper_0_0/synth/evo_v1_Stepper_0_0.vhd:116]
+ERROR: [Synth 8-549] port width mismatch for port 'Counter': port width = 27, actual width = 32 [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Stepper_0_0/synth/evo_v1_Stepper_0_0.vhd:118]
+ERROR: [Synth 8-285] failed synthesizing module 'evo_v1_Stepper_0_0' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Stepper_0_0/synth/evo_v1_Stepper_0_0.vhd:96]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 424.965 ; gain = 120.160
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+10 Infos, 7 Warnings, 0 Critical Warnings and 6 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 11 16:17:14 2017...
+
+*** Running vivado
+    with args -log evo_v1_Stepper_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source evo_v1_Stepper_0_0.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source evo_v1_Stepper_0_0.tcl -notrace
+Command: synth_design -top evo_v1_Stepper_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8748 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 385.938 ; gain = 80.098
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'evo_v1_Stepper_0_0' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Stepper_0_0/synth/evo_v1_Stepper_0_0.vhd:96]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter DIVIDER bound to: 200 - type: integer 
+INFO: [Synth 8-3491] module 'Stepper_v1_0' declared at 'c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0.vhd:5' bound to instance 'U0' of component 'Stepper_v1_0' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Stepper_0_0/synth/evo_v1_Stepper_0_0.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'Stepper_v1_0' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0.vhd:65]
+	Parameter DIVIDER bound to: 200 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter DIVIDER bound to: 200 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Stepper_v1_0_S00_AXI' declared at 'c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:5' bound to instance 'Stepper_v1_0_S00_AXI_inst' of component 'Stepper_v1_0_S00_AXI' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'Stepper_v1_0_S00_AXI' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:102]
+	Parameter DIVIDER bound to: 200 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:276]
+INFO: [Synth 8-226] default block is never used [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:514]
+WARNING: [Synth 8-614] signal 'slv_reg7' is read in the process but is not in the sensitivity list [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:509]
+WARNING: [Synth 8-614] signal 'slv_reg12' is read in the process but is not in the sensitivity list [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:509]
+WARNING: [Synth 8-614] signal 'slv_reg13' is read in the process but is not in the sensitivity list [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:509]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg10_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:267]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg11_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:268]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:274]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:513]
+INFO: [Synth 8-256] done synthesizing module 'Stepper_v1_0_S00_AXI' (1#1) [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:102]
+INFO: [Synth 8-256] done synthesizing module 'Stepper_v1_0' (2#1) [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'evo_v1_Stepper_0_0' (3#1) [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Stepper_0_0/synth/evo_v1_Stepper_0_0.vhd:96]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 426.020 ; gain = 120.180
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 426.020 ; gain = 120.180
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 720.277 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 720.277 ; gain = 414.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 720.277 ; gain = 414.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 720.277 ; gain = 414.438
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:592]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:592]
+WARNING: [Synth 8-6014] Unused sequential element counter_i_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:594]
+WARNING: [Synth 8-6014] Unused sequential element cpt_step_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:595]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 720.277 ; gain = 414.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     28 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 15    
+	               31 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 14    
+	  16 Input     32 Bit        Muxes := 14    
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Stepper_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     28 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 15    
+	               31 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 14    
+	  16 Input     32 Bit        Muxes := 14    
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element cpt_step_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:595]
+WARNING: [Synth 8-6014] Unused sequential element counter_i_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/cc98/hdl/Stepper_v1_0_S00_AXI.vhd:594]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/Stepper_v1_0_S00_AXI_inst/aw_en_reg )
+INFO: [Synth 8-3886] merging instance 'U0/Stepper_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/Stepper_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/Stepper_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/Stepper_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/Stepper_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/Stepper_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/aw_en_reg) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/slv_reg5_reg[31]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/slv_reg5_reg[30]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/slv_reg5_reg[29]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/slv_reg5_reg[28]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/slv_reg5_reg[27]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/slv_reg6_reg[31]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module evo_v1_Stepper_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 720.277 ; gain = 414.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 720.277 ; gain = 414.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 720.277 ; gain = 414.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 722.234 ; gain = 416.395
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 722.234 ; gain = 416.395
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 722.234 ; gain = 416.395
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 722.234 ; gain = 416.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 722.234 ; gain = 416.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 722.234 ; gain = 416.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 722.234 ; gain = 416.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    43|
+|2     |LUT1   |    32|
+|3     |LUT2   |    81|
+|4     |LUT3   |    42|
+|5     |LUT4   |    35|
+|6     |LUT5   |    55|
+|7     |LUT6   |   196|
+|8     |MUXF7  |    53|
+|9     |MUXF8  |    26|
+|10    |FDRE   |   576|
+|11    |FDSE   |     4|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------------------+---------------------+------+
+|      |Instance                      |Module               |Cells |
++------+------------------------------+---------------------+------+
+|1     |top                           |                     |  1143|
+|2     |  U0                          |Stepper_v1_0         |  1143|
+|3     |    Stepper_v1_0_S00_AXI_inst |Stepper_v1_0_S00_AXI |  1139|
++------+------------------------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 722.234 ; gain = 416.395
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 722.234 ; gain = 122.137
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 722.234 ; gain = 416.395
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 43 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'evo_v1_Stepper_0_0' is not ideal for floorplanning, since the cellview 'Stepper_v1_0_S00_AXI' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+40 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 722.645 ; gain = 424.570
+INFO: [Common 17-1381] The checkpoint 'C:/Projet/Vivado/Evo/Evo.runs/evo_v1_Stepper_0_0_synth_1/evo_v1_Stepper_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Stepper_0_0/evo_v1_Stepper_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Projet/Vivado/Evo/Evo.runs/evo_v1_Stepper_0_0_synth_1/evo_v1_Stepper_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 722.645 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 11 16:30:23 2017...
+
+*** Running vivado
+    with args -log evo_v1_Stepper_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source evo_v1_Stepper_0_0.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source evo_v1_Stepper_0_0.tcl -notrace
+Command: synth_design -top evo_v1_Stepper_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4728 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 385.160 ; gain = 78.813
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'evo_v1_Stepper_0_0' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Stepper_0_0/synth/evo_v1_Stepper_0_0.vhd:96]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter DIVIDER bound to: 200 - type: integer 
+INFO: [Synth 8-3491] module 'Stepper_v1_0' declared at 'c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0.vhd:5' bound to instance 'U0' of component 'Stepper_v1_0' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Stepper_0_0/synth/evo_v1_Stepper_0_0.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'Stepper_v1_0' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0.vhd:65]
+	Parameter DIVIDER bound to: 200 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter DIVIDER bound to: 200 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Stepper_v1_0_S00_AXI' declared at 'c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:5' bound to instance 'Stepper_v1_0_S00_AXI_inst' of component 'Stepper_v1_0_S00_AXI' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'Stepper_v1_0_S00_AXI' [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:102]
+	Parameter DIVIDER bound to: 200 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:276]
+INFO: [Synth 8-226] default block is never used [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:514]
+WARNING: [Synth 8-614] signal 'slv_reg7' is read in the process but is not in the sensitivity list [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:509]
+WARNING: [Synth 8-614] signal 'slv_reg12' is read in the process but is not in the sensitivity list [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:509]
+WARNING: [Synth 8-614] signal 'slv_reg13' is read in the process but is not in the sensitivity list [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:509]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg10_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:267]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg11_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:268]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:274]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:513]
+INFO: [Synth 8-256] done synthesizing module 'Stepper_v1_0_S00_AXI' (1#1) [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:102]
+INFO: [Synth 8-256] done synthesizing module 'Stepper_v1_0' (2#1) [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'evo_v1_Stepper_0_0' (3#1) [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Stepper_0_0/synth/evo_v1_Stepper_0_0.vhd:96]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 425.492 ; gain = 119.145
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 425.492 ; gain = 119.145
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 720.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 720.434 ; gain = 414.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 720.434 ; gain = 414.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 720.434 ; gain = 414.086
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:592]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:592]
+WARNING: [Synth 8-6014] Unused sequential element counter_i_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:594]
+WARNING: [Synth 8-6014] Unused sequential element cpt_step_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:595]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 720.434 ; gain = 414.086
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     28 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 15    
+	               31 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 14    
+	  16 Input     32 Bit        Muxes := 14    
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Stepper_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     28 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 15    
+	               31 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 14    
+	  16 Input     32 Bit        Muxes := 14    
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element cpt_step_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:595]
+WARNING: [Synth 8-6014] Unused sequential element counter_i_reg was removed.  [c:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ipshared/6b0b/hdl/Stepper_v1_0_S00_AXI.vhd:594]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design Stepper_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/Stepper_v1_0_S00_AXI_inst/aw_en_reg )
+INFO: [Synth 8-3886] merging instance 'U0/Stepper_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/Stepper_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/Stepper_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/Stepper_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/Stepper_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/Stepper_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/aw_en_reg) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/slv_reg5_reg[31]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/slv_reg5_reg[30]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/slv_reg5_reg[29]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/slv_reg5_reg[28]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/slv_reg5_reg[27]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/slv_reg6_reg[31]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module evo_v1_Stepper_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Stepper_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module evo_v1_Stepper_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 720.434 ; gain = 414.086
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 720.434 ; gain = 414.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 720.434 ; gain = 414.086
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 723.258 ; gain = 416.910
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 723.258 ; gain = 416.910
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 723.258 ; gain = 416.910
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 723.258 ; gain = 416.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 723.258 ; gain = 416.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 723.258 ; gain = 416.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 723.258 ; gain = 416.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    44|
+|2     |LUT1   |    32|
+|3     |LUT2   |    56|
+|4     |LUT3   |    41|
+|5     |LUT4   |    65|
+|6     |LUT5   |    63|
+|7     |LUT6   |   170|
+|8     |MUXF7  |    63|
+|9     |MUXF8  |    31|
+|10    |FDRE   |   576|
+|11    |FDSE   |     4|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------------------+---------------------+------+
+|      |Instance                      |Module               |Cells |
++------+------------------------------+---------------------+------+
+|1     |top                           |                     |  1145|
+|2     |  U0                          |Stepper_v1_0         |  1145|
+|3     |    Stepper_v1_0_S00_AXI_inst |Stepper_v1_0_S00_AXI |  1140|
++------+------------------------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 723.258 ; gain = 416.910
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 723.258 ; gain = 121.969
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 723.258 ; gain = 416.910
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 44 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'evo_v1_Stepper_0_0' is not ideal for floorplanning, since the cellview 'Stepper_v1_0_S00_AXI' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+40 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 723.258 ; gain = 425.676
+INFO: [Common 17-1381] The checkpoint 'C:/Projet/Vivado/Evo/Evo.runs/evo_v1_Stepper_0_0_synth_1/evo_v1_Stepper_0_0.dcp' has been generated.

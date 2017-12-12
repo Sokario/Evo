@@ -60,20 +60,17 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_xbar_0/evo_v1_xbar_0.xci">
-          <Proxy FileSetName="evo_v1_xbar_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_Motor_0_0/evo_v1_Motor_0_0.xci">
           <Proxy FileSetName="evo_v1_Motor_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_Motor_1_0/evo_v1_Motor_1_0.xci">
           <Proxy FileSetName="evo_v1_Motor_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_Derivator_0_0/evo_v1_Derivator_0_0.xci">
-          <Proxy FileSetName="evo_v1_Derivator_0_0"/>
+        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_Encoder_0_0/evo_v1_Encoder_0_0.xci">
+          <Proxy FileSetName="evo_v1_Encoder_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_Derivator_1_0/evo_v1_Derivator_1_0.xci">
-          <Proxy FileSetName="evo_v1_Derivator_1_0"/>
+        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_Encoder_1_1/evo_v1_Encoder_1_1.xci">
+          <Proxy FileSetName="evo_v1_Encoder_1_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_PID_0_0/evo_v1_PID_0_0.xci">
           <Proxy FileSetName="evo_v1_PID_0_0"/>
@@ -81,44 +78,26 @@
         <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_PID_1_0/evo_v1_PID_1_0.xci">
           <Proxy FileSetName="evo_v1_PID_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_processing_system7_0_0_2/evo_v1_processing_system7_0_0.xci">
-          <Proxy FileSetName="evo_v1_processing_system7_0_0"/>
+        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_Subtractor_0_0/evo_v1_Subtractor_0_0.xci">
+          <Proxy FileSetName="evo_v1_Subtractor_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_axi_gpio_0_0_2/evo_v1_axi_gpio_0_0.xci">
-          <Proxy FileSetName="evo_v1_axi_gpio_0_0"/>
+        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_Subtractor_1_0/evo_v1_Subtractor_1_0.xci">
+          <Proxy FileSetName="evo_v1_Subtractor_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_axi_gpio_1_0_2/evo_v1_axi_gpio_1_0.xci">
-          <Proxy FileSetName="evo_v1_axi_gpio_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_xadc_wiz_0_0/evo_v1_xadc_wiz_0_0.xci">
-          <Proxy FileSetName="evo_v1_xadc_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_xlconstant_0_0/evo_v1_xlconstant_0_0.xci">
-          <Proxy FileSetName="evo_v1_xlconstant_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_xlconstant_0_1/evo_v1_xlconstant_0_1.xci">
-          <Proxy FileSetName="evo_v1_xlconstant_0_1"/>
+        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_rst_ps7_0_100M_0_2/evo_v1_rst_ps7_0_100M_0.xci">
+          <Proxy FileSetName="evo_v1_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_ADC_IRQ_0_0/evo_v1_ADC_IRQ_0_0.xci">
           <Proxy FileSetName="evo_v1_ADC_IRQ_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_xlconcat_0_0/evo_v1_xlconcat_0_0.xci">
-          <Proxy FileSetName="evo_v1_xlconcat_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_Gpio_IRQ_0_1/evo_v1_Gpio_IRQ_0_1.xci">
           <Proxy FileSetName="evo_v1_Gpio_IRQ_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_Quadramp_0_1/evo_v1_Quadramp_0_1.xci">
-          <Proxy FileSetName="evo_v1_Quadramp_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_Quadramp_1_1/evo_v1_Quadramp_1_1.xci">
-          <Proxy FileSetName="evo_v1_Quadramp_1_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_Odometer_0_0/evo_v1_Odometer_0_0.xci">
-          <Proxy FileSetName="evo_v1_Odometer_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_Stepper_0_0/evo_v1_Stepper_0_0.xci">
           <Proxy FileSetName="evo_v1_Stepper_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="evo_v1.bd" FileRelPathName="ip/evo_v1_system_ila_0_0/evo_v1_system_ila_0_0.xci">
+          <Proxy FileSetName="evo_v1_system_ila_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/evo_v1/hdl/evo_v1_wrapper.vhd">
@@ -159,24 +138,6 @@
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
-    <FileSet Name="evo_v1_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_xbar_0">
-      <Config>
-        <Option Name="TopModule" Val="evo_v1_xbar_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="evo_v1_axi_gpio_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_axi_gpio_1_0">
-      <Config>
-        <Option Name="TopModule" Val="evo_v1_axi_gpio_1_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="evo_v1_axi_gpio_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_axi_gpio_0_0">
-      <Config>
-        <Option Name="TopModule" Val="evo_v1_axi_gpio_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="evo_v1_PID_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_PID_0_0">
       <Config>
         <Option Name="TopModule" Val="evo_v1_PID_0_0"/>
@@ -201,24 +162,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="evo_v1_xadc_wiz_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_xadc_wiz_0_0">
-      <Config>
-        <Option Name="TopModule" Val="evo_v1_xadc_wiz_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="evo_v1_xlconstant_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_xlconstant_0_0">
-      <Config>
-        <Option Name="TopModule" Val="evo_v1_xlconstant_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="evo_v1_xlconstant_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_xlconstant_0_1">
-      <Config>
-        <Option Name="TopModule" Val="evo_v1_xlconstant_0_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="evo_v1_ADC_IRQ_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_ADC_IRQ_0_0">
       <Config>
         <Option Name="TopModule" Val="evo_v1_ADC_IRQ_0_0"/>
@@ -231,45 +174,39 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="evo_v1_Odometer_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_Odometer_0_0">
+    <FileSet Name="evo_v1_system_ila_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_system_ila_0_0">
       <Config>
-        <Option Name="TopModule" Val="evo_v1_Odometer_0_0"/>
+        <Option Name="TopModule" Val="evo_v1_system_ila_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="evo_v1_Derivator_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_Derivator_0_0">
+    <FileSet Name="evo_v1_Encoder_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_Encoder_0_0">
       <Config>
-        <Option Name="TopModule" Val="evo_v1_Derivator_0_0"/>
+        <Option Name="TopModule" Val="evo_v1_Encoder_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="evo_v1_Derivator_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_Derivator_1_0">
+    <FileSet Name="evo_v1_Encoder_1_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_Encoder_1_1">
       <Config>
-        <Option Name="TopModule" Val="evo_v1_Derivator_1_0"/>
+        <Option Name="TopModule" Val="evo_v1_Encoder_1_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="evo_v1_Quadramp_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_Quadramp_0_1">
+    <FileSet Name="evo_v1_Subtractor_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_Subtractor_0_0">
       <Config>
-        <Option Name="TopModule" Val="evo_v1_Quadramp_0_1"/>
+        <Option Name="TopModule" Val="evo_v1_Subtractor_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="evo_v1_Quadramp_1_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_Quadramp_1_1">
+    <FileSet Name="evo_v1_Subtractor_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_Subtractor_1_0">
       <Config>
-        <Option Name="TopModule" Val="evo_v1_Quadramp_1_1"/>
+        <Option Name="TopModule" Val="evo_v1_Subtractor_1_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="evo_v1_processing_system7_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_processing_system7_0_0">
+    <FileSet Name="evo_v1_rst_ps7_0_100M_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_rst_ps7_0_100M_0">
       <Config>
-        <Option Name="TopModule" Val="evo_v1_processing_system7_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="evo_v1_xlconcat_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/evo_v1_xlconcat_0_0">
-      <Config>
-        <Option Name="TopModule" Val="evo_v1_xlconcat_0_0"/>
+        <Option Name="TopModule" Val="evo_v1_rst_ps7_0_100M_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -300,33 +237,6 @@
   </Simulators>
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="evo_v1_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_xbar_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_xbar_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_xbar_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="evo_v1_axi_gpio_1_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_axi_gpio_1_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_axi_gpio_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_axi_gpio_1_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="evo_v1_axi_gpio_0_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_axi_gpio_0_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_axi_gpio_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_axi_gpio_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
@@ -371,33 +281,6 @@
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="evo_v1_xadc_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_xadc_wiz_0_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_xadc_wiz_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_xadc_wiz_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="evo_v1_xlconstant_0_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_xlconstant_0_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_xlconstant_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_xlconstant_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="evo_v1_xlconstant_0_1_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_xlconstant_0_1" Part="xc7z010clg400-1" ConstrsSet="evo_v1_xlconstant_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_xlconstant_0_1_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="evo_v1_ADC_IRQ_0_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_ADC_IRQ_0_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_ADC_IRQ_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_ADC_IRQ_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
@@ -416,63 +299,66 @@
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="evo_v1_Odometer_0_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_Odometer_0_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Odometer_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_Odometer_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="evo_v1_system_ila_0_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_system_ila_0_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_system_ila_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_system_ila_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="evo_v1_Derivator_0_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_Derivator_0_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Derivator_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_Derivator_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="evo_v1_Encoder_0_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_Encoder_0_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Encoder_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_Encoder_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="evo_v1_Derivator_1_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_Derivator_1_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Derivator_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_Derivator_1_0_synth_1" IncludeInArchive="true">
+    <Run Id="evo_v1_Encoder_1_1_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_Encoder_1_1" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Encoder_1_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_Encoder_1_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="evo_v1_Quadramp_0_1_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_Quadramp_0_1" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Quadramp_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_Quadramp_0_1_synth_1" IncludeInArchive="true">
+    <Run Id="evo_v1_Subtractor_0_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_Subtractor_0_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Subtractor_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_Subtractor_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="evo_v1_Quadramp_1_1_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_Quadramp_1_1" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Quadramp_1_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_Quadramp_1_1_synth_1" IncludeInArchive="true">
+    <Run Id="evo_v1_Subtractor_1_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_Subtractor_1_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Subtractor_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_Subtractor_1_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="evo_v1_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_processing_system7_0_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_processing_system7_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_processing_system7_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="evo_v1_rst_ps7_0_100M_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_rst_ps7_0_100M_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_rst_ps7_0_100M_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_rst_ps7_0_100M_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="evo_v1_xlconcat_0_0_synth_1" Type="Ft3:Synth" SrcSet="evo_v1_xlconcat_0_0" Part="xc7z010clg400-1" ConstrsSet="evo_v1_xlconcat_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/evo_v1_xlconcat_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -504,54 +390,6 @@
         <Step Id="write_bitstream"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="evo_v1_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_xbar_0" Description="Default settings for Implementation." SynthRun="evo_v1_xbar_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="evo_v1_axi_gpio_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_axi_gpio_1_0" Description="Default settings for Implementation." SynthRun="evo_v1_axi_gpio_1_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="evo_v1_axi_gpio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_axi_gpio_0_0" Description="Default settings for Implementation." SynthRun="evo_v1_axi_gpio_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
@@ -619,54 +457,6 @@
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="evo_v1_xadc_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_xadc_wiz_0_0" Description="Default settings for Implementation." SynthRun="evo_v1_xadc_wiz_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="evo_v1_xlconstant_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_xlconstant_0_0" Description="Default settings for Implementation." SynthRun="evo_v1_xlconstant_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="evo_v1_xlconstant_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_xlconstant_0_1" Description="Default settings for Implementation." SynthRun="evo_v1_xlconstant_0_1_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="evo_v1_ADC_IRQ_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_ADC_IRQ_0_0" Description="Default settings for Implementation." SynthRun="evo_v1_ADC_IRQ_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
@@ -699,9 +489,11 @@
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="evo_v1_Odometer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Odometer_0_0" Description="Default settings for Implementation." SynthRun="evo_v1_Odometer_0_0_synth_1" IncludeInArchive="false">
+    <Run Id="evo_v1_system_ila_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_system_ila_0_0" Description="Default settings for Implementation." SynthRun="evo_v1_system_ila_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -715,9 +507,11 @@
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="evo_v1_Derivator_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Derivator_0_0" Description="Default settings for Implementation." SynthRun="evo_v1_Derivator_0_0_synth_1" IncludeInArchive="false">
+    <Run Id="evo_v1_Encoder_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Encoder_0_0" Description="Default settings for Implementation." SynthRun="evo_v1_Encoder_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -731,9 +525,11 @@
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="evo_v1_Derivator_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Derivator_1_0" Description="Default settings for Implementation." SynthRun="evo_v1_Derivator_1_0_synth_1" IncludeInArchive="false">
+    <Run Id="evo_v1_Encoder_1_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Encoder_1_1" Description="Default settings for Implementation." SynthRun="evo_v1_Encoder_1_1_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -747,9 +543,11 @@
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="evo_v1_Quadramp_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Quadramp_0_1" Description="Default settings for Implementation." SynthRun="evo_v1_Quadramp_0_1_synth_1" IncludeInArchive="false">
+    <Run Id="evo_v1_Subtractor_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Subtractor_0_0" Description="Default settings for Implementation." SynthRun="evo_v1_Subtractor_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -763,9 +561,11 @@
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="evo_v1_Quadramp_1_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Quadramp_1_1" Description="Default settings for Implementation." SynthRun="evo_v1_Quadramp_1_1_synth_1" IncludeInArchive="false">
+    <Run Id="evo_v1_Subtractor_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_Subtractor_1_0" Description="Default settings for Implementation." SynthRun="evo_v1_Subtractor_1_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -779,25 +579,11 @@
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="evo_v1_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_processing_system7_0_0" Description="Default settings for Implementation." SynthRun="evo_v1_processing_system7_0_0_synth_1" IncludeInArchive="false">
+    <Run Id="evo_v1_rst_ps7_0_100M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_rst_ps7_0_100M_0" Description="Default settings for Implementation." SynthRun="evo_v1_rst_ps7_0_100M_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="evo_v1_xlconcat_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="evo_v1_xlconcat_0_0" Description="Default settings for Implementation." SynthRun="evo_v1_xlconcat_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

@@ -67,7 +67,12 @@ Motor MotLeft, MotRight;
 
 #include "Stepper.h"
 Stepper Elevator;
-#define MOTOR_ELEVATOR_DEVICE_ID 		XPAR_STEPPER_0_DEVICE_ID
+#define STEPPER_ELEVATOR_DEVICE_ID	XPAR_STEPPER_0_DEVICE_ID
+#define STEPPER_IRQ_ID				XPAR_FABRIC_STEPPER_0_INTERRUPT_INTR
+void STEPPER_IRQ_Handler(void *CallbackRef);
+void STEPPER_IRQ_Simulation(u32 value);
+volatile static int stepperProcessed = FALSE;
+volatile static u32 stepperValue = 0;
 
 #include "xscugic.h"
 #define SCUGIC_DEVICE_ID			XPAR_PS7_SCUGIC_0_DEVICE_ID
@@ -77,7 +82,7 @@ int ScuGic_SetHandler(XScuGic *gic, u16 interruptId);
 #include "Gpio_IRQ.h"
 #define GPIO_IRQ_ID					XPAR_FABRIC_GPIO_IRQ_0_INTERRUPT_INTR
 void GPIO_IRQ_Handler(void *CallbackRef);
-void Gpio_IRQ_Simulation(u32 value);
+void GPIO_IRQ_Simulation(u32 value);
 volatile static int gpioProcessed = FALSE;
 volatile static u32 gpioValue = 0;
 
@@ -87,7 +92,13 @@ int IRQ_Initialization();
 
 int ScuGic_SetHandler(XScuGic *gic, u16 interruptId)
 {
-	if (XScuGic_Connect(gic, interruptId, (Xil_ExceptionHandler)GPIO_IRQ_Handler, (void *)NULL) != XST_SUCCESS)
+	if (interruptId == GPIO_IRQ_ID) {
+		if (XScuGic_Connect(gic, interruptId, (Xil_ExceptionHandler)GPIO_IRQ_Handler, (void *)NULL) != XST_SUCCESS)
+			return XST_FAILURE;
+	} else if (interruptId == STEPPER_IRQ_ID) {
+		if (XScuGic_Connect(gic, interruptId, (Xil_ExceptionHandler)STEPPER_IRQ_Handler, (void *)NULL) != XST_SUCCESS)
+			return XST_FAILURE;
+	} else
 		return XST_FAILURE;
 
 	if ((gic == NULL) && (gic->IsReady != XIL_COMPONENT_IS_READY))
@@ -98,7 +109,7 @@ int ScuGic_SetHandler(XScuGic *gic, u16 interruptId)
 	return XST_SUCCESS;
 }
 
-void Gpio_IRQ_Simulation(u32 value)
+void GPIO_IRQ_Simulation(u32 value)
 {
 	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG0_OFFSET, 0b01);
 	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG1_OFFSET, 0);
@@ -106,6 +117,7 @@ void Gpio_IRQ_Simulation(u32 value)
 	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG1_OFFSET, value);
 	usleep(200000);
 	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG0_OFFSET, 0b00);
+	usleep(200000);
 }
 
 void GPIO_IRQ_Handler(void *CallbackRef)
@@ -114,6 +126,22 @@ void GPIO_IRQ_Handler(void *CallbackRef)
 	Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG4_OFFSET, 0b10);
 	gpioValue = Xil_In32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR + GPIO_IRQ_S00_AXI_SLV_REG1_OFFSET);
 	gpioProcessed = TRUE;
+}
+
+
+void STEPPER_IRQ_Simulation(u32 value)
+{
+	u32 reg = Stepper_GetTarget(&Elevator);
+	Stepper_SetTarget(&Elevator, reg + value);
+	usleep(200000);
+}
+
+void STEPPER_IRQ_Handler(void *CallbackRef)
+{
+	Stepper_SetIrqManager(&Elevator, 0b1);
+	Stepper_SetIrqManager(&Elevator, 0b0);
+	stepperValue = Stepper_GetTargetStep(&Elevator);
+	stepperProcessed = TRUE;
 }
 
 int main()
@@ -172,15 +200,23 @@ int main()
 		}
 		usleep(200000);
 
-		if (cmd_value == (IRQ_GPIO_MASK >> 24)) {
-			Gpio_IRQ_Simulation(0b1 << data_value);
-			char string[16];
+		if (cmd_value == (STEPPER_SET_MASK >> 24)) {
+			Stepper_SetTarget(&Elevator, data_value);
+		} else if (cmd_value == (IRQ_GPIO_MASK >> 24)) {
+			GPIO_IRQ_Simulation(0b1 << data_value);
 			if (gpioProcessed) {
-				itoa(gpioValue, string, 10);
+				strcpy(result, "GPIOOK00");
 				gpioProcessed = FALSE;
 			} else
-				itoa(1000 * (0b1 << data_value), string, 10);
-			strcpy(result, string);
+				strcpy(result, "GPIOFAIL");
+			writeMonitor(&UartPs, result, sizeof(result));
+		} else if (cmd_value == (IRQ_STEPPER_MASK >> 24)) {
+			STEPPER_IRQ_Simulation(data_value);
+			if (stepperProcessed) {
+				strcpy(result, "STEPOK00");
+				stepperProcessed = FALSE;
+			} else
+				strcpy(result, "STEPFAIL");
 			writeMonitor(&UartPs, result, sizeof(result));
 		}
 		usleep(200000);
@@ -342,7 +378,7 @@ int ASSERV_Initialization()
 	usleep(200000);
 
 	// Elevator motor test
-	if (Stepper_Initialization(&Elevator, MOTOR_ELEVATOR_DEVICE_ID) != XST_SUCCESS) {
+	if (Stepper_Initialization(&Elevator, STEPPER_ELEVATOR_DEVICE_ID) != XST_SUCCESS) {
 		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: Stepper Elevator", 30);
 		status = XST_FAILURE;
 	} else {
@@ -375,6 +411,7 @@ int IRQ_Initialization()
 	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, &IRQ_Controller);
 	Xil_ExceptionEnable();
 
+	// Interrupt GPIO Handler
 	if (ScuGic_SetHandler(&IRQ_Controller, GPIO_IRQ_ID) != XST_SUCCESS) {
 		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: IRQ GPIO Handler", 30);
 		status = XST_FAILURE;
@@ -384,9 +421,8 @@ int IRQ_Initialization()
 	}
 	usleep(200000);
 
-	// Interrupt simulation
-	Gpio_IRQ_Simulation(0b0001);
-
+	// Interrupt GPIO simulation
+	GPIO_IRQ_Simulation(0b0001);
 	for (int i = 0; i < 10; i++) {
 		if (gpioProcessed) {
 			status = XST_SUCCESS;
@@ -399,6 +435,32 @@ int IRQ_Initialization()
 		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: IRQ GPIO Test", 27);
 	else
 		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: IRQ GPIO Test", 27);
+	usleep(200000);
+
+	// Interrupt Stepper Handler
+	if (ScuGic_SetHandler(&IRQ_Controller, STEPPER_IRQ_ID) != XST_SUCCESS) {
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: IRQ STEPPER Handler", 33);
+		status = XST_FAILURE;
+	} else {
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: IRQ STEPPER Handler", 33);
+		status = XST_SUCCESS;
+	}
+	usleep(200000);
+
+	// Interrupt GPIO simulation
+	STEPPER_IRQ_Simulation(0b1);
+	for (int i = 0; i < 10; i++) {
+		if (stepperProcessed) {
+			status = XST_SUCCESS;
+			stepperProcessed = FALSE;
+			break;
+		} else
+			status = XST_FAILURE;
+	}
+	if (status == XST_FAILURE)
+		writeMonitor(&UartPs, (u8 *)"INIT FAILURE: IRQ STEPPER Test", 30);
+	else
+		writeMonitor(&UartPs, (u8 *)"INIT SUCCESS: IRQ STEPPER Test", 30);
 	usleep(200000);
 
 	return status;

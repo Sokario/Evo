@@ -1,11 +1,11 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Thu Nov 30 21:26:27 2017
+-- Date        : Thu Nov 30 21:26:26 2017
 -- Host        : LogOut-AsusPro running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Projet/Vivado/Evo/Evo.srcs/sources_1/bd/evo_v1/ip/evo_v1_Quadramp_1_1/evo_v1_Quadramp_1_1_sim_netlist.vhdl
--- Design      : evo_v1_Quadramp_1_1
+-- Command     : write_vhdl -force -mode funcsim -rename_top evo_v1_Quadramp_1_1 -prefix
+--               evo_v1_Quadramp_1_1_ evo_v1_Quadramp_0_1_sim_netlist.vhdl
+-- Design      : evo_v1_Quadramp_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z010clg400-1
@@ -43,8 +43,6 @@ entity evo_v1_Quadramp_1_1_Quadramp_v1_0_S00_AXI is
     Reset : in STD_LOGIC;
     Command : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of evo_v1_Quadramp_1_1_Quadramp_v1_0_S00_AXI : entity is "Quadramp_v1_0_S00_AXI";
 end evo_v1_Quadramp_1_1_Quadramp_v1_0_S00_AXI;
 
 architecture STRUCTURE of evo_v1_Quadramp_1_1_Quadramp_v1_0_S00_AXI is
@@ -14844,8 +14842,6 @@ entity evo_v1_Quadramp_1_1_Quadramp_v1_0 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of evo_v1_Quadramp_1_1_Quadramp_v1_0 : entity is "Quadramp_v1_0";
 end evo_v1_Quadramp_1_1_Quadramp_v1_0;
 
 architecture STRUCTURE of evo_v1_Quadramp_1_1_Quadramp_v1_0 is
@@ -14978,7 +14974,7 @@ entity evo_v1_Quadramp_1_1 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of evo_v1_Quadramp_1_1 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of evo_v1_Quadramp_1_1 : entity is "evo_v1_Quadramp_1_1,Quadramp_v1_0,{}";
+  attribute CHECK_LICENSE_TYPE of evo_v1_Quadramp_1_1 : entity is "evo_v1_Quadramp_0_1,Quadramp_v1_0,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of evo_v1_Quadramp_1_1 : entity is "yes";
   attribute x_core_info : string;
